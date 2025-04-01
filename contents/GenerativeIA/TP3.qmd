@@ -5,15 +5,15 @@ You can download the Lab work n°3 by clicking [here](TP1-PDE/TP%20n%C2%B01%20-%
 All the important information is already presented in the notebook. The following is a simple summary of what you will learn to do during the lab work and what is expected of you for the final submission if you choose this lab.
 
 
-## Summary of the Lab work : 
+## Summary of the Lab work n°3 
 
 
 
-### Goals of the Lab work :
+### Goals 
 
 
 
-### Your expected work : 
+### Your expected work  
 
 
 
@@ -25,4 +25,9 @@ All the important information is already presented in the notebook. The followin
 
 
 ## Expected Results
+
+
+### 
+
+### 
 

@@ -20,11 +20,11 @@
     ]
   },
   {
-    "objectID": "index.html#utiliser-ce-site",
-    "href": "index.html#utiliser-ce-site",
-    "title": "TP : Apprentissage automatique et contrôle stochastique",
-    "section": "Utiliser ce site",
-    "text": "Utiliser ce site\nCe site est décomposé en 3 parties qui constituent le cours où un chapitre intitulé Course Reminders est présenté où les principaux résultats théoriques sont présentés ainsi qu’un second chapitre qui contient l’énoncé du TP ainsi qu’un lien vers un fichier jupyter notebook.\nPar ailleurs, ce site est généré via Quarto et les notes sont accessibles depuis cette page GitHub. Si jamais vous détectez des erreurs sur le site, n’hésitez pas à me les faire remonter via des pull requests.",
+    "objectID": "index.html#use-this-website",
+    "href": "index.html#use-this-website",
+    "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
+    "section": "Use this website",
+    "text": "Use this website\nThe site is structured into three sections that make up the course, each consisting of two chapters. The first chapter, titled Course reminders, presents the key theoretical concepts, followed by the second chapter, which contains the practical session instructions and a link to a Jupyter notebook file where you can write your code.\nNote that the Jupyter notebooks files are designed to be self-sufficient, allowing you to work independently during the practical sessions.\nFor your information, this site is generated using Quarto, and the notes are available on this GitHub page. If you spot any errors on the site, feel free to report them through pull requests.",
     "crumbs": [
       "Organisation"
     ]
@@ -41,25 +41,47 @@
     ]
   },
   {
-    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#neural-network-algorithms",
-    "href": "contents/DeepPDE/RappelsDeepPDE.html#neural-network-algorithms",
-    "title": "1  Course Reminders",
-    "section": "1.3 Neural Network Algorithms",
-    "text": "1.3 Neural Network Algorithms\n\n1.3.1 Deep Galerkin Method\nThis method is based on the seminal papers : Insérer Références.\nInsérer Graphiques\n\n\n1.3.2 Deep BSDE\nInsérer Graphiques\n\n\n1.3.3 Deep BDP\nThis method is based on the seminal papers : Insérer Références",
+    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#some-reminders-on-pde-and-stochastic-control",
+    "href": "contents/DeepPDE/RappelsDeepPDE.html#some-reminders-on-pde-and-stochastic-control",
+    "title": "1  Course reminders",
+    "section": "",
+    "text": "1.1.1 Stochastic control in a nutshell\n\n\n1.1.2 The dynamic programming approach : HJB equation",
     "crumbs": [
       "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course Reminders</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
     ]
   },
   {
-    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#section",
-    "href": "contents/DeepPDE/RappelsDeepPDE.html#section",
-    "title": "1  Course Reminders",
-    "section": "1.4 ",
-    "text": "1.4 \n\n#  Import des Librairies\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\n# Test\nprint(np.arange(5))\n\n\ndef f(x) :\n    return x**2\n\nL=[i for i in range(-5,6)]\n\nplt.scatter(L,[f(l) for l in L])\nplt.xlabel(\"Test\")\nplt.ylabel(\"Test2\")\nplt.title(\"Test Scatter Plot\")\nplt.grid()\n\n# Exemple simple de DataFrame\ndata = {\n    'Nom': ['Alice', 'Bob', 'Charlie', 'David'],\n    'Âge': [24, 30, 18, 22],\n    'Ville': ['Paris', 'Lyon', 'Marseille', 'Toulouse'],\n    'Score': [85.5, 90.0, 78.0, 88.5]\n}\n\ndf = pd.DataFrame(data)\ndf\n\n[0 1 2 3 4]\n\n\n\n\n\n\n\n\n\nNom\nÂge\nVille\nScore\n\n\n\n\n0\nAlice\n24\nParis\n85.5\n\n\n1\nBob\n30\nLyon\n90.0\n\n\n2\nCharlie\n18\nMarseille\n78.0\n\n\n3\nDavid\n22\nToulouse\n88.5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition 1.1 A noter qu’il faut être à l’aise sur l’utilisation de Quarto",
+    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#some-reminders-on-neural-networks",
+    "href": "contents/DeepPDE/RappelsDeepPDE.html#some-reminders-on-neural-networks",
+    "title": "1  Course reminders",
+    "section": "1.2 Some reminders on neural networks",
+    "text": "1.2 Some reminders on neural networks",
     "crumbs": [
       "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course Reminders</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
+    ]
+  },
+  {
+    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#neural-networks-algorithms-for-pde",
+    "href": "contents/DeepPDE/RappelsDeepPDE.html#neural-networks-algorithms-for-pde",
+    "title": "1  Course reminders",
+    "section": "1.3 Neural networks algorithms for PDE",
+    "text": "1.3 Neural networks algorithms for PDE\n\n1.3.1 Deep Galerkin Method\nThis method is based on the seminal papers : Insérer Références.\nInsérer Graphiques\n\n\n1.3.2 Deep BSDE Solver\nInsérer Graphiques\n\n\n1.3.3 Deep BDP Solver\nThis method is based on the seminal papers : Insérer Références",
+    "crumbs": [
+      "Part n°1 : Deep Learning for PDE",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
+    ]
+  },
+  {
+    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#an-extension-deep-learning-for-mdp",
+    "href": "contents/DeepPDE/RappelsDeepPDE.html#an-extension-deep-learning-for-mdp",
+    "title": "1  Course reminders",
+    "section": "1.4 An extension : Deep Learning for MDP",
+    "text": "1.4 An extension : Deep Learning for MDP\n\n#  Import des Librairies\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\n# Test\nprint(np.arange(5))\n\n\ndef f(x) :\n    return x**2\n\nL=[i for i in range(-5,6)]\n\nplt.scatter(L,[f(l) for l in L])\nplt.xlabel(\"Test\")\nplt.ylabel(\"Test2\")\nplt.title(\"Test Scatter Plot\")\nplt.grid()\n\n# Exemple simple de DataFrame\ndata = {\n    'Nom': ['Alice', 'Bob', 'Charlie', 'David'],\n    'Âge': [24, 30, 18, 22],\n    'Ville': ['Paris', 'Lyon', 'Marseille', 'Toulouse'],\n    'Score': [85.5, 90.0, 78.0, 88.5]\n}\n\ndf = pd.DataFrame(data)\ndf\n\n[0 1 2 3 4]\n\n\n\n\n\n\n\n\n\nNom\nÂge\nVille\nScore\n\n\n\n\n0\nAlice\n24\nParis\n85.5\n\n\n1\nBob\n30\nLyon\n90.0\n\n\n2\nCharlie\n18\nMarseille\n78.0\n\n\n3\nDavid\n22\nToulouse\n88.5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition 1.1 A noter qu’il faut être à l’aise sur l’utilisation de Quarto",
+    "crumbs": [
+      "Part n°1 : Deep Learning for PDE",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
     ]
   },
   {
@@ -68,6 +90,28 @@
     "title": "2  Lab work n°1",
     "section": "",
     "text": "2.1 Summary of the Lab work n°1\nYou can download the Lab work n°1 by clicking here. All the relevant informations are already provided on the notebook.\nAll the important information is already presented in the notebook. The following is a simple summary of what you will learn to do during the lab work and what is expected of you for the final submission if you choose this lab.\nThe Lab work is divided into 3 parts :",
+    "crumbs": [
+      "Part n°1 : Deep Learning for PDE",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
+    ]
+  },
+  {
+    "objectID": "contents/DeepPDE/TP1.html#summary-of-the-lab-work-n1",
+    "href": "contents/DeepPDE/TP1.html#summary-of-the-lab-work-n1",
+    "title": "2  Lab work n°1",
+    "section": "",
+    "text": "The first part is devoted to get more familiar with the PyTorch library for the ones who are not that familiar with the library.\nThe second part is devoted to the implementation of the Deep Galerkin algorithm with so\nThe third part is devoted to the implementation of the Deep BSDE Solver and to\n\n\n2.1.1 Goals\nThe TP aims you to implement the various PDE algorithms seen during the class session :\n\nGet more familiar with the PyTorch library\nImplement the Deep Galerkin and Deep BSDE algorithm and benchmark it with some classic PDE for which we know explicit or semi explicit formulas.\n\n\n\n2.1.2 Your expected work\n\n\n2.1.3 Submission deadline\n\\(\\ldots\\) : TBD.",
+    "crumbs": [
+      "Part n°1 : Deep Learning for PDE",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
+    ]
+  },
+  {
+    "objectID": "contents/DeepPDE/TP1.html#expected-results",
+    "href": "contents/DeepPDE/TP1.html#expected-results",
+    "title": "2  Lab work n°1",
+    "section": "2.2 Expected results",
+    "text": "2.2 Expected results\n\n2.2.1 About the Deep Galerking Algorithm\n\n\n2.2.2 About the Deep BSDE Solver",
     "crumbs": [
       "Part n°1 : Deep Learning for PDE",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
@@ -140,136 +184,6 @@
     ]
   },
   {
-    "objectID": "contents/GenerativeIA/RappelsGenAI.html",
-    "href": "contents/GenerativeIA/RappelsGenAI.html",
-    "title": "5  Course reminders",
-    "section": "",
-    "text": "5.1 Some fundamentals of Schrödinger Bridge and connection with optimal transport\nThe following is a reminder of the main theoretical results about Generative AI and Schrödinger Bridge seen during the course. A full PDF version is also available at this link.",
-    "crumbs": [
-      "Part n°3 : Generative AI for data generation",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/GenerativeIA/RappelsGenAI.html#rappels-de-cours",
-    "href": "contents/GenerativeIA/RappelsGenAI.html#rappels-de-cours",
-    "title": "5  Course reminders",
-    "section": "",
-    "text": "Definition 5.1 (intervalle de confiance) Un intervalle de confiance de niveau \\(1-\\alpha\\) est un intervalle \\(I = [A,B]\\) dont les bornes \\(A,B\\) sont des statistiques, et tel que pour tout \\(\\theta\\), \\[P_\\theta(\\theta \\in I) \\geqslant 1 - \\alpha.\\] Un intervalle de confiance de niveau asymptotique \\(1-\\alpha\\) est une suite d’intervalles \\(I_n = [A_n,B_n]\\) dont les bornes \\(A_n,B_n\\) sont des statistiques, et tels que pour tout \\(n\\), \\[ P_\\theta(\\theta \\in I_n) \\geqslant 1 - \\alpha.\\]",
-    "crumbs": [
-      "Part n°3 : Generative AI for data generation",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/GenerativeIA/RappelsGenAI.html#implémentation-numérique",
-    "href": "contents/GenerativeIA/RappelsGenAI.html#implémentation-numérique",
-    "title": "5  Course reminders",
-    "section": "5.2 Implémentation numérique",
-    "text": "5.2 Implémentation numérique\n\\(\\bx\\)\n\n\n\nÀ gauche, RQ élevé mais biais nul ; à droite, RQ faible mais biais non nul.",
-    "crumbs": [
-      "Part n°3 : Generative AI for data generation",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/GenerativeIA/TP3.html",
-    "href": "contents/GenerativeIA/TP3.html",
-    "title": "6  Lab work n°3",
-    "section": "",
-    "text": "6.1 Summary of the Lab work :\nYou can download the Lab work n°3 by clicking here. All the relevant informations are already provided on the notebook.\nAll the important information is already presented in the notebook. The following is a simple summary of what you will learn to do during the lab work and what is expected of you for the final submission if you choose this lab.",
-    "crumbs": [
-      "Part n°3 : Generative AI for data generation",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab work n°3</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "$$\n\n\\newcommand{\\bx}{\\boldsymbol{x}}\n\n\\newcommand{\\bt}{\\boldsymbol{\\theta}}\n\n\\newcommand{\\dkl}{\\mathrm{d}_{\\mathrm{KL}}}\n\n\\newcommand{\\dtv}{\\mathrm{d}_{\\mathrm{TV}}}\n\n\\newcommand{\\emv}{\\hat{\\theta}_{\\mathrm{emv}}}\n\n\\newcommand{\\ent}{\\mathrm{Ent}}\n\n$$\n\n\n\n\n\n\n\n\n\nDeep Learning for PDE :\n\nTBD\nTBD\n[1] M. Germain, H. Pham, X. Warin: Neural networks-based algorithms for stochastic control and PDEs in finance, Machine Learning and Data Sciences for Financial Markets: a guide to contemporary practices, Cambridge University Press, 2023, Editors: A. Capponi and C. A. Lehalle available here\n\n\n\nReinforcement Learning for stochastic control :\n\n[3] Y. Jia and X.Y. Zhou: Policy gradient and Actor-Critic learning in continuous time and space: theory and algorithms, 2022, Journal of Machine Learning and Research. available here\n[4] Y. Jia and X.Y. Zhou: q-Learning in continuous time, 2023, Journal of Machine Learning and Research. available here\n[6] R. Sutton and A. Barto: Introduction to reinforcement learning, second edition 2016, available here\n\n\n\nGenerative IA for data generation :\n\n[2] M. Hamdouche, P. Henry-Labordère, H. Pham: Generative modeling for time series via Schrödinger bridge, 2023. available here.\n[4] A.Alouadi, B.Barreau, L.Carlier, H.Pham : Robust time series generation via Schr¨odinger Bridge: a comprehensive evaluation available here.\n[5] C. Remlinger, J. Mikael, R. Elie: Conditional loss and deep Euler scheme for time series generation, 2021, AAAI Conference on Artificial Intelligence. available here.\n[7] M. Xia, X. Li, Q. Shen, T. Chou: Squared Wasserstein-2 distance for efficient reconstruction of stochastic differential equations, 2024, arXiv:2401.11354 available here.\n\n\n\nSome personal recommendations :",
-    "crumbs": [
-      "References"
-    ]
-  },
-  {
-    "objectID": "contents/DeepPDE/TP1.html#expected-results",
-    "href": "contents/DeepPDE/TP1.html#expected-results",
-    "title": "2  Lab work n°1",
-    "section": "2.2 Expected results",
-    "text": "2.2 Expected results\n\n2.2.1 About the Deep Galerking Algorithm\n\n\n2.2.2 About the Deep BSDE Solver",
-    "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
-    ]
-  },
-  {
-    "objectID": "contents/DeepPDE/TP1.html#summary-of-the-tp",
-    "href": "contents/DeepPDE/TP1.html#summary-of-the-tp",
-    "title": "2  Enoncé du TP n°1",
-    "section": "",
-    "text": "The first part is devoted to get more familiar with the Pytorch library for the ones who are not that familiar with the library.\nThe second part is devoted to the implementation of the Deep Galerkin algorithm with so\nThe third part is devoted to the implementation of the Deep BSDE Solver and to\n\n\n2.1.1 \n\n\n2.1.2 Goals of the TP :\nThe TP aims you to implement the various PDE algorithms seen during the class session :\n\nGet more familiar with the Pytorch library\nImplement the Deep Galerkin and Deep BSDE algorithm and benchmark it with some classic PDE for which we know explicit or semi explicit formulas\n\n\n\n2.1.3 Notation Mark",
-    "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#use-this-website",
-    "href": "index.html#use-this-website",
-    "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
-    "section": "Use this website",
-    "text": "Use this website\nThe site is structured into three sections that make up the course, each consisting of two chapters. The first chapter, titled Course reminders, presents the key theoretical concepts, followed by the second chapter, which contains the practical session instructions and a link to a Jupyter notebook file where you can write your code.\nNote that the Jupyter notebooks files are designed to be self-sufficient, allowing you to work independently during the practical sessions.\nFor your information, this site is generated using Quarto, and the notes are available on this GitHub page. If you spot any errors on the site, feel free to report them through pull requests.",
-    "crumbs": [
-      "Organisation"
-    ]
-  },
-  {
-    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#section-1",
-    "href": "contents/DeepPDE/RappelsDeepPDE.html#section-1",
-    "title": "1  Course Reminders",
-    "section": "1.4 ",
-    "text": "1.4 \n\n#  Import des Librairies\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\n# Test\nprint(np.arange(5))\n\n\ndef f(x) :\n    return x**2\n\nL=[i for i in range(-5,6)]\n\nplt.scatter(L,[f(l) for l in L])\nplt.xlabel(\"Test\")\nplt.ylabel(\"Test2\")\nplt.title(\"Test Scatter Plot\")\nplt.grid()\n\n# Exemple simple de DataFrame\ndata = {\n    'Nom': ['Alice', 'Bob', 'Charlie', 'David'],\n    'Âge': [24, 30, 18, 22],\n    'Ville': ['Paris', 'Lyon', 'Marseille', 'Toulouse'],\n    'Score': [85.5, 90.0, 78.0, 88.5]\n}\n\ndf = pd.DataFrame(data)\ndf\n\n[0 1 2 3 4]\n\n\n\n\n\n\n\n\n\nNom\nÂge\nVille\nScore\n\n\n\n\n0\nAlice\n24\nParis\n85.5\n\n\n1\nBob\n30\nLyon\n90.0\n\n\n2\nCharlie\n18\nMarseille\n78.0\n\n\n3\nDavid\n22\nToulouse\n88.5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition 1.1 A noter qu’il faut être à l’aise sur l’utilisation de Quarto",
-    "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course Reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#some-reminders-on-neural-networks",
-    "href": "contents/DeepPDE/RappelsDeepPDE.html#some-reminders-on-neural-networks",
-    "title": "1  Course reminders",
-    "section": "1.2 Some reminders on neural networks",
-    "text": "1.2 Some reminders on neural networks",
-    "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#neural-networks-algorithms-for-pde",
-    "href": "contents/DeepPDE/RappelsDeepPDE.html#neural-networks-algorithms-for-pde",
-    "title": "1  Course reminders",
-    "section": "1.3 Neural networks algorithms for PDE",
-    "text": "1.3 Neural networks algorithms for PDE\n\n1.3.1 Deep Galerkin Method\nThis method is based on the seminal papers : Insérer Références.\nInsérer Graphiques\n\n\n1.3.2 Deep BSDE Solver\nInsérer Graphiques\n\n\n1.3.3 Deep BDP Solver\nThis method is based on the seminal papers : Insérer Références",
-    "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#some-reminders-on-pde-and-stochastic-control",
-    "href": "contents/DeepPDE/RappelsDeepPDE.html#some-reminders-on-pde-and-stochastic-control",
-    "title": "1  Course reminders",
-    "section": "",
-    "text": "1.1.1 Stochastic control in a nutshell\n\n\n1.1.2 The dynamic programming approach : HJB equation",
-    "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
     "objectID": "contents/RL/TP2.html#summary-of-the-tp",
     "href": "contents/RL/TP2.html#summary-of-the-tp",
     "title": "4  Lab work n°2",
@@ -292,44 +206,11 @@
     ]
   },
   {
-    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#an-extension-deep-learning-for-mdp",
-    "href": "contents/DeepPDE/RappelsDeepPDE.html#an-extension-deep-learning-for-mdp",
-    "title": "1  Course reminders",
-    "section": "1.4 An extension : Deep Learning for MDP",
-    "text": "1.4 An extension : Deep Learning for MDP\n\n#  Import des Librairies\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\n# Test\nprint(np.arange(5))\n\n\ndef f(x) :\n    return x**2\n\nL=[i for i in range(-5,6)]\n\nplt.scatter(L,[f(l) for l in L])\nplt.xlabel(\"Test\")\nplt.ylabel(\"Test2\")\nplt.title(\"Test Scatter Plot\")\nplt.grid()\n\n# Exemple simple de DataFrame\ndata = {\n    'Nom': ['Alice', 'Bob', 'Charlie', 'David'],\n    'Âge': [24, 30, 18, 22],\n    'Ville': ['Paris', 'Lyon', 'Marseille', 'Toulouse'],\n    'Score': [85.5, 90.0, 78.0, 88.5]\n}\n\ndf = pd.DataFrame(data)\ndf\n\n[0 1 2 3 4]\n\n\n\n\n\n\n\n\n\nNom\nÂge\nVille\nScore\n\n\n\n\n0\nAlice\n24\nParis\n85.5\n\n\n1\nBob\n30\nLyon\n90.0\n\n\n2\nCharlie\n18\nMarseille\n78.0\n\n\n3\nDavid\n22\nToulouse\n88.5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition 1.1 A noter qu’il faut être à l’aise sur l’utilisation de Quarto",
-    "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/DeepPDE/TP1.html#summary-of-the-lab-work",
-    "href": "contents/DeepPDE/TP1.html#summary-of-the-lab-work",
-    "title": "2  Lab work n°1",
-    "section": "",
-    "text": "The first part is devoted to get more familiar with the PyTorch library for the ones who are not that familiar with the library.\nThe second part is devoted to the implementation of the Deep Galerkin algorithm with so\nThe third part is devoted to the implementation of the Deep BSDE Solver and to\n\n\n2.1.1 Goals of the Lab work :\nThe TP aims you to implement the various PDE algorithms seen during the class session :\n\nGet more familiar with the PyTorch library\nImplement the Deep Galerkin and Deep BSDE algorithm and benchmark it with some classic PDE for which we know explicit or semi explicit formulas.\n\n\n\n2.1.2 Submission deadline\n\\(\\ldots\\) : TBD.",
-    "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
-    ]
-  },
-  {
-    "objectID": "contents/GenerativeIA/RappelsGenAI.html#section",
-    "href": "contents/GenerativeIA/RappelsGenAI.html#section",
+    "objectID": "contents/GenerativeIA/RappelsGenAI.html",
+    "href": "contents/GenerativeIA/RappelsGenAI.html",
     "title": "5  Course reminders",
     "section": "",
-    "text": "Definition 5.1 (intervalle de confiance) Un intervalle de confiance de niveau \\(1-\\alpha\\) est un intervalle \\(I = [A,B]\\) dont les bornes \\(A,B\\) sont des statistiques, et tel que pour tout \\(\\theta\\), \\[P_\\theta(\\theta \\in I) \\geqslant 1 - \\alpha.\\] Un intervalle de confiance de niveau asymptotique \\(1-\\alpha\\) est une suite d’intervalles \\(I_n = [A_n,B_n]\\) dont les bornes \\(A_n,B_n\\) sont des statistiques, et tels que pour tout \\(n\\), \\[ P_\\theta(\\theta \\in I_n) \\geqslant 1 - \\alpha.\\]",
-    "crumbs": [
-      "Part n°3 : Generative AI for data generation",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/GenerativeIA/RappelsGenAI.html#some",
-    "href": "contents/GenerativeIA/RappelsGenAI.html#some",
-    "title": "5  Course reminders",
-    "section": "",
-    "text": "Definition 5.1 (intervalle de confiance) Un intervalle de confiance de niveau \\(1-\\alpha\\) est un intervalle \\(I = [A,B]\\) dont les bornes \\(A,B\\) sont des statistiques, et tel que pour tout \\(\\theta\\), \\[P_\\theta(\\theta \\in I) \\geqslant 1 - \\alpha.\\] Un intervalle de confiance de niveau asymptotique \\(1-\\alpha\\) est une suite d’intervalles \\(I_n = [A_n,B_n]\\) dont les bornes \\(A_n,B_n\\) sont des statistiques, et tels que pour tout \\(n\\), \\[ P_\\theta(\\theta \\in I_n) \\geqslant 1 - \\alpha.\\]",
+    "text": "5.1 Some fundamentals of Schrödinger Bridge and connection with optimal transport\nThe following is a reminder of the main theoretical results about Generative AI and Schrödinger Bridge seen during the course. A full PDF version is also available at this link.",
     "crumbs": [
       "Part n°3 : Generative AI for data generation",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Course reminders</span>"
@@ -369,6 +250,17 @@
     ]
   },
   {
+    "objectID": "contents/GenerativeIA/TP3.html",
+    "href": "contents/GenerativeIA/TP3.html",
+    "title": "6  Lab work n°3",
+    "section": "",
+    "text": "6.1 Summary of the Lab work :\nYou can download the Lab work n°3 by clicking here. All the relevant informations are already provided on the notebook.\nAll the important information is already presented in the notebook. The following is a simple summary of what you will learn to do during the lab work and what is expected of you for the final submission if you choose this lab.",
+    "crumbs": [
+      "Part n°3 : Generative AI for data generation",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab work n°3</span>"
+    ]
+  },
+  {
     "objectID": "contents/GenerativeIA/TP3.html#summary-of-the-lab-work",
     "href": "contents/GenerativeIA/TP3.html#summary-of-the-lab-work",
     "title": "6  Lab work n°3",
@@ -391,25 +283,35 @@
     ]
   },
   {
-    "objectID": "contents/DeepPDE/TP1.html#summary",
-    "href": "contents/DeepPDE/TP1.html#summary",
-    "title": "2  Lab work n°1",
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
     "section": "",
-    "text": "The first part is devoted to get more familiar with the PyTorch library for the ones who are not that familiar with the library.\nThe second part is devoted to the implementation of the Deep Galerkin algorithm with so\nThe third part is devoted to the implementation of the Deep BSDE Solver and to\n\n\n2.1.1 Goals :\nThe TP aims you to implement the various PDE algorithms seen during the class session :\n\nGet more familiar with the PyTorch library\nImplement the Deep Galerkin and Deep BSDE algorithm and benchmark it with some classic PDE for which we know explicit or semi explicit formulas.\n\n\n\n2.1.2 Submission deadline\n\\(\\ldots\\) : TBD.",
+    "text": "$$\n\n\\newcommand{\\bx}{\\boldsymbol{x}}\n\n\\newcommand{\\bt}{\\boldsymbol{\\theta}}\n\n\\newcommand{\\dkl}{\\mathrm{d}_{\\mathrm{KL}}}\n\n\\newcommand{\\dtv}{\\mathrm{d}_{\\mathrm{TV}}}\n\n\\newcommand{\\emv}{\\hat{\\theta}_{\\mathrm{emv}}}\n\n\\newcommand{\\ent}{\\mathrm{Ent}}\n\n$$\n\n\n\n\n\n\n\n\n\nDeep Learning for PDE :\n\nTBD\nTBD\n[1] M. Germain, H. Pham, X. Warin: Neural networks-based algorithms for stochastic control and PDEs in finance, Machine Learning and Data Sciences for Financial Markets: a guide to contemporary practices, Cambridge University Press, 2023, Editors: A. Capponi and C. A. Lehalle available here\n\n\n\nReinforcement Learning for stochastic control :\n\n[3] Y. Jia and X.Y. Zhou: Policy gradient and Actor-Critic learning in continuous time and space: theory and algorithms, 2022, Journal of Machine Learning and Research. available here\n[4] Y. Jia and X.Y. Zhou: q-Learning in continuous time, 2023, Journal of Machine Learning and Research. available here\n[6] R. Sutton and A. Barto: Introduction to reinforcement learning, second edition 2016, available here\n\n\n\nGenerative IA for data generation :\n\n[2] M. Hamdouche, P. Henry-Labordère, H. Pham: Generative modeling for time series via Schrödinger bridge, 2023. available here.\n[4] A.Alouadi, B.Barreau, L.Carlier, H.Pham : Robust time series generation via Schr¨odinger Bridge: a comprehensive evaluation available here.\n[5] C. Remlinger, J. Mikael, R. Elie: Conditional loss and deep Euler scheme for time series generation, 2021, AAAI Conference on Artificial Intelligence. available here.\n[7] M. Xia, X. Li, Q. Shen, T. Chou: Squared Wasserstein-2 distance for efficient reconstruction of stochastic differential equations, 2024, arXiv:2401.11354 available here.\n\n\n\nSome personal recommendations :",
     "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
+      "References"
     ]
   },
   {
-    "objectID": "contents/DeepPDE/TP1.html#summary-of-the-lab-work-n1",
-    "href": "contents/DeepPDE/TP1.html#summary-of-the-lab-work-n1",
-    "title": "2  Lab work n°1",
+    "objectID": "contents/RL/TP2.html#summary-of-the-lab-work-n2",
+    "href": "contents/RL/TP2.html#summary-of-the-lab-work-n2",
+    "title": "4  Lab work n°2",
     "section": "",
-    "text": "The first part is devoted to get more familiar with the PyTorch library for the ones who are not that familiar with the library.\nThe second part is devoted to the implementation of the Deep Galerkin algorithm with so\nThe third part is devoted to the implementation of the Deep BSDE Solver and to\n\n\n2.1.1 Goals\nThe TP aims you to implement the various PDE algorithms seen during the class session :\n\nGet more familiar with the PyTorch library\nImplement the Deep Galerkin and Deep BSDE algorithm and benchmark it with some classic PDE for which we know explicit or semi explicit formulas.\n\n\n\n2.1.2 Submission deadline\n\\(\\ldots\\) : TBD.",
+    "text": "4.1.1 Goals of the TP\n\n\n4.1.2 Your expected work",
     "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
+      "Part n°2  : Reinforcement Learning for stochastic control problems",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab work n°2</span>"
+    ]
+  },
+  {
+    "objectID": "contents/GenerativeIA/TP3.html#summary-of-the-lab-work-n3",
+    "href": "contents/GenerativeIA/TP3.html#summary-of-the-lab-work-n3",
+    "title": "6  Lab work n°3",
+    "section": "",
+    "text": "6.1.1 Goals\n\n\n6.1.2 Your expected work\n\n\n6.1.3 Submission deadline",
+    "crumbs": [
+      "Part n°3 : Generative AI for data generation",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab work n°3</span>"
     ]
   }
 ]
