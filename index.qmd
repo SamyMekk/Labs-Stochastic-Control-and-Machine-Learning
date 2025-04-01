@@ -1,26 +1,33 @@
+
+
+
+Welcome to the webpage of the practical sessions of the course **Apprentissage automatique et contrôle stochastique** taught by Huyên Pham within the Master’s program in Probability and Finance (M2). 
+
+
+
 ## Organisation {.unnumbered}
 
----
-
-Bienvenue sur la page du TP du cours d'**Apprentissage automatique et contrôle stochastique** enseigné par Huyên Pham au sein du M2 Probabilités et Finance. <br>
-Les TPs seront décomposés en 3 TPs de 3h chacun où chacune des notions abordée pendant le cours sera illustré.
-
-**Cette page est en cours de construction .** 
+The practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.
 
 
-- **Horaires** : Les TPs auront lieu les $\ldots$ en salle **123** 
+
+- **Schedule**: The practical sessions will take place on $\ldots$ each time in **room 15/25 104** at Jussieu.
+
+- **Materials**: The practical sessions will be conducted in **Python**. You should bring your own laptop and have your own Python environment set up for each session.
  
-- **Agenda** : 
-  - TP n°1 : About **Reinforcement Learning**
-  - TP n°2 : About **Deep Galerkin** and **Deep BSDE Solver** for solving PDEs
-  - TP n°3 : About **Generative IA** and **Schrodinger Bridge** for data generation.
-
----
+- **Planning** : 
+  - **Lab work n°1** : About **Deep PDE Solver** for solving partial differential equations.
+  - **Lab work n°2** : About **Reinforcement Learning** for stochastic control problems.
+  - **Lab work n°3** : About **Generative IA** and **Schrodinger Bridge** for data generation.
 
 
-## Utiliser ce site {.unnumbered}
-
-Ce site est décomposé en 3 parties qui constituent le cours où un chapitre intitulé **Course Reminders** est présenté où les principaux résultats théoriques sont présentés ainsi qu'un second chapitre qui contient l'énoncé du TP ainsi qu'un lien vers un fichier jupyter notebook.
+- **Grade** : $\ldots$ To be confirmed
 
 
-Par ailleurs, ce site est généré via [Quarto](https://quarto.org) et les notes sont accessibles depuis cette page [GitHub](https://github.com/SamyMekk/TP-Controle-Stochastique). Si jamais vous détectez des erreurs sur le site, n'hésitez pas à me les faire remonter via des pull requests.
+## Use this website {.unnumbered}
+
+The site is structured into three sections that make up the course, each consisting of two chapters. The first chapter, titled **Course reminders**, presents the key theoretical concepts, followed by the second chapter, which contains the practical session instructions and a link to a **Jupyter notebook file** where you can write your code.
+
+Note that the Jupyter notebooks files are designed to be **self-sufficient**, allowing you to work independently during the practical sessions.
+
+For your information, this site is generated using [Quarto](https://quarto.org), and the notes are available on this [GitHub](https://github.com/SamyMekk/TP-Controle-Stochastique) page. If you spot any errors on the site, feel free to report them through pull requests.

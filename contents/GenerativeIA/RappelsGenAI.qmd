@@ -1,11 +1,11 @@
-# Course Reminders 
+# Course reminders 
+
+The following is a reminder of the main theoretical results about **Generative AI and Schrödinger Bridge** seen during the course. A full **PDF version** is also available at this [link]().
 
 
+## Some fundamentals of Schrödinger Bridge and connection with optimal transport
 
-## Rappels de cours 
-
-
-:::{#def-ic}
+### 
 
 ## intervalle de confiance
 
@@ -16,7 +16,7 @@ $$ P_\theta(\theta \in I_n) \geqslant 1 - \alpha.$$
 :::
 
 
-## Implémentation numérique 
+##  
 
 $\bx$
 

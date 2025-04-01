@@ -5,22 +5,22 @@ lang: en
 
 
 book:
-  title: "TP : Apprentissage automatique et contrôle stochastique"
+  title: "Practical sessions : Apprentissage automatique et contrôle stochastique"
   author: "Samy Mekkaoui"
   date: today
   repo-url: "https://github.com/SamyMekk/TP-Controle-Stochastique"
   chapters:
      - index.qmd
 
-     - part: "Part n°1 : Deep Learning for PDEs"
+     - part: "Part n°1 : Deep Learning for PDE"
        chapters:
          - contents/DeepPDE/RappelsDeepPDE.qmd
          - contents/DeepPDE/TP1.qmd
-     - part: "Part n°2  : Reinforcement Learning"
+     - part: "Part n°2  : Reinforcement Learning for stochastic control problems"
        chapters:
          - contents/RL/RappelsRL.qmd 
          - contents/RL/TP2.qmd
-     - part: "Part n°3 : Generative AI"
+     - part: "Part n°3 : Generative AI for data generation"
        chapters:
          - contents/GenerativeIA/RappelsGenAI.qmd
          - contents/GenerativeIA/TP3.qmd

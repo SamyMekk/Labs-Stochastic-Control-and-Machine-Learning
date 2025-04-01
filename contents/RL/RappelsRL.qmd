@@ -1,5 +1,7 @@
-# Course Reminders
+# Course reminders
 
+
+The following is a reminder of the main theoretical results about **Reinforcement Learning for stochastic control problems** seen during the course. A full PDF version is also available at this [link]().
 
 
 ## Some Foundations of Reinforcement Learning
@@ -126,7 +128,7 @@ $$
 
 
 :::{.proof}
-En notant $x$ l'espérance de $\hat{\theta}$, on voit que le risque quadratique est égal à $\mathbb{E}[|\hat{\theta} - x - (\theta - x)|^2]$. Le carré se développe en trois termes : le premier, $\mathbb{E}[|\hat{\theta} - x|^2]$, est la variance de $\hat{\theta}$. Le second, $-2\mathbb{E}[(\hat{\theta} - x)(\theta - x)]$, est égal à $-2(\theta - x)\mathbb{E}[\hat{\theta} - x]$, c'est-à-dire 0. Le dernier, $\mathbb{E}[(\theta - x)^2]$, est égal à $(\theta - x)^2$, c'est-à-dire $(\theta - \mathbb{E}[\hat{\theta}])^2$ : c'est bien le carré du biais. 
+En notant $x$ l'espérance de $\hat{\theta}$, on    voit que le risque quadratique est égal à $\mathbb{E}[|\hat{\theta} - x - (\theta - x)|^2]$. Le carré se développe en trois termes : le premier, $\mathbb{E}[|\hat{\theta} - x|^2]$, est la variance de $\hat{\theta}$. Le second, $-2\mathbb{E}[(\hat{\theta} - x)(\theta - x)]$, est égal à $-2(\theta - x)\mathbb{E}[\hat{\theta} - x]$, c'est-à-dire 0. Le dernier, $\mathbb{E}[(\theta - x)^2]$, est égal à $(\theta - x)^2$, c'est-à-dire $(\theta - \mathbb{E}[\hat{\theta}])^2$ : c'est bien le carré du biais. 
 :::
 
 

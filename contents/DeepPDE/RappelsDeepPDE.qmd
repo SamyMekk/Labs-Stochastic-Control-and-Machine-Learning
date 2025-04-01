@@ -1,12 +1,20 @@
-# Course Reminders
+# Course reminders
+
+The following is a reminder of the main theoretical results about **Deep Learning algorithms for PDE** seen during the course. A full **PDF version** is also available at this [link]().
+
+## Some reminders on PDE and stochastic control
+
+### Stochastic control in a nutshell
 
 
-## Some reminders on PDEs and stochastic control
+### The dynamic programming approach : HJB equation
+
+
+## Some reminders on neural networks
 
 
 
-
-## Neural Network Algorithms 
+## Neural networks algorithms for PDE
 
 
 ### Deep Galerkin Method
@@ -17,7 +25,7 @@ This method is based on the seminal papers :  Insérer Références.
 
 Insérer Graphiques
 
-### Deep BSDE 
+### Deep BSDE Solver
 
 
 
@@ -25,19 +33,23 @@ Insérer Graphiques
 
 
 
-### Deep BDP
+### Deep BDP Solver
 
 This method is based on the seminal papers : Insérer Références
 
 
 
+## An extension : Deep Learning for MDP
 
 
 
 
 
 
-##
+
+
+
+
 ```{python}
 
 #| output-location: column-fragment

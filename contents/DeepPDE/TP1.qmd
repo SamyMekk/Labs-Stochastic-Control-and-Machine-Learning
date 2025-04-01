@@ -1,4 +1,47 @@
-# Enoncé du TP n°1
+# Lab work n°1  
 
-You can download the TP n°1 by clicking [here](TP1-PDE/TP%20n%C2%B01%20-%20Deep%20Learning%20For%20PDEs.ipynb)
+You can download the **Lab work n°1** by clicking [here](TP1-PDE/TP%20n%C2%B01%20-%20Deep%20Learning%20For%20PDEs.ipynb). All the relevant informations are already provided on the notebook. 
+
+All the important information is already presented in the notebook. The following is a simple summary of what you will learn to do during the lab work and what is expected of you for the final submission if you choose this lab.
+
+
+## Summary of the Lab work n°1  
+
+The Lab work is divided into 3 parts : 
+
+- The first part is devoted to get more familiar with the PyTorch library for the ones who are not that familiar with the library.
+- The second part is devoted to the implementation of the Deep Galerkin algorithm with so 
+- The third part is devoted to the implementation of the Deep BSDE Solver and to 
+
+
+### Goals 
+
+The TP aims you to implement the various PDE algorithms seen during the class session :
+
+- Get more familiar with the PyTorch library
+- Implement the Deep Galerkin and Deep BSDE algorithm and benchmark it with some classic PDE for which we know explicit or semi explicit formulas.
+
+
+
+### Your expected work 
+
+
+### Submission deadline
+
+
+$\ldots$ : TBD.
+
+
+
+## Expected results
+
+
+### About the Deep Galerking Algorithm
+
+
+
+### About the Deep BSDE Solver
+
+
+
 
