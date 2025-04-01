@@ -11,6 +11,11 @@ body {
     text-align: center;
   }
 
+  h2{
+    text-align: center;
+  }
+
+
   .theorem {
     background-color: rgb(248, 239, 239);
     padding: 0.5em;
