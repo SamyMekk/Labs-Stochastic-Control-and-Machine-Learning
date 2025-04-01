@@ -177,7 +177,7 @@
     "href": "contents/RL/TP2.html",
     "title": "4  Lab work n°2",
     "section": "",
-    "text": "4.1 Summary of the Lab work n°2\nYou can download the Lab work n°2 by clicking here. All the relevant informations are already provided on the notebook.\nAll the important information is already presented in the notebook. The following is a simple summary of what you will learn to do during the lab work and what is expected of you for the final submission if you choose this lab.",
+    "text": "4.1 Summary of the Lab work n°2\nYou can download the Lab work n°2 by clicking here. All the relevant informations are already provided on the notebook.\nAll the important information is already presented in the notebook. The following is a simple summary of what you will learn to do during the lab work and what is expected of you for the final submission if you choose this lab.\n\\(\\bx\\)",
     "crumbs": [
       "Part n°2  : Reinforcement Learning for stochastic control problems",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab work n°2</span>"
@@ -199,7 +199,7 @@
     "href": "contents/RL/TP2.html#expected-results",
     "title": "4  Lab work n°2",
     "section": "4.2 Expected results",
-    "text": "4.2 Expected results\n\n4.2.1 About\n\n\n4.2.2 About",
+    "text": "4.2 Expected results\n\n4.2.1 \n\n\n4.2.2",
     "crumbs": [
       "Part n°2  : Reinforcement Learning for stochastic control problems",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab work n°2</span>"
@@ -217,33 +217,11 @@
     ]
   },
   {
-    "objectID": "contents/GenerativeIA/RappelsGenAI.html#some-fundamentals-of-schrödinger-bridge-and-connection-with-optimal-transport",
-    "href": "contents/GenerativeIA/RappelsGenAI.html#some-fundamentals-of-schrödinger-bridge-and-connection-with-optimal-transport",
+    "objectID": "contents/GenerativeIA/RappelsGenAI.html#schrödinger-bridge-for-data-generation",
+    "href": "contents/GenerativeIA/RappelsGenAI.html#schrödinger-bridge-for-data-generation",
     "title": "5  Course reminders",
-    "section": "",
-    "text": "5.1.1",
-    "crumbs": [
-      "Part n°3 : Generative AI for data generation",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/GenerativeIA/RappelsGenAI.html#intervalle-de-confiance",
-    "href": "contents/GenerativeIA/RappelsGenAI.html#intervalle-de-confiance",
-    "title": "5  Course reminders",
-    "section": "5.2 intervalle de confiance",
-    "text": "5.2 intervalle de confiance\nUn intervalle de confiance de niveau \\(1-\\alpha\\) est un intervalle \\(I = [A,B]\\) dont les bornes \\(A,B\\) sont des statistiques, et tel que pour tout \\(\\theta\\), \\[P_\\theta(\\theta \\in I) \\geqslant 1 - \\alpha.\\] Un intervalle de confiance de niveau asymptotique \\(1-\\alpha\\) est une suite d’intervalles \\(I_n = [A_n,B_n]\\) dont les bornes \\(A_n,B_n\\) sont des statistiques, et tels que pour tout \\(n\\), \\[ P_\\theta(\\theta \\in I_n) \\geqslant 1 - \\alpha.\\] :::",
-    "crumbs": [
-      "Part n°3 : Generative AI for data generation",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/GenerativeIA/RappelsGenAI.html#section-1",
-    "href": "contents/GenerativeIA/RappelsGenAI.html#section-1",
-    "title": "5  Course reminders",
-    "section": "5.2 ",
-    "text": "5.2 \n\\(\\bx\\)\n\n\n\nÀ gauche, RQ élevé mais biais nul ; à droite, RQ faible mais biais non nul.",
+    "section": "5.2 Schrödinger Bridge for data generation",
+    "text": "5.2 Schrödinger Bridge for data generation",
     "crumbs": [
       "Part n°3 : Generative AI for data generation",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Course reminders</span>"

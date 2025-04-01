@@ -8,10 +8,8 @@ The following is a reminder of the main theoretical results about **Generative A
 
 ##  Schrödinger Bridge for data generation
 
-$\bx$
 
 
-![À gauche, RQ élevé mais biais nul ; à droite, RQ faible mais biais non nul. ](/images/cover.png){width=50%}
 
 
 

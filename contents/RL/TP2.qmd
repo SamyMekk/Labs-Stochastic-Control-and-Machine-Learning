@@ -6,6 +6,7 @@ All the important information is already presented in the notebook. The followin
 
 ## Summary of the Lab work n°2 
 
+$\bx$
 
 
 ### Goals
@@ -19,11 +20,11 @@ All the important information is already presented in the notebook. The followin
 ## Expected results
 
 
-### About 
+### 
 
 
 
-### About 
+### 
 
 
 
