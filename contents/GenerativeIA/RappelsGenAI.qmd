@@ -5,18 +5,8 @@ The following is a reminder of the main theoretical results about **Generative A
 
 ## Some fundamentals of Schrödinger Bridge and connection with optimal transport
 
-### 
 
-## intervalle de confiance
-
-Un intervalle de confiance de niveau $1-\alpha$ est un intervalle $I = [A,B]$ dont les bornes $A,B$ sont des statistiques, et tel que pour tout $\theta$, 
-$$P_\theta(\theta \in I) \geqslant 1 - \alpha.$$
-Un intervalle de confiance de niveau asymptotique $1-\alpha$ est une *suite* d'intervalles $I_n = [A_n,B_n]$ dont les bornes $A_n,B_n$ sont des statistiques, et tels que pour tout $n$,
-$$ P_\theta(\theta \in I_n) \geqslant 1 - \alpha.$$
-:::
-
-
-##  
+##  Schrödinger Bridge for data generation
 
 $\bx$
 
