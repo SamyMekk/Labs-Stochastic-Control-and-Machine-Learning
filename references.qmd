@@ -27,7 +27,7 @@
 
 - [2] M. Hamdouche, P. Henry-Labordère, H. Pham: Generative modeling for time series via Schrödinger bridge, 2023. available [here]().
 
-- [4] A.Alouadi, B.Barreau, L.Carlier, H.Pham : Robust time series generation via Schr¨odinger Bridge: a comprehensive
+- [4] A.Alouadi, B.Barreau, L.Carlier, H.Pham : Robust time series generation via Schrödinger Bridge: a comprehensive
 evaluation available [here](https://arxiv.org/pdf/2503.02943).
 
 - [5] C. Remlinger, J. Mikael, R. Elie: Conditional loss and deep Euler scheme for time series generation, 2021, AAAI Conference on Artificial Intelligence. available [here]().

@@ -19,11 +19,11 @@ All the important information is already presented in the notebook. The followin
 
 ### Submission deadline
 
+    
 
 
 
-
-## Expected Results
+## Expected results
 
 
 ### 

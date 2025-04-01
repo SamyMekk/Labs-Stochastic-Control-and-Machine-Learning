@@ -1,7 +1,7 @@
 # Course reminders
 
 
-The following is a reminder of the main theoretical results about **Reinforcement Learning for stochastic control problems** seen during the course. A full **PDF version** is also available at this [link]().
+The following is a reminder of the main theoretical results about **Reinforcement Learning for stochastic control problems** seen during the course. A full **PDF version** is also available at this [link](PDF-File/RL_in_Finance.pdf).
 
 
 ## Some Foundations of Reinforcement Learning

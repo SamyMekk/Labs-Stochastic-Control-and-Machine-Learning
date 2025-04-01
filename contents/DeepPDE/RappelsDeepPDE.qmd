@@ -1,6 +1,6 @@
 # Course reminders
 
-The following is a reminder of the main theoretical results about **Deep Learning algorithms for PDE** seen during the course. A full **PDF version** is also available at this [link]().
+The following is a reminder of the main theoretical results about **Deep Learning algorithms for PDE** seen during the course. A full **PDF version** is also available at this [link](PDF-File/Deep_Learning_for_PDE.pdf).
 
 ## Some reminders on PDE and stochastic control
 
@@ -12,6 +12,16 @@ The following is a reminder of the main theoretical results about **Deep Learnin
 
 ## Some reminders on neural networks
 
+### Feedforward neural networks (FFNN)
+
+
+### Other neural network architectures
+
+
+#### Recurrent neural networks (RNN)
+
+#### Long short term memory (LSTM)
+
 
 
 ## Neural networks algorithms for PDE
@@ -19,23 +29,21 @@ The following is a reminder of the main theoretical results about **Deep Learnin
 
 ### Deep Galerkin Method
 
-This method is based on the seminal papers :  Insérer Références.
+#### Algorithm Description
 
-
-
-Insérer Graphiques
+#### 
 
 ### Deep BSDE Solver
 
+#### A quick overview on BSDE
 
-
-Insérer Graphiques
-
+#### Algorithm Description
 
 
 ### Deep BDP Solver
 
-This method is based on the seminal papers : Insérer Références
+
+#### Algorithm Description
 
 
 
