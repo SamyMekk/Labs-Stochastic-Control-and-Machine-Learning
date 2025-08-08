@@ -5,7 +5,7 @@ Welcome to the webpage of the practical sessions of the course **Apprentissage a
 
 
 <figure style="text-align: center; margin: 0;">
-  <img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/MasterM2PF.png" 
+  <img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/MasterProbaFinance.png" 
        alt="Ma belle image"
        style="display: block; margin: 0 auto; max-width: 40%; height: auto;">
   <figcaption style="font-size: 0.9em; color: #333;">
