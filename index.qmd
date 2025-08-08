@@ -1,22 +1,15 @@
 
 
 
-Welcome to the webpage of the practical sessions of the course **Apprentissage automatique et contrôle stochastique** taught by Huyên Pham within the Master’s program in Probability and Finance (M2). 
+Welcome to the webpage of the practical sessions of the course **Apprentissage automatique et contrôle stochastique** taught by Professor [H.Pham](https://sites.google.com/site/phamxuanhuyen/) within the Master’s program in Probability and Finance (M2). 
 
 
 <figure style="text-align: center; margin: 0;">
-  <img src="https://raw.githubusercontent.com/SamyMekk/samymekk.github.io/master/images/500x300.png" 
+  <img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/MasterProbaFinance.png" 
        alt="Ma belle image"
        style="display: block; margin: 0 auto; max-width: 60%; height: auto;">
   <figcaption style="font-size: 0.9em; color: #333;">
-    1024 × 1024 samples generated from score-based models 
-    <sup><a href="#ref21" style="color: orange; text-decoration: none;">[21]</a></sup>
-  </figcaption>
-</figure>
-
-<a id="ref21"></a>
-
-**[21]**  Song, Y., et al. *Score-Based Generative Modeling through Stochastic Differential Equations*. (2021).
+    
 
 ## Organisation {.unnumbered}
 
@@ -43,3 +36,29 @@ The site is structured into three sections that make up the course, each consist
 Note that the Jupyter notebooks files are designed to be **self-sufficient**, allowing you to work independently during the practical sessions.
 
 For your information, this site is generated using [Quarto](https://quarto.org), and the notes are available on this [GitHub](https://github.com/SamyMekk/TP-Controle-Stochastique) page. If you spot any errors on the site, feel free to report them through pull requests.
+
+## Instructors {.unnumbered}
+
+The Lab sessions for this course have been prepared by [Samy](https://samymekk.github.io/) and [Alexandre](https://www.linkedin.com/in/alexandre-alouadi/). We want to thank [Huyên Pham](https://sites.google.com/site/phamxuanhuyen/) for beeing our advisor and for the confidence in letting us preparing the lab works of his course.
+
+The **prerequisites** for this course are the following:
+
+- Probability Theory, Stochastic Processes
+- Basics on **Deep Learning**.
+- Familarity with **Python** and potentially with **PyTorch**.
+- 
+
+
+
+
+If you have any  **questions**, you can either e-mail [Samy](samy.mekkaoui@polytechnique.edu) or [Alexandre](alexandre.alouadi@polytechnique.edu).
+
+
+
+
+## Acknowledgements {.unnumbered}
+
+We would like to thank the following individuals and organizations without whose support this course would not be possible
+
+- 2
+- 2
