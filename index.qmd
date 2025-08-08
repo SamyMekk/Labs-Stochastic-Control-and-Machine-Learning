@@ -10,6 +10,8 @@ Welcome to the webpage of the practical sessions of the course **Apprentissage a
        style="display: block; margin: 0 auto; max-width: 40%; height: auto;">
   <figcaption style="font-size: 0.9em; color: #333;">
 </figure>
+
+<iframe src="https://giphy.com/embed/ix8yJ9ZwYW5zJprbTN" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
     
 
 ## Organisation {.unnumbered}
