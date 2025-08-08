@@ -13,7 +13,8 @@ Welcome to the webpage of the practical sessions of the course **Apprentissage a
 
 
 <div style="text-align: center;">
-  <img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/videos/animation.gif" alt="Animation" />
+  <img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/videos/animation.gif" alt="Animation" 
+  style="display: block; margin: 0 auto; max-width: 40%; height: auto;">
   <p><em>Animation ici</em></p>
 </div>
 
