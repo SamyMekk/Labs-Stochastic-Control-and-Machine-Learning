@@ -15,8 +15,6 @@ Welcome to the webpage of the practical sessions of the course **Apprentissage a
 </figure>
 
 <a id="ref21"></a>
-Testici
-
 
 **[21]**  Song, Y., et al. *Score-Based Generative Modeling through Stochastic Differential Equations*. (2021).
 
