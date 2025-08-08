@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
     "section": "",
-    "text": "Organisation\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Huyên Pham within the Master’s program in Probability and Finance (M2).\n[21] Song, Y., et al. Score-Based Generative Modeling through Stochastic Differential Equations. (2021).\nThe practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.",
+    "text": "Organisation\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor H.Pham within the Master’s program in Probability and Finance (M2).\nThe practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.",
     "crumbs": [
       "Organisation"
     ]
@@ -30,11 +30,21 @@
     ]
   },
   {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
+    "section": "Instructors",
+    "text": "Instructors\nThe Lab sessions for this course have been prepared by Samy and Alexandre. We want to thank Huyên Pham for beeing our advisor and for the confidence in letting us preparing the lab works of his course.\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nIf you have any questions, you can either e-mail Samy or Alexandre.",
+    "crumbs": [
+      "Organisation"
+    ]
+  },
+  {
     "objectID": "index.html#acknowledgements",
     "href": "index.html#acknowledgements",
     "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
     "section": "Acknowledgements",
-    "text": "Acknowledgements",
+    "text": "Acknowledgements\nWe would like to thank the following individuals and organizations without whose support this course would not be possible\n\nProfessor Huyên Pham for the support during the creation of this lab.\nParticipants in the course of your interest in Machine Learning for stochastic control and its applications.",
     "crumbs": [
       "Organisation"
     ]
