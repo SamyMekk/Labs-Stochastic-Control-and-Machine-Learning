@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
     "section": "",
-    "text": "Organisation\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Huyên Pham within the Master’s program in Probability and Finance (M2).\nTestici\n[21] Song, Y., et al. Score-Based Generative Modeling through Stochastic Differential Equations. (2021).\nThe practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.",
+    "text": "Organisation\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Huyên Pham within the Master’s program in Probability and Finance (M2).\n[21] Song, Y., et al. Score-Based Generative Modeling through Stochastic Differential Equations. (2021).\nThe practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.",
     "crumbs": [
       "Organisation"
     ]
@@ -25,6 +25,16 @@
     "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
     "section": "Use this website",
     "text": "Use this website\nThe site is structured into three sections that make up the course, each consisting of two chapters. The first chapter, titled Course reminders, presents the key theoretical concepts, followed by the second chapter, which contains the practical session instructions and a link to a Jupyter notebook file where you can write your code.\nNote that the Jupyter notebooks files are designed to be self-sufficient, allowing you to work independently during the practical sessions.\nFor your information, this site is generated using Quarto, and the notes are available on this GitHub page. If you spot any errors on the site, feel free to report them through pull requests.",
+    "crumbs": [
+      "Organisation"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements",
     "crumbs": [
       "Organisation"
     ]
