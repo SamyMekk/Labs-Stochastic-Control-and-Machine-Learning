@@ -3,7 +3,18 @@
 
 Welcome to the webpage of the practical sessions of the course **Apprentissage automatique et contrôle stochastique** taught by Huyên Pham within the Master’s program in Probability and Finance (M2). 
 
-Here is an image ![Here](https://raw.githubusercontent.com/SamyMekk/samymekk.github.io/master/images/500x300.png)
+
+<figure>
+  <img src="https://raw.githubusercontent.com/SamyMekk/samymekk.github.io/master/images/500x300.png" alt="Ma belle image">
+  <figcaption style="font-size: 0.9em; text-align: center; color: #333;">
+    1024 × 1024 samples generated from score-based models 
+    <sup><a href="#ref21" style="color: orange; text-decoration: none;">[21]</a></sup>
+  </figcaption>
+</figure>
+<a id="ref21"></a>
+
+
+**[21]**  Song, Y., et al. *Score-Based Generative Modeling through Stochastic Differential Equations*. (2021).
 
 ## Organisation {.unnumbered}
 
