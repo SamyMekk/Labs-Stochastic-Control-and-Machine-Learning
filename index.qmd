@@ -28,9 +28,8 @@ Welcome to the webpage of the practical sessions of the course **Apprentissage a
 </figure>
 
 ::: {.text-center}
-![Ma belle image](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg){width=40%}
+![Optimal transport from $\mathbf{\delta_{x}}$ to Gaussian](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg){width=40%}
 
-*Optimal transport from* $\mathbf{\delta_{x}}$ *to Gaussian*
 
 <figure style="text-align: center; margin: 0;">
   <img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg" 
