@@ -3,12 +3,11 @@
 
 Welcome to the webpage of the practical sessions of the course **Apprentissage automatique et contrôle stochastique** taught by Huyên Pham within the Master’s program in Probability and Finance (M2). 
 
-
+Here is an image ![Here](https://raw.githubusercontent.com/SamyMekk/samymekk.github.io/master/images/500x300.png)
 
 ## Organisation {.unnumbered}
 
 The practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.
-
 
 
 - **Schedule**: The practical sessions will take place on $\ldots$ each time in **room 15/25 104** at Jussieu.
