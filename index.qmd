@@ -9,6 +9,7 @@ Welcome to the webpage of the practical sessions of the course **Apprentissage a
        alt="Ma belle image"
        style="display: block; margin: 0 auto; max-width: 60%; height: auto;">
   <figcaption style="font-size: 0.9em; color: #333;">
+</figure>
     
 
 ## Organisation {.unnumbered}
@@ -43,10 +44,11 @@ The Lab sessions for this course have been prepared by [Samy](https://samymekk.g
 
 The **prerequisites** for this course are the following:
 
-- Probability Theory, Stochastic Processes
+- Good knowledge on **Probability Theory** and **Stochastic Processes**.
+- Basics on **optimal control theory**.
 - Basics on **Deep Learning**.
 - Familarity with **Python** and potentially with **PyTorch**.
-- 
+
 
 
 
@@ -60,5 +62,5 @@ If you have any  **questions**, you can either e-mail [Samy](samy.mekkaoui@polyt
 
 We would like to thank the following individuals and organizations without whose support this course would not be possible
 
-- 2
-- 2
+- Professor [Huyên Pham](https://sites.google.com/site/phamxuanhuyen/) for the support during the creation of this lab.
+- **Participants** in the course of your interest in Machine Learning for stochastic control and its applications.
