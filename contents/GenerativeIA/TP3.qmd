@@ -16,13 +16,21 @@ All the important information is already presented in the notebook. The followin
 
 
 
+
+
+### Submission deadline
+
+    
+
+
+
+## Expected results
+
 <div style="text-align: center;">
   <img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/videos/animation.gif" alt="Animation" 
   style="display: block; margin: 0 auto; max-width: 40%; height: auto;">
   <p><em>Animation ici</em></p>
 </div>
-
-
 
 
 ::: {.text-center}
@@ -38,17 +46,6 @@ All the important information is already presented in the notebook. The followin
   
   </figcaption>
 </figure>
-
-
-### Submission deadline
-
-    
-
-
-
-## Expected results
-
-
 ### 
 
 ### 
