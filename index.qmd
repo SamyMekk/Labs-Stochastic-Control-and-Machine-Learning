@@ -11,7 +11,7 @@ Welcome to the webpage of the practical sessions of the course **Apprentissage a
   <figcaption style="font-size: 0.9em; color: #333;">
 </figure>
 
-<iframe src="https://giphy.com/embed/ix8yJ9ZwYW5zJprbTN" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+![Animation](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/videos/animation.gif)
     
 
 ## Organisation {.unnumbered}
