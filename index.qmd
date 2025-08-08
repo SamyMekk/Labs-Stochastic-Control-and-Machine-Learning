@@ -1,7 +1,7 @@
 
 
 
-Welcome to the webpage of the practical sessions of the course **Apprentissage automatique et contrôle stochastique** taught by Professor [H.Pham](https://sites.google.com/site/phamxuanhuyen/) within the Master’s program in Probability and Finance (M2). 
+Welcome to the webpage of the practical sessions of the course **Apprentissage automatique et contrôle stochastique** taught by Professor [Pham](https://sites.google.com/site/phamxuanhuyen/) within the Master’s program in Probability and Finance (M2). 
 
 
 <figure style="text-align: center; margin: 0;">
