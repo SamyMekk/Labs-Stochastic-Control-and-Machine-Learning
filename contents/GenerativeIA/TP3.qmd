@@ -1,6 +1,6 @@
 # Lab work n°3  
 
-You can download the **Lab work n°3** by clicking [here](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/GenerativeIA/PDF-File/LabWork3_SchrodingerBridge.pdf).
+You can download the **Lab work n°3** by clicking [here](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/contents/GenerativeIA/PDF-File/LabWork3_SchrodingerBridge.pdf).
 
 All the important informations are provided in the PDF file. In the following, we just summarize the main goals of this Lab Work.
 
