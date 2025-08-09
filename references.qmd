@@ -6,11 +6,11 @@
 
 ### Deep Learning for PDE :  {.unnumbered}
 
-- TBD
+- 
   
-- TBD
+- J.Han, A.Jentzen, W.E : Solving high-dimensional partial differential equations using deep learning available [here](https://arxiv.org/abs/1707.02568).
 
-- [1] M. Germain, H. Pham, X. Warin: Neural networks-based algorithms for stochastic control and PDEs in finance, Machine Learning and Data Sciences for Financial Markets: a guide to contemporary practices, Cambridge University Press, 2023, Editors: A. Capponi and C. A. Lehalle available [here]()
+- [1] M. Germain, H. Pham, X. Warin: Neural networks-based algorithms for stochastic control and PDEs in finance, Machine Learning and Data Sciences for Financial Markets: a guide to contemporary practices, Cambridge University Press, 2023, Editors: A. Capponi and C. A. Lehalle available [here](https://arxiv.org/abs/2101.08068)
 
 ### Reinforcement Learning for stochastic control : {.unnumbered}
 
@@ -33,7 +33,3 @@ evaluation available [here](https://arxiv.org/pdf/2503.02943).
 - [5] C. Remlinger, J. Mikael, R. Elie: Conditional loss and deep Euler scheme for time series generation, 2021, AAAI Conference on Artificial Intelligence. available [here]().
 
 - [7] M. Xia, X. Li, Q. Shen, T. Chou: Squared Wasserstein-2 distance for efficient reconstruction of stochastic differential equations, 2024, arXiv:2401.11354 available [here]().
-
-
-
-### Some personal recommendations :

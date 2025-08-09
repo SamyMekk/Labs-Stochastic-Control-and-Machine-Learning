@@ -1,8 +1,8 @@
 # Lab work n°3  
 
-You can download the **Lab work n°3** by clicking [here](). All the relevant informations are already provided on the notebook. 
+You can download the **Lab work n°3** by clicking [here](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/notebooks/TP3-SB/LabWork3_SchrodingerBridge.pdf).
 
-All the important information is already presented in the notebook. The following is a simple summary of what you will learn to do during the lab work and what is expected of you for the final submission if you choose this lab.
+All the important informations are provided in the PDF file. In the following, we just summarize the main goals of this Lab Work.
 
 ## Summary of the Lab work n°3 
 
@@ -46,7 +46,6 @@ All the important information is already presented in the notebook. The followin
   
   </figcaption>
 </figure>
-### 
 
-### 
+
 
