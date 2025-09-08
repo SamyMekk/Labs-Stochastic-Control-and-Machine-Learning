@@ -6,7 +6,10 @@ All the important information is already presented in the notebook. The followin
 
 ## Summary of the Lab work n°2 
 
-$\bx$
+The lab work is divided into 2 parts :
+ 
+- The first part is devoted to the implementation of Policy gradient algorithms in the context of RL in continuous time with applications to some stochastic models used in finance.
+- The second part is devoted to the use of Q-learning algorithms for RL in continuous time.
 
 
 ### Goals
