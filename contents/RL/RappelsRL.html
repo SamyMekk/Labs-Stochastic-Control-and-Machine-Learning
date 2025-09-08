@@ -246,13 +246,7 @@ window.Quarto = {
   <li><a href="#tbd" id="toc-tbd" class="nav-link" data-scroll-target="#tbd"><span class="header-section-number">3.2.3</span> TBD</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">3.2.4</span> </a></li>
   </ul></li>
-  <li><a href="#reinforcement-learning-in-continous-time" id="toc-reinforcement-learning-in-continous-time" class="nav-link" data-scroll-target="#reinforcement-learning-in-continous-time"><span class="header-section-number">3.3</span> Reinforcement Learning in Continous Time</a>
-  <ul class="collapse">
-  <li><a href="#problem-formulation" id="toc-problem-formulation" class="nav-link" data-scroll-target="#problem-formulation"><span class="header-section-number">3.3.1</span> Problem Formulation</a></li>
-  <li><a href="#policy-gradient-methods-in-continous-time" id="toc-policy-gradient-methods-in-continous-time" class="nav-link" data-scroll-target="#policy-gradient-methods-in-continous-time"><span class="header-section-number">3.3.2</span> Policy gradient methods in continous time</a></li>
-  <li><a href="#q-learning-and-approximations-in-continous-time" id="toc-q-learning-and-approximations-in-continous-time" class="nav-link" data-scroll-target="#q-learning-and-approximations-in-continous-time"><span class="header-section-number">3.3.3</span> Q-learning and approximations in continous time</a></li>
-  </ul></li>
-  <li><a href="#to-go-further" id="toc-to-go-further" class="nav-link" data-scroll-target="#to-go-further"><span class="header-section-number">3.4</span> To Go Further</a></li>
+  <li><a href="#reinforcement-learning-in-continous-time" id="toc-reinforcement-learning-in-continous-time" class="nav-link" data-scroll-target="#reinforcement-learning-in-continous-time"><span class="header-section-number">3.3</span> Reinforcement Learning in Continous Time</a></li>
   </ul>
 </nav>
     </div>
@@ -416,11 +410,32 @@ J(\theta) = \mathbb{E}_{\pi^{\theta}} [ \sum_{t=0}^{T-1} f(X_t,\alpha_t) + g(X_T
 </section>
 <section id="reinforcement-learning-in-continous-time" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reinforcement-learning-in-continous-time"><span class="header-section-number">3.3</span> Reinforcement Learning in Continous Time</h2>
-<section id="problem-formulation" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="problem-formulation"><span class="header-section-number">3.3.1</span> Problem Formulation</h3>
-</section>
-<section id="policy-gradient-methods-in-continous-time" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="policy-gradient-methods-in-continous-time"><span class="header-section-number">3.3.2</span> Policy gradient methods in continous time</h3>
+<p>We present in the following the main concepts of Reinforcement learning in continuous time. ### Problem Formulation</p>
+<div id="def-RLContinuousTime" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3.6</strong></span> &nbsp;</p>
+<ul>
+<li><span class="math inline">\(\pi : [0,T] \times \R^d \to \mathcal{P}(A)\)</span> with density <span class="math inline">\(A \ni a \mapsto \pi(t,x,a)\)</span> with respect to a reference measure <span class="math inline">\(\nu\)</span> on <span class="math inline">\(P(A)\)</span> and we will by misuse of notation write</li>
+</ul>
+<p><span class="math display">\[ \pi(t,x,da) = \pi(t,x,a) d a .\]</span></p>
+<ul>
+<li>A control <span class="math inline">\(\alpha = (\alpha_t)_{t \in [0,T]}\)</span> is said to be sampled from <span class="math inline">\(\pi=(\pi_t)_{t \in [0,T]}\)</span> if at each time <span class="math inline">\(t \in [0,T]\)</span>, we have <span class="math inline">\(\alpha_t \sim \pi_t\)</span>. There is a technical issue here to ensure that we can in fact sample <span class="math inline">\(\alpha\)</span> from <span class="math inline">\(\pi\)</span> using an appropriate randomization of the controls through an uncountable number of i.i.d uniform random variables <span class="math inline">\((U_t)_{t \in [0,T]}\)</span>. This kind of randomization can be done under a suitable enlargment of the probability space <span class="math inline">\((\Omega,\mathcal{F},\mathbb{P})\)</span> by using the Fubini Extension to ensure the progressive measurability of <span class="math inline">\(\alpha\)</span> with respect to the filtration given by <span class="math display">\[\tilde{\mathbb{F}} = (\tilde{\mathcal{F}_t})_{t \in [0,T]}, \quad \tilde{\mathcal{F}_t} =  \sigma((W_s)_{s \leq t}) \vee  \sigma(U_s, s \leq t).\]</span></li>
+<li>State dynamics given by the Itô’s dynamics with <span class="math inline">\(\alpha \sim \pi\)</span></li>
+</ul>
+<p><span class="math display">\[ dX_t = b(X_t,a_t) dt  + \sigma(X_t,a_t) dW_t.\]</span></p>
+</div>
+<div id="def-valuefunctionRLTempsContinu" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3.7</strong></span> Given a policy <span class="math inline">\(\pi=(\pi_t)_{t \in [0,T]}\)</span>, we consider the performance value function defined as</p>
+<p><span class="math display">\[\begin{align}
+V_t^{\pi}(x) &amp;= \mathbb{E}_{\pi} \Big[ \int_{t}^{T} f(X_s,a_s) + \lambda \mathcal{E}(\pi(s,(X_s)) d s  + g(X_T) | X_t = x \Big] \notag \\
+&amp;=  \mathbb{E}_{\pi} \Big[ \int_{t}^{T} f(X_s,a_s) + \lambda \text{ log } \pi(s,X_s,a_s) d s  + g(X_T) | X_t = x \Big] \notag
+\end{align}
+\]</span> where <span class="math inline">\(\mathbb{E}_{\pi}\)</span> denotes the expectation when <span class="math inline">\(\alpha \sim \pi\)</span> and when we added the Shannon entropy $ : (A) $ with temperature <span class="math inline">\(\lambda &gt; 0\)</span></p>
+<p><span class="math display">\[\mathcal{E}(\pi) = - \int_{A} \text{ log } \pi(a) \pi(d a)= - \mathbb{E}_{a \sim \pi} [ \text{ log } \pi(a) ],\]</span></p>
+<p>for <span class="math inline">\(\pi \in \mathcal{P}(A)\)</span> with density given by <span class="math inline">\(a \mapsto \pi(a)\)</span> used for exploration in the context of RL.</p>
+<p>The optimal value function is given for <span class="math inline">\(\pi \in \Pi\)</span> where <span class="math inline">\(\Pi\)</span> denotes an admissible class of stochastic policies as</p>
+<p><span class="math display">\[V_t(x) = \underset{\pi \in \Pi}{\sup } V_t^{\pi}(x) .\]</span></p>
+<section id="policy-gradient-methods-in-continous-time" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="policy-gradient-methods-in-continous-time"><span class="header-section-number">3.3.1</span> Policy gradient methods in continous time</h3>
 <p>In the policy gradient method, we will consider parametric family of randomized policies admitting a density writh respect to <span class="math inline">\(\nu\)</span> on A given by :</p>
 <p><span class="math display">\[
 \pi_{\theta}(t,x,da) = p(t,x,a) \nu(da)
@@ -431,23 +446,22 @@ V^{\pi_{\theta}}(t,x) = \mathbb{E}_{\pi^{\theta}} [ \int_{t}^{T} f(X_s,\alpha_s)
 \]</span> and <span class="math display">\[
 J(\theta) = \mathbb{E}[V^{\pi_{\theta}}(0,X_0)]
 \]</span></p>
-<section id="policy-gradient-representation" class="level4" data-number="3.3.2.1">
-<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="policy-gradient-representation"><span class="header-section-number">3.3.2.1</span> Policy Gradient Representation</h4>
+<section id="policy-gradient-representation" class="level4" data-number="3.3.1.1">
+<h4 data-number="3.3.1.1" class="anchored" data-anchor-id="policy-gradient-representation"><span class="header-section-number">3.3.1.1</span> Policy Gradient Representation</h4>
 <p>Let’s dive into policy gradient representation now.</p>
 </section>
-<section id="actor-critic-algorithms" class="level4" data-number="3.3.2.2">
-<h4 data-number="3.3.2.2" class="anchored" data-anchor-id="actor-critic-algorithms"><span class="header-section-number">3.3.2.2</span> Actor critic algorithms</h4>
+<section id="actor-critic-algorithms" class="level4" data-number="3.3.1.2">
+<h4 data-number="3.3.1.2" class="anchored" data-anchor-id="actor-critic-algorithms"><span class="header-section-number">3.3.1.2</span> Actor critic algorithms</h4>
 <p>Let’s dive into Actor critic algorithms</p>
 </section>
 </section>
-<section id="q-learning-and-approximations-in-continous-time" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="q-learning-and-approximations-in-continous-time"><span class="header-section-number">3.3.3</span> Q-learning and approximations in continous time</h3>
-<section id="tbd-1" class="level4" data-number="3.3.3.1">
-<h4 data-number="3.3.3.1" class="anchored" data-anchor-id="tbd-1"><span class="header-section-number">3.3.3.1</span> TBD</h4>
+<section id="q-learning-and-approximations-in-continous-time" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="q-learning-and-approximations-in-continous-time"><span class="header-section-number">3.3.2</span> Q-learning and approximations in continous time</h3>
+<section id="tbd-1" class="level4" data-number="3.3.2.1">
+<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="tbd-1"><span class="header-section-number">3.3.2.1</span> TBD</h4>
 </section>
-<section id="tbd-2" class="level4" data-number="3.3.3.2">
-<h4 data-number="3.3.3.2" class="anchored" data-anchor-id="tbd-2"><span class="header-section-number">3.3.3.2</span> TBD</h4>
-</section>
+<section id="tbd-2" class="level4" data-number="3.3.2.2">
+<h4 data-number="3.3.2.2" class="anchored" data-anchor-id="tbd-2"><span class="header-section-number">3.3.2.2</span> TBD</h4>
 </section>
 </section>
 <section id="to-go-further" class="level2" data-number="3.4">
@@ -455,6 +469,8 @@ J(\theta) = \mathbb{E}[V^{\pi_{\theta}}(0,X_0)]
 <p>If you are interested in such topics, you can have a look at the following papers as this is a current research topic.</p>
 
 
+</section>
+</div>
 </section>
 
 </main> <!-- /main -->
