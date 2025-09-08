@@ -101,7 +101,10 @@ $$
 $$
 :::
 
-Preuve : TBD
+:::{#proof-PolicyGradient}
+
+
+:::
 
 
 ## MDP
@@ -174,6 +177,7 @@ $$ \pi(t,x,da) = \pi(t,x,a) d a .$$
 $$ dX_t = b(X_t,a_t) dt  + \sigma(X_t,a_t) dW_t.$$
 :::
 
+Now, we can define the performance evaluation / value function in the context of reinforcement learning in continuous time.
 
 :::{#def-valuefunctionRLTempsContinu}
 
