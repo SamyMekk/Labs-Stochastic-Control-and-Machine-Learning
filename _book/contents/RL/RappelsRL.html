@@ -373,7 +373,9 @@ J(\theta) = \mathbb{E}_{\pi^{\theta}} [ \sum_{t=0}^{T-1} f(X_t,\alpha_t) + g(X_T
 \end{align}
 \]</span></p>
 </div>
-<p>Preuve : TBD</p>
+<div id="proof-PolicyGradient">
+
+</div>
 </section>
 </section>
 <section id="mdp" class="level2" data-number="3.2">
@@ -429,6 +431,7 @@ J(\theta) = \mathbb{E}_{\pi^{\theta}} [ \sum_{t=0}^{T-1} f(X_t,\alpha_t) + g(X_T
 </ul>
 <p><span class="math display">\[ dX_t = b(X_t,a_t) dt  + \sigma(X_t,a_t) dW_t.\]</span></p>
 </div>
+<p>Now, we can define the performance evaluation / value function in the context of reinforcement learning in continuous time.</p>
 <div id="def-valuefunctionRLTempsContinu" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3.7</strong></span> Given a policy <span class="math inline">\(\pi=(\pi_t)_{t \in [0,T]}\)</span>, we consider the performance value function defined as</p>
 <p><span class="math display">\[\begin{align}
