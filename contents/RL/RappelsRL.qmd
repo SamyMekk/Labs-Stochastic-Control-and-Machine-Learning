@@ -158,8 +158,44 @@ Ce n'est pas le cas et cette hypothèse est très fréquemment réfutée : le pr
 
 ## Reinforcement Learning in Continous Time
 
-
+We present in the following the main concepts of Reinforcement learning in continuous time. 
 ### Problem Formulation
+
+
+:::{#def-RLContinuousTime}
+
+
+
+- $\pi : [0,T] \times \R^d \to \mathcal{P}(A)$ with density $A \ni a \mapsto \pi(t,x,a)$ with respect to a reference measure $\nu$ on $P(A)$ and we will by misuse of notation write
+
+$$ \pi(t,x,da) = \pi(t,x,a) d a .$$
+
+- A control $\alpha = (\alpha_t)_{t \in [0,T]}$ is said to be sampled from $\pi=(\pi_t)_{t \in [0,T]}$ if at each time $t \in [0,T]$, we have $\alpha_t \sim \pi_t$. There is a technical issue here to ensure  that we can in fact sample $\alpha$ from $\pi$ using an appropriate randomization of the controls through an uncountable number of i.i.d uniform random variables $(U_t)_{t \in [0,T]}$. This kind of randomization can be done under a suitable enlargment of the probability space $(\Omega,\mathcal{F},\mathbb{P})$ by using the Fubini Extension to ensure the progressive measurability of $\alpha$ with respect to the filtration given by $$\tilde{\mathbb{F}} = (\tilde{\mathcal{F}_t})_{t \in [0,T]}, \quad \tilde{\mathcal{F}_t} =  \sigma((W_s)_{s \leq t}) \vee  \sigma(U_s, s \leq t).$$
+- State dynamics given by the Itô's dynamics with $\alpha \sim \pi$
+
+$$ dX_t = b(X_t,a_t) dt  + \sigma(X_t,a_t) dW_t.$$
+:::
+
+
+:::{#def-valuefunctionRLTempsContinu}
+
+Given a policy $\pi=(\pi_t)_{t \in [0,T]}$, we consider the performance value function defined as 
+  
+$$\begin{align}
+V_t^{\pi}(x) &= \mathbb{E}_{\pi} \Big[ \int_{t}^{T} f(X_s,a_s) + \lambda \mathcal{E}(\pi(s,(X_s)) d s  + g(X_T) | X_t = x \Big] \notag \\
+&=  \mathbb{E}_{\pi} \Big[ \int_{t}^{T} f(X_s,a_s) + \lambda \text{ log } \pi(s,X_s,a_s) d s  + g(X_T) | X_t = x \Big] \notag 
+\end{align}
+$$
+where $\mathbb{E}_{\pi}$ denotes the expectation when $\alpha \sim \pi$ and when we added the Shannon entropy $\mathcal{E} : \mathcal{P}(A) \to \R $ with temperature $\lambda > 0$
+
+
+$$\mathcal{E}(\pi) = - \int_{A} \text{ log } \pi(a) \pi(d a)= - \mathbb{E}_{a \sim \pi} [ \text{ log } \pi(a) ],$$
+
+for $\pi \in \mathcal{P}(A)$ with density given by $a \mapsto \pi(a)$ used for exploration in the context of RL.
+
+The optimal value function is given for $\pi \in \Pi$ where $\Pi$ denotes an admissible class of stochastic policies  as
+
+$$V_t(x) = \underset{\pi \in \Pi}{\sup } V_t^{\pi}(x) .$$
 
 
 
