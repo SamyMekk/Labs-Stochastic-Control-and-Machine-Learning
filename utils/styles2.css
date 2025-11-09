@@ -1,0 +1,123 @@
+/* ===========================
+   VARIABLES DU THÈME SOMBRE
+   =========================== */
+:root {
+  --background-color: #1c1c1c;
+  --text-color: #e0e0e0;
+  --accent-color: #66d9ef;
+  --heading-color: #ffffff;
+  --link-hover-bg: #54008c;
+  --font-body: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Source Code Pro", monospace;
+}
+
+/* ===========================
+   BASE GÉNÉRALE
+   =========================== */
+html, body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: 1rem; /* Taille normale */
+}
+
+/* Conserve la structure Quarto */
+main.content {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+}
+
+/* ===========================
+   TITRES
+   =========================== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-weight: 600;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+}
+
+h1 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+}
+
+/* ===========================
+   LIENS
+   =========================== */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+  background-color: var(--link-hover-bg);
+  border-radius: 4px;
+  padding: 0 0.2em;
+}
+
+/* ===========================
+   CODES ET BLOCS
+   =========================== */
+code {
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  padding: 0.15em 0.3em;
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+}
+
+pre {
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  padding: 0.75em 1em;
+  overflow-x: auto;
+}
+
+/* ===========================
+   FIGURES ET IMAGES
+   =========================== */
+figure {
+  text-align: center;
+  margin: 2em auto;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #999;
+}
+
+/* ===========================
+   SIDEBAR QUARTO
+   =========================== */
+.sidebar {
+  background-color: #111;
+  color: var(--text-color);
+}
+
+.sidebar a {
+  color: var(--accent-color);
+}
+
+.sidebar a:hover {
+  color: #fff;
+}
+
+/* ===========================
+   RÉPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 0.95rem;
+  }
+}

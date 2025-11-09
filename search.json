@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Stochastic Control and Machine Learning : Lab sessions",
     "section": "",
-    "text": "Organisation\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor H.Pham within the Master’s program in Probability and Finance (M2-PF).\nThe practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.",
+    "text": "Welcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor H.Pham within the Master’s program in Probability and Finance (M2-PF).",
     "crumbs": [
       "Organisation"
     ]
@@ -13,8 +13,8 @@
     "objectID": "index.html#organisation",
     "href": "index.html#organisation",
     "title": "Stochastic Control and Machine Learning : Lab sessions",
-    "section": "",
-    "text": "Schedule: The practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu.\nMaterials: The practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\nLab work n°1 : About Deep PDE Solver for solving partial differential equations.\nLab work n°2 : About Reinforcement Learning for stochastic control problems.\nLab work n°3 : About Generative IA and Schrodinger Bridge for data generation.\n\nGrade : \\(\\ldots\\) To be confirmed",
+    "section": "Organisation",
+    "text": "Organisation\nThe practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.\n\nSchedule: The practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu.\nMaterials: The practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\nLab work n°1 : About Deep PDE Solver for solving partial differential equations.\nLab work n°2 : About Reinforcement Learning for stochastic control problems.\nLab work n°3 : About Generative IA and Schrodinger Bridge for data generation.\n\nGrade : \\(\\ldots\\) To be confirmed",
     "crumbs": [
       "Organisation"
     ]
