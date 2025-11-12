@@ -5,7 +5,7 @@ lang: en
 
 
 book:
-  title: "Practical sessions : Apprentissage automatique et contrôle stochastique"
+  title: "Lab sessions : Stochastic Control and Machine Learning"
   author: "Samy Mekkaoui"
   date: today
   repo-url: "https://github.com/SamyMekk/TP-Controle-Stochastique"
@@ -36,9 +36,7 @@ book:
 format:
   html:
     mainfont: "Computer Modern Serif"
-    theme:
-      light: simplex
-      dark: solar
+    theme: cosmo 
     css: utils/styles.css
     include-before-body:
       - utils/macros

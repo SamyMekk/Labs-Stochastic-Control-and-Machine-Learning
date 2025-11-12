@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
+    "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "",
     "text": "Organisation\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor Pham within the Master’s program in Probability and Finance (M2).\nThe practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#organisation",
     "href": "index.html#organisation",
-    "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
+    "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "",
     "text": "Schedule: The practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu.\nMaterials: The practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\nLab work n°1 : About Deep PDE Solver for solving partial differential equations.\nLab work n°2 : About Reinforcement Learning for stochastic control problems.\nLab work n°3 : About Generative IA and Schrodinger Bridge for data generation.\n\nGrade : \\(\\ldots\\) To be confirmed",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "index.html#use-this-website",
     "href": "index.html#use-this-website",
-    "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
+    "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "Use this website",
     "text": "Use this website\nThe site is structured into three sections that make up the course, each consisting of two chapters. The first chapter, titled Course reminders, presents the key theoretical concepts, followed by the second chapter, which contains the practical session instructions and a link to a Jupyter notebook file where you can write your code.\nNote that the Jupyter notebooks files are designed to be self-sufficient, allowing you to work independently during the practical sessions.\nFor your information, this site is generated using Quarto, and the notes are available on this GitHub page. If you spot any errors on the site, feel free to report them through pull requests.",
     "crumbs": [
@@ -32,7 +32,7 @@
   {
     "objectID": "index.html#instructors",
     "href": "index.html#instructors",
-    "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
+    "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "Instructors",
     "text": "Instructors\nThe Lab sessions for this course have been prepared by Samy and Alexandre. We want to thank Huyên Pham for beeing our advisor and for the confidence in letting us preparing the lab works of his course.\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nIf you have any questions, you can either e-mail Samy or Alexandre",
     "crumbs": [
@@ -42,7 +42,7 @@
   {
     "objectID": "index.html#acknowledgements",
     "href": "index.html#acknowledgements",
-    "title": "Practical sessions : Apprentissage automatique et contrôle stochastique",
+    "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "Acknowledgements",
     "text": "Acknowledgements\nWe would like to thank the following individuals and organizations without whose support this course would not be possible\n\nProfessor Huyên Pham for the support and valuable feedbacks during the creation of this lab.\nParticipants in the course of your interest in Machine Learning for stochastic control and its applications.",
     "crumbs": [
