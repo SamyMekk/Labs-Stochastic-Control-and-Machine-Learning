@@ -1,3 +1,4 @@
+
 project:
   type: book
 
@@ -22,7 +23,7 @@ book:
          - contents/RL/TP2.qmd
      - part: "Part n°3 : Generative AI for data generation"
        chapters:
-         - contents/GenerativeIA/RappelsGenAI.qmd
+         - contents/GenerativeIA/RappelsGenAI.qmd²
          - contents/GenerativeIA/TP3.qmd
  
      - references.qmd
