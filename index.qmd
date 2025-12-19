@@ -67,3 +67,7 @@ We would like to thank the following individuals and organizations without whose
 
 - Professor [Huyên Pham](https://sites.google.com/site/phamxuanhuyen/) for the support and valuable feedbacks during the creation of this lab.
 - **Participants** in the course of your interest in Machine Learning for stochastic control and its applications.
+
+## Slide Presentations  
+
+- [Intro slides](slides/intro.html)

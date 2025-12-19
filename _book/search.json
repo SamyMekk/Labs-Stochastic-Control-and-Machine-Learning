@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "",
-    "text": "Organisation\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor Pham within the Master’s program in Probability and Finance (M2).\nThe practical sessions will be divided into three 2/3-hour sessions, each illustrating the concepts covered during the lecture.",
+    "text": "Organisation\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor Pham within the Master’s program in Probability and Finance (M2).\nThe practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.",
     "crumbs": [
       "Organisation"
     ]
@@ -45,6 +45,16 @@
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "Acknowledgements",
     "text": "Acknowledgements\nWe would like to thank the following individuals and organizations without whose support this course would not be possible\n\nProfessor Huyên Pham for the support and valuable feedbacks during the creation of this lab.\nParticipants in the course of your interest in Machine Learning for stochastic control and its applications.",
+    "crumbs": [
+      "Organisation"
+    ]
+  },
+  {
+    "objectID": "index.html#slide-presentations",
+    "href": "index.html#slide-presentations",
+    "title": "Lab sessions : Stochastic Control and Machine Learning",
+    "section": "Slide Presentations",
+    "text": "Slide Presentations\n\nIntro slides",
     "crumbs": [
       "Organisation"
     ]
