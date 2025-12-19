@@ -34,7 +34,7 @@
     "href": "index.html#instructors",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "Instructors",
-    "text": "Instructors\nThe Lab sessions for this course have been prepared by Samy and Alexandre. We want to thank Huyên Pham for beeing our advisor and for the confidence in letting us preparing the lab works of his course.\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nIf you have any questions, you can either e-mail Samy or Alexandre",
+    "text": "Instructors\nThe Lab sessions for this course have been prepared by Samy and Alexandre. We want to thank Huyên Pham for beeing our advisor and for the confidence in letting us preparing the lab works of his course.\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nIf you have any questions, you can either e-mail Samy or Alexandre.",
     "crumbs": [
       "Organisation"
     ]
@@ -54,7 +54,7 @@
     "href": "index.html#slide-presentations",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "Slide Presentations",
-    "text": "Slide Presentations\n\nIntro slides",
+    "text": "Slide Presentations\nTest2 - Intro slides",
     "crumbs": [
       "Organisation"
     ]
