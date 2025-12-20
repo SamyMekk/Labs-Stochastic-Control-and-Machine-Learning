@@ -34,7 +34,7 @@
     "href": "index.html#instructors",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "Instructors",
-    "text": "Instructors\nThe Lab sessions for this course have been prepared by Samy and Alexandre. We want to thank Huyên Pham for beeing our advisor and for the confidence in letting us preparing the lab works of his course.\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nIf you have any questions, you can either e-mail Samy or Alexandre.",
+    "text": "Instructors\nThe Lab sessions for this course have been prepared by Samy and Alexandre. We want to thank Huyên Pham for beeing our advisor and for the confidence in letting us preparing the lab works of his course.\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nIf you have any questions, you can either e-mail Samy or Alexandre",
     "crumbs": [
       "Organisation"
     ]
@@ -45,16 +45,6 @@
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "Acknowledgements",
     "text": "Acknowledgements\nWe would like to thank the following individuals and organizations without whose support this course would not be possible\n\nProfessor Huyên Pham for the support and valuable feedbacks during the creation of this lab.\nParticipants in the course of your interest in Machine Learning for stochastic control and its applications.",
-    "crumbs": [
-      "Organisation"
-    ]
-  },
-  {
-    "objectID": "index.html#slides",
-    "href": "index.html#slides",
-    "title": "Lab sessions : Stochastic Control and Machine Learning",
-    "section": "Slides",
-    "text": "Slides\n\nIntro slides",
     "crumbs": [
       "Organisation"
     ]
