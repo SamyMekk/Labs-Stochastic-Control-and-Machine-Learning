@@ -1,0 +1,21 @@
+---
+title: "Intro — Stochastic Control & ML"
+format: revealjs
+---
+
+## Plan
+- Deep Learning for PDE
+- RL for Stochastic Control
+- Generative AI for data generation
+
+## Deep PDE
+Quelques points clés…
+
+## RL
+Quelques points clés…
+
+## GenAI
+Quelques points clés…
+
+## Fin
+Questions 🙂
