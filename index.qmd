@@ -56,7 +56,7 @@ The **prerequisites** for this course are the following:
 
 
 
-If you have any  **questions**, you can either e-mail [Samy](mailto:samy.mekkaoui@polytechnique.edu) or [Alexandre](mailto:alexandre.alouadi@polytechnique.edu)..
+If you have any  **questions**, you can either e-mail [Samy](mailto:samy.mekkaoui@polytechnique.edu) or [Alexandre](mailto:alexandre.alouadi@polytechnique.edu).
 
 
 
