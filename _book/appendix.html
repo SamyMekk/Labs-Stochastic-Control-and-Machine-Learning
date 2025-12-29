@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>References – Lab sessions : Stochastic Control and Machine Learning</title>
+<title>Appendix – Lab sessions : Stochastic Control and Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,8 +30,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./appendix.html" rel="next">
-<link href="./contents/GenerativeIA/TP3.html" rel="prev">
+<link href="./references.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./appendix.html">Appendix</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -206,13 +186,13 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./appendix.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendix.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Appendix</span></a>
   </div>
 </li>
@@ -226,9 +206,15 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#deep-learning-for-pde" id="toc-deep-learning-for-pde" class="nav-link active" data-scroll-target="#deep-learning-for-pde">Deep Learning for PDE :</a></li>
-  <li><a href="#reinforcement-learning-for-stochastic-control" id="toc-reinforcement-learning-for-stochastic-control" class="nav-link" data-scroll-target="#reinforcement-learning-for-stochastic-control">Reinforcement Learning for stochastic control :</a></li>
-  <li><a href="#generative-ia-for-data-generation" id="toc-generative-ia-for-data-generation" class="nav-link" data-scroll-target="#generative-ia-for-data-generation">Generative IA for data generation :</a></li>
+  <li><a href="#a-primer-on-neural-networks" id="toc-a-primer-on-neural-networks" class="nav-link active" data-scroll-target="#a-primer-on-neural-networks">A primer on neural networks</a>
+  <ul class="collapse">
+  <li><a href="#feedforward-neural-networks-ffnn" id="toc-feedforward-neural-networks-ffnn" class="nav-link" data-scroll-target="#feedforward-neural-networks-ffnn">Feedforward neural networks (FFNN)</a></li>
+  <li><a href="#other-neural-network-architectures" id="toc-other-neural-network-architectures" class="nav-link" data-scroll-target="#other-neural-network-architectures">Other neural network architectures</a></li>
+  </ul></li>
+  <li><a href="#an-overview-of-optimal-transport." id="toc-an-overview-of-optimal-transport." class="nav-link" data-scroll-target="#an-overview-of-optimal-transport.">An overview of optimal transport.</a>
+  <ul class="collapse">
+  <li><a href="#canonical-problem-of-ot." id="toc-canonical-problem-of-ot." class="nav-link" data-scroll-target="#canonical-problem-of-ot.">Canonical problem of OT.</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -256,7 +242,7 @@ $$
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title">Appendix</h1>
 </div>
 
 
@@ -273,33 +259,29 @@ $$
 </header>
 
 
-
-
-<section id="deep-learning-for-pde" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="deep-learning-for-pde">Deep Learning for PDE :</h3>
-<ul>
-<li><p>[1] J.Han, A.Jentzen, W.E : Solving high-dimensional partial differential equations using deep learning available <a href="https://arxiv.org/abs/1707.02568">here</a>.</p></li>
-<li><p>[2] M. Germain, H. Pham, X. Warin: Neural networks-based algorithms for stochastic control and PDEs in finance, Machine Learning and Data Sciences for Financial Markets: a guide to contemporary practices, Cambridge University Press, 2023, Editors: A. Capponi and C. A. Lehalle available <a href="https://arxiv.org/abs/2101.08068">here</a>.</p></li>
-</ul>
+<p>In this appendix, you may find some useful stuffs . A full <strong>PDF version</strong> is also available at this <a href="PDF-File/Appendix.pdf">link</a></p>
+<section id="a-primer-on-neural-networks" class="level2">
+<h2 class="anchored" data-anchor-id="a-primer-on-neural-networks">A primer on neural networks</h2>
+<section id="feedforward-neural-networks-ffnn" class="level3">
+<h3 class="anchored" data-anchor-id="feedforward-neural-networks-ffnn">Feedforward neural networks (FFNN)</h3>
 </section>
-<section id="reinforcement-learning-for-stochastic-control" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="reinforcement-learning-for-stochastic-control">Reinforcement Learning for stochastic control :</h3>
-<ul>
-<li><p>[3] Y. Jia and X.Y. Zhou: Policy gradient and Actor-Critic learning in continuous time and space: theory and algorithms, 2022, Journal of Machine Learning and Research. available <a href="https://arxiv.org/abs/2111.11232">here</a>.</p></li>
-<li><p>[4] Y. Jia and X.Y. Zhou: q-Learning in continuous time, 2023, Journal of Machine Learning and Research. available <a href="https://arxiv.org/abs/2207.00713">here</a>.</p></li>
-<li><p>[5] R. Sutton and A. Barto: Introduction to reinforcement learning, second edition 2016, available <a href="https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf">here</a>.</p></li>
-</ul>
+<section id="other-neural-network-architectures" class="level3">
+<h3 class="anchored" data-anchor-id="other-neural-network-architectures">Other neural network architectures</h3>
+<section id="recurrent-neural-networks-rnn" class="level4">
+<h4 class="anchored" data-anchor-id="recurrent-neural-networks-rnn">Recurrent neural networks (RNN)</h4>
 </section>
-<section id="generative-ia-for-data-generation" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="generative-ia-for-data-generation">Generative IA for data generation :</h3>
-<ul>
-<li><p>[6] M. Hamdouche, P. Henry-Labordère, H. Pham: Generative modeling for time series via Schrödinger bridge, 2023. available <a href="https://arxiv.org/pdf/2304.05093">here</a>.</p></li>
-<li><p>[7] A.Alouadi, B.Barreau, L.Carlier, H.Pham : Robust time series generation via Schrödinger Bridge: a comprehensive evaluation available <a href="https://arxiv.org/pdf/2503.02943">here</a>.</p></li>
-<li><p>[8] C. Remlinger, J. Mikael, R. Elie: Conditional loss and deep Euler scheme for time series generation, 2021, AAAI Conference on Artificial Intelligence. available <a href="https://arxiv.org/abs/2102.05313">here</a>.</p></li>
-<li><p>[9] M. Xia, X. Li, Q. Shen, T. Chou: Squared Wasserstein-2 distance for efficient reconstruction of stochastic differential equations, 2024, arXiv:2401.11354 available <a href="https://arxiv.org/abs/2401.11354">here</a>.</p></li>
-</ul>
+<section id="long-short-term-memory-lstm" class="level4">
+<h4 class="anchored" data-anchor-id="long-short-term-memory-lstm">Long short term memory (LSTM)</h4>
+</section>
+</section>
+</section>
+<section id="an-overview-of-optimal-transport." class="level2">
+<h2 class="anchored" data-anchor-id="an-overview-of-optimal-transport.">An overview of optimal transport.</h2>
+<section id="canonical-problem-of-ot." class="level3">
+<h3 class="anchored" data-anchor-id="canonical-problem-of-ot.">Canonical problem of OT.</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -725,14 +707,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./contents/GenerativeIA/TP3.html" class="pagination-link" aria-label="Lab work n°3">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab work n°3</span></span>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">References</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./appendix.html" class="pagination-link" aria-label="Appendix">
-        <span class="nav-page-text">Appendix</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

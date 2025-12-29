@@ -6,96 +6,71 @@ The following is a reminder of the main theoretical results about **Deep Learnin
 
 ### Stochastic control in a nutshell
 
+Let $(\Omega,\mathcal{F}, \mathbb{F}=(\mathcal{F}_t)_{t \geq 0}, \mathbb{P})$ be a probability space satisfying the usual assumptions and big enough to support a Brownian motion $W=(W_t)_{t \geq 0}$. We consider a control model where the state of the system is governed by a stochastic differential equation (SDE) valued in $\mathbb{R}^n$ given by 
+
+\begin{align}
+    \d X_s = b(X_s,\alpha_s) \d s + \sigma(X_s, \alpha_s ) \d W_s,
+\end{align}
+starting from $X_0= x \in \R^n$ and where we are given 2 measurable maps $(b,\sigma) : \ \mathbb{R}^n \times A \to \R^n ,\R^{d \times n}$ and the control $\alpha=(\alpha_t)_{0 \leq t \leq T}$ is a progressively measurable  (with respect to $\F)$ process valued in $A \subset \R^m$. We suppose that the measurable maps $(b,\sigma)$ satisfy a uniform Lipschitz condition on $A$: $\exists K \geq 0$, $\forall x,y \in \R^n$, $\forall a \in A$,
+\begin{align}
+    | b(x,a) - b(y,a) |+ |\sigma(x,a) - \sigma(y,a) | \leq  K |x-y|.
+\end{align}
 
 ### The dynamic programming approach : HJB equation
 
 
-## Some reminders on neural networks
+### The BSDE approach : Pontryagin's formulation
 
-### Feedforward neural networks (FFNN)
-
-
-### Other neural network architectures
-
-
-#### Recurrent neural networks (RNN)
-
-#### Long short term memory (LSTM)
-
-
-
-## Neural networks algorithms for PDE
-
+## Neural networks based algorithms for solving PDEs
 
 ### Deep Galerkin Method
 
-#### Algorithm Description
 
-#### 
+::: {#alg-description .algorithm}
+**Algorithm Description**
+
+Let \( \pi_\theta \) be a policy such that …
+1. Initialize parameters
+2. Iterate until convergence
+3. Return the value function
+:::
 
 ### Deep BSDE Solver
 
-#### A quick overview on BSDE
+::: {#alg-description .algorithm}
+**Algorithm: Deep BSDE Solver**
 
-#### Algorithm Description
+Let \( \pi_\theta \) be a policy such that …
+1. Initialize parameters
+2. Iterate until convergence
+3. Return the value function
+:::
 
 
 ### Deep BDP Solver
 
+::: {#alg-description .algorithm}
+**Algorithm: Value Iteration**
 
-#### Algorithm Description
+**Input:** discount factor $\gamma$ , tolerance $\varepsilon$  
 
+**Output:** value function $V^{\star}$
 
+1. Initialize \( V_0(s) = 0 \) for all states \( s \)
+   
+2. Repeat:
+   1. For each state \( s \):
+      \[
+      V_{k+1}(s) \leftarrow \max_a \left( r(s,a) + \gamma \sum_{s'} P(s'|s,a) V_k(s') \right)
+      \]
 
-## An extension : Deep Learning for MDP
-
-
-
-
-
-
-
-
-
-
-```{python}
-
-#| output-location: column-fragment
-
-
-
-#  Import des Librairies
-
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
-
-# Test
-print(np.arange(5))
+3. Until \( \| V_{k+1} - V_k \| < \varepsilon \)
+   
+4. Return \( V^\* \)
+:::
 
 
-def f(x) :
-    return x**2
 
-L=[i for i in range(-5,6)]
-
-plt.scatter(L,[f(l) for l in L])
-plt.xlabel("Test")
-plt.ylabel("Test2")
-plt.title("Test Scatter Plot")
-plt.grid()
-
-# Exemple simple de DataFrame
-data = {
-    'Nom': ['Alice', 'Bob', 'Charlie', 'David'],
-    'Âge': [24, 30, 18, 22],
-    'Ville': ['Paris', 'Lyon', 'Marseille', 'Toulouse'],
-    'Score': [85.5, 90.0, 78.0, 88.5]
-}
-
-df = pd.DataFrame(data)
-df
-```
 
 :::{#def-quarto}
 

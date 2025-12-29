@@ -37,6 +37,11 @@ body {
     margin-top: 1em;
   }
 
+  .algorithm {
+  border-left: 4px solid #3b82f6;
+  padding: 1em;
+  background-color: #f8fafc;
+}
   
 @media (max-width: 600px) {
     .content {

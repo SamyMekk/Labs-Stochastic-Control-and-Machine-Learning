@@ -27,6 +27,7 @@ book:
          - contents/GenerativeIA/TP3.qmd
  
      - references.qmd
+     - appendix.qmd
 
     
      

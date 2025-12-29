@@ -1,0 +1,18 @@
+# Appendix {.unnumbered}
+
+In this appendix, you may find some useful stuffs . A full **PDF version** is also available at this [link](PDF-File/Appendix.pdf)
+
+## A primer on neural networks
+
+### Feedforward neural networks (FFNN)
+
+### Other neural network architectures
+
+#### Recurrent neural networks (RNN)
+
+#### Long short term memory (LSTM)
+
+
+## An overview of optimal transport.
+
+### Canonical problem of OT.
