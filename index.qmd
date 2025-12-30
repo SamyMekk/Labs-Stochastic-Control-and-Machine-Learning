@@ -13,7 +13,7 @@ Welcome to the webpage of the practical sessions of the course **Apprentissage a
 </figure>
 
 
-Test Samy
+Double Test
     
 
 ## Global informations  {.unnumbered}
