@@ -11,7 +11,7 @@ The following is a reminder of the main theoretical results about **Deep Learnin
 
 <span class="para-title">Mathematical setup</span>
 
-<span class="para-subtitle">Dynamics of the controlled state process</span>
+- <span class="para-subtitle">Dynamics of the controlled state process</span>
 
 Let $(\Omega,\mathcal{F}, \mathbb{F}=(\mathcal{F}_t)_{t \geq 0}, \mathbb{P})$ be a probability space satisfying the usual assumptions and big enough to support a Brownian motion $W=(W_t)_{t \geq 0}$. We consider a control model where the state of the system is governed by a stochastic differential equation (SDE) valued in $\mathbb{R}^n$ given by 
 
@@ -24,7 +24,7 @@ starting from $X_0= x \in \mathbb{R}^n$ and where we are given 2 measurable maps
 \end{align}
 In the sequel, for $0 \leq t \leq T$, we denote by $\mathcal{T}_{t,T}$ the set of stopping times valued in $[t,T]$. Fix $T > 0$ and we denote by $\mathcal{A}$ the set of progressively mesurable with respect to $\mathbb{F}$ control processes $\alpha = (\alpha_t)_{0 \leq t \leq T}$ such that
 \begin{align}
-\mathbb{E} \Big[ \int_{0}^{T} | b(0,\alpha_t)|^2 + |\sigma(0,\alpha_t)|^2 dt \Big] < + \infty$.
+\mathbb{E} \Big[ \int_{0}^{T} | b(0,\alpha_t)|^2 + |\sigma(0,\alpha_t)|^2 dt \Big] < + \infty.
 \end{align}
 It is known that under the previous conditions, existence and unicity of a strong solution to the SDE (1) for any initial condtion $(t,x) \in [0,T] \in \mathbb{R}^n$. Starting from $x$ at $s=t$, we then denote by $\big \lbrace X_s^{t,x}, t \leq s \leq T \big \rbrace$ the solution to $(1)$ which admits a modification with continuous paths up to indistinguability. We also recall that under the standard conditions on $(b,\sigma)$ and on the integrability condition on $\alpha$, we have
 \begin{align}
@@ -32,7 +32,7 @@ It is known that under the previous conditions, existence and unicity of a stron
 \end{align}
 
 
-<span class="para-subtitle">Functional objective</span>
+- <span class="para-subtitle">Functional objective</span>
 
 Let $f :[0,T] \times \mathbb{R}^n \times A \to \mathbb{R}$ and $g : \mathbb{R}^n \to \mathbb{R}$ two measurable functions. We supose that
 \begin{enumerate}

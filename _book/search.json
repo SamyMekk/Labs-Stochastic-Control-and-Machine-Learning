@@ -10,13 +10,13 @@
     ]
   },
   {
-    "objectID": "index.html#organisation",
-    "href": "index.html#organisation",
+    "objectID": "index.html#global-informations",
+    "href": "index.html#global-informations",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "",
-    "text": "Schedule :\nThe practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu and will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.\nMaterials :\nThe practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\n Lab work n°1 : \n\nAbout Deep PDE Solver for solving partial differential equations.\n\n Lab work n°2 : \n\nAbout Reinforcement Learning for stochastic control problems.\n\n Lab work n°3 : \n\nAbout Generative IA and Schrodinger Bridge for data generation.\nGrade :\nTo be confirmed",
+    "text": "Prerequisites :\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nSchedule :\nThe practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu and will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.\nMaterials :\nThe practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\n Lab work n°1 : \n\nAbout Deep PDE Solver for solving partial differential equations.\n\n Lab work n°2 : \n\nAbout Reinforcement Learning for stochastic control problems.\n\n Lab work n°3 : \n\nAbout Generative IA and Schrodinger Bridge for data generation.\nGrade :\nTo be confirmed\nQuestions ? :\nIf you have any questions, you can either e-mail Samy or Alexandre who prepared the lab sessions for this course.",
     "crumbs": [
-      "Organisation"
+      "Global informations"
     ]
   },
   {
@@ -27,16 +27,6 @@
     "text": "Use this website\n\nStructure of the website :\nThe site is structured into three sections that make up the course, each consisting of two chapters.\n\n Course reminders: \n\nThe first chapter, titled Course reminders, presents the key theoretical concepts.\n\n Practical session: \n\nThe second chapter, titled Lab work contains the practical session instructions and a link to a Jupyter notebook file where you can write your code. te that the Jupyter notebooks files are designed to be self-sufficient, allowing you to work independently during the practical sessions.\n\n References: \n\nThe site contains a section References\n\n Appendix: \n\nThe site contains also a section Appendix where we go more in depth about some topics discussed during the course.\nFor your information, this site is generated using Quarto through GitHub Pages (see this GitHub page). If you spot any errors on the site, feel free to report them through pull requests.",
     "crumbs": [
       "Global informations"
-    ]
-  },
-  {
-    "objectID": "index.html#instructors",
-    "href": "index.html#instructors",
-    "title": "Lab sessions : Stochastic Control and Machine Learning",
-    "section": "Instructors",
-    "text": "Instructors\nThe Lab sessions for this course have been prepared by Samy and Alexandre. We want to thank Huyên Pham for beeing our advisor and for the confidence in letting us preparing the lab works of his course.\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nIf you have any questions, you can either e-mail Samy or Alexandre",
-    "crumbs": [
-      "Organisation"
     ]
   },
   {
@@ -307,26 +297,6 @@
     "text": "An overview of optimal transport.\n\nCanonical problem of OT.",
     "crumbs": [
       "Appendix"
-    ]
-  },
-  {
-    "objectID": "index.html#global-informations-about-the-course",
-    "href": "index.html#global-informations-about-the-course",
-    "title": "Lab sessions : Stochastic Control and Machine Learning",
-    "section": "",
-    "text": "Prerequisites :\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nSchedule :\nThe practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu and will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.\nMaterials :\nThe practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\n Lab work n°1 : \n\nAbout Deep PDE Solver for solving partial differential equations.\n\n Lab work n°2 : \n\nAbout Reinforcement Learning for stochastic control problems.\n\n Lab work n°3 : \n\nAbout Generative IA and Schrodinger Bridge for data generation.\nGrade :\nTo be confirmed\nQuestions ? :\nIf you have any questions, you can either e-mail Samy or Alexandre who prepared the lab sessions for this course.",
-    "crumbs": [
-      "Global informations about the course"
-    ]
-  },
-  {
-    "objectID": "index.html#global-informations",
-    "href": "index.html#global-informations",
-    "title": "Lab sessions : Stochastic Control and Machine Learning",
-    "section": "",
-    "text": "Prerequisites :\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nSchedule :\nThe practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu and will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.\nMaterials :\nThe practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\n Lab work n°1 : \n\nAbout Deep PDE Solver for solving partial differential equations.\n\n Lab work n°2 : \n\nAbout Reinforcement Learning for stochastic control problems.\n\n Lab work n°3 : \n\nAbout Generative IA and Schrodinger Bridge for data generation.\nGrade :\nTo be confirmed\nQuestions ? :\nIf you have any questions, you can either e-mail Samy or Alexandre who prepared the lab sessions for this course.",
-    "crumbs": [
-      "Global informations"
     ]
   }
 ]
