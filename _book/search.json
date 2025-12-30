@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "",
-    "text": "Organisation\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor Pham within the Master’s program in Probability and Finance (M2).\nThe practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.",
+    "text": "Global informations\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor Pham within the Master’s program in Probability and Finance (M2).",
     "crumbs": [
-      "Organisation"
+      "Global informations"
     ]
   },
   {
@@ -14,7 +14,7 @@
     "href": "index.html#organisation",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "",
-    "text": "Schedule: The practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu.\nMaterials: The practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\nLab work n°1 : About Deep PDE Solver for solving partial differential equations.\nLab work n°2 : About Reinforcement Learning for stochastic control problems.\nLab work n°3 : About Generative IA and Schrodinger Bridge for data generation.\n\nGrade : \\(\\ldots\\) To be confirmed",
+    "text": "Schedule :\nThe practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu and will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.\nMaterials :\nThe practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\n Lab work n°1 : \n\nAbout Deep PDE Solver for solving partial differential equations.\n\n Lab work n°2 : \n\nAbout Reinforcement Learning for stochastic control problems.\n\n Lab work n°3 : \n\nAbout Generative IA and Schrodinger Bridge for data generation.\nGrade :\nTo be confirmed",
     "crumbs": [
       "Organisation"
     ]
@@ -24,9 +24,9 @@
     "href": "index.html#use-this-website",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "Use this website",
-    "text": "Use this website\nThe site is structured into three sections that make up the course, each consisting of two chapters. The first chapter, titled Course reminders, presents the key theoretical concepts, followed by the second chapter, which contains the practical session instructions and a link to a Jupyter notebook file where you can write your code.\nNote that the Jupyter notebooks files are designed to be self-sufficient, allowing you to work independently during the practical sessions.\nFor your information, this site is generated using Quarto, and the notes are available on this GitHub page. If you spot any errors on the site, feel free to report them through pull requests.",
+    "text": "Use this website\n\nStructure of the website :\nThe site is structured into three sections that make up the course, each consisting of two chapters.\n\n Course reminders: \n\nThe first chapter, titled Course reminders, presents the key theoretical concepts.\n\n Practical session: \n\nThe second chapter, titled Lab work contains the practical session instructions and a link to a Jupyter notebook file where you can write your code. te that the Jupyter notebooks files are designed to be self-sufficient, allowing you to work independently during the practical sessions.\n\n References: \n\nThe site contains a section References\n\n Appendix: \n\nThe site contains also a section Appendix where we go more in depth about some topics discussed during the course.\nFor your information, this site is generated using Quarto through GitHub Pages (see this GitHub page). If you spot any errors on the site, feel free to report them through pull requests.",
     "crumbs": [
-      "Organisation"
+      "Global informations"
     ]
   },
   {
@@ -44,19 +44,9 @@
     "href": "index.html#acknowledgements",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "Acknowledgements",
-    "text": "Acknowledgements\nWe would like to thank the following individuals and organizations without whose support this course would not be possible\n\nProfessor Huyên Pham for the support and valuable feedbacks during the creation of this lab.\nParticipants in the course of your interest in Machine Learning for stochastic control and its applications.",
+    "text": "Acknowledgements\n\nWe would like to thank the following individuals and organizations without whose support this course would not be possible\n\nProfessor Huyên Pham for the support and valuable feedbacks during the creation of this lab.\nParticipants in the course of your interest in Machine Learning for stochastic control and its applications.",
     "crumbs": [
-      "Organisation"
-    ]
-  },
-  {
-    "objectID": "index.html#slides",
-    "href": "index.html#slides",
-    "title": "Lab sessions : Stochastic Control and Machine Learning",
-    "section": "Slides",
-    "text": "Slides\n\nIntro slides",
-    "crumbs": [
-      "Organisation"
+      "Global informations"
     ]
   },
   {
@@ -82,33 +72,11 @@
     ]
   },
   {
-    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#some-reminders-on-neural-networks",
-    "href": "contents/DeepPDE/RappelsDeepPDE.html#some-reminders-on-neural-networks",
+    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#neural-networks-based-algorithms-for-solving-pdes",
+    "href": "contents/DeepPDE/RappelsDeepPDE.html#neural-networks-based-algorithms-for-solving-pdes",
     "title": "1  Course reminders",
-    "section": "1.2 Some reminders on neural networks",
-    "text": "1.2 Some reminders on neural networks",
-    "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#neural-networks-algorithms-for-pde",
-    "href": "contents/DeepPDE/RappelsDeepPDE.html#neural-networks-algorithms-for-pde",
-    "title": "1  Course reminders",
-    "section": "1.3 Neural networks algorithms for PDE",
-    "text": "1.3 Neural networks algorithms for PDE\n\n1.3.1 Deep Galerkin Method\n\n1.3.1.1 Algorithm Description\n\n\n1.3.1.2 \n\n\n\n1.3.2 Deep BSDE Solver\n\n1.3.2.1 A quick overview on BSDE\n\n\n1.3.2.2 Algorithm Description\n\n\n\n1.3.3 Deep BDP Solver\n\n1.3.3.1 Algorithm Description",
-    "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
-    ]
-  },
-  {
-    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#an-extension-deep-learning-for-mdp",
-    "href": "contents/DeepPDE/RappelsDeepPDE.html#an-extension-deep-learning-for-mdp",
-    "title": "1  Course reminders",
-    "section": "1.3 An extension : Deep Learning for MDP",
-    "text": "1.3 An extension : Deep Learning for MDP\n\n#  Import des Librairies\n\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\n# Test\nprint(np.arange(5))\n\n\ndef f(x) :\n    return x**2\n\nL=[i for i in range(-5,6)]\n\nplt.scatter(L,[f(l) for l in L])\nplt.xlabel(\"Test\")\nplt.ylabel(\"Test2\")\nplt.title(\"Test Scatter Plot\")\nplt.grid()\n\n# Exemple simple de DataFrame\ndata = {\n    'Nom': ['Alice', 'Bob', 'Charlie', 'David'],\n    'Âge': [24, 30, 18, 22],\n    'Ville': ['Paris', 'Lyon', 'Marseille', 'Toulouse'],\n    'Score': [85.5, 90.0, 78.0, 88.5]\n}\n\ndf = pd.DataFrame(data)\ndf\n\n[0 1 2 3 4]\n\n\n\n\n\n\n\n\n\nNom\nÂge\nVille\nScore\n\n\n\n\n0\nAlice\n24\nParis\n85.5\n\n\n1\nBob\n30\nLyon\n90.0\n\n\n2\nCharlie\n18\nMarseille\n78.0\n\n\n3\nDavid\n22\nToulouse\n88.5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDefinition 1.1 A noter qu’il faut être à l’aise sur l’utilisation de Quarto",
+    "section": "1.2 Neural networks based algorithms for solving PDEs",
+    "text": "1.2 Neural networks based algorithms for solving PDEs\nNow, that we have shown how stochastic control problems naturally lead to PDEs, we will rely on some recent advances which appear to numerically solve these PDE, i.e to characterize the function and/or its derivative solution the PDE. Formally, we are going to tackle the following kind of problems.\n\nPDE formulation\nLet \\(v\\) a function defined on \\([0,T] \\times \\mathbb{R}^n\\) supposed to satisfy the following PDE\n\\[\\begin{cases}\n\\partial_t v(t,x) + \\mathcal{H}[v](t,x) = 0, \\quad (t,x) \\in [0,T) \\times \\mathbb{R}^n, \\quad (1) \\\\\nv(T,x) = g(x).\n\\end{cases}\\]\nwhere the operator \\(\\mathcal{H}\\) is defined over the space of functions over \\([0,T] \\times \\mathbb{R}^n\\) potentially with some regularity \\([0,T] \\times \\mathbb{R}^n\\) and can be rewritten in the case we are going to cover as \\[\\begin{align}\n\\mathcal{H}[v](t,x) = H \\big(t,x,v(t,x), D_x v(t,x), D^2_x v(t,x) \\big). \\quad (2)\n\\end{align}\\] The complexity of such systems comes notably from\n\nThe non linearity of \\(H\\) with respect to \\(v\\) and its derivatives.\nThe potentially high dimension of the underlying space (\\(n \\approx 100\\)).\n\nExample of PDEs.\n\nLinear PDE : \n\n\\[\\begin{align}\n\\begin{cases}\n  \\partial_t v(t,x) - r(x) v(t,x) + b(x) \\cdot D_x v + \\frac{1}{2} (\\sigma \\sigma^{\\top})(t,x) : D^2_x v(t,x) + f(x)= 0, \\quad (t,x) \\in [0,T) \\times \\mathbb{R}^n \\\\\n  v(T,x) = g(x), \\quad x \\in \\mathbb{R}^n\n\\end{cases}\n\\end{align}\\] In this case, the operator \\(\\mathcal{H}\\) is linear with respect to its arguments with the map \\(H\\) (recall \\((1)\\)) given by \\[\\begin{align}\nH(t,x,y,z,\\gamma):= -r(x) y(t,x) + b(x) \\cdot z(t,x) + \\frac{1}{2} (\\sigma \\sigma^{\\top})(t,x) : \\gamma(t,x)\n\\end{align}\\] This is typically the type of \\(PDE\\) which arises in option pricing in B-S model by taking \\(b=r\\), \\(\\sigma\\) the volatility, \\(f=0\\) and \\(g\\) the option payoff.\n\nQuasilinear PDE :  \\[\\begin{align}\n\\begin{cases}\n\\partial_t v + \\mathcal{H}[v] + f(x,v)= 0, \\quad (t,x) \\in [0,T) \\times \\mathbb{R}^n, \\quad (2)\\\\\nv(T,x) = g(x), \\quad x \\in \\mathbb{R}^n\n\\end{cases}\n\\end{align}\\] For instance, when \\(f(x,y) = r \\text{max}(y,0) - ry\\), this is the type of PDE which arises from pricing of CVA (Credit Valuation adjustment) where \\(r\\) denotes the intensity of default of a counterparty.\n\nNumerical challenges.\nHowever, solving these PDEs have always been highly challenging due to the curse of dimensionnality due to the exponentially scaling when discretizing the action mesh size \\(\\mathbb{R}^n\\) (grid based methods) but also from the point of view of Monte-Carlo methods which are limited to low dimensional setting \\(n \\approx 6\\) and where the solution is essentially computed at a fixed point \\((t,x) \\in [0,T] \\times \\mathbb{R}^n\\). In order to solve \\((1)\\) efficiently, we will rely on neural-network based algorithms which can provide a functional representation of the map \\((t,x) \\in [0,T] \\times \\mathbb{R}^n\\) at any \\((t,x)\\) and for \\(n\\) beeing large.\n\n\n1.2.1 Deep Galerkin Algorithm\n\n1.2.1.1 Mathematical description\n\nMathematical description of the method\n\n\n\n1.2.1.2 Algorithm description\n\nAlgorithm : Deep Galerkin Method\nLet ( _) be a policy such that … 1. Initialize parameters 2. Iterate until convergence 3. Return the value function\n\n\n\n\n1.2.2 Deep BSDE Solver\n\n1.2.2.1 Mathematical description\n\nMathematical description of the method\n\n\n\n1.2.2.2 Algorithm description\n\nAlgorithm: Deep BSDE Solver\nLet ( _) be a policy such that … 1. Initialize parameters 2. Iterate until convergence 3. Return the value function\n\n\n\n\n1.2.3 Deep BDP Solver\n\nMathematical description of the method\n\n\nAlgorithm: Deep BDP Solver\nInput: discount factor \\(\\gamma\\) , tolerance \\(\\varepsilon\\)\nOutput: value function \\(V^{\\star}\\)\n\nInitialize ( V_0(s) = 0 ) for all states ( s )\nRepeat:\n\nFor each state ( s ): [ V_{k+1}(s) a ( r(s,a) + {s’} P(s’|s,a) V_k(s’) ) ]\n\nUntil ( | V_{k+1} - V_k | &lt; )\nReturn ( V^* )\n\n\n\nDefinition 1.1 A noter qu’il faut être à l’aise sur l’utilisation de Quarto",
     "crumbs": [
       "Part n°1 : Deep Learning for PDE",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
@@ -186,6 +154,17 @@
     "title": "3  Course reminders",
     "section": "3.3 Reinforcement Learning in Continous Time",
     "text": "3.3 Reinforcement Learning in Continous Time\nWe present in the following the main concepts of Reinforcement learning in continuous time.\n\n3.3.1 Problem Formulation\n\nDefinition 3.6  \n\n\\(\\pi : [0,T] \\times \\mathbb{R}^d \\to \\mathcal{P}(A)\\) with density \\(A \\ni a \\mapsto \\pi(t,x,a)\\) with respect to a reference measure \\(\\nu\\) on \\(P(A)\\) and we will by misuse of notation write\n\n\\[ \\pi(t,x,da) = \\pi(t,x,a) d a .\\]\n\nA control \\(\\alpha = (\\alpha_t)_{t \\in [0,T]}\\) is said to be sampled from \\(\\pi=(\\pi_t)_{t \\in [0,T]}\\) if at each time \\(t \\in [0,T]\\), we have \\(\\alpha_t \\sim \\pi_t\\). There is a technical issue here to ensure that we can in fact sample \\(\\alpha\\) from \\(\\pi\\) using an appropriate randomization of the controls through an uncountable number of i.i.d uniform random variables \\((U_t)_{t \\in [0,T]}\\). This kind of randomization can be done under a suitable enlargment of the probability space \\((\\Omega,\\mathcal{F},\\mathbb{P})\\) by using the Fubini Extension to ensure the progressive measurability of \\(\\alpha\\) with respect to the filtration given by \\[\\tilde{\\mathbb{F}} = (\\tilde{\\mathcal{F}_t})_{t \\in [0,T]}, \\quad \\tilde{\\mathcal{F}_t} =  \\sigma((W_s)_{s \\leq t}) \\vee  \\sigma(U_s, s \\leq t).\\]\nState dynamics given by the Itô’s dynamics with \\(\\alpha \\sim \\pi\\)\n\n\\[ dX_t = b(X_t,a_t) dt  + \\sigma(X_t,a_t) dW_t.\\]\n\nNow, we can define the performance evaluation / value function in the context of reinforcement learning in continuous time.\n\nDefinition 3.7 Given a policy \\(\\pi=(\\pi_t)_{t \\in [0,T]}\\), we consider the performance value function defined as\n\\[\\begin{align}\nV_t^{\\pi}(x) &= \\mathbb{E}_{\\pi} \\Big[ \\int_{t}^{T} f(X_s,a_s) + \\lambda \\mathcal{E}(\\pi(s,(X_s)) d s  + g(X_T) | X_t = x \\Big] \\notag \\\\\n&=  \\mathbb{E}_{\\pi} \\Big[ \\int_{t}^{T} f(X_s,a_s) + \\lambda \\text{ log } \\pi(s,X_s,a_s) d s  + g(X_T) | X_t = x \\Big] \\notag\n\\end{align}\n\\] where \\(\\mathbb{E}_{\\pi}\\) denotes the expectation when \\(\\alpha \\sim \\pi\\) and when we added the Shannon entropy $ : (A) $ with temperature \\(\\lambda &gt; 0\\)\n\\[\\mathcal{E}(\\pi) = - \\int_{A} \\text{ log } \\pi(a) \\pi(d a)= - \\mathbb{E}_{a \\sim \\pi} [ \\text{ log } \\pi(a) ],\\]\nfor \\(\\pi \\in \\mathcal{P}(A)\\) with density given by \\(a \\mapsto \\pi(a)\\) used for exploration in the context of RL.\nThe optimal value function is given for \\(\\pi \\in \\Pi\\) where \\(\\Pi\\) denotes an admissible class of stochastic policies as\n\\[V_t(x) = \\underset{\\pi \\in \\Pi}{\\sup } V_t^{\\pi}(x) .\\]\n\n\n\n3.3.2 Policy gradient methods in continous time\nIn the policy gradient method, we will consider parametric family of randomized policies admitting a density writh respect to \\(\\nu\\) on A given by :\n\\[\n\\pi_{\\theta}(t,x,da) = p(t,x,a) \\nu(da)\n\\] Therefore, the perforamnce value function which is also called critic with entropy regularizer is given by :\n\\[\nV^{\\pi_{\\theta}}(t,x) = \\mathbb{E}_{\\pi_{\\theta}} [ \\int_{t}^{T} f(X_s,\\alpha_s) - \\lambda \\text{ log } (\\pi_{\\theta})(s,X_s,\\alpha_s) + g(X_T) | X_t= x]\n\\] and \\[\nJ(\\theta) = \\mathbb{E}[V^{\\pi_{\\theta}}(0,X_0)]\n\\]\n\n3.3.2.1 Policy Gradient Representation\nLet’s dive into policy gradient representation now.\n\n\n3.3.2.2 Actor critic algorithms\nLet’s dive into Actor critic algorithms\n\n\n\n3.3.3 Q-learning and approximations in continous time\n\n3.3.3.1 TBD\n\n\n3.3.3.2 TBD",
+    "crumbs": [
+      "Part n°2  : Reinforcement Learning for stochastic control problems",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Course reminders</span>"
+    ]
+  },
+  {
+    "objectID": "contents/RL/RappelsRL.html#rl-algorithms-to-solve-stochastic-control-problems",
+    "href": "contents/RL/RappelsRL.html#rl-algorithms-to-solve-stochastic-control-problems",
+    "title": "3  Course reminders",
+    "section": "3.4 RL algorithms to solve stochastic control problems",
+    "text": "3.4 RL algorithms to solve stochastic control problems",
     "crumbs": [
       "Part n°2  : Reinforcement Learning for stochastic control problems",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Course reminders</span>"
@@ -331,25 +310,23 @@
     ]
   },
   {
-    "objectID": "contents/DeepPDE/RappelsDeepPDE.html#neural-networks-based-algorithms-for-solving-pdes",
-    "href": "contents/DeepPDE/RappelsDeepPDE.html#neural-networks-based-algorithms-for-solving-pdes",
-    "title": "1  Course reminders",
-    "section": "1.2 Neural networks based algorithms for solving PDEs",
-    "text": "1.2 Neural networks based algorithms for solving PDEs\nNow, that we have shown how stochastic control problems naturally lead to PDEs, we will rely on some recent advances which appear to numerically solve these PDE, i.e to characterize the function and/or its derivative solution the PDE. Formally, we are going to tackle the following kind of problems.\n\nPDE formulaiton\nLet \\(v\\) a function defined on \\([0,T] \\times \\mathbb{R}^n\\) supposed to satisfy the following PDE\n\\[\\begin{cases}\n\\partial_t v(t,x) + \\mathcal{H}[v](t,x) = 0, \\quad (t,x) \\in [0,T) \\times \\mathbb{R}^n, \\quad (1) \\\\\nv(T,x) = g(x).\n\\end{cases}\\]\nwhere the operator \\(\\mathcal{H}\\) is defined over the space of functions over \\([0,T] \\times \\mathbb{R}^n\\) potentially with some regularity \\([0,T] \\times \\mathbb{R}^n\\) and can be rewritten in the case we are going to cover as \\[\\begin{align}\n\\mathcal{H}[v](t,x) = H \\big(t,x,v(t,x), D_x v(t,x), D^2_x v(t,x) \\big). \\quad (2)\n\\end{align}\\] The complexity of such systems comes notably from\n\nThe non linearity of \\(H\\) with respect to \\(v\\) and its derivatives.\nThe potentially high dimension of the underlying space (\\(n \\approx 100\\)).\n\nExample of PDEs.\n\nLinear PDE : \n\n\\[\\begin{align}\n\\begin{cases}\n  \\partial_t v(t,x) - r(x) v(t,x) + b(x) \\cdot D_x v + \\frac{1}{2} (\\sigma \\sigma^{\\top})(t,x) : D^2_x v(t,x) + f(x)= 0, \\quad (t,x) \\in [0,T) \\times \\mathbb{R}^n \\\\\n  v(T,x) = g(x), \\quad x \\in \\mathbb{R}^n\n\\end{cases}\n\\end{align}\\] In this case, the operator \\(\\mathcal{H}\\) is linear with respect to its arguments with the map \\(H\\) (recall \\((1)\\)) given by \\[\\begin{align}\nH(t,x,y,z,\\gamma):= -r(x) y(t,x) + b(x) \\cdot z(t,x) + \\frac{1}{2} (\\sigma \\sigma^{\\top})(t,x) : \\gamma(t,x)\n\\end{align}\\] This is typically the type of \\(PDE\\) which arises in option pricing in B-S model by taking \\(b=r\\), \\(\\sigma\\) the volatility, \\(f=0\\) and \\(g\\) the option payoff.\n\nQuasilinear PDE :  \\[\\begin{align}\n\\begin{cases}\n\\partial_t v + \\mathcal{H}[v] + f(x,v)= 0, \\quad (t,x) \\in [0,T) \\times \\mathbb{R}^n, \\quad (2)\\\\\nv(T,x) = g(x), \\quad x \\in \\mathbb{R}^n\n\\end{cases}\n\\end{align}\\] For instance, when \\(f(x,y) = r \\text{max}(y,0) - ry\\), this is the type of PDE which arises from pricing of CVA (Credit Valuation adjustment) where \\(r\\) denotes the intensity of default of a counterparty.\n\nNumerical challenges.\nHowever, solving these PDEs have always been highly challenging due to the curse of dimensionnality due to the exponentially scaling when discretizing the action mesh size \\(\\mathbb{R}^n\\) (grid based methods) but also from the point of view of Monte-Carlo methods which are limited to low dimensional setting \\(n \\approx 6\\) and where the solution is essentially computed at a fixed point \\((t,x) \\in [0,T] \\times \\mathbb{R}^n\\). In order to solve \\((1)\\) efficiently, we will rely on neural-network based algorithms which can provide a functional representation of the map \\((t,x) \\in [0,T] \\times \\mathbb{R}^n\\) at any \\((t,x)\\) and for \\(n\\) beeing large.\n\n\n1.2.1 Deep Galerkin Algorithm\n\n1.2.1.1 Mathematical description\n\nMathematical description of the method\n\n\n\n1.2.1.2 Algorithm description\n\nAlgorithm : Deep Galerkin Method\nLet ( _) be a policy such that … 1. Initialize parameters 2. Iterate until convergence 3. Return the value function\n\n\n\n\n1.2.2 Deep BSDE Solver\n\n1.2.2.1 Mathematical description\n\nMathematical description of the method\n\n\n\n1.2.2.2 Algorithm description\n\nAlgorithm: Deep BSDE Solver\nLet ( _) be a policy such that … 1. Initialize parameters 2. Iterate until convergence 3. Return the value function\n\n\n\n\n1.2.3 Deep BDP Solver\n\nMathematical description of the method\n\n\nAlgorithm: Deep BDP Solver\nInput: discount factor \\(\\gamma\\) , tolerance \\(\\varepsilon\\)\nOutput: value function \\(V^{\\star}\\)\n\nInitialize ( V_0(s) = 0 ) for all states ( s )\nRepeat:\n\nFor each state ( s ): [ V_{k+1}(s) a ( r(s,a) + {s’} P(s’|s,a) V_k(s’) ) ]\n\nUntil ( | V_{k+1} - V_k | &lt; )\nReturn ( V^* )\n\n\n\nDefinition 1.1 A noter qu’il faut être à l’aise sur l’utilisation de Quarto",
+    "objectID": "index.html#global-informations-about-the-course",
+    "href": "index.html#global-informations-about-the-course",
+    "title": "Lab sessions : Stochastic Control and Machine Learning",
+    "section": "",
+    "text": "Prerequisites :\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nSchedule :\nThe practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu and will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.\nMaterials :\nThe practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\n Lab work n°1 : \n\nAbout Deep PDE Solver for solving partial differential equations.\n\n Lab work n°2 : \n\nAbout Reinforcement Learning for stochastic control problems.\n\n Lab work n°3 : \n\nAbout Generative IA and Schrodinger Bridge for data generation.\nGrade :\nTo be confirmed\nQuestions ? :\nIf you have any questions, you can either e-mail Samy or Alexandre who prepared the lab sessions for this course.",
     "crumbs": [
-      "Part n°1 : Deep Learning for PDE",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Course reminders</span>"
+      "Global informations about the course"
     ]
   },
   {
-    "objectID": "contents/RL/RappelsRL.html#rl-algorithms-to-solve-stochastic-control-problems",
-    "href": "contents/RL/RappelsRL.html#rl-algorithms-to-solve-stochastic-control-problems",
-    "title": "3  Course reminders",
-    "section": "3.4 RL algorithms to solve stochastic control problems",
-    "text": "3.4 RL algorithms to solve stochastic control problems",
+    "objectID": "index.html#global-informations",
+    "href": "index.html#global-informations",
+    "title": "Lab sessions : Stochastic Control and Machine Learning",
+    "section": "",
+    "text": "Prerequisites :\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nSchedule :\nThe practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu and will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.\nMaterials :\nThe practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\n Lab work n°1 : \n\nAbout Deep PDE Solver for solving partial differential equations.\n\n Lab work n°2 : \n\nAbout Reinforcement Learning for stochastic control problems.\n\n Lab work n°3 : \n\nAbout Generative IA and Schrodinger Bridge for data generation.\nGrade :\nTo be confirmed\nQuestions ? :\nIf you have any questions, you can either e-mail Samy or Alexandre who prepared the lab sessions for this course.",
     "crumbs": [
-      "Part n°2  : Reinforcement Learning for stochastic control problems",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Course reminders</span>"
+      "Global informations"
     ]
   }
 ]

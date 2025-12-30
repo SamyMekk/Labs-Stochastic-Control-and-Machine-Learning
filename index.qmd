@@ -15,35 +15,13 @@ Welcome to the webpage of the practical sessions of the course **Apprentissage a
 
     
 
-## Organisation {.unnumbered}
+## Global informations  {.unnumbered}
 
-The practical sessions will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.
-
-
-- **Schedule**: The practical sessions will take place on $\ldots$ each time in **room 15/25 104** at Jussieu.
-
-- **Materials**: The practical sessions will be conducted in **Python**. You should bring your own laptop and have your own Python environment set up for each session.
- 
-- **Planning** : 
-  - **Lab work n°1** : About **Deep PDE Solver** for solving partial differential equations.
-  - **Lab work n°2** : About **Reinforcement Learning** for stochastic control problems.
-  - **Lab work n°3** : About **Generative IA** and **Schrodinger Bridge** for data generation.
+:::{#method-description .methodology}
 
 
-- **Grade** : $\ldots$ To be confirmed
 
-
-## Use this website {.unnumbered}
-
-The site is structured into three sections that make up the course, each consisting of two chapters. The first chapter, titled **Course reminders**, presents the key theoretical concepts, followed by the second chapter, which contains the practical session instructions and a link to a **Jupyter notebook file** where you can write your code.
-
-Note that the Jupyter notebooks files are designed to be **self-sufficient**, allowing you to work independently during the practical sessions.
-
-For your information, this site is generated using [Quarto](https://quarto.org), and the notes are available on this [GitHub](https://github.com/SamyMekk/TP-Controle-Stochastique) page. If you spot any errors on the site, feel free to report them through pull requests.
-
-## Instructors {.unnumbered}
-
-The Lab sessions for this course have been prepared by [Samy](https://samymekk.github.io/) and [Alexandre](https://www.linkedin.com/in/alexandre-alouadi/). We want to thank [Huyên Pham](https://sites.google.com/site/phamxuanhuyen/) for beeing our advisor and for the confidence in letting us preparing the lab works of his course.
+<span class="para-title">Prerequisites :</span>
 
 The **prerequisites** for this course are the following:
 
@@ -52,19 +30,84 @@ The **prerequisites** for this course are the following:
 - Basics on **Deep Learning**.
 - Familarity with **Python** and potentially with **PyTorch**.
 
+<span class="para-title">Schedule :</span>
+
+The practical sessions will take place on $\ldots$ each time in **room 15/25 104** at Jussieu and will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.
+
+<span class="para-title">Materials :</span>
+
+The practical sessions will be conducted in **Python**. You should bring your own laptop and have your own Python environment set up for each session.
+ 
+ <span class="para-title">Planning :</span>
+ 
+
+ - <span class="para-subtitle"> Lab work n°1 : </span>
+
+ About **Deep PDE Solver** for solving partial differential equations.
+
+  - <span class="para-subtitle"> Lab work n°2 : </span>
+
+About **Reinforcement Learning** for stochastic control problems.
+
+  - <span class="para-subtitle"> Lab work n°3 : </span>
+
+About **Generative IA** and **Schrodinger Bridge** for data generation.
+
+
+ <span class="para-title">Grade :</span>
+
+To be confirmed
+
+ <span class="para-title">Questions ? :</span>
+
+If you have any  **questions**, you can either e-mail [Samy](mailto:samy.mekkaoui@polytechnique.edu) or [Alexandre](mailto:alexandre.alouadi@polytechnique.edu) who prepared the lab sessions for this course.
+
+:::
+
+
+## Use this website {.unnumbered}
+
+
+:::{#method-description .methodology}
+
+<span class="para-title">Structure of the website :</span>
+
+The site is structured into three sections that make up the course, each consisting of two chapters.
+
+  - <span class="para-subtitle"> Course reminders: </span>
+
+  The first chapter, titled **Course reminders**, presents the key theoretical concepts. 
+
+
+  - <span class="para-subtitle"> Practical session: </span>
+
+  The second chapter, titled **Lab work** contains the practical session instructions and a link to a **Jupyter notebook file** where you can write your code. te that the Jupyter notebooks files are designed to be **self-sufficient**, allowing you to work independently during the practical sessions.
+
+
+  - <span class="para-subtitle"> References: </span>
+
+  The site contains a section  **References** 
+
+  - <span class="para-subtitle"> Appendix: </span>
+
+  The site contains also a section **Appendix** where we go more in depth about some topics discussed during the course.
 
 
 
 
-If you have any  **questions**, you can either e-mail [Samy](mailto:samy.mekkaoui@polytechnique.edu) or [Alexandre](mailto:alexandre.alouadi@polytechnique.edu)
 
 
+For your information, this site is generated using [Quarto](https://quarto.org) through GitHub Pages (see this [GitHub](https://github.com/SamyMekk/TP-Controle-Stochastique) page). If you spot any errors on the site, feel free to report them through pull requests.
 
+:::
 
 ## Acknowledgements {.unnumbered}
+
+:::{#method-description .methodology}
 
 We would like to thank the following individuals and organizations without whose support this course would not be possible
 
 - Professor [Huyên Pham](https://sites.google.com/site/phamxuanhuyen/) for the support and valuable feedbacks during the creation of this lab.
 - **Participants** in the course of your interest in Machine Learning for stochastic control and its applications.
 
+:::

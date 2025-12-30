@@ -53,7 +53,7 @@ Now, that we have shown how stochastic control problems naturally lead to PDEs, 
 ::: {#alg-description .algorithm}
 
 
-<span class="para-title">PDE formulaiton</span>
+<span class="para-title">PDE formulation</span>
 
 Let $v$ a function defined on $[0,T] \times \mathbb{R}^n$ supposed to satisfy the following PDE
 \begin{cases}
