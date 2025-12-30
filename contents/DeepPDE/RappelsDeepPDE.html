@@ -299,18 +299,22 @@ $$
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="stochastic-control-in-a-nutshell"><span class="header-section-number">1.1.1</span> Stochastic control in a nutshell</h3>
 <div id="formula-description" class="formulation">
 <p><span class="para-title">Mathematical setup</span></p>
-<p><span class="para-subtitle">Dynamics of the controlled state process</span></p>
+<ul>
+<li><span class="para-subtitle">Dynamics of the controlled state process</span></li>
+</ul>
 <p>Let <span class="math inline">\((\Omega,\mathcal{F}, \mathbb{F}=(\mathcal{F}_t)_{t \geq 0}, \mathbb{P})\)</span> be a probability space satisfying the usual assumptions and big enough to support a Brownian motion <span class="math inline">\(W=(W_t)_{t \geq 0}\)</span>. We consider a control model where the state of the system is governed by a stochastic differential equation (SDE) valued in <span class="math inline">\(\mathbb{R}^n\)</span> given by</p>
 <p><span class="math display">\[\begin{align}
     d X_s = b(X_s,\alpha_s) d s + \sigma(X_s, \alpha_s ) d W_s, \hspace{0.5 cm} (1)
 \end{align}\]</span> starting from <span class="math inline">\(X_0= x \in \mathbb{R}^n\)</span> and where we are given 2 measurable maps <span class="math inline">\((b,\sigma) : \ \mathbb{R}^n \times A \to \mathbb{R}^n ,\mathbb{R}^{d \times n}\)</span> and the control <span class="math inline">\(\alpha=(\alpha_t)_{0 \leq t \leq T}\)</span> is a progressively measurable (with respect to <span class="math inline">\(\mathbb{F})\)</span> process valued in <span class="math inline">\(A \subset \mathbb{R}^m\)</span>. We suppose that the measurable maps <span class="math inline">\((b,\sigma)\)</span> satisfy a uniform Lipschitz condition on <span class="math inline">\(A\)</span>: <span class="math inline">\(\exists K \geq 0\)</span>, <span class="math inline">\(\forall x,y \in \mathbb{R}^n\)</span>, <span class="math inline">\(\forall a \in A\)</span>, <span class="math display">\[\begin{align}
     | b(x,a) - b(y,a) |+ |\sigma(x,a) - \sigma(y,a) | \leq  K |x-y|.
 \end{align}\]</span> In the sequel, for <span class="math inline">\(0 \leq t \leq T\)</span>, we denote by <span class="math inline">\(\mathcal{T}_{t,T}\)</span> the set of stopping times valued in <span class="math inline">\([t,T]\)</span>. Fix <span class="math inline">\(T &gt; 0\)</span> and we denote by <span class="math inline">\(\mathcal{A}\)</span> the set of progressively mesurable with respect to <span class="math inline">\(\mathbb{F}\)</span> control processes <span class="math inline">\(\alpha = (\alpha_t)_{0 \leq t \leq T}\)</span> such that <span class="math display">\[\begin{align}
-\mathbb{E} \Big[ \int_{0}^{T} | b(0,\alpha_t)|^2 + |\sigma(0,\alpha_t)|^2 dt \Big] &lt; + \infty$.
+\mathbb{E} \Big[ \int_{0}^{T} | b(0,\alpha_t)|^2 + |\sigma(0,\alpha_t)|^2 dt \Big] &lt; + \infty.
 \end{align}\]</span> It is known that under the previous conditions, existence and unicity of a strong solution to the SDE (1) for any initial condtion <span class="math inline">\((t,x) \in [0,T] \in \mathbb{R}^n\)</span>. Starting from <span class="math inline">\(x\)</span> at <span class="math inline">\(s=t\)</span>, we then denote by <span class="math inline">\(\big \lbrace X_s^{t,x}, t \leq s \leq T \big \rbrace\)</span> the solution to <span class="math inline">\((1)\)</span> which admits a modification with continuous paths up to indistinguability. We also recall that under the standard conditions on <span class="math inline">\((b,\sigma)\)</span> and on the integrability condition on <span class="math inline">\(\alpha\)</span>, we have <span class="math display">\[\begin{align}
   \mathbb{E} \Big[ \underset{s \leq t \leq T}{\text{ sup }} |X_s^{t,x}|^2 \Big] &lt; \infty.
 \end{align}\]</span></p>
-<p><span class="para-subtitle">Functional objective</span></p>
+<ul>
+<li><span class="para-subtitle">Functional objective</span></li>
+</ul>
 Let <span class="math inline">\(f :[0,T] \times \mathbb{R}^n \times A \to \mathbb{R}\)</span> and <span class="math inline">\(g : \mathbb{R}^n \to \mathbb{R}\)</span> two measurable functions. We supose that
 </div>
 </section>
