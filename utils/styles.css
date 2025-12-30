@@ -37,6 +37,49 @@ body {
     margin-top: 1em;
   }
 
+.methodology {
+  border-left: 4px solid #3b82f6;
+  padding: 1em 1.2em;
+  background-color: #f8fafc;
+  border-radius: 6px;
+  margin: 1.5em 0;
+}
+.para-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  display: inline-block;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid currentColor;
+}
+.para-subtitle {
+  font-size: 1.0em;
+  font-weight: 400;
+  display: inline-block;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid currentColor;
+  font-style: italic;
+}
+.para-subsubtitle {
+  font-size: 0.8em;
+  font-weight: 400;
+  display: inline-block;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid currentColor;
+}
+
+.formulation {
+  border-left: 4px solid #3b82f6;
+  padding: 1em 1.2em;
+  background-color: #f8fafc;
+  border-radius: 6px;
+  margin: 1.5em 0;
+}
+
+.algorithm {
+  border-left: 4px solid #3b82f6;
+  padding: 1em;
+  background-color: #f8fafc;
+}
   
 @media (max-width: 600px) {
     .content {
