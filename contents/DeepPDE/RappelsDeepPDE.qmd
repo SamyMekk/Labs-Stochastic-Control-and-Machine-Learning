@@ -6,16 +6,40 @@ The following is a reminder of the main theoretical results about **Deep Learnin
 
 ### Stochastic control in a nutshell
 
+
+::: {#formula-description .formulation}
+
+<span class="para-title">Mathematical setup</span>
+
+<span class="para-subtitle">Dynamics of the controlled state process</span>
+
 Let $(\Omega,\mathcal{F}, \mathbb{F}=(\mathcal{F}_t)_{t \geq 0}, \mathbb{P})$ be a probability space satisfying the usual assumptions and big enough to support a Brownian motion $W=(W_t)_{t \geq 0}$. We consider a control model where the state of the system is governed by a stochastic differential equation (SDE) valued in $\mathbb{R}^n$ given by 
 
 \begin{align}
-    \d X_s = b(X_s,\alpha_s) \d s + \sigma(X_s, \alpha_s ) \d W_s,
+    d X_s = b(X_s,\alpha_s) d s + \sigma(X_s, \alpha_s ) d W_s, \hspace{0.5 cm} (1)
 \end{align}
-starting from $X_0= x \in \R^n$ and where we are given 2 measurable maps $(b,\sigma) : \ \mathbb{R}^n \times A \to \R^n ,\R^{d \times n}$ and the control $\alpha=(\alpha_t)_{0 \leq t \leq T}$ is a progressively measurable  (with respect to $\F)$ process valued in $A \subset \R^m$. We suppose that the measurable maps $(b,\sigma)$ satisfy a uniform Lipschitz condition on $A$: $\exists K \geq 0$, $\forall x,y \in \R^n$, $\forall a \in A$,
+starting from $X_0= x \in \mathbb{R}^n$ and where we are given 2 measurable maps $(b,\sigma) : \ \mathbb{R}^n \times A \to \mathbb{R}^n ,\mathbb{R}^{d \times n}$ and the control $\alpha=(\alpha_t)_{0 \leq t \leq T}$ is a progressively measurable  (with respect to $\mathbb{F})$ process valued in $A \subset \mathbb{R}^m$. We suppose that the measurable maps $(b,\sigma)$ satisfy a uniform Lipschitz condition on $A$: $\exists K \geq 0$, $\forall x,y \in \mathbb{R}^n$, $\forall a \in A$,
 \begin{align}
     | b(x,a) - b(y,a) |+ |\sigma(x,a) - \sigma(y,a) | \leq  K |x-y|.
 \end{align}
+In the sequel, for $0 \leq t \leq T$, we denote by $\mathcal{T}_{t,T}$ the set of stopping times valued in $[t,T]$. Fix $T > 0$ and we denote by $\mathcal{A}$ the set of progressively mesurable with respect to $\mathbb{F}$ control processes $\alpha = (\alpha_t)_{0 \leq t \leq T}$ such that
+\begin{align}
+\mathbb{E} \Big[ \int_{0}^{T} | b(0,\alpha_t)|^2 + |\sigma(0,\alpha_t)|^2 dt \Big] < + \infty$.
+\end{align}
+It is known that under the previous conditions, existence and unicity of a strong solution to the SDE (1) for any initial condtion $(t,x) \in [0,T] \in \mathbb{R}^n$. Starting from $x$ at $s=t$, we then denote by $\big \lbrace X_s^{t,x}, t \leq s \leq T \big \rbrace$ the solution to $(1)$ which admits a modification with continuous paths up to indistinguability. We also recall that under the standard conditions on $(b,\sigma)$ and on the integrability condition on $\alpha$, we have
+\begin{align}
+  \mathbb{E} \Big[ \underset{s \leq t \leq T}{\text{ sup }} |X_s^{t,x}|^2 \Big] < \infty.
+\end{align}
 
+
+<span class="para-subtitle">Functional objective</span>
+
+Let $f :[0,T] \times \mathbb{R}^n \times A \to \mathbb{R}$ and $g : \mathbb{R}^n \to \mathbb{R}$ two measurable functions. We supose that
+\begin{enumerate}
+\item [(1)] g is bounded from below.
+or \item [(2)] g satisfies a quadratic growth condition : $|g(x)| \leq C( 1+ |x|^2)$, $\quad$ $\forall x \in \mathbb{R}^n$. for some constant $C$ independant of $x$.
+\end{enumerate}
+:::
 ### The dynamic programming approach : HJB equation
 
 
@@ -23,11 +47,78 @@ starting from $X_0= x \in \R^n$ and where we are given 2 measurable maps $(b,\si
 
 ## Neural networks based algorithms for solving PDEs
 
-### Deep Galerkin Method
+Now, that we have shown how stochastic control problems naturally lead to PDEs, we will rely on some recent advances which appear to numerically solve these PDE, i.e to characterize the function and/or its derivative solution the PDE. Formally, we are going to tackle the following kind of problems.
 
 
 ::: {#alg-description .algorithm}
-**Algorithm Description**
+
+
+<span class="para-title">PDE formulaiton</span>
+
+Let $v$ a function defined on $[0,T] \times \mathbb{R}^n$ supposed to satisfy the following PDE
+\begin{cases}
+\partial_t v(t,x) + \mathcal{H}[v](t,x) = 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \quad (1) \\
+v(T,x) = g(x).
+\end{cases}
+where the operator $\mathcal{H}$ is defined over the space of functions over $[0,T] \times \mathbb{R}^n$ potentially with some regularity
+$[0,T] \times \mathbb{R}^n$ and can be rewritten in the case we are going to cover as
+\begin{align}
+\mathcal{H}[v](t,x) = H \big(t,x,v(t,x), D_x v(t,x), D^2_x v(t,x) \big). \quad (2)
+\end{align}
+The complexity of such systems comes notably from 
+
+- The non linearity of $H$ with respect to $v$ and its derivatives.
+- The potentially high dimension of the underlying space ($n \approx 100$).
+
+<span class="para-subtitle">Example of PDEs.</span>
+
+
+
+- <span class="para-subsubtitle">Linear PDE : </span>
+
+\begin{align}
+\begin{cases}
+  \partial_t v(t,x) - r(x) v(t,x) + b(x) \cdot D_x v + \frac{1}{2} (\sigma \sigma^{\top})(t,x) : D^2_x v(t,x) + f(x)= 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n \\
+  v(T,x) = g(x), \quad x \in \mathbb{R}^n
+\end{cases}
+\end{align}
+In this case, the operator $\mathcal{H}$ is linear with respect to its arguments  with the map $H$ (recall $(1)$) given by
+\begin{align}
+H(t,x,y,z,\gamma):= -r(x) y(t,x) + b(x) \cdot z(t,x) + \frac{1}{2} (\sigma \sigma^{\top})(t,x) : \gamma(t,x)
+\end{align}
+This is typically the type of $PDE$ which arises in option pricing in B-S model by taking $b=r$, $\sigma$ the volatility, $f=0$ and $g$ the option payoff.
+
+- <span class="para-subsubtitle">Quasilinear PDE : </span>
+\begin{align}
+\begin{cases}
+  \partial_t v + \mathcal{H}[v] + f(x,v)= 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \quad (2)\\
+  v(T,x) = g(x), \quad x \in \mathbb{R}^n
+\end{cases}
+\end{align}
+For instance, when $f(x,y) = r \text{max}(y,0) - ry$, this is the type of PDE which arises from pricing of CVA (Credit Valuation adjustment) where $r$ denotes the intensity of default of a counterparty.
+
+
+<span class="para-subtitle">Numerical challenges.</span>
+
+However, solving these PDEs have always been highly challenging due to the curse of dimensionnality due to the exponentially scaling when discretizing the action mesh size $\mathbb{R}^n$ (grid based methods) but also from the point of view of Monte-Carlo methods which are limited to low dimensional setting $n \approx 6$ and where the solution is essentially computed at a fixed point $(t,x) \in [0,T] \times \mathbb{R}^n$. In order to solve $(1)$ efficiently, we will rely on neural-network based algorithms which can provide a functional representation of the map $(t,x) \in [0,T] \times \mathbb{R}^n$ at any $(t,x)$ and for $n$ beeing large.
+:::
+
+
+
+
+### Deep Galerkin Algorithm
+
+#### Mathematical description 
+
+:::{#method-description .methodology}
+**Mathematical description of the method**
+
+:::
+
+#### Algorithm description
+
+::: {#alg-description .algorithm}
+**Algorithm : Deep Galerkin Method**
 
 Let \( \pi_\theta \) be a policy such that …
 1. Initialize parameters
@@ -36,6 +127,18 @@ Let \( \pi_\theta \) be a policy such that …
 :::
 
 ### Deep BSDE Solver
+
+#### Mathematical description 
+
+
+:::{#method-description .methodology}
+**Mathematical description of the method**
+
+:::
+
+
+#### Algorithm description
+
 
 ::: {#alg-description .algorithm}
 **Algorithm: Deep BSDE Solver**
@@ -49,8 +152,14 @@ Let \( \pi_\theta \) be a policy such that …
 
 ### Deep BDP Solver
 
+:::{#method-description .methodology}
+**Mathematical description of the method**
+
+:::
+
+
 ::: {#alg-description .algorithm}
-**Algorithm: Value Iteration**
+**Algorithm: Deep BDP Solver**
 
 **Input:** discount factor $\gamma$ , tolerance $\varepsilon$  
 

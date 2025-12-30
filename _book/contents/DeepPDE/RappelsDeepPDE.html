@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.32">
+<meta name="generator" content="quarto-1.6.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-275061990db69f1fcac8dd72fc2d8868.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-61d41e5301eef9078892d481b68da2a7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -244,7 +244,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#neural-networks-based-algorithms-for-solving-pdes" id="toc-neural-networks-based-algorithms-for-solving-pdes" class="nav-link" data-scroll-target="#neural-networks-based-algorithms-for-solving-pdes"><span class="header-section-number">1.2</span> Neural networks based algorithms for solving PDEs</a>
   <ul class="collapse">
-  <li><a href="#deep-galerkin-method" id="toc-deep-galerkin-method" class="nav-link" data-scroll-target="#deep-galerkin-method"><span class="header-section-number">1.2.1</span> Deep Galerkin Method</a></li>
+  <li><a href="#deep-galerkin-algorithm" id="toc-deep-galerkin-algorithm" class="nav-link" data-scroll-target="#deep-galerkin-algorithm"><span class="header-section-number">1.2.1</span> Deep Galerkin Algorithm</a></li>
   <li><a href="#deep-bsde-solver" id="toc-deep-bsde-solver" class="nav-link" data-scroll-target="#deep-bsde-solver"><span class="header-section-number">1.2.2</span> Deep BSDE Solver</a></li>
   <li><a href="#deep-bdp-solver" id="toc-deep-bdp-solver" class="nav-link" data-scroll-target="#deep-bdp-solver"><span class="header-section-number">1.2.3</span> Deep BDP Solver</a></li>
   </ul></li>
@@ -297,12 +297,22 @@ $$
 <h2 data-number="1.1" class="anchored" data-anchor-id="some-reminders-on-pde-and-stochastic-control"><span class="header-section-number">1.1</span> Some reminders on PDE and stochastic control</h2>
 <section id="stochastic-control-in-a-nutshell" class="level3" data-number="1.1.1">
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="stochastic-control-in-a-nutshell"><span class="header-section-number">1.1.1</span> Stochastic control in a nutshell</h3>
+<div id="formula-description" class="formulation">
+<p><span class="para-title">Mathematical setup</span></p>
+<p><span class="para-subtitle">Dynamics of the controlled state process</span></p>
 <p>Let <span class="math inline">\((\Omega,\mathcal{F}, \mathbb{F}=(\mathcal{F}_t)_{t \geq 0}, \mathbb{P})\)</span> be a probability space satisfying the usual assumptions and big enough to support a Brownian motion <span class="math inline">\(W=(W_t)_{t \geq 0}\)</span>. We consider a control model where the state of the system is governed by a stochastic differential equation (SDE) valued in <span class="math inline">\(\mathbb{R}^n\)</span> given by</p>
 <p><span class="math display">\[\begin{align}
-    \d X_s = b(X_s,\alpha_s) \d s + \sigma(X_s, \alpha_s ) \d W_s,
-\end{align}\]</span> starting from <span class="math inline">\(X_0= x \in \R^n\)</span> and where we are given 2 measurable maps <span class="math inline">\((b,\sigma) : \ \mathbb{R}^n \times A \to \R^n ,\R^{d \times n}\)</span> and the control <span class="math inline">\(\alpha=(\alpha_t)_{0 \leq t \leq T}\)</span> is a progressively measurable (with respect to <span class="math inline">\(\F)\)</span> process valued in <span class="math inline">\(A \subset \R^m\)</span>. We suppose that the measurable maps <span class="math inline">\((b,\sigma)\)</span> satisfy a uniform Lipschitz condition on <span class="math inline">\(A\)</span>: <span class="math inline">\(\exists K \geq 0\)</span>, <span class="math inline">\(\forall x,y \in \R^n\)</span>, <span class="math inline">\(\forall a \in A\)</span>, <span class="math display">\[\begin{align}
+    d X_s = b(X_s,\alpha_s) d s + \sigma(X_s, \alpha_s ) d W_s, \hspace{0.5 cm} (1)
+\end{align}\]</span> starting from <span class="math inline">\(X_0= x \in \mathbb{R}^n\)</span> and where we are given 2 measurable maps <span class="math inline">\((b,\sigma) : \ \mathbb{R}^n \times A \to \mathbb{R}^n ,\mathbb{R}^{d \times n}\)</span> and the control <span class="math inline">\(\alpha=(\alpha_t)_{0 \leq t \leq T}\)</span> is a progressively measurable (with respect to <span class="math inline">\(\mathbb{F})\)</span> process valued in <span class="math inline">\(A \subset \mathbb{R}^m\)</span>. We suppose that the measurable maps <span class="math inline">\((b,\sigma)\)</span> satisfy a uniform Lipschitz condition on <span class="math inline">\(A\)</span>: <span class="math inline">\(\exists K \geq 0\)</span>, <span class="math inline">\(\forall x,y \in \mathbb{R}^n\)</span>, <span class="math inline">\(\forall a \in A\)</span>, <span class="math display">\[\begin{align}
     | b(x,a) - b(y,a) |+ |\sigma(x,a) - \sigma(y,a) | \leq  K |x-y|.
+\end{align}\]</span> In the sequel, for <span class="math inline">\(0 \leq t \leq T\)</span>, we denote by <span class="math inline">\(\mathcal{T}_{t,T}\)</span> the set of stopping times valued in <span class="math inline">\([t,T]\)</span>. Fix <span class="math inline">\(T &gt; 0\)</span> and we denote by <span class="math inline">\(\mathcal{A}\)</span> the set of progressively mesurable with respect to <span class="math inline">\(\mathbb{F}\)</span> control processes <span class="math inline">\(\alpha = (\alpha_t)_{0 \leq t \leq T}\)</span> such that <span class="math display">\[\begin{align}
+\mathbb{E} \Big[ \int_{0}^{T} | b(0,\alpha_t)|^2 + |\sigma(0,\alpha_t)|^2 dt \Big] &lt; + \infty$.
+\end{align}\]</span> It is known that under the previous conditions, existence and unicity of a strong solution to the SDE (1) for any initial condtion <span class="math inline">\((t,x) \in [0,T] \in \mathbb{R}^n\)</span>. Starting from <span class="math inline">\(x\)</span> at <span class="math inline">\(s=t\)</span>, we then denote by <span class="math inline">\(\big \lbrace X_s^{t,x}, t \leq s \leq T \big \rbrace\)</span> the solution to <span class="math inline">\((1)\)</span> which admits a modification with continuous paths up to indistinguability. We also recall that under the standard conditions on <span class="math inline">\((b,\sigma)\)</span> and on the integrability condition on <span class="math inline">\(\alpha\)</span>, we have <span class="math display">\[\begin{align}
+  \mathbb{E} \Big[ \underset{s \leq t \leq T}{\text{ sup }} |X_s^{t,x}|^2 \Big] &lt; \infty.
 \end{align}\]</span></p>
+<p><span class="para-subtitle">Functional objective</span></p>
+Let <span class="math inline">\(f :[0,T] \times \mathbb{R}^n \times A \to \mathbb{R}\)</span> and <span class="math inline">\(g : \mathbb{R}^n \to \mathbb{R}\)</span> two measurable functions. We supose that
+</div>
 </section>
 <section id="the-dynamic-programming-approach-hjb-equation" class="level3" data-number="1.1.2">
 <h3 data-number="1.1.2" class="anchored" data-anchor-id="the-dynamic-programming-approach-hjb-equation"><span class="header-section-number">1.1.2</span> The dynamic programming approach : HJB equation</h3>
@@ -313,24 +323,83 @@ $$
 </section>
 <section id="neural-networks-based-algorithms-for-solving-pdes" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="neural-networks-based-algorithms-for-solving-pdes"><span class="header-section-number">1.2</span> Neural networks based algorithms for solving PDEs</h2>
-<section id="deep-galerkin-method" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="deep-galerkin-method"><span class="header-section-number">1.2.1</span> Deep Galerkin Method</h3>
+<p>Now, that we have shown how stochastic control problems naturally lead to PDEs, we will rely on some recent advances which appear to numerically solve these PDE, i.e to characterize the function and/or its derivative solution the PDE. Formally, we are going to tackle the following kind of problems.</p>
 <div id="alg-description" class="algorithm">
-<p><strong>Algorithm Description</strong></p>
+<p><span class="para-title">PDE formulaiton</span></p>
+Let <span class="math inline">\(v\)</span> a function defined on <span class="math inline">\([0,T] \times \mathbb{R}^n\)</span> supposed to satisfy the following PDE
+<span class="math display">\[\begin{cases}
+\partial_t v(t,x) + \mathcal{H}[v](t,x) = 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \quad (1) \\
+v(T,x) = g(x).
+\end{cases}\]</span>
+<p>where the operator <span class="math inline">\(\mathcal{H}\)</span> is defined over the space of functions over <span class="math inline">\([0,T] \times \mathbb{R}^n\)</span> potentially with some regularity <span class="math inline">\([0,T] \times \mathbb{R}^n\)</span> and can be rewritten in the case we are going to cover as <span class="math display">\[\begin{align}
+\mathcal{H}[v](t,x) = H \big(t,x,v(t,x), D_x v(t,x), D^2_x v(t,x) \big). \quad (2)
+\end{align}\]</span> The complexity of such systems comes notably from</p>
+<ul>
+<li>The non linearity of <span class="math inline">\(H\)</span> with respect to <span class="math inline">\(v\)</span> and its derivatives.</li>
+<li>The potentially high dimension of the underlying space (<span class="math inline">\(n \approx 100\)</span>).</li>
+</ul>
+<p><span class="para-subtitle">Example of PDEs.</span></p>
+<ul>
+<li><span class="para-subsubtitle">Linear PDE : </span></li>
+</ul>
+<p><span class="math display">\[\begin{align}
+\begin{cases}
+  \partial_t v(t,x) - r(x) v(t,x) + b(x) \cdot D_x v + \frac{1}{2} (\sigma \sigma^{\top})(t,x) : D^2_x v(t,x) + f(x)= 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n \\
+  v(T,x) = g(x), \quad x \in \mathbb{R}^n
+\end{cases}
+\end{align}\]</span> In this case, the operator <span class="math inline">\(\mathcal{H}\)</span> is linear with respect to its arguments with the map <span class="math inline">\(H\)</span> (recall <span class="math inline">\((1)\)</span>) given by <span class="math display">\[\begin{align}
+H(t,x,y,z,\gamma):= -r(x) y(t,x) + b(x) \cdot z(t,x) + \frac{1}{2} (\sigma \sigma^{\top})(t,x) : \gamma(t,x)
+\end{align}\]</span> This is typically the type of <span class="math inline">\(PDE\)</span> which arises in option pricing in B-S model by taking <span class="math inline">\(b=r\)</span>, <span class="math inline">\(\sigma\)</span> the volatility, <span class="math inline">\(f=0\)</span> and <span class="math inline">\(g\)</span> the option payoff.</p>
+<ul>
+<li><span class="para-subsubtitle">Quasilinear PDE : </span> <span class="math display">\[\begin{align}
+\begin{cases}
+\partial_t v + \mathcal{H}[v] + f(x,v)= 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \quad (2)\\
+v(T,x) = g(x), \quad x \in \mathbb{R}^n
+\end{cases}
+\end{align}\]</span> For instance, when <span class="math inline">\(f(x,y) = r \text{max}(y,0) - ry\)</span>, this is the type of PDE which arises from pricing of CVA (Credit Valuation adjustment) where <span class="math inline">\(r\)</span> denotes the intensity of default of a counterparty.</li>
+</ul>
+<p><span class="para-subtitle">Numerical challenges.</span></p>
+<p>However, solving these PDEs have always been highly challenging due to the curse of dimensionnality due to the exponentially scaling when discretizing the action mesh size <span class="math inline">\(\mathbb{R}^n\)</span> (grid based methods) but also from the point of view of Monte-Carlo methods which are limited to low dimensional setting <span class="math inline">\(n \approx 6\)</span> and where the solution is essentially computed at a fixed point <span class="math inline">\((t,x) \in [0,T] \times \mathbb{R}^n\)</span>. In order to solve <span class="math inline">\((1)\)</span> efficiently, we will rely on neural-network based algorithms which can provide a functional representation of the map <span class="math inline">\((t,x) \in [0,T] \times \mathbb{R}^n\)</span> at any <span class="math inline">\((t,x)\)</span> and for <span class="math inline">\(n\)</span> beeing large.</p>
+</div>
+<section id="deep-galerkin-algorithm" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="deep-galerkin-algorithm"><span class="header-section-number">1.2.1</span> Deep Galerkin Algorithm</h3>
+<section id="mathematical-description" class="level4" data-number="1.2.1.1">
+<h4 data-number="1.2.1.1" class="anchored" data-anchor-id="mathematical-description"><span class="header-section-number">1.2.1.1</span> Mathematical description</h4>
+<div id="method-description" class="methodology">
+<p><strong>Mathematical description of the method</strong></p>
+</div>
+</section>
+<section id="algorithm-description" class="level4" data-number="1.2.1.2">
+<h4 data-number="1.2.1.2" class="anchored" data-anchor-id="algorithm-description"><span class="header-section-number">1.2.1.2</span> Algorithm description</h4>
+<div id="alg-description" class="algorithm">
+<p><strong>Algorithm : Deep Galerkin Method</strong></p>
 <p>Let ( _) be a policy such that … 1. Initialize parameters 2. Iterate until convergence 3. Return the value function</p>
 </div>
 </section>
+</section>
 <section id="deep-bsde-solver" class="level3" data-number="1.2.2">
 <h3 data-number="1.2.2" class="anchored" data-anchor-id="deep-bsde-solver"><span class="header-section-number">1.2.2</span> Deep BSDE Solver</h3>
+<section id="mathematical-description-1" class="level4" data-number="1.2.2.1">
+<h4 data-number="1.2.2.1" class="anchored" data-anchor-id="mathematical-description-1"><span class="header-section-number">1.2.2.1</span> Mathematical description</h4>
+<div id="method-description" class="methodology">
+<p><strong>Mathematical description of the method</strong></p>
+</div>
+</section>
+<section id="algorithm-description-1" class="level4" data-number="1.2.2.2">
+<h4 data-number="1.2.2.2" class="anchored" data-anchor-id="algorithm-description-1"><span class="header-section-number">1.2.2.2</span> Algorithm description</h4>
 <div id="alg-description" class="algorithm">
 <p><strong>Algorithm: Deep BSDE Solver</strong></p>
 <p>Let ( _) be a policy such that … 1. Initialize parameters 2. Iterate until convergence 3. Return the value function</p>
 </div>
 </section>
+</section>
 <section id="deep-bdp-solver" class="level3" data-number="1.2.3">
 <h3 data-number="1.2.3" class="anchored" data-anchor-id="deep-bdp-solver"><span class="header-section-number">1.2.3</span> Deep BDP Solver</h3>
+<div id="method-description" class="methodology">
+<p><strong>Mathematical description of the method</strong></p>
+</div>
 <div id="alg-description" class="algorithm">
-<p><strong>Algorithm: Value Iteration</strong></p>
+<p><strong>Algorithm: Deep BDP Solver</strong></p>
 <p><strong>Input:</strong> discount factor <span class="math inline">\(\gamma\)</span> , tolerance <span class="math inline">\(\varepsilon\)</span></p>
 <p><strong>Output:</strong> value function <span class="math inline">\(V^{\star}\)</span></p>
 <ol type="1">
