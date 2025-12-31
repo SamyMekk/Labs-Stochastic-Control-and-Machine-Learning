@@ -3,13 +3,6 @@
 Welcome to the webpage of the practical sessions of the course **Apprentissage automatique et contrôle stochastique** taught by Professor [Pham](https://sites.google.com/site/phamxuanhuyen/) within the Master’s program in Probability and Finance (M2). 
 
 
-<figure style="text-align: center; margin: 0;">
-  <img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/MasterProbaFinance.png" 
-       alt="Ma belle image"
-       style="display: block; margin: 0 auto; max-width: 30%; height: auto;">
-  <figcaption style="font-size: 0.9em; color: #333;">
-  <p><em>Logo of the M2- Probability and Finance </em></p>
-</figure>
 
 ```{python}
 #|eval: true
