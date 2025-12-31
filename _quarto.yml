@@ -45,10 +45,6 @@ format:
     toc: true
     sidebar: true 
  
-  
-bibliography : references.bib
-nocite: |
-  @*
 
 execute:
   kernel : "these_env"
