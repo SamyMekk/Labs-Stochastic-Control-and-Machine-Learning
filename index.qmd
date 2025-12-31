@@ -1,6 +1,5 @@
 
 
-
 Welcome to the webpage of the practical sessions of the course **Apprentissage automatique et contrôle stochastique** taught by Professor [Pham](https://sites.google.com/site/phamxuanhuyen/) within the Master’s program in Probability and Finance (M2). 
 
 
@@ -12,8 +11,112 @@ Welcome to the webpage of the practical sessions of the course **Apprentissage a
   <p><em>Logo of the M2- Probability and Finance </em></p>
 </figure>
 
-Test
+```{python}
+#|eval: true
+#|fig-cap: "Test scatter plot"
+#|fig-width: 6
+#|fig-height: 4
+#| output-location: column-fragment
 
+import os
+import sys
+from pathlib import Path
+
+
+#  Import des Librairies
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Test
+print(np.arange(5))
+
+
+def f(x) :
+    return x**2
+
+L=[i for i in range(-5,6)]
+
+plt.scatter(L,[f(l) for l in L])
+plt.xlabel("Test")
+plt.ylabel("Test2")
+plt.title("Test Scatter Plot")
+plt.grid()
+
+# Exemple simple de DataFrame
+data = {
+    'Nom': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Âge': [24, 30, 18, 22],
+    'Ville': ['Paris', 'Lyon', 'Marseille', 'Toulouse'],
+    'Score': [85.5, 90.0, 78.0, 88.5]
+}
+
+# test_pytorch_mlp.py
+
+import torch
+import torch.nn as nn
+print("Hello")
+# -----------------------------
+# Définition du modèle
+# -----------------------------
+class MLP(nn.Module):
+    def __init__(self, input_dim, hidden_dims, output_dim):
+        super().__init__()
+
+        layers = []
+        in_dim = input_dim
+
+        for h in hidden_dims:
+            layers.append(nn.Linear(in_dim, h))
+            layers.append(nn.ReLU())
+            in_dim = h
+
+        layers.append(nn.Linear(in_dim, output_dim))
+
+        self.network = nn.Sequential(*layers)
+
+    def forward(self, x):
+        return self.network(x)
+
+
+# -----------------------------
+# Instanciation du modèle
+# -----------------------------
+input_dim = 3
+hidden_dims = [64, 64, 64]
+output_dim = 1
+
+model = MLP(input_dim, hidden_dims, output_dim)
+
+
+# -----------------------------
+# Affichage de l'architecture
+# -----------------------------
+print("\n=== Architecture du modèle ===\n")
+print(model)
+
+
+# -----------------------------
+# Nombre de paramètres
+# -----------------------------
+num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+print("\nNombre de paramètres entraînables :", num_params)
+
+
+# -----------------------------
+# Test forward (sanity check)
+# -----------------------------
+x = torch.randn(5, input_dim)
+y = model(x)
+
+print("\nEntrée x.shape :", x.shape)
+print("Sortie y.shape :", y.shape)
+print("\nSortie y :\n", y)
+
+df = pd.DataFrame(data)
+df
+```    
 
 ## Global informations  {.unnumbered}
 
@@ -109,111 +212,4 @@ We would like to thank the following individuals and organizations without whose
 
 - Professor [Huyên Pham](https://sites.google.com/site/phamxuanhuyen/) for the support and valuable feedbacks during the creation of this lab.
 - **Participants** in the course of your interest in Machine Learning for stochastic control and its applications.
-
-
-
-```{python}
-
-#| output-location: column-fragment
-
-import sys
-print(sys.executable)
-
-#  Import des Librairies
-
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
-
-# Test
-print(np.arange(5))
-
-
-def f(x) :
-    return x**2
-
-L=[i for i in range(-5,6)]
-
-plt.scatter(L,[f(l) for l in L])
-plt.xlabel("Test")
-plt.ylabel("Test2")
-plt.title("Test Scatter Plot")
-plt.grid()
-
-# Exemple simple de DataFrame
-data = {
-    'Nom': ['Alice', 'Bob', 'Charlie', 'David'],
-    'Âge': [24, 30, 18, 22],
-    'Ville': ['Paris', 'Lyon', 'Marseille', 'Toulouse'],
-    'Score': [85.5, 90.0, 78.0, 88.5]
-}
-
-df = pd.DataFrame(data)
-df
-
-# test_pytorch_mlp.py
-
-import torch
-import torch.nn as nn
-
-# -----------------------------
-# Définition du modèle
-# -----------------------------
-class MLP(nn.Module):
-    def __init__(self, input_dim, hidden_dims, output_dim):
-        super().__init__()
-
-        layers = []
-        in_dim = input_dim
-
-        for h in hidden_dims:
-            layers.append(nn.Linear(in_dim, h))
-            layers.append(nn.ReLU())
-            in_dim = h
-
-        layers.append(nn.Linear(in_dim, output_dim))
-
-        self.network = nn.Sequential(*layers)
-
-    def forward(self, x):
-        return self.network(x)
-
-
-# -----------------------------
-# Instanciation du modèle
-# -----------------------------
-input_dim = 3
-hidden_dims = [64, 64, 64]
-output_dim = 1
-
-model = MLP(input_dim, hidden_dims, output_dim)
-
-
-# -----------------------------
-# Affichage de l'architecture
-# -----------------------------
-print("\n=== Architecture du modèle ===\n")
-print(model)
-
-
-# -----------------------------
-# Nombre de paramètres
-# -----------------------------
-num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-print("\nNombre de paramètres entraînables :", num_params)
-
-
-# -----------------------------
-# Test forward (sanity check)
-# -----------------------------
-x = torch.randn(5, input_dim)
-y = model(x)
-
-print("\nEntrée x.shape :", x.shape)
-print("Sortie y.shape :", y.shape)
-print("\nSortie y :\n", y)
-
-
-```    
-
 :::

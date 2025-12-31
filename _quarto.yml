@@ -51,6 +51,7 @@ nocite: |
   @*
 
 execute:
-  kernel: "Python appstatapp_tp2"
-  echo : true
+  kernel : "these_env"
+  echo: true
+
 
