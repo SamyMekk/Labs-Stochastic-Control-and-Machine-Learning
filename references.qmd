@@ -1,19 +1,19 @@
 # References {.unnumbered}
 
-::: {#refs}
-:::
 
+## Deep Learning for PDE  {.unnumbered}
 
-### Deep Learning for PDE :  {.unnumbered}
-
-
+:::{#method-description .methodology}
   
 - J.Han, A.Jentzen, W.E : Solving high-dimensional partial differential equations using deep learning available [here](https://arxiv.org/abs/1707.02568).
 
 - M. Germain, H. Pham, X. Warin: Neural networks-based algorithms for stochastic control and PDEs in finance, Machine Learning and Data Sciences for Financial Markets: a guide to contemporary practices, Cambridge University Press, 2023, Editors: A. Capponi and C. A. Lehalle available [here](https://arxiv.org/abs/2101.08068).
 
-### Reinforcement Learning for stochastic control : {.unnumbered}
+:::
 
+## Reinforcement Learning for stochastic control  {.unnumbered}
+
+:::{#method-description .methodology}
 
 - Y. Jia and X.Y. Zhou: Policy gradient and Actor-Critic learning in continuous time and space: theory and algorithms, 2022, Journal of Machine Learning and Research. available [here](https://arxiv.org/abs/2111.11232).
 
@@ -21,9 +21,11 @@
 
 - R. Sutton and A. Barto: Introduction to reinforcement learning, second edition 2016, available [here](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf).
 
+:::
 
-### Generative IA for data generation :  {.unnumbered}
+## Generative IA for data generation {.unnumbered}
 
+:::{#method-description .methodology}
 
 - M. Hamdouche, P. Henry-Labordère, H. Pham: Generative modeling for time series via Schrödinger bridge, 2023. available [here](https://arxiv.org/pdf/2304.05093).
 
@@ -33,3 +35,5 @@ evaluation available [here](https://arxiv.org/pdf/2503.02943).
 - C. Remlinger, J. Mikael, R. Elie: Conditional loss and deep Euler scheme for time series generation, 2021, AAAI Conference on Artificial Intelligence. available [here](https://arxiv.org/abs/2102.05313).
 
 - M. Xia, X. Li, Q. Shen, T. Chou: Squared Wasserstein-2 distance for efficient reconstruction of stochastic differential equations, 2024, arXiv:2401.11354 available [here](https://arxiv.org/abs/2401.11354).
+
+:::
