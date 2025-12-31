@@ -270,36 +270,6 @@
     ]
   },
   {
-    "objectID": "appendix.html",
-    "href": "appendix.html",
-    "title": "Appendix",
-    "section": "",
-    "text": "A primer on neural networks\nIn this appendix, you may find some useful stuffs . A full PDF version is also available at this link",
-    "crumbs": [
-      "Appendix"
-    ]
-  },
-  {
-    "objectID": "appendix.html#a-primer-on-neural-networks",
-    "href": "appendix.html#a-primer-on-neural-networks",
-    "title": "Appendix",
-    "section": "",
-    "text": "Feedforward neural networks (FFNN)\n\n\nOther neural network architectures\n\nRecurrent neural networks (RNN)\n\n\nLong short term memory (LSTM)",
-    "crumbs": [
-      "Appendix"
-    ]
-  },
-  {
-    "objectID": "appendix.html#an-overview-of-optimal-transport.",
-    "href": "appendix.html#an-overview-of-optimal-transport.",
-    "title": "Appendix",
-    "section": "An overview of optimal transport.",
-    "text": "An overview of optimal transport.\n\nCanonical problem of OT.",
-    "crumbs": [
-      "Appendix"
-    ]
-  },
-  {
     "objectID": "references.html#deep-learning-for-pde",
     "href": "references.html#deep-learning-for-pde",
     "title": "References",
@@ -327,6 +297,36 @@
     "text": "Generative IA for data generation\n\n\nM. Hamdouche, P. Henry-Labordère, H. Pham: Generative modeling for time series via Schrödinger bridge, 2023. available here.\nA.Alouadi, B.Barreau, L.Carlier, H.Pham : Robust time series generation via Schrödinger Bridge: a comprehensive evaluation available here.\nC. Remlinger, J. Mikael, R. Elie: Conditional loss and deep Euler scheme for time series generation, 2021, AAAI Conference on Artificial Intelligence. available here.\nM. Xia, X. Li, Q. Shen, T. Chou: Squared Wasserstein-2 distance for efficient reconstruction of stochastic differential equations, 2024, arXiv:2401.11354 available here.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "appendix.html",
+    "href": "appendix.html",
+    "title": "Appendix",
+    "section": "",
+    "text": "A primer on neural networks\nIn this appendix, you may find some useful stuffs . A full PDF version is also available at this link",
+    "crumbs": [
+      "Appendix"
+    ]
+  },
+  {
+    "objectID": "appendix.html#a-primer-on-neural-networks",
+    "href": "appendix.html#a-primer-on-neural-networks",
+    "title": "Appendix",
+    "section": "",
+    "text": "Feedforward neural networks (FFNN)\n\n\nOther neural network architectures\n\nRecurrent neural networks (RNN)\n\n\nLong short term memory (LSTM)",
+    "crumbs": [
+      "Appendix"
+    ]
+  },
+  {
+    "objectID": "appendix.html#an-overview-of-optimal-transport.",
+    "href": "appendix.html#an-overview-of-optimal-transport.",
+    "title": "Appendix",
+    "section": "An overview of optimal transport.",
+    "text": "An overview of optimal transport.\n\nCanonical problem of OT.",
+    "crumbs": [
+      "Appendix"
     ]
   }
 ]
