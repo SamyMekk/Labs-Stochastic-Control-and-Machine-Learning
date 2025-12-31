@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "",
-    "text": "Global informations\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor Pham within the Master’s program in Probability and Finance (M2).\nTest3 Voir les slides – TP1",
+    "text": "Global informations\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor Pham within the Master’s program in Probability and Finance (M2).",
     "crumbs": [
       "Global informations"
     ]
@@ -264,7 +264,37 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "$$\n\n\\newcommand{\\bx}{\\boldsymbol{x}}\n\n\\newcommand{\\bt}{\\boldsymbol{\\theta}}\n\n\\newcommand{\\dkl}{\\mathrm{d}_{\\mathrm{KL}}}\n\n\\newcommand{\\dtv}{\\mathrm{d}_{\\mathrm{TV}}}\n\n\\newcommand{\\emv}{\\hat{\\theta}_{\\mathrm{emv}}}\n\n\\newcommand{\\ent}{\\mathrm{Ent}}\n\n$$\n\n\n\n\n\n\n\n\n\nDeep Learning for PDE :\n\n[1] J.Han, A.Jentzen, W.E : Solving high-dimensional partial differential equations using deep learning available here.\n[2] M. Germain, H. Pham, X. Warin: Neural networks-based algorithms for stochastic control and PDEs in finance, Machine Learning and Data Sciences for Financial Markets: a guide to contemporary practices, Cambridge University Press, 2023, Editors: A. Capponi and C. A. Lehalle available here.\n\n\n\nReinforcement Learning for stochastic control :\n\n[3] Y. Jia and X.Y. Zhou: Policy gradient and Actor-Critic learning in continuous time and space: theory and algorithms, 2022, Journal of Machine Learning and Research. available here.\n[4] Y. Jia and X.Y. Zhou: q-Learning in continuous time, 2023, Journal of Machine Learning and Research. available here.\n[5] R. Sutton and A. Barto: Introduction to reinforcement learning, second edition 2016, available here.\n\n\n\nGenerative IA for data generation :\n\n[6] M. Hamdouche, P. Henry-Labordère, H. Pham: Generative modeling for time series via Schrödinger bridge, 2023. available here.\n[7] A.Alouadi, B.Barreau, L.Carlier, H.Pham : Robust time series generation via Schrödinger Bridge: a comprehensive evaluation available here.\n[8] C. Remlinger, J. Mikael, R. Elie: Conditional loss and deep Euler scheme for time series generation, 2021, AAAI Conference on Artificial Intelligence. available here.\n[9] M. Xia, X. Li, Q. Shen, T. Chou: Squared Wasserstein-2 distance for efficient reconstruction of stochastic differential equations, 2024, arXiv:2401.11354 available here.",
+    "text": "Deep Learning for PDE",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "references.html#deep-learning-for-pde",
+    "href": "references.html#deep-learning-for-pde",
+    "title": "References",
+    "section": "",
+    "text": "J.Han, A.Jentzen, W.E : Solving high-dimensional partial differential equations using deep learning available here.\nM. Germain, H. Pham, X. Warin: Neural networks-based algorithms for stochastic control and PDEs in finance, Machine Learning and Data Sciences for Financial Markets: a guide to contemporary practices, Cambridge University Press, 2023, Editors: A. Capponi and C. A. Lehalle available here.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "references.html#reinforcement-learning-for-stochastic-control",
+    "href": "references.html#reinforcement-learning-for-stochastic-control",
+    "title": "References",
+    "section": "Reinforcement Learning for stochastic control",
+    "text": "Reinforcement Learning for stochastic control\n\n\nY. Jia and X.Y. Zhou: Policy gradient and Actor-Critic learning in continuous time and space: theory and algorithms, 2022, Journal of Machine Learning and Research. available here.\nY. Jia and X.Y. Zhou: q-Learning in continuous time, 2023, Journal of Machine Learning and Research. available here.\nR. Sutton and A. Barto: Introduction to reinforcement learning, second edition 2016, available here.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "references.html#generative-ia-for-data-generation",
+    "href": "references.html#generative-ia-for-data-generation",
+    "title": "References",
+    "section": "Generative IA for data generation",
+    "text": "Generative IA for data generation\n\n\nM. Hamdouche, P. Henry-Labordère, H. Pham: Generative modeling for time series via Schrödinger bridge, 2023. available here.\nA.Alouadi, B.Barreau, L.Carlier, H.Pham : Robust time series generation via Schrödinger Bridge: a comprehensive evaluation available here.\nC. Remlinger, J. Mikael, R. Elie: Conditional loss and deep Euler scheme for time series generation, 2021, AAAI Conference on Artificial Intelligence. available here.\nM. Xia, X. Li, Q. Shen, T. Chou: Squared Wasserstein-2 distance for efficient reconstruction of stochastic differential equations, 2024, arXiv:2401.11354 available here.",
     "crumbs": [
       "References"
     ]
