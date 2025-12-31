@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "",
-    "text": "Global informations\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor Pham within the Master’s program in Probability and Finance (M2).",
+    "text": "Global informations\nWelcome to the webpage of the practical sessions of the course Apprentissage automatique et contrôle stochastique taught by Professor Pham within the Master’s program in Probability and Finance (M2).\nTest Voir les slides – TP1",
     "crumbs": [
       "Global informations"
     ]
@@ -297,6 +297,16 @@
     "text": "An overview of optimal transport.\n\nCanonical problem of OT.",
     "crumbs": [
       "Appendix"
+    ]
+  },
+  {
+    "objectID": "index.html#global-informations-1",
+    "href": "index.html#global-informations-1",
+    "title": "Lab sessions : Stochastic Control and Machine Learning",
+    "section": "Global informations",
+    "text": "Global informations\n\nPrerequisites :\nThe prerequisites for this course are the following:\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nSchedule :\nThe practical sessions will take place on \\(\\ldots\\) each time in room 15/25 104 at Jussieu and will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.\nMaterials :\nThe practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\n Lab work n°1 : \n\nAbout Deep PDE Solver for solving partial differential equations.\n\n Lab work n°2 : \n\nAbout Reinforcement Learning for stochastic control problems.\n\n Lab work n°3 : \n\nAbout Generative IA and Schrodinger Bridge for data generation.\nGrade :\nTo be confirmed\nQuestions ? :\nIf you have any questions, you can either e-mail Samy or Alexandre who prepared the lab sessions for this course.",
+    "crumbs": [
+      "Global informations"
     ]
   }
 ]

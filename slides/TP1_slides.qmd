@@ -1,0 +1,29 @@
+---
+title: "TP1 – Deep PDE Solver"
+author: "Samy Mekkaoui"
+format: revealjs
+execute:
+  enabled: false
+---
+
+## Introduction
+
+- Objectifs du TP
+- Contexte mathématique
+- Méthode Deep PDE Solver
+- Test
+
+---
+
+## Rappel théorique
+
+- Équations aux dérivées partielles
+- Approximation par réseaux de neurones
+
+---
+
+## Plan du TP
+
+1. Mise en place du modèle
+2. Entraînement
+3. Analyse des résultats
