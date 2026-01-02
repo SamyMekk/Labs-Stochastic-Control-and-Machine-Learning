@@ -55,7 +55,7 @@ Your objective will be to answer the **questions** of the chosen lab, and a fair
 **The final grade** will be based on both the **lab questions** and the **mini-project**. In any case, the **final course grade** will be calculated as follows:
 
 \begin{align}
-    \text{Final Grade = 70 \% multiple-choice exam (QCM) + 30 \% project}.
+    \text{Final Grade = 50 \% multiple-choice exam (QCM) + 50 \% project}.
 \end{align}
 
  <span class="para-title">Questions ? :</span>
