@@ -1,6 +1,6 @@
 
 
-Welcome to the webpage of the practical sessions of the course **Apprentissage automatique et contrôle stochastique** taught by Professor [Pham](https://sites.google.com/site/phamxuanhuyen/) within the Master’s program in Probability and Finance (M2). 
+Welcome to the webpage of the practical sessions of the course [Machine learning and stochastic control](https://finance.math.upmc.fr/enseignements/2_mn_9_ml_stochastic_control/) taught by Professor [Pham](https://sites.google.com/site/phamxuanhuyen/) within the Master’s program in Probability and Finance (M2).
 
 
 ## Global informations  {.unnumbered}
@@ -11,8 +11,6 @@ Welcome to the webpage of the practical sessions of the course **Apprentissage a
 
 <span class="para-title">Prerequisites :</span>
 
-The **prerequisites** for this course are the following:
-
 - Good knowledge on **Probability Theory** and **Stochastic Processes**.
 - Basics on **optimal control theory**.
 - Basics on **Deep Learning**.
@@ -20,31 +18,45 @@ The **prerequisites** for this course are the following:
 
 <span class="para-title">Schedule :</span>
 
-The practical sessions will take place on $\ldots$ each time in **room 15/25 104** at Jussieu and will be divided into three 3-hour sessions, each illustrating the concepts covered during the lecture.
+- **Lab work** n°  $1$  : Tuesday, January 27th,  9h-12h, room $102$ in tower $15-25$.
+- **Lab work** n°  $2$  : Tuesday, February 3rd,  9h-12h, room $102$ in tower $15-25$.
+- **Lab work** n°  $3$  : Tuesday, February 19th, 9h-12h,
+room $102$ in tower $15-25$.
 
 <span class="para-title">Materials :</span>
 
-The practical sessions will be conducted in **Python**. You should bring your own laptop and have your own Python environment set up for each session.
+The practical sessions will be conducted in **Python**. You should bring your own laptop and have your own **Python** environment set up for each session.
  
  <span class="para-title">Planning :</span>
  
 
- - <span class="para-subtitle"> Lab work n°1 : </span>
+ - <span class="para-subtitle"> Lab work n°1 : Deep PDE Solver </span>
 
- About **Deep PDE Solver** for solving partial differential equations.
+ The first lab session will be about **Deep PDE Solver** for solving partial differential equations using neural networks. You will implement some of the algorithms which were seen during the course. 
 
-  - <span class="para-subtitle"> Lab work n°2 : </span>
+  - <span class="para-subtitle"> Lab work n°2 : RL for stochastic control problems </span>
 
+
+The second lab session will be about **Reinforcement Learning** for solving some control problems. We will implement some of the algorithms seen during the course 
 About **Reinforcement Learning** for stochastic control problems.
 
-  - <span class="para-subtitle"> Lab work n°3 : </span>
+  - <span class="para-subtitle"> Lab work n°3 : GenAI for data generation </span>
 
-About **Generative IA** and **Schrodinger Bridge** for data generation.
+
+The third lab session will be about **Generative IA** for data generation based on the **Schrödinger bridge**. You will implement the **Schrödinger Bridge Time series (SBTS)** algorithm and apply it to generate some **new samples** of generic time series. 
 
 
  <span class="para-title">Grade :</span>
 
-To be confirmed
+You will have to choose **one lab (TP)** among the three proposed by modifying the column named **"Lab Choice"** associated to your name directly on the  **Excel sheet** available [here](https://docs.google.com/spreadsheets/d/1H2ZDF7BeY9pMEMaEnG-JyBBCpDcvnkJcoZzA4M7mCMo/edit?gid=0#gid=0). Note that the project has be to done by **groups** of **2** or **3**.
+\
+Your objective will be to answer the **questions** of the chosen lab, and a fairly open-ended **mini-project** will be proposed at the end of it. 
+
+**The final grade** will be based on both the **lab questions** and the **mini-project**. In any case, the **final course grade** will be calculated as follows:
+
+\begin{align}
+    \text{Final Grade = 70 \% multiple-choice exam (QCM) + 30 \% project}.
+\end{align}
 
  <span class="para-title">Questions ? :</span>
 
@@ -52,125 +64,6 @@ If you have any  **questions**, you can either e-mail [Samy](mailto:samy.mekkaou
 
 :::
 
-
-
-<figure style="text-align: center; margin: 0;">
-  <img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/MasterM2PF.png" 
-       alt="Ma belle image"
-       style="display: block; margin: 0 auto; max-width: 30%; height: auto;">
-  <figcaption style="font-size: 0.9em; color: #333;">
-  <p><em>Logo of the M2- Probability and Finance </em></p>
-</figure>
-
-```{python}
-
-#| output-location: column-fragment
-
-import os
-import sys
-from pathlib import Path
-
-print("=== KERNEL DEBUG ===")
-print("sys.executable:", sys.executable)
-print("cwd:", os.getcwd())
-print("Path.cwd():", Path.cwd())
-print("====================")
-#  Import des Librairies
-
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
-
-# Test
-print(np.arange(5))
-
-
-def f(x) :
-    return x**2
-
-L=[i for i in range(-5,6)]
-
-plt.scatter(L,[f(l) for l in L])
-plt.xlabel("Test")
-plt.ylabel("Test2")
-plt.title("Test Scatter Plot")
-plt.grid()
-
-# Exemple simple de DataFrame
-data = {
-    'Nom': ['Alice', 'Bob', 'Charlie', 'David'],
-    'Âge': [24, 30, 18, 22],
-    'Ville': ['Paris', 'Lyon', 'Marseille', 'Toulouse'],
-    'Score': [85.5, 90.0, 78.0, 88.5]
-}
-
-
-
-# test_pytorch_mlp.py
-
-import torch
-import torch.nn as nn
-print("Hello")
-# -----------------------------
-# Définition du modèle
-# -----------------------------
-class MLP(nn.Module):
-    def __init__(self, input_dim, hidden_dims, output_dim):
-        super().__init__()
-
-        layers = []
-        in_dim = input_dim
-
-        for h in hidden_dims:
-            layers.append(nn.Linear(in_dim, h))
-            layers.append(nn.ReLU())
-            in_dim = h
-
-        layers.append(nn.Linear(in_dim, output_dim))
-
-        self.network = nn.Sequential(*layers)
-
-    def forward(self, x):
-        return self.network(x)
-
-
-# -----------------------------
-# Instanciation du modèle
-# -----------------------------
-input_dim = 3
-hidden_dims = [64, 64, 64]
-output_dim = 1
-
-model = MLP(input_dim, hidden_dims, output_dim)
-
-
-# -----------------------------
-# Affichage de l'architecture
-# -----------------------------
-print("\n=== Architecture du modèle ===\n")
-print(model)
-
-
-# -----------------------------
-# Nombre de paramètres
-# -----------------------------
-num_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-print("\nNombre de paramètres entraînables :", num_params)
-
-
-# -----------------------------
-# Test forward (sanity check)
-# -----------------------------
-x = torch.randn(5, input_dim)
-y = model(x)
-
-print("\nEntrée x.shape :", x.shape)
-print("Sortie y.shape :", y.shape)
-print("\nSortie y :\n", y)
-
-df = pd.DataFrame(data)
-df
-```    
 
 
 ## Use this website {.unnumbered}
@@ -184,21 +77,23 @@ The site is structured into three sections that make up the course, each consist
 
   - <span class="para-subtitle"> Course reminders: </span>
 
-  The first chapter, titled **Course reminders**, presents the key theoretical concepts. 
+The first chapter, titled **Course Reminders**, reviews the key theoretical concepts covered in the course. It revisits important results and the corresponding algorithms for the underlying problems.
 
 
   - <span class="para-subtitle"> Practical session: </span>
+  
+The second chapter, titled **Lab Work**, contains the practical session instructions along with a link to a **Jupyter Notebook** where you can write your code. These notebooks are designed to be self-contained, allowing you to work independently during the sessions.
 
-  The second chapter, titled **Lab work** contains the practical session instructions and a link to a **Jupyter notebook file** where you can write your code. te that the Jupyter notebooks files are designed to be **self-sufficient**, allowing you to work independently during the practical sessions.
+At the end of each practical session, an **open-ended project** is provided. This project is not intended to be completed during the session, but it is closely related to the material covered and offers an opportunity to explore the concepts in more depth.
 
 
   - <span class="para-subtitle"> References: </span>
 
-  The site contains a section  **References** 
+The site includes a **References** section, where we list the key papers forming the core content of this course. Much of this material is relatively recent and represents an active area of research. Feel free to contact us if you are interested in exploring these topics further!
 
   - <span class="para-subtitle"> Appendix: </span>
 
-  The site contains also a section **Appendix** where we go more in depth about some topics discussed during the course.
+The site also includes an **Appendix** section, where we explore in greater depth some of the topics covered in the course. This section is still under development and will be updated regularly throughout the year.
 
 
 
@@ -217,6 +112,6 @@ For your information, this site is generated using [Quarto](https://quarto.org) 
 We would like to thank the following individuals and organizations without whose support this course would not be possible
 
 - Professor [Huyên Pham](https://sites.google.com/site/phamxuanhuyen/) for the support and valuable feedbacks during the creation of this lab.
-- **Participants** in the course of your interest in Machine Learning for stochastic control and its applications.
+- **Participants** in the course for your interest in Machine Learning for stochastic control and its applications.
 :::
 
