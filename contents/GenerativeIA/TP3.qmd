@@ -1,24 +1,37 @@
 # Lab work n°3  
 
-You can download the **Lab work n°3** by clicking [here](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/contents/GenerativeIA/PDF-File/LabWork3_SchrodingerBridge.pdf).
-
-All the important informations are provided in the PDF file. In the following, we just summarize the main goals of this Lab Work.
-
-## Summary of the Lab work n°3 
+You can download the **Lab work n°3** as a PDF file by clicking [here](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/contents/GenerativeIA/PDF-File/LabWork3_SchrodingerBridge.pdf).
+All the necessary information is already included in the PDF file, but a brief summary of the lab content is provided below for convenience.
 
 
-
-### Goals 
+## Summary of the lab 
 
 
 
-### Your expected work  
+::: {#alg-description .algorithm}
 
 
+<span class="para-title"> Content : </span>
+
+The lab work is divided into 2 parts :
+ 
+- TBD
+- TBD
+
+<span class="para-title"> Main goals : </span>
+
+I will add some plots here.
+
+:::
+
+## Towards the open ended mini-project
 
 
+::: {#alg-description .algorithm}
 
-### Submission deadline
+Add here what is expected for the mini-project.
+
+:::
 
     
 

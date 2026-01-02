@@ -1,33 +1,36 @@
 # Lab work n°2 
 
-You can download the **Lab work n°2** by clicking [here](TP2-RL/TP%20n%C2%B02-%20RL%20in%20Continuous%20Time.ipynb). All the relevant informations are already provided on the notebook. 
+You can download **Lab Work n°2: RL for stochastic control problems** as a Jupyter Notebook [here](TP2-RL/TP%20n%C2%B02-%20RL%20in%20Continuous%20Time.ipynb). All the necessary information is already included in the notebook, but a brief summary of the lab content is provided below for convenience.
 
-All the important information is already presented in the notebook. The following is a simple summary of what you will learn to do during the lab work and what is expected of you for the final submission if you choose this lab.
 
-## Summary of the Lab work n°2 
+## Summary of the lab 
+
+
+::: {#alg-description .algorithm}
+
+
+<span class="para-title"> Content : </span>
 
 The lab work is divided into 2 parts :
  
 - The first part is devoted to the implementation of Policy gradient algorithms in the context of RL in continuous time with applications to some stochastic models used in finance.
 - The second part is devoted to the use of Q-learning algorithms for RL in continuous time.
 
+<span class="para-title"> Main goals : </span>
 
-### Goals
+I will add some plots here.
 
+:::
 
-### Your expected work 
-
-### Submission deadline
-
-
-## Expected results
+## Towards the open ended mini-project
 
 
-### 
+::: {#alg-description .algorithm}
 
+Add here what is expected for the mini-project.
 
+:::
 
-### 
 
 
 

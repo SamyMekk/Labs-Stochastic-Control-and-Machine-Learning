@@ -108,14 +108,12 @@ However, solving these PDEs have always been highly challenging due to the curse
 
 ### Deep Galerkin Algorithm
 
-#### Mathematical description 
 
 :::{#method-description .methodology}
 **Mathematical description of the method**
 
 :::
 
-#### Algorithm description
 
 ::: {#alg-description .algorithm}
 **Algorithm : Deep Galerkin Method**
@@ -128,16 +126,10 @@ Let \( \pi_\theta \) be a policy such that …
 
 ### Deep BSDE Solver
 
-#### Mathematical description 
-
-
 :::{#method-description .methodology}
 **Mathematical description of the method**
 
 :::
-
-
-#### Algorithm description
 
 
 ::: {#alg-description .algorithm}
