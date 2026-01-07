@@ -16,6 +16,7 @@ The Lab work is divided into 3 parts :
 - The first part is devoted to get more familiar with the PyTorch library for the ones who are not that familiar with the library.
 - The second part is devoted to the implementation of the Deep Galerkin algorithm with so 
 - The third part is devoted to the implementation of the Deep BSDE Solver and to 
+- TBD.
 
 
 
