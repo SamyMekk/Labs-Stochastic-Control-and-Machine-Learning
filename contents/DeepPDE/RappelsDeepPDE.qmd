@@ -54,15 +54,15 @@ We introduce the pair of processes $(Y,Z) = (Y_t,Z_t)_{0 \leq t \leq T}$
 $$
 \begin{align}
 \begin{cases}
-   dY_t &= - f(t,Y_t,Z_t) d t + Z_t d W_t , \quad (1)\\
+   dY_t &= - f(t,Y_t,Z_t) d t + Z_t d W_t ,\\
    Y_T &= \xi
 \end{cases}
 \end{align}
-$$
+$$ {#eq-BSDE-differential}
 
 :::{#def-solBSDE}
 
-A solution to the BSDE is a pair of processes $(Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)$ satisfying
+A solution to the BSDE @eq-BSDE-differential is a pair of processes $(Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)$ satisfying
 $$
 \begin{align}
 Y_t = \xi + \int_{t}^{T} f(s,Y_s,Z_s) ds - \int_{t}^{T} Z_s d W_s, \quad 0 \leq t \leq T, \quad \mathbb{P - }\text{ a.s}. \notag 
@@ -138,9 +138,9 @@ $$
  d X_s = b(s,X_s) d s + \sigma(s,X_s) d W_s
 \end{align}
 $$
-<span class="para-subtitle">Link between $v$ and $(Y,Z)$ :</span>
+<span class="para-subtitle">Proposition : Link between $v$ and $(Y,Z)$ :</span>
 
-Let $v \in \mathcal{C}^{1,2}([0,T) \times \mathbb{R}^n) \cap C^0([0,T] \times \mathbb{R}^n)$ be a solution to the PDE $(4)$, satisfying a linear growth condition and such that there exists positive constants $C,q$ such that $| D_x v(t,x)| \leq C( 1+ |x|^q)$ for any $x \in \mathbb{R}^n$. Then the pair $(Y,Z)$ defined by
+Let $v \in \mathcal{C}^{1,2}([0,T) \times \mathbb{R}^n) \cap C^0([0,T] \times \mathbb{R}^n)$ be a solution to the PDE $(4)$, satisfying a linear growth condition and such that there exists positive constants $C,q$ such that $| D_x v(t,x)| \leq C( 1+ |x|^q)$ for any $x \in \mathbb{R}^n$. Then the pair of processes $(Y,Z)$ defined by
 
 <div class="eq-frame">
 $$
@@ -152,10 +152,21 @@ Z_t &= \sigma^{\top}(X_t) D_x v(t,X_t), \quad 0 \leq t \leq T
 \end{align}
 $$
 </div>
-is a solution to the BSDE $(1)$.
+is the solution to the BSDE $(1)$.
 
-
-
+**Proof.** This result is an immediate application of the Itô's formula applied to the process $\big(v(t,X_t)\big)_{0 \leq t \leq T}$ and the fact that $v$ is a solution to the PDE **add ref**. Indeed, applying Itô's formula between $t$ and $T$, we have
+$$
+\begin{align}
+   v(t,X_t)= v(T,X_T) - \int_{t}^{T} \Big( \partial_t v(s,X_s) - \mathcal{L}v(s,X_s)  \Big) d s - \int_{t}^{T} \sigma^{\top}(s,X_s) D_x v(s,X_s) d W_s, \quad 0 \leq t \leq T.
+\end{align}
+$$
+Now, using that $v$ is a solution to the PDE, we get that
+$$
+\begin{align}
+Y_t = g(X_T) + \int_{t}^{T} f(s,X_s,Y_s,Z_s) d s - \int_{t}^{T} Z_s d W_s,  \quad 0 \leq t \leq T,
+\end{align}
+$$
+where we set $(Y_t,Z_t) = \Big(v(t,X_t), \sigma^{\top}(t,X_t)D_x v(t,X_t)\Big)$ for any $t \in [0,T]$. Moreover, from the growth assumptions on $v$ and $D_x v$, we get that $(Y,Z)$ lies in $\mathbb{S}^2([0,T]; \mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)$ and is unique by @thm-ExistenceUnicityBSDE .
 
 
 

@@ -324,16 +324,16 @@ Let <span class="math inline">\(f :[0,T] \times \mathbb{R}^n \times A \to \mathb
 <section id="the-bsde-approach-pontryagins-formulation" class="level3" data-number="1.1.3">
 <h3 data-number="1.1.3" class="anchored" data-anchor-id="the-bsde-approach-pontryagins-formulation"><span class="header-section-number">1.1.3</span> The BSDE approach : Pontryagin’s formulation</h3>
 <p>We introduce the pair of processes <span class="math inline">\((Y,Z) = (Y_t,Z_t)_{0 \leq t \leq T}\)</span></p>
-<p><span class="math display">\[
+<p><span id="eq-BSDE-differential"><span class="math display">\[
 \begin{align}
 \begin{cases}
    dY_t &amp;= - f(t,Y_t,Z_t) d t + Z_t d W_t , \quad (1)\\
    Y_T &amp;= \xi
 \end{cases}
 \end{align}
-\]</span></p>
+\tag{1.1}\]</span></span></p>
 <div id="def-solBSDE" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1.1</strong></span> A solution to the BSDE is a pair of processes <span class="math inline">\((Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)\)</span> satisfying <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 1.1</strong></span> A solution to the BSDE <a href="#eq-BSDE-differential" class="quarto-xref">Equation&nbsp;<span>1.1</span></a> is a pair of processes <span class="math inline">\((Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)\)</span> satisfying <span class="math display">\[
 \begin{align}
 Y_t = \xi + \int_{t}^{T} f(s,Y_s,Z_s) ds - \int_{t}^{T} Z_s d W_s, \quad 0 \leq t \leq T, \quad \mathbb{P - }\text{ a.s}. \notag
 \end{align}
@@ -383,8 +383,8 @@ v(T,x) = g(x).
 \begin{align}
 d X_s = b(s,X_s) d s + \sigma(s,X_s) d W_s
 \end{align}
-\]</span> <span class="para-subtitle">Link between <span class="math inline">\(v\)</span> and <span class="math inline">\((Y,Z)\)</span> :</span></p>
-<p>Let <span class="math inline">\(v \in \mathcal{C}^{1,2}([0,T) \times \mathbb{R}^n) \cap C^0([0,T] \times \mathbb{R}^n)\)</span> be a solution to the PDE <span class="math inline">\((4)\)</span>, satisfying a linear growth condition and such that there exists positive constants <span class="math inline">\(C,q\)</span> such that <span class="math inline">\(| D_x v(t,x)| \leq C( 1+ |x|^q)\)</span> for any <span class="math inline">\(x \in \mathbb{R}^n\)</span>. Then the pair <span class="math inline">\((Y,Z)\)</span> defined by</p>
+\]</span> <span class="para-subtitle">Proposition : Link between <span class="math inline">\(v\)</span> and <span class="math inline">\((Y,Z)\)</span> :</span></p>
+<p>Let <span class="math inline">\(v \in \mathcal{C}^{1,2}([0,T) \times \mathbb{R}^n) \cap C^0([0,T] \times \mathbb{R}^n)\)</span> be a solution to the PDE <span class="math inline">\((4)\)</span>, satisfying a linear growth condition and such that there exists positive constants <span class="math inline">\(C,q\)</span> such that <span class="math inline">\(| D_x v(t,x)| \leq C( 1+ |x|^q)\)</span> for any <span class="math inline">\(x \in \mathbb{R}^n\)</span>. Then the pair of processes <span class="math inline">\((Y,Z)\)</span> defined by</p>
 <div class="eq-frame">
 <p><span class="math display">\[
 \begin{align}
@@ -395,7 +395,16 @@ Z_t &amp;= \sigma^{\top}(X_t) D_x v(t,X_t), \quad 0 \leq t \leq T
 \end{align}
 \]</span></p>
 </div>
-<p>is a solution to the BSDE <span class="math inline">\((1)\)</span>.</p>
+<p>is the solution to the BSDE <span class="math inline">\((1)\)</span>.</p>
+<p><strong>Proof.</strong> This result is an immediate application of the Itô’s formula applied to the process <span class="math inline">\(\big(v(t,X_t)\big)_{0 \leq t \leq T}\)</span> and the fact that <span class="math inline">\(v\)</span> is a solution to the PDE <strong>add ref</strong>. Indeed, applying Itô’s formula between <span class="math inline">\(t\)</span> and <span class="math inline">\(T\)</span>, we have <span class="math display">\[
+\begin{align}
+   v(t,X_t)= v(T,X_T) - \int_{t}^{T} \Big( \partial_t v(s,X_s) - \mathcal{L}v(s,X_s)  \Big) d s - \int_{t}^{T} \sigma^{\top}(s,X_s) D_x v(s,X_s) d W_s, \quad 0 \leq t \leq T.
+\end{align}
+\]</span> Now, using that <span class="math inline">\(v\)</span> is a solution to the PDE, we get that <span class="math display">\[
+\begin{align}
+Y_t = g(X_T) + \int_{t}^{T} f(s,X_s,Y_s,Z_s) d s - \int_{t}^{T} Z_s d W_s,  \quad 0 \leq t \leq T,
+\end{align}
+\]</span> where we set <span class="math inline">\((Y_t,Z_t) = \Big(v(t,X_t), \sigma^{\top}(t,X_t)D_x v(t,X_t)\Big)\)</span> for any <span class="math inline">\(t \in [0,T]\)</span>. Moreover, from the growth assumptions on <span class="math inline">\(v\)</span> and <span class="math inline">\(D_x v\)</span>, we get that <span class="math inline">\((Y,Z)\)</span> lies in <span class="math inline">\(\mathbb{S}^2([0,T]; \mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)\)</span> and is unique by <a href="#thm-ExistenceUnicityBSDE" class="quarto-xref">Theorem&nbsp;<span>1.1</span></a> .</p>
 </div>
 </section>
 </section>
