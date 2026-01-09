@@ -9,6 +9,18 @@
 
 ```{python}
 
+# -----------------------
+# 5️⃣ Plot
+# -----------------------
+plt.figure()
+plt.scatter(X[:2000], Y[:2000], alpha=0.2, label="Données")
+plt.plot(x_test, y_nn, linewidth=2, label="Réseau neuronal")
+plt.plot(x_test, y_true, linestyle="--", linewidth=2, label="cos(x)")
+plt.legend()
+plt.show()
+
+
+
 #| output-location: column-fragment
 
 import os

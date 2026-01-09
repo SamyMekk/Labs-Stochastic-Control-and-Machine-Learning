@@ -17,6 +17,7 @@ The Lab work is divided into 3 parts :
 - The second part is devoted to the implementation of the Deep Galerkin algorithm with so 
 - The third part is devoted to the implementation of the Deep BSDE Solver and to 
 - TBD.
+- TBD
 
 
 

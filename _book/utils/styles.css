@@ -21,6 +21,11 @@ body {
     padding: 0.5em;
   }
 
+  .proposition {
+    background-color: rgb(248, 239, 239);
+    padding: 0.5em;
+  }
+
   .lemma {
     background-color: rgb(247, 247, 242);
     padding: 0.5em;
@@ -31,6 +36,14 @@ body {
     padding: 0.5em;
   }
 
+
+  .proof {
+    background-color: rgb(255, 240, 220); /* orange très clair */
+    margin-top: 1em;
+    padding: 0.5em;
+    border-left: 4px solid rgb(255, 200, 150); /* accent doux */
+    border-radius: 4px;
+}
 
   .theorem .definition p {
     background-color: rgb(119, 37, 37);
@@ -65,6 +78,12 @@ body {
   display: inline-block;
   padding-bottom: 0.1em;
   border-bottom: 1px solid currentColor;
+}
+.eq-frame {
+    border: 1px solid #aaa; /* cadre fin gris */
+    padding: 0.5em 0.8em;    /* un peu d’espace autour de l’équation */
+    margin: 1em 0;           /* espace au-dessus et en dessous */
+    border-radius: 3px;      /* coins légèrement arrondis, optionnel */
 }
 
 
