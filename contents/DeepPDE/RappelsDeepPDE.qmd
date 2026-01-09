@@ -78,9 +78,9 @@ Given a pair of $(\xi,f)$ satisfying Assumptions $(A)$ and $(B)$, there exists a
 
 :::
 
-::: {#formula-description .formulation}
+::: proof
 
-**Proof.** The proof is based on a fixed point argument on the Banach space $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)$ endowed with the norm 
+The proof of @thm-ExistenceUnicityBSDE is based on a fixed point argument on the Banach space $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)$ endowed with the norm 
 $$
 \begin{align}
 \lVert (Y,Z) \rVert_{\beta} = \bigg(\mathbb{E} \Big[ \int_{0}^{T}  e^{\beta s} \big( |Y_s|^2 + |Z_s|^2 \big) \Big] \bigg)^{\frac{1}{2}}

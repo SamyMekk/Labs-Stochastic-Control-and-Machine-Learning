@@ -327,7 +327,7 @@ Let <span class="math inline">\(f :[0,T] \times \mathbb{R}^n \times A \to \mathb
 <p><span id="eq-BSDE-differential"><span class="math display">\[
 \begin{align}
 \begin{cases}
-   dY_t &amp;= - f(t,Y_t,Z_t) d t + Z_t d W_t , \quad (1)\\
+   dY_t &amp;= - f(t,Y_t,Z_t) d t + Z_t d W_t ,\\
    Y_T &amp;= \xi
 \end{cases}
 \end{align}
@@ -343,8 +343,8 @@ Y_t = \xi + \int_{t}^{T} f(s,Y_s,Z_s) ds - \int_{t}^{T} Z_s d W_s, \quad 0 \leq 
 <div id="thm-ExistenceUnicityBSDE" class="theorem">
 <p><span class="theorem-title"><strong>Theorem 1.1</strong></span> Given a pair of <span class="math inline">\((\xi,f)\)</span> satisfying Assumptions <span class="math inline">\((A)\)</span> and <span class="math inline">\((B)\)</span>, there exists a unique solution <span class="math inline">\((Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> to <span class="math inline">\((1)\)</span>.</p>
 </div>
-<div id="formula-description" class="formulation">
-<p><strong>Proof.</strong> The proof is based on a fixed point argument on the Banach space <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> endowed with the norm <span class="math display">\[
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of <a href="#thm-ExistenceUnicityBSDE" class="quarto-xref">Theorem&nbsp;<span>1.1</span></a> is based on a fixed point argument on the Banach space <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> endowed with the norm <span class="math display">\[
 \begin{align}
 \lVert (Y,Z) \rVert_{\beta} = \bigg(\mathbb{E} \Big[ \int_{0}^{T}  e^{\beta s} \big( |Y_s|^2 + |Z_s|^2 \big) \Big] \bigg)^{\frac{1}{2}}
 \end{align}
