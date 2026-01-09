@@ -292,7 +292,7 @@ $$
 </header>
 
 
-<p>The following is a reminder of the main theoretical results about <strong>Deep Learning algorithms for PDE</strong> seen during the course. A full <strong>PDF version</strong> is also available at this <a href="PDF-File/Deep_Learning_for_PDE.pdf">link</a>.</p>
+<p>The following is a reminder of the main theoretical results about <strong>Deep Learning algorithms for PDE</strong> seen during the course.</p>
 <section id="some-reminders-on-pde-and-stochastic-control" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="some-reminders-on-pde-and-stochastic-control"><span class="header-section-number">1.1</span> Some reminders on PDE and stochastic control</h2>
 <section id="stochastic-control-in-a-nutshell" class="level3" data-number="1.1.1">
@@ -315,7 +315,7 @@ $$
 <ul>
 <li><span class="para-subtitle">Functional objective</span></li>
 </ul>
-Let <span class="math inline">\(f :[0,T] \times \mathbb{R}^n \times A \to \mathbb{R}\)</span> and <span class="math inline">\(g : \mathbb{R}^n \to \mathbb{R}\)</span> two measurable functions. We supose that
+Let <span class="math inline">\(f :[0,T] \times \mathbb{R}^n \times A \to \mathbb{R}\)</span> and <span class="math inline">\(g : \mathbb{R}^n \to \mathbb{R}\)</span> two measurable functions. We suppose that
 </div>
 </section>
 <section id="the-dynamic-programming-approach-hjb-equation" class="level3" data-number="1.1.2">
@@ -323,6 +323,89 @@ Let <span class="math inline">\(f :[0,T] \times \mathbb{R}^n \times A \to \mathb
 </section>
 <section id="the-bsde-approach-pontryagins-formulation" class="level3" data-number="1.1.3">
 <h3 data-number="1.1.3" class="anchored" data-anchor-id="the-bsde-approach-pontryagins-formulation"><span class="header-section-number">1.1.3</span> The BSDE approach : Pontryagin’s formulation</h3>
+<p>We introduce the pair of processes <span class="math inline">\((Y,Z) = (Y_t,Z_t)_{0 \leq t \leq T}\)</span></p>
+<p><span id="eq-BSDE-differential"><span class="math display">\[
+\begin{align}
+\begin{cases}
+   dY_t &amp;= - f(t,Y_t,Z_t) d t + Z_t d W_t ,\\
+   Y_T &amp;= \xi
+\end{cases}
+\end{align}
+\tag{1.1}\]</span></span></p>
+<div id="def-solBSDE" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1.1</strong></span> A solution to the BSDE <a href="#eq-BSDE-differential" class="quarto-xref">Equation&nbsp;<span>1.1</span></a> is a pair of processes <span class="math inline">\((Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)\)</span> satisfying <span class="math display">\[
+\begin{align}
+Y_t = \xi + \int_{t}^{T} f(s,Y_s,Z_s) ds - \int_{t}^{T} Z_s d W_s, \quad 0 \leq t \leq T, \quad \mathbb{P - }\text{ a.s}. \notag
+\end{align}
+\]</span></p>
+</div>
+<p>We now state an import result ensuring existence and unicity to the BSDE <span class="math inline">\((1)\)</span></p>
+<div id="thm-ExistenceUnicityBSDE" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.1</strong></span> Given a pair of <span class="math inline">\((\xi,f)\)</span> satisfying Assumptions <span class="math inline">\((A)\)</span> and <span class="math inline">\((B)\)</span>, there exists a unique solution <span class="math inline">\((Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> to <span class="math inline">\((1)\)</span>.</p>
+</div>
+<div id="formula-description" class="formulation">
+<p><strong>Proof.</strong> The proof is based on a fixed point argument on the Banach space <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> endowed with the norm <span class="math display">\[
+\begin{align}
+\lVert (Y,Z) \rVert_{\beta} = \bigg(\mathbb{E} \Big[ \int_{0}^{T}  e^{\beta s} \big( |Y_s|^2 + |Z_s|^2 \big) \Big] \bigg)^{\frac{1}{2}}
+\end{align}
+\]</span>. We now show that for a suitable choice of <span class="math inline">\(\beta\)</span>, the mapping <span class="math inline">\(\Phi\)</span> is well defined on <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> into <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> as <span class="math inline">\((Y,Z) = \Phi(U,V)\)</span>. Formally, defining the martingale process <span class="math inline">\(M=(M_t)_{0 \leq t \leq T}\)</span> as <span class="math inline">\(M_t = \mathbb{E} \Big[ \xi + \int_{0}^{T} f(s,U_s,V_s)| \mathcal{F}_t \Big]\)</span>, from the Itô’s martingale decomposition theorem, we got the existence of a process <span class="math inline">\(Z=(Z_t)_{0 \leq t \leq T} \in \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> such that <span class="math display">\[
+\begin{align}
+M_t = M_0 + \int_{0}^{t} Z_s d W_s.
+\end{align}
+\]</span> We then define the process <span class="math inline">\(Y=(Y_t)_{0 \leq t \leq T}\)</span> as <span class="math display">\[
+\begin{align}
+Y_t = M_t - \int_{0}^{t} f(s,U_s, V_s) d s .
+\end{align}
+\]</span> It is easy to see that <span class="math inline">\(Y_T = \xi\)</span> by construction and that our <span class="math inline">\(Y\)</span> candidate satisfies <span class="math inline">\((1)\)</span>. Now, you can check under the assumptions on <span class="math inline">\(f\)</span> and <span class="math inline">\(\xi\)</span> that <span class="math display">\[
+\begin{align}
+\mathbb{E} \Big[ \underset{0 \leq t \leq T}{\text{ sup }} |\int_{t}^{T} Z_s d W_s |^2 \Big] \leq 4 \mathbb{E}\Big[ \int_{0}^{T} |Z_s|^2 d s  \Big] &lt; + \infty.
+\end{align}
+\]</span> where the inequality follows from Doob’s inequality. Therefore, <span class="math inline">\(\Phi\)</span> is a well defined map. Now, you can check that for <span class="math inline">\(\beta\)</span> small enough, <span class="math inline">\(\Phi\)</span> is a contraction and therefore the Banach fixed point ensures that there exists a unique solution to <span class="math inline">\((1)\)</span>.</p>
+</div>
+<div id="alg-description" class="algorithm">
+<p><span class="para-title">BSDE, PDE and nonlinear Feynman-Kac formula</span></p>
+<p>In this chapter, we will study an extension of the Feynman-Kac formula for <strong>semi-linear PDE</strong> in the form <span class="math display">\[
+\begin{align}
+\begin{cases}
+\partial_t v(t,x) + \mathcal{L}v(t,x) + f(t,x,v(t,x), \sigma(t,x)^{\top} D_x v(t,x)) = 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \quad (4) \\
+v(T,x) = g(x).
+\end{cases}
+\end{align}
+\]</span> In fact, we will represent the solution of this PDE through a BSDE, namely from the BSDE</p>
+<p><span class="math display">\[
+\begin{align}
+\begin{cases}
+    d Y_s &amp;= - f(s,X_s,Y_s,Z_s) d s + Z_s d W_s , \\
+    Y_T &amp;= g(X_T),
+\end{cases}
+\end{align}
+\]</span> and we recall that the forward SDE <span class="math inline">\(\mathbb{R}^n\)</span>-valued process <span class="math inline">\(X=(X_t)_{0 \leq t \leq T}\)</span> is given by <span class="math display">\[
+\begin{align}
+d X_s = b(s,X_s) d s + \sigma(s,X_s) d W_s
+\end{align}
+\]</span> <span class="para-subtitle">Proposition : Link between <span class="math inline">\(v\)</span> and <span class="math inline">\((Y,Z)\)</span> :</span></p>
+<p>Let <span class="math inline">\(v \in \mathcal{C}^{1,2}([0,T) \times \mathbb{R}^n) \cap C^0([0,T] \times \mathbb{R}^n)\)</span> be a solution to the PDE <span class="math inline">\((4)\)</span>, satisfying a linear growth condition and such that there exists positive constants <span class="math inline">\(C,q\)</span> such that <span class="math inline">\(| D_x v(t,x)| \leq C( 1+ |x|^q)\)</span> for any <span class="math inline">\(x \in \mathbb{R}^n\)</span>. Then the pair of processes <span class="math inline">\((Y,Z)\)</span> defined by</p>
+<div class="eq-frame">
+<p><span class="math display">\[
+\begin{align}
+\begin{cases}
+Y_t &amp;= v(t,X_t), \\
+Z_t &amp;= \sigma^{\top}(X_t) D_x v(t,X_t), \quad 0 \leq t \leq T
+\end{cases}
+\end{align}
+\]</span></p>
+</div>
+<p>is the solution to the BSDE <span class="math inline">\((1)\)</span>.</p>
+<p><strong>Proof.</strong> This result is an immediate application of the Itô’s formula applied to the process <span class="math inline">\(\big(v(t,X_t)\big)_{0 \leq t \leq T}\)</span> and the fact that <span class="math inline">\(v\)</span> is a solution to the PDE <strong>add ref</strong>. Indeed, applying Itô’s formula between <span class="math inline">\(t\)</span> and <span class="math inline">\(T\)</span>, we have <span class="math display">\[
+\begin{align}
+   v(t,X_t)= v(T,X_T) - \int_{t}^{T} \Big( \partial_t v(s,X_s) - \mathcal{L}v(s,X_s)  \Big) d s - \int_{t}^{T} \sigma^{\top}(s,X_s) D_x v(s,X_s) d W_s, \quad 0 \leq t \leq T.
+\end{align}
+\]</span> Now, using that <span class="math inline">\(v\)</span> is a solution to the PDE, we get that <span class="math display">\[
+\begin{align}
+Y_t = g(X_T) + \int_{t}^{T} f(s,X_s,Y_s,Z_s) d s - \int_{t}^{T} Z_s d W_s,  \quad 0 \leq t \leq T,
+\end{align}
+\]</span> where we set <span class="math inline">\((Y_t,Z_t) = \Big(v(t,X_t), \sigma^{\top}(t,X_t)D_x v(t,X_t)\Big)\)</span> for any <span class="math inline">\(t \in [0,T]\)</span>. Moreover, from the growth assumptions on <span class="math inline">\(v\)</span> and <span class="math inline">\(D_x v\)</span>, we get that <span class="math inline">\((Y,Z)\)</span> lies in <span class="math inline">\(\mathbb{S}^2([0,T]; \mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)\)</span> and is unique by <a href="#thm-ExistenceUnicityBSDE" class="quarto-xref">Theorem&nbsp;<span>1.1</span></a> .</p>
+</div>
 </section>
 </section>
 <section id="neural-networks-based-algorithms-for-solving-pdes" class="level2" data-number="1.2">
@@ -403,9 +486,6 @@ v(T,x) = g(x), \quad x \in \mathbb{R}^n
 <li><p>Until ( | V_{k+1} - V_k | &lt; )</p></li>
 <li><p>Return ( V^* )</p></li>
 </ol>
-</div>
-<div id="def-quarto" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1.1</strong></span> A noter qu’il faut être à l’aise sur l’utilisation de Quarto</p>
 </div>
 
 
