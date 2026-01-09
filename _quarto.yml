@@ -11,7 +11,7 @@ book:
   date: today
   repo-url: "https://github.com/SamyMekk/TP-Controle-Stochastique"
   chapters:
-     - contents/index.qmd
+     - Home.qmd
 
      - part: "Part n°1 : Deep Learning for PDE"
        chapters:
@@ -26,7 +26,7 @@ book:
          - contents/GenerativeIA/RappelsGenAI.qmd
          - contents/GenerativeIA/TP3.qmd
  
-     - contents/references.qmd
+     - References.qmd
 
     
      
