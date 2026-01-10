@@ -216,7 +216,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../references.html" class="sidebar-item-text sidebar-link">
+  <a href="../../References.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -298,7 +298,7 @@ $$
 </ul>
 <p>Let <span class="math inline">\((\Omega,\mathcal{F}, \mathbb{F}=(\mathcal{F}_t)_{t \geq 0}, \mathbb{P})\)</span> be a probability space satisfying the usual assumptions and big enough to support a Brownian motion <span class="math inline">\(W=(W_t)_{t \geq 0}\)</span>. We consider a control model where the state of the system is governed by a stochastic differential equation (SDE) valued in <span class="math inline">\(\mathbb{R}^n\)</span> given by</p>
 <p><span class="math display">\[\begin{align}
-    d X_s = b(X_s,\alpha_s) d s + \sigma(X_s, \alpha_s ) d W_s, \hspace{0.5 cm} (1)
+    d X_s = b(X_s,\alpha_s) d s + \sigma(X_s, \alpha_s ) d W_s, \hspace{0.5 cm}
 \end{align}\]</span> starting from <span class="math inline">\(X_0= x \in \mathbb{R}^n\)</span> and where we are given 2 measurable maps <span class="math inline">\((b,\sigma) : \ \mathbb{R}^n \times A \to \mathbb{R}^n ,\mathbb{R}^{d \times n}\)</span> and the control <span class="math inline">\(\alpha=(\alpha_t)_{0 \leq t \leq T}\)</span> is a progressively measurable (with respect to <span class="math inline">\(\mathbb{F})\)</span> process valued in <span class="math inline">\(A \subset \mathbb{R}^m\)</span>. We suppose that the measurable maps <span class="math inline">\((b,\sigma)\)</span> satisfy a uniform Lipschitz condition on <span class="math inline">\(A\)</span>: <span class="math inline">\(\exists K \geq 0\)</span>, <span class="math inline">\(\forall x,y \in \mathbb{R}^n\)</span>, <span class="math inline">\(\forall a \in A\)</span>, <span class="math display">\[\begin{align}
     | b(x,a) - b(y,a) |+ |\sigma(x,a) - \sigma(y,a) | \leq  K |x-y|.
 \end{align}\]</span> In the sequel, for <span class="math inline">\(0 \leq t \leq T\)</span>, we denote by <span class="math inline">\(\mathcal{T}_{t,T}\)</span> the set of stopping times valued in <span class="math inline">\([t,T]\)</span>. Fix <span class="math inline">\(T &gt; 0\)</span> and we denote by <span class="math inline">\(\mathcal{A}\)</span> the set of progressively mesurable with respect to <span class="math inline">\(\mathbb{F}\)</span> control processes <span class="math inline">\(\alpha = (\alpha_t)_{0 \leq t \leq T}\)</span> such that <span class="math display">\[\begin{align}
@@ -358,22 +358,22 @@ Y_t = M_t - \int_{0}^{t} f(s,U_s, V_s) d s .
 </div>
 <div id="alg-description" class="algorithm">
 <p><span class="para-title">BSDE, PDE and nonlinear Feynman-Kac formula</span></p>
-<p>In this chapter, we will study an extension of the Feynman-Kac formula for <strong>semi-linear PDE</strong> in the form <span class="math display">\[
+<p>In this chapter, we will study an extension of the Feynman-Kac formula for <strong>semi-linear PDE</strong> in the form <span id="eq-semilinearPDE"><span class="math display">\[
 \begin{align}
 \begin{cases}
-\partial_t v(t,x) + \mathcal{L}v(t,x) + f(t,x,v(t,x), \sigma(t,x)^{\top} D_x v(t,x)) = 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \quad (4) \\
+\partial_t v(t,x) + \mathcal{L}v(t,x) + f(t,x,v(t,x), \sigma(t,x)^{\top} D_x v(t,x)) = 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \\
 v(T,x) = g(x).
 \end{cases}
 \end{align}
-\]</span> In fact, we will represent the solution of this PDE through a BSDE, namely from the BSDE</p>
-<p><span class="math display">\[
+\tag{1.2}\]</span></span> In fact, we will represent the PDE solution of <a href="#eq-semilinearPDE" class="quarto-xref">Equation&nbsp;<span>1.2</span></a> through a suitable BSDE representation as below</p>
+<p><span id="eq-BSDE-differential-2"><span class="math display">\[
 \begin{align}
 \begin{cases}
     d Y_s &amp;= - f(s,X_s,Y_s,Z_s) d s + Z_s d W_s , \\
     Y_T &amp;= g(X_T),
 \end{cases}
 \end{align}
-\]</span> and we recall that the forward SDE <span class="math inline">\(\mathbb{R}^n\)</span>-valued process <span class="math inline">\(X=(X_t)_{0 \leq t \leq T}\)</span> is given by <span class="math display">\[
+\tag{1.3}\]</span></span> and we recall that the forward SDE <span class="math inline">\(\mathbb{R}^n\)</span>-valued process <span class="math inline">\(X=(X_t)_{0 \leq t \leq T}\)</span> is given by <span class="math display">\[
 \begin{align}
 d X_s = b(s,X_s) d s + \sigma(s,X_s) d W_s
 \end{align}
@@ -389,7 +389,7 @@ Z_t &amp;= \sigma^{\top}(X_t) D_x v(t,X_t), \quad 0 \leq t \leq T
 \end{align}
 \]</span></p>
 </div>
-<p>is the solution to the BSDE <span class="math inline">\((1)\)</span>.</p>
+<p>is the solution to the BSDE <a href="#eq-BSDE-differential-2" class="quarto-xref">Equation&nbsp;<span>1.3</span></a>.</p>
 <p><strong>Proof.</strong> This result is an immediate application of the Itô’s formula applied to the process <span class="math inline">\(\big(v(t,X_t)\big)_{0 \leq t \leq T}\)</span> and the fact that <span class="math inline">\(v\)</span> is a solution to the PDE <strong>add ref</strong>. Indeed, applying Itô’s formula between <span class="math inline">\(t\)</span> and <span class="math inline">\(T\)</span>, we have <span class="math display">\[
 \begin{align}
    v(t,X_t)= v(T,X_T) - \int_{t}^{T} \Big( \partial_t v(s,X_s) - \mathcal{L}v(s,X_s)  \Big) d s - \int_{t}^{T} \sigma^{\top}(s,X_s) D_x v(s,X_s) d W_s, \quad 0 \leq t \leq T.

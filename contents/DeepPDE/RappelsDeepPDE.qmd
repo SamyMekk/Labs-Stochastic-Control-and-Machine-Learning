@@ -16,7 +16,7 @@ The following is a reminder of the main theoretical results about **Deep Learnin
 Let $(\Omega,\mathcal{F}, \mathbb{F}=(\mathcal{F}_t)_{t \geq 0}, \mathbb{P})$ be a probability space satisfying the usual assumptions and big enough to support a Brownian motion $W=(W_t)_{t \geq 0}$. We consider a control model where the state of the system is governed by a stochastic differential equation (SDE) valued in $\mathbb{R}^n$ given by 
 
 \begin{align}
-    d X_s = b(X_s,\alpha_s) d s + \sigma(X_s, \alpha_s ) d W_s, \hspace{0.5 cm} (1)
+    d X_s = b(X_s,\alpha_s) d s + \sigma(X_s, \alpha_s ) d W_s, \hspace{0.5 cm}
 \end{align}
 starting from $X_0= x \in \mathbb{R}^n$ and where we are given 2 measurable maps $(b,\sigma) : \ \mathbb{R}^n \times A \to \mathbb{R}^n ,\mathbb{R}^{d \times n}$ and the control $\alpha=(\alpha_t)_{0 \leq t \leq T}$ is a progressively measurable  (with respect to $\mathbb{F})$ process valued in $A \subset \mathbb{R}^m$. We suppose that the measurable maps $(b,\sigma)$ satisfy a uniform Lipschitz condition on $A$: $\exists K \geq 0$, $\forall x,y \in \mathbb{R}^n$, $\forall a \in A$,
 \begin{align}
@@ -117,12 +117,12 @@ In this chapter, we will study an extension of the Feynman-Kac formula for **sem
 $$
 \begin{align}
 \begin{cases}
-\partial_t v(t,x) + \mathcal{L}v(t,x) + f(t,x,v(t,x), \sigma(t,x)^{\top} D_x v(t,x)) = 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \quad (4) \\
+\partial_t v(t,x) + \mathcal{L}v(t,x) + f(t,x,v(t,x), \sigma(t,x)^{\top} D_x v(t,x)) = 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \\
 v(T,x) = g(x).
 \end{cases}
 \end{align}
-$$
-In fact, we will represent the solution of this PDE through a BSDE, namely from the BSDE
+$${#eq-semilinearPDE}
+In fact, we will represent the PDE solution of @eq-semilinearPDE through a suitable BSDE representation as below
 
 $$
 \begin{align}
@@ -131,7 +131,7 @@ $$
     Y_T &= g(X_T),
 \end{cases}
 \end{align}
-$$
+$${#eq-BSDE-differential-2}
 and  we recall that the forward SDE $\mathbb{R}^n$-valued process $X=(X_t)_{0 \leq t \leq T}$ is given by
 $$
 \begin{align}
@@ -152,7 +152,7 @@ Z_t &= \sigma^{\top}(X_t) D_x v(t,X_t), \quad 0 \leq t \leq T
 \end{align}
 $$
 </div>
-is the solution to the BSDE $(1)$.
+is the solution to the BSDE @eq-BSDE-differential-2.
 
 **Proof.** This result is an immediate application of the Itô's formula applied to the process $\big(v(t,X_t)\big)_{0 \leq t \leq T}$ and the fact that $v$ is a solution to the PDE **add ref**. Indeed, applying Itô's formula between $t$ and $T$, we have
 $$
