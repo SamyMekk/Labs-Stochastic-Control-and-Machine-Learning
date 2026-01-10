@@ -271,8 +271,8 @@
     ]
   },
   {
-    "objectID": "references.html",
-    "href": "references.html",
+    "objectID": "References.html",
+    "href": "References.html",
     "title": "References",
     "section": "",
     "text": "Deep Learning for PDE",
@@ -281,8 +281,8 @@
     ]
   },
   {
-    "objectID": "references.html#deep-learning-for-pde",
-    "href": "references.html#deep-learning-for-pde",
+    "objectID": "References.html#deep-learning-for-pde",
+    "href": "References.html#deep-learning-for-pde",
     "title": "References",
     "section": "",
     "text": "J.Han, A.Jentzen, W.E : Solving high-dimensional partial differential equations using deep learning available here.\nM. Germain, H. Pham, X. Warin: Neural networks-based algorithms for stochastic control and PDEs in finance, Machine Learning and Data Sciences for Financial Markets: a guide to contemporary practices, Cambridge University Press, 2023, Editors: A. Capponi and C. A. Lehalle available here.",
@@ -291,8 +291,8 @@
     ]
   },
   {
-    "objectID": "references.html#reinforcement-learning-for-stochastic-control",
-    "href": "references.html#reinforcement-learning-for-stochastic-control",
+    "objectID": "References.html#reinforcement-learning-for-stochastic-control",
+    "href": "References.html#reinforcement-learning-for-stochastic-control",
     "title": "References",
     "section": "Reinforcement Learning for stochastic control",
     "text": "Reinforcement Learning for stochastic control\n\n\nY. Jia and X.Y. Zhou: Policy gradient and Actor-Critic learning in continuous time and space: theory and algorithms, 2022, Journal of Machine Learning and Research. available here.\nY. Jia and X.Y. Zhou: q-Learning in continuous time, 2023, Journal of Machine Learning and Research. available here.\nR. Sutton and A. Barto: Introduction to reinforcement learning, second edition 2016, available here.",
@@ -301,43 +301,13 @@
     ]
   },
   {
-    "objectID": "references.html#generative-ia-for-data-generation",
-    "href": "references.html#generative-ia-for-data-generation",
+    "objectID": "References.html#generative-ia-for-data-generation",
+    "href": "References.html#generative-ia-for-data-generation",
     "title": "References",
     "section": "Generative IA for data generation",
     "text": "Generative IA for data generation\n\n\nM. Hamdouche, P. Henry-Labordère, H. Pham: Generative modeling for time series via Schrödinger bridge, 2023. available here.\nA.Alouadi, B.Barreau, L.Carlier, H.Pham : Robust time series generation via Schrödinger Bridge: a comprehensive evaluation available here.\nC. Remlinger, J. Mikael, R. Elie: Conditional loss and deep Euler scheme for time series generation, 2021, AAAI Conference on Artificial Intelligence. available here.\nM. Xia, X. Li, Q. Shen, T. Chou: Squared Wasserstein-2 distance for efficient reconstruction of stochastic differential equations, 2024, arXiv:2401.11354 available here.",
     "crumbs": [
       "References"
-    ]
-  },
-  {
-    "objectID": "appendix.html",
-    "href": "appendix.html",
-    "title": "Appendix",
-    "section": "",
-    "text": "A primer on neural networks\nIn this appendix, you may find some useful stuffs . A full PDF version is also available at this link",
-    "crumbs": [
-      "Appendix"
-    ]
-  },
-  {
-    "objectID": "appendix.html#a-primer-on-neural-networks",
-    "href": "appendix.html#a-primer-on-neural-networks",
-    "title": "Appendix",
-    "section": "",
-    "text": "Feedforward neural networks (FFNN)\n\n\nOther neural network architectures\n\nRecurrent neural networks (RNN)\n\n\nLong short term memory (LSTM)",
-    "crumbs": [
-      "Appendix"
-    ]
-  },
-  {
-    "objectID": "appendix.html#an-overview-of-optimal-transport.",
-    "href": "appendix.html#an-overview-of-optimal-transport.",
-    "title": "Appendix",
-    "section": "An overview of optimal transport.",
-    "text": "An overview of optimal transport.\n\nCanonical problem of OT.",
-    "crumbs": [
-      "Appendix"
     ]
   }
 ]

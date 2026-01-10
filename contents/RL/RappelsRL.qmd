@@ -6,7 +6,7 @@ The following is a reminder of the main theoretical results about **Reinforcemen
 
 ## Some Foundations of Reinforcement Learning
 
-We will introduce in the following the main concepts of Reinforcement Learning. If you want to look for more in depth theory, you can look at 
+We will introduce in the following the main concepts of Reinforcement Learning. If you want to look for more in depth theory, you can look at the section **References**.
 
 ### Basics of Reinforcement Learning
 
