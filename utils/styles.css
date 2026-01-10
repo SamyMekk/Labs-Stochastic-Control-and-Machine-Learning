@@ -38,11 +38,8 @@ body {
 
 
   .proof {
-    background-color: rgb(255, 240, 220); /* orange très clair */
-    margin-top: 1em;
+    background-color: rgb(120, 240, 220); /* orange très clair */
     padding: 0.5em;
-    border-left: 4px solid rgb(255, 200, 150); /* accent doux */
-    border-radius: 4px;
 }
 
   .theorem .definition p {
@@ -122,3 +119,19 @@ body {
       white-space: nowrap;
     }
   }
+
+  .callout-proof {
+  background-color: #fbfbfb;   /* gris très clair, neutre */
+  border-left: none;           /* supprime la barre verticale */
+  border: 1px solid #eeeeee;   /* bordure fine discrète */
+  padding: 0.6em;
+}
+
+.callout-proof .callout-title {
+  color: #333333;
+  font-weight: 600;
+}
+
+.callout-proof .callout-body {
+  color: #222222;
+}
