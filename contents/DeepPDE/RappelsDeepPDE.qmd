@@ -231,7 +231,7 @@ This is typically the type of $PDE$ which arises in option pricing in B-S model 
 For instance, when $f(x,y) = r \text{max}(y,0) - ry$, this is the type of PDE which arises from pricing of CVA (Credit Valuation adjustment) where $r$ denotes the intensity of default of a counterparty.
 
 
-<span class="para-subtitle">Numerical challenges.</span>
+<span class="para-subtitle">Numerical challenges</span>
 
 However, solving these PDEs have always been highly challenging due to the curse of dimensionnality due to the exponentially scaling when discretizing the action mesh size $\mathbb{R}^n$ (grid based methods) but also from the point of view of Monte-Carlo methods which are limited to low dimensional setting $n \approx 6$ and where the solution is essentially computed at a fixed point $(t,x) \in [0,T] \times \mathbb{R}^n$. In order to solve $(1)$ efficiently, we will rely on neural-network based algorithms which can provide a functional representation of the map $(t,x) \in [0,T] \times \mathbb{R}^n$ at any $(t,x)$ and for $n$ beeing large.
 :::
@@ -243,13 +243,13 @@ However, solving these PDEs have always been highly challenging due to the curse
 
 
 :::{#method-description .methodology}
-<span class="Mathematical description : /span>
+<span class="Mathematical description :"/span>
 
 :::
 
 
 ::: {#alg-description .algorithm}
-<span class="Deep Galerkin Algorithm : /span>
+<span class="Deep Galerkin Algorithm :"/span>
 
 Let \( \pi_\theta \) be a policy such that …
 1. Initialize parameters
@@ -266,13 +266,13 @@ Let \( \pi_\theta \) be a policy such that …
 ### Deep BSDE Solver
 
 :::{#method-description .methodology}
-<span class="*Mathematical description : /span>
+<span class="Mathematical description :"/span>
 
 :::
 
 
 ::: {#alg-description .algorithm}
-<span class="Deep BSDE Algorithm : /span>
+<span class="Deep BSDE Algorithm :"/span>
 
 
 Let \( \pi_\theta \) be a policy such that …
@@ -285,13 +285,13 @@ Let \( \pi_\theta \) be a policy such that …
 ### Deep BDP Solver
 
 :::{#method-description .methodology}
-<span class="*Mathematical description : /span>
+<span class="Mathematical description :"/span>
 
 :::
 
 
 ::: {#alg-description .algorithm}
-<span class="Deep BDP Algorithm : /span>
+<span class="Deep BDP Algorithm :"/span>
 
 **Input:** discount factor $\gamma$ , tolerance $\varepsilon$  
 
