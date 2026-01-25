@@ -16,35 +16,33 @@ All the necessary information is already included in the **notebook**^[There wil
 
 The Lab work is divided into 2 parts : 
 
-- The first part is devoted to the implementation of the **Deep Galerkin algorithm** where you are going to test it on various PDEs arising in finance.  
-  
-<span class="para-subtitle"> Some expected plots for **Deep Galerkin** part:  </span>
+- The first part is devoted to the implementation of the **Deep Galerkin algorithm** where you are going to test it on various PDEs arising in **finance**. We give below some **expected plots** that you should obtain after finishing this part.
+
 
 ::: {.columns}
 
-::: {.column width="50%"}
-![Evolution of the loss in the learning process of the PDE of the price of a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png)
+::: {.column width="50%" style="text-align: center;"}
+![Evolution of the loss in the learning process of the PDE of the price of a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png){fig-align="center" .center-caption}
 :::
 
-::: {.column width="50%"}
-![Price surface $(t,s) \mapsto C(t,s)$ for a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.jpg)
+::: {.column width="50%" style="text-align: center;"}
+![Price surface $(t,s) \mapsto C(t,s)$ for a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.png){fig-align="center" .center-caption}
 :::
 
 :::
 
 
-- The second part is devoted to the implementation of the **Deep BSDE Solver** where you are going to test it on known PDEs arising from **finance** and **stochastic control problems**.
+- The second part is devoted to the implementation of the **Deep BSDE Solver** where you are going to test it on known PDEs arising from **finance** and **stochastic control problems**. We give below some **expected plots** that you should obtain after finishing this part.
 
-<span class="para-subtitle"> Some expected plots for **Deep BSDE** part:  </span>
 
 ::: {.columns}
 
-::: {.column width="50%"}
-![Evolution of the loss for the learning of $y_0$ in the LQ control problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/LossLinearQuadraticControlProblem.png)
+::: {.column width="50%" style="text-align: center;"}
+![Evolution of the loss for the learning of $y_0$ in the LQ control problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/LossLinearQuadraticControlProblem.png){fig-align="center" .center-caption}
 :::
 
-::: {.column width="50%"}
-![Evolution of $y_0$ in the LQ control problem ](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/y0LinearQuadraticControlProblem.png)
+::: {.column width="50%" style="text-align: center;"}
+![Evolution of $y_0$ in the LQ control problem ](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/y0LinearQuadraticControlProblem.png){fig-align="center" .center-caption}
 :::
 
 :::
@@ -60,7 +58,6 @@ The TP aims you to implement the various PDE algorithms seen during the class se
 - Get more familiar with the PyTorch library
 - Implement the Deep Galerkin and Deep BSDE algorithm and benchmark it with some classic PDE for which we know explicit or semi explicit formulas.
 
-I will add some plots here.
 
 :::
 

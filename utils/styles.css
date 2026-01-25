@@ -135,3 +135,7 @@ body {
 .callout-proof .callout-body {
   color: #222222;
 }
+
+.center-caption figcaption {
+  text-align: center;
+}
