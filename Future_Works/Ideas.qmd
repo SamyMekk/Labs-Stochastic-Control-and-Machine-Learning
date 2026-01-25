@@ -7,6 +7,25 @@
   <p><em>Logo of the M2- Probability and Finance </em></p>
 </figure>
 
+ - part: "Part n°2  : Reinforcement Learning for stochastic control problems"
+       chapters:
+         - contents/RL/RappelsRL.qmd 
+         - contents/RL/TP2.qmd
+     - part: "Part n°3 : Generative AI for data generation"
+       chapters:
+         - contents/GenerativeIA/RappelsGenAI.qmd
+         - contents/GenerativeIA/TP3.qmd
+ 
+     - References.qmd
+  
+
+  - <span class="para-subtitle"> References: </span>
+
+The site includes a **References** section, where we list the key papers forming the core content of this course. Much of this material is relatively recent and represents an active area of research. Feel free to contact us if you are interested in exploring these topics further!
+
+  - <span class="para-subtitle"> Appendix: </span>
+
+The site also includes an **Appendix** section, where we explore in greater depth some of the topics covered in the course. This section is still under development and will be updated regularly throughout the year.
 ```{python}
 
 # -----------------------

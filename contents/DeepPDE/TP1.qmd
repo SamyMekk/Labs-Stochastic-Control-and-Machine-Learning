@@ -1,7 +1,7 @@
 # Lab work n°1  
 
 You can download the **Lab Work n°1: Deep PDE Solver** as a Jupyter Notebook file [here](TP1-PDE/Lab%20Session%20n%C2%B01%20-%20Deep%20Learning%20for%20PDE.ipynb).
-^[If you end-up with a **.txt** file, download it and rename it as a **.ipynb** file] 
+^[If you end-up with a **.txt** file, download it and rename it as a **.ipynb** file.] 
 
 All the necessary information is already included in the **notebook**^[There will be **coding** and **math** questions.].  Below, is a brief summary of the lab content and some expected results.
 
@@ -19,17 +19,20 @@ The Lab work is divided into 2 parts :
 - The first part is devoted to the implementation of the **Deep Galerkin algorithm** where you are going to test it on various PDEs arising in **finance**. We give below some **expected plots** that you should obtain after finishing this part.
 
 
+
+
 ::: {.columns}
 
 ::: {.column width="50%" style="text-align: center;"}
-![Evolution of the loss in the learning process of the PDE of the price of a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png){fig-align="center" .center-caption}
+![Evolution of the loss in the PDE learning of the call price](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png){fig-align="center"}
 :::
 
 ::: {.column width="50%" style="text-align: center;"}
-![Price surface $(t,s) \mapsto C(t,s)$ for a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.png){fig-align="center" .center-caption}
+![Price surface $(t,s) \mapsto C(t,s)$ for a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.png){fig-align="center" width=90%}
 :::
 
 :::
+
 
 
 - The second part is devoted to the implementation of the **Deep BSDE Solver** where you are going to test it on known PDEs arising from **finance** and **stochastic control problems**. We give below some **expected plots** that you should obtain after finishing this part.
@@ -38,7 +41,7 @@ The Lab work is divided into 2 parts :
 ::: {.columns}
 
 ::: {.column width="50%" style="text-align: center;"}
-![Evolution of the loss for the learning of $y_0$ in the LQ control problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/LossLinearQuadraticControlProblem.png){fig-align="center" .center-caption}
+![Evolution of the loss for $y_0$ in the LQ control problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/LossLinearQuadraticControlProblem.png){fig-align="center" .center-caption}
 :::
 
 ::: {.column width="50%" style="text-align: center;"}
@@ -46,18 +49,6 @@ The Lab work is divided into 2 parts :
 :::
 
 :::
-
-
-
-
-<span class="para-title"> Main goals : </span>
-
-
-The TP aims you to implement the various PDE algorithms seen during the class session :
-
-- Get more familiar with the PyTorch library
-- Implement the Deep Galerkin and Deep BSDE algorithm and benchmark it with some classic PDE for which we know explicit or semi explicit formulas.
-
 
 :::
 
@@ -76,7 +67,7 @@ If you already have other project ideas in mind that make use of the methods cov
 In all cases, the final mini-project will require the **submission of a PDF report of at most 8 pages**. The report should include the references to the papers used, a clear formulation of the problem addressed in these papers, a description of the numerical methods employed, as well as your numerical results. You will also need to **submit the associated code** (either in **.py** or **.ipynb** format). 
 
 The mini-project^[i.e., the list of proposed papers along with the expected work, as well as alternative, more challenging project options.]  will be announced at the end of the third tutorial session on generative models, which will take place on **February 19**. A follow-up **email** will be sent asking you to indicate your preferred project choice.
-The **submission deadline** for the mini-project will be announced later.
+The **submission deadline** for the mini-project and the answers to the lab session^[**No PDF submission** is required for the lab session answers. The answers should be written directly in the **Jupyter notebook** and submitted along with the documents associated with the mini-project.] will be announced later.
 :::
 
 

@@ -30,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../contents/RL/RappelsRL.html" rel="next">
 <link href="../../contents/DeepPDE/RappelsDeepPDE.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -168,58 +167,6 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Part n°2 : Reinforcement Learning for stochastic control problems</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/RL/RappelsRL.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Course reminders</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/RL/TP2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lab work n°2</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Part n°3 : Generative AI for data generation</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/GenerativeIA/RappelsGenAI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Course reminders</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/GenerativeIA/TP3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab work n°3</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../References.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -290,14 +237,14 @@ $$
 <div class="column" style="text-align: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png" class="center-caption img-fluid figure-img"></p>
-<figcaption>Evolution of the loss in the learning process of the PDE of the price of a call option</figcaption>
+<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png" class="img-fluid figure-img"></p>
+<figcaption>Evolution of the loss in the PDE learning of the call price</figcaption>
 </figure>
 </div>
 </div><div class="column" style="text-align: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.png" class="center-caption img-fluid figure-img"></p>
+<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.png" class="img-fluid figure-img" style="width:90.0%"></p>
 <figcaption>Price surface <span class="math inline">\((t,s) \mapsto C(t,s)\)</span> for a call option</figcaption>
 </figure>
 </div>
@@ -311,7 +258,7 @@ $$
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/LossLinearQuadraticControlProblem.png" class="center-caption img-fluid figure-img"></p>
-<figcaption>Evolution of the loss for the learning of <span class="math inline">\(y_0\)</span> in the LQ control problem</figcaption>
+<figcaption>Evolution of the loss for <span class="math inline">\(y_0\)</span> in the LQ control problem</figcaption>
 </figure>
 </div>
 </div><div class="column" style="text-align: center;">
@@ -323,12 +270,6 @@ $$
 </div>
 </div>
 </div>
-<p><span class="para-title"> Main goals : </span></p>
-<p>The TP aims you to implement the various PDE algorithms seen during the class session :</p>
-<ul>
-<li>Get more familiar with the PyTorch library</li>
-<li>Implement the Deep Galerkin and Deep BSDE algorithm and benchmark it with some classic PDE for which we know explicit or semi explicit formulas.</li>
-</ul>
 </div>
 </section>
 <section id="towards-the-open-ended-project" class="level2" data-number="2.2">
@@ -338,7 +279,7 @@ $$
 <p>You may be asked to reproduce results from selected research papers and to test the proposed methods on other types of PDEs that are of interest to you. For more ambitious students, we may also propose topics that are less directly related to PDE solving but that rely on the methods studied in lectures and tutorials to address more challenging control problems.</p>
 <p>If you already have other project ideas in mind that make use of the methods covered during the course, please feel free to inform us in advance (<strong>between today and second week of February</strong>) so that the project can potentially be validated.</p>
 <p>In all cases, the final mini-project will require the <strong>submission of a PDF report of at most 8 pages</strong>. The report should include the references to the papers used, a clear formulation of the problem addressed in these papers, a description of the numerical methods employed, as well as your numerical results. You will also need to <strong>submit the associated code</strong> (either in <strong>.py</strong> or <strong>.ipynb</strong> format).</p>
-<p>The mini-project<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> will be announced at the end of the third tutorial session on generative models, which will take place on <strong>February 19</strong>. A follow-up <strong>email</strong> will be sent asking you to indicate your preferred project choice. The <strong>submission deadline</strong> for the mini-project will be announced later.</p>
+<p>The mini-project<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> will be announced at the end of the third tutorial session on generative models, which will take place on <strong>February 19</strong>. A follow-up <strong>email</strong> will be sent asking you to indicate your preferred project choice. The <strong>submission deadline</strong> for the mini-project and the answers to the lab session<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> will be announced later.</p>
 </div>
 
 
@@ -346,9 +287,10 @@ $$
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>If you end-up with a <strong>.txt</strong> file, download it and rename it as a <strong>.ipynb</strong> file<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>If you end-up with a <strong>.txt</strong> file, download it and rename it as a <strong>.ipynb</strong> file.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>There will be <strong>coding</strong> and <strong>math</strong> questions.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>i.e., the list of proposed papers along with the expected work, as well as alternative, more challenging project options.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><strong>No PDF submission</strong> is required for the lab session answers. The answers should be written directly in the <strong>Jupyter notebook</strong> and submitted along with the documents associated with the mini-project.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -780,9 +722,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../contents/RL/RappelsRL.html" class="pagination-link" aria-label="Course reminders">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Course reminders</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

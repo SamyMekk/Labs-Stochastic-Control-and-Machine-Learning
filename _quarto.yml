@@ -17,16 +17,6 @@ book:
        chapters:
          - contents/DeepPDE/RappelsDeepPDE.qmd
          - contents/DeepPDE/TP1.qmd
-     - part: "Part n°2  : Reinforcement Learning for stochastic control problems"
-       chapters:
-         - contents/RL/RappelsRL.qmd 
-         - contents/RL/TP2.qmd
-     - part: "Part n°3 : Generative AI for data generation"
-       chapters:
-         - contents/GenerativeIA/RappelsGenAI.qmd
-         - contents/GenerativeIA/TP3.qmd
- 
-     - References.qmd
 
     
      

@@ -1,6 +1,6 @@
 
 
-Welcome to the webpage of the practical sessions of the course [Machine learning and stochastic control](https://finance.math.upmc.fr/enseignements/2_mn_9_ml_stochastic_control/) taught by Professor [Pham](https://sites.google.com/site/phamxuanhuyen/) within the Master’s program in Probability and Finance (M2).
+Welcome to the webpage of the practical sessions of the course [Machine learning and stochastic control](https://finance.math.upmc.fr/enseignements/2_mn_9_ml_stochastic_control/) taught by Professor [Pham](https://sites.google.com/site/phamxuanhuyen/) within the Master’s program in Probability and Finance **(M2PF)**.
 
 
 ## Global informations  {.unnumbered}
@@ -25,7 +25,7 @@ room $102$ in tower $15-25$.
 
 <span class="para-title">Materials :</span>
 
-The practical sessions will be conducted in **Python**. You should bring your own laptop and have your own **Python** environment set up for each session.
+The practical sessions will be conducted in **Python**. You should bring your own laptop and have your own **Python** environment set up for each session.^[The **required scientific packages** used during the practical sessions will be specified during the lab sessions.] 
  
  <span class="para-title">Planning :</span>
  
@@ -78,7 +78,7 @@ If you have any  **questions**, you can either e-mail [Samy](mailto:samy.mekkaou
 
 <span class="para-title">Structure of the website :</span>
 
-The site is structured into three sections that make up the course, each consisting of two chapters.
+The site is structured into three sections that make up the course, each consisting of two chapters.^[The **sections** will be uploaded shortly before the beginning of each lab session.]
 
   - <span class="para-subtitle"> Course reminders: </span>
 
@@ -87,26 +87,11 @@ The first chapter, titled **Course Reminders**, reviews the key theoretical conc
 
   - <span class="para-subtitle"> Practical session: </span>
   
-The second chapter, titled **Lab Work**, contains the practical session instructions along with a link to a **Jupyter Notebook** where you can write your code. These notebooks are designed to be self-contained, allowing you to work independently during the sessions.
+The second chapter, titled **Lab Work**, contains the practical session instructions along with a link to a **Jupyter Notebook** where you can write your code. These notebooks are designed to be self-contained, allowing you to work independently during the sessions. At the end of each practical session, an **open-ended project**^[The **projects** related to each course session will be uploaded after the third lab session, i.e., after **February 19**.] is provided. This project is not intended to be completed during the session, but it is closely related to the material covered and offers an opportunity to explore the concepts in more depth.
 
-At the end of each practical session, an **open-ended project** is provided. This project is not intended to be completed during the session, but it is closely related to the material covered and offers an opportunity to explore the concepts in more depth.
+<div style="margin-top: 1em;"></div>
 
-
-  - <span class="para-subtitle"> References: </span>
-
-The site includes a **References** section, where we list the key papers forming the core content of this course. Much of this material is relatively recent and represents an active area of research. Feel free to contact us if you are interested in exploring these topics further!
-
-  - <span class="para-subtitle"> Appendix: </span>
-
-The site also includes an **Appendix** section, where we explore in greater depth some of the topics covered in the course. This section is still under development and will be updated regularly throughout the year.
-
-
-
-
-
-
-
-For your information, this site is generated using [Quarto](https://quarto.org) through GitHub Pages (see this [GitHub](https://github.com/SamyMekk/TP-Controle-Stochastique) page). If you spot any errors on the site, feel free to report them through pull requests.
+For your information, this site is generated using [Quarto](https://quarto.org) through GitHub Pages (see this [GitHub](https://github.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning) page). If you spot any errors on the site, feel free to report them through pull requests.
 
 :::
 
