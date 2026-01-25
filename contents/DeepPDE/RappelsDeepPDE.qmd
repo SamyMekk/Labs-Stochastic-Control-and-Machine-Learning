@@ -243,13 +243,19 @@ However, solving these PDEs have always been highly challenging due to the curse
 
 
 :::{#method-description .methodology}
-**Mathematical description of the method**
+<span class="Mathematical description : /span>
 
 :::
 
 
 ::: {#alg-description .algorithm}
-**Algorithm : Deep Galerkin Method**
+<span class="Deep Galerkin Algorithm : /span>
+
+Let \( \pi_\theta \) be a policy such that …
+1. Initialize parameters
+2. Iterate until convergence
+3. Return the value function
+:::
 
 Let \( \pi_\theta \) be a policy such that …
 1. Initialize parameters
@@ -260,13 +266,14 @@ Let \( \pi_\theta \) be a policy such that …
 ### Deep BSDE Solver
 
 :::{#method-description .methodology}
-**Mathematical description of the method**
+<span class="*Mathematical description : /span>
 
 :::
 
 
 ::: {#alg-description .algorithm}
-**Algorithm: Deep BSDE Solver**
+<span class="Deep BSDE Algorithm : /span>
+
 
 Let \( \pi_\theta \) be a policy such that …
 1. Initialize parameters
@@ -278,13 +285,13 @@ Let \( \pi_\theta \) be a policy such that …
 ### Deep BDP Solver
 
 :::{#method-description .methodology}
-**Mathematical description of the method**
+<span class="*Mathematical description : /span>
 
 :::
 
 
 ::: {#alg-description .algorithm}
-**Algorithm: Deep BDP Solver**
+<span class="Deep BDP Algorithm : /span>
 
 **Input:** discount factor $\gamma$ , tolerance $\varepsilon$  
 
