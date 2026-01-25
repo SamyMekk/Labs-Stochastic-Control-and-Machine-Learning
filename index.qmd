@@ -37,8 +37,7 @@ The practical sessions will be conducted in **Python**. You should bring your ow
   - <span class="para-subtitle"> Lab work n°2 : RL for stochastic control problems </span>
 
 
-The second lab session will be about **Reinforcement Learning** for solving some control problems. We will implement some of the algorithms seen during the course 
-About **Reinforcement Learning** for stochastic control problems.
+The second lab session will be about **Reinforcement Learning** for solving some stochastic control problems. We will implement some of the algorithms seen during the course.
 
   - <span class="para-subtitle"> Lab work n°3 : GenAI for data generation </span>
 
@@ -87,7 +86,7 @@ The first chapter, titled **Course Reminders**, reviews the key theoretical conc
 
   - <span class="para-subtitle"> Practical session: </span>
   
-The second chapter, titled **Lab Work**, contains the practical session instructions along with a link to a **Jupyter Notebook** where you can write your code. These notebooks are designed to be self-contained, allowing you to work independently during the sessions. At the end of each practical session, an **open-ended project**^[The **projects** related to each course session will be uploaded after the third lab session, i.e., after **February 19**.] is provided. This project is not intended to be completed during the session, but it is closely related to the material covered and offers an opportunity to explore the concepts in more depth.
+The second chapter, titled **Lab work**, contains the practical session instructions along with a link to a **Jupyter Notebook** where you can write your code. These notebooks are designed to be self-contained, allowing you to work independently during the sessions. At the end of each practical session, an **open-ended project**^[The **projects** related to each course session will be uploaded after the third lab session, i.e., after **February 19**.] is provided. This project is not intended to be completed during the session, but it is closely related to the material covered and offers an opportunity to explore the concepts in more depth.
 
 <div style="margin-top: 1em;"></div>
 
@@ -99,9 +98,9 @@ For your information, this site is generated using [Quarto](https://quarto.org) 
 
 :::{#method-description .methodology}
 
-We would like to thank the following individuals and organizations without whose support this course would not be possible
+We would like to thank the following individuals and organizations without whose support this course would not be possible:
 
 - Professor [Huyên Pham](https://sites.google.com/site/phamxuanhuyen/) for the support and valuable feedbacks during the creation of this lab.
-- **Participants** in the course for your interest in Machine Learning for stochastic control and its applications.
+- **Participants** in the course for your interest in Machine Learning for Stochastic Control and its applications.
 :::
 
