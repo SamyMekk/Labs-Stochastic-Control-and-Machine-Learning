@@ -202,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#summary-of-the-lab" id="toc-summary-of-the-lab" class="nav-link active" data-scroll-target="#summary-of-the-lab"><span class="header-section-number">2.1</span> Summary of the lab</a></li>
-  <li><a href="#towards-the-open-ended-mini-project" id="toc-towards-the-open-ended-mini-project" class="nav-link" data-scroll-target="#towards-the-open-ended-mini-project"><span class="header-section-number">2.2</span> Towards the open ended mini-project</a></li>
+  <li><a href="#towards-the-open-ended-project" id="toc-towards-the-open-ended-project" class="nav-link" data-scroll-target="#towards-the-open-ended-project"><span class="header-section-number">2.2</span> Towards the open ended project</a></li>
   </ul>
 </nav>
     </div>
@@ -247,19 +247,38 @@ $$
 </header>
 
 
-<p>You can download <strong>Lab Work n°1: Deep PDE Solver</strong> as a Jupyter Notebook <a href="TP1-PDE/Lab Session n°1 - Deep Learning for PDE.ipynb">here</a>. All the necessary information is already included in the notebook, but a brief summary of the lab content is provided below for convenience.</p>
+<p>You can download the <strong>Lab Work n°1: Deep PDE Solver</strong> as a Jupyter Notebook file <a href="TP1-PDE/Lab Session n°1 - Deep Learning for PDE.ipynb">here</a>. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>All the necessary information is already included in the notebook<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Below, is a brief summary of the lab content and some expected results.</p>
 <section id="summary-of-the-lab" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="summary-of-the-lab"><span class="header-section-number">2.1</span> Summary of the lab</h2>
 <div id="alg-description" class="algorithm">
 <p><span class="para-title"> Content : </span></p>
-<p>The Lab work is divided into 3 parts :</p>
+<p>The Lab work is divided into 2 parts :</p>
 <ul>
-<li>The first part is devoted to get more familiar with the PyTorch library for the ones who are not that familiar with the library.</li>
-<li>The second part is devoted to the implementation of the Deep Galerkin algorithm with so</li>
-<li>The third part is devoted to the implementation of the Deep BSDE Solver and to</li>
-<li>TBD.</li>
-<li>TBD</li>
+<li>The first part is devoted to the implementation of the <strong>Deep Galerkin algorithm</strong> where you are going to test it on various PDEs arising in finance.</li>
 </ul>
+<p>We illustrate below some expected plots that you should obtain :</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg" class="img-fluid figure-img"></p>
+<figcaption>Test</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg" class="img-fluid figure-img"></p>
+<figcaption>Test</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>The second part is devoted to the implementation of the <strong>Deep BSDE Solver</strong> where you are going to test it on known PDEs arising from <strong>finance</strong> and <strong>stochastic control problems</strong>.</li>
+</ul>
+<p>We illustrate below some expected plots that you should obtain for the <strong>Deep BSDE Solver part</strong>:</p>
 <p><span class="para-title"> Main goals : </span></p>
 <p>The TP aims you to implement the various PDE algorithms seen during the class session :</p>
 <ul>
@@ -269,13 +288,25 @@ $$
 <p>I will add some plots here.</p>
 </div>
 </section>
-<section id="towards-the-open-ended-mini-project" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="towards-the-open-ended-mini-project"><span class="header-section-number">2.2</span> Towards the open ended mini-project</h2>
+<section id="towards-the-open-ended-project" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="towards-the-open-ended-project"><span class="header-section-number">2.2</span> Towards the open ended project</h2>
 <div id="alg-description" class="algorithm">
-<p>Add here what is expected for the mini-project.</p>
+<p>The project will be fairly open-ended, allowing you to explore on your own the use of Deep Learning algorithms for the solution of partial differential equations (PDEs). The expected workload corresponds to approximately one full weekend of work.</p>
+<p>You may be asked to reproduce results from selected research papers and to test the proposed methods on other types of PDEs that are of interest to you. For more ambitious students, we may also propose topics that are less directly related to PDE solving but that rely on the methods studied in lectures and tutorials to address more challenging control problems.</p>
+<p>If you already have other project ideas in mind that make use of the methods covered during the course, please feel free to inform us in advance (<strong>between today and second week of February</strong>) so that the project can potentially be validated.</p>
+<p>In all cases, the final mini-project will require the <strong>submission of a PDF report of at most 8 pages</strong>. The report should include the references to the papers used, a clear formulation of the problem addressed in these papers, a description of the numerical methods employed, as well as your numerical results. You will also need to <strong>submit the associated code</strong> (either in <strong>.py</strong> or <strong>.ipynb</strong> format).</p>
+<p>The mini-project<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> will be announced at the end of the third tutorial session on generative models, which will take place on <strong>February 19</strong>. A follow-up <strong>email</strong> will be sent asking you to indicate your preferred project choice. The <strong>submission deadline</strong> for the mini-project will be announced later.</p>
 </div>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>If you end-up with a <strong>.txt</strong> file, download it and rename it as a <strong>.ipynb</strong> file<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>There will be <strong>coding</strong> and <strong>math</strong> questions.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>i.e., the list of proposed papers along with the expected work, as well as alternative, more challenging project options.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
