@@ -58,7 +58,7 @@ The Lab work is divided into 2 parts :
 
 ::: {#alg-description .algorithm}
 
-The project will be fairly open-ended, allowing you to explore on your own the use of Deep Learning algorithms for the solution of partial differential equations (PDEs). The expected workload corresponds to approximately one full weekend of work.
+The project will be fairly open-ended, allowing you to explore on your own the use of **Deep Learning algorithms** for the solution of **partial differential equations (PDEs)**. The expected workload corresponds to approximately one full weekend of work.
 
 You may be asked to reproduce results from selected research papers and to test the proposed methods on other types of PDEs that are of interest to you. For more ambitious students, we may also propose topics that are less directly related to PDE solving but that rely on the methods studied in lectures and tutorials to address more challenging control problems.
 
