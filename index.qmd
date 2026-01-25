@@ -57,7 +57,7 @@ Your objective will be to answer the **questions** of the chosen lab, and a fair
 <div class="eq-frame">
 
 \begin{align}
-    \text{Final Grade = 50 \% multiple-choice exam (QCM) + 50 \% project}.
+    \text{Final Grade = 50 \% multiple-choice exam (QCM) + 50 \% (Lab +project)}.
 \end{align}
 
 </div>

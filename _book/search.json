@@ -14,7 +14,7 @@
     "href": "index.html#global-informations",
     "title": "Lab sessions : Stochastic Control and Machine Learning",
     "section": "",
-    "text": "Prerequisites :\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nSchedule :\n\nLab work n° \\(1\\) : Tuesday, January 27th, 9h-12h, room \\(102\\) in tower \\(15-25\\).\nLab work n° \\(2\\) : Tuesday, February 3rd, 9h-12h, room \\(102\\) in tower \\(15-25\\).\nLab work n° \\(3\\) : Tuesday, February 19th, 9h-12h, room \\(102\\) in tower \\(15-25\\).\n\nMaterials :\nThe practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\n Lab work n°1 : Deep PDE Solver \n\nThe first lab session will be about Deep PDE Solver for solving partial differential equations using neural networks. You will implement some of the algorithms which were seen during the course.\n\n Lab work n°2 : RL for stochastic control problems \n\nThe second lab session will be about Reinforcement Learning for solving some control problems. We will implement some of the algorithms seen during the course About Reinforcement Learning for stochastic control problems.\n\n Lab work n°3 : GenAI for data generation \n\nThe third lab session will be about Generative IA for data generation based on the Schrödinger bridge. You will implement the Schrödinger Bridge Time series (SBTS) algorithm and apply it to generate some new samples of generic time series.\nGrade :\nYou will have to choose one lab (TP) among the three proposed by modifying the column named “Lab Choice” associated to your name directly on the Excel sheet available here. Note that the project has be to done by groups of 2 or 3.\nYour objective will be to answer the questions of the chosen lab, and a fairly open-ended mini-project will be proposed at the end of it.\nThe final grade will be based on both the lab questions and the mini-project. In any case, the final course grade will be calculated as follows:\n\n\\[\\begin{align}\n    \\text{Final Grade = 50 \\% multiple-choice exam (QCM) + 50 \\% project}.\n\\end{align}\\]\n\nQuestions ? :\nIf you have any questions, you can either e-mail Samy or Alexandre who prepared the lab sessions for this course.",
+    "text": "Prerequisites :\n\nGood knowledge on Probability Theory and Stochastic Processes.\nBasics on optimal control theory.\nBasics on Deep Learning.\nFamilarity with Python and potentially with PyTorch.\n\nSchedule :\n\nLab work n° \\(1\\) : Tuesday, January 27th, 9h-12h, room \\(102\\) in tower \\(15-25\\).\nLab work n° \\(2\\) : Tuesday, February 3rd, 9h-12h, room \\(102\\) in tower \\(15-25\\).\nLab work n° \\(3\\) : Tuesday, February 19th, 9h-12h, room \\(102\\) in tower \\(15-25\\).\n\nMaterials :\nThe practical sessions will be conducted in Python. You should bring your own laptop and have your own Python environment set up for each session.\nPlanning :\n\n Lab work n°1 : Deep PDE Solver \n\nThe first lab session will be about Deep PDE Solver for solving partial differential equations using neural networks. You will implement some of the algorithms which were seen during the course.\n\n Lab work n°2 : RL for stochastic control problems \n\nThe second lab session will be about Reinforcement Learning for solving some control problems. We will implement some of the algorithms seen during the course About Reinforcement Learning for stochastic control problems.\n\n Lab work n°3 : GenAI for data generation \n\nThe third lab session will be about Generative IA for data generation based on the Schrödinger bridge. You will implement the Schrödinger Bridge Time series (SBTS) algorithm and apply it to generate some new samples of generic time series.\nGrade :\nYou will have to choose one lab (TP) among the three proposed by modifying the column named “Lab Choice” associated to your name directly on the Excel sheet available here. Note that the project has be to done by groups of 2 or 3.\nYour objective will be to answer the questions of the chosen lab, and a fairly open-ended mini-project will be proposed at the end of it.\nThe final grade will be based on both the lab questions and the mini-project. In any case, the final course grade will be calculated as follows:\n\n\\[\\begin{align}\n    \\text{Final Grade = 50 \\% multiple-choice exam (QCM) + 50 \\% (Lab +project)}.\n\\end{align}\\]\n\nQuestions ? :\nIf you have any questions, you can either e-mail Samy or Alexandre who prepared the lab sessions for this course.",
     "crumbs": [
       "Global informations"
     ]
@@ -77,7 +77,7 @@
     "href": "contents/DeepPDE/TP1.html",
     "title": "2  Lab work n°1",
     "section": "",
-    "text": "2.1 Summary of the lab\nYou can download Lab Work n°1: Deep PDE Solver as a Jupyter Notebook here. All the necessary information is already included in the notebook, but a brief summary of the lab content is provided below for convenience.",
+    "text": "2.1 Summary of the lab\nYou can download the Lab Work n°1: Deep PDE Solver as a Jupyter Notebook file here. 1\nAll the necessary information is already included in the notebook2. Below, is a brief summary of the lab content and some expected results.",
     "crumbs": [
       "Part n°1 : Deep Learning for PDE",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
@@ -99,7 +99,7 @@
     "href": "contents/DeepPDE/TP1.html#towards-the-open-ended-mini-project",
     "title": "2  Lab work n°1",
     "section": "2.2 Towards the open ended mini-project",
-    "text": "2.2 Towards the open ended mini-project\n\nAdd here what is expected for the mini-project.",
+    "text": "2.2 Towards the open ended mini-project\n\nThe project will be fairly open-ended, allowing you to explore on your own the use of Deep Learning algorithms for the solution of partial differential equations (PDEs). The expected workload corresponds to approximately one full weekend of work.\nYou may be asked to reproduce results from selected research papers and to test the proposed methods on other types of PDEs that are of interest to you. If you already have other project ideas in mind that make use of the methods covered during the course, please feel free to inform us in advance (between today and second week of February) so that the project can potentially be validated.\nFor more ambitious students, we may also propose topics that are less directly related to PDE solving but that rely on the methods studied in lectures and tutorials to address more challenging control problems.\nIn all cases, the final mini-project will require the submission of a PDF report of at most 8 pages. The report should include the references to the papers used, a clear formulation of the problem addressed in these papers, a description of the numerical methods employed, as well as your numerical results. You will also need to submit the associated code (either in .py or .ipynb format).\nThe mini-project3 will be announced at the end of the third tutorial session on generative models, which will take place on February 19. A follow-up email will be sent asking you to indicate your preferred project choice.",
     "crumbs": [
       "Part n°1 : Deep Learning for PDE",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
@@ -110,7 +110,7 @@
     "href": "contents/RL/RappelsRL.html",
     "title": "3  Course reminders",
     "section": "",
-    "text": "3.1 Some Foundations of Reinforcement Learning\nThe following is a reminder of the main theoretical results about Reinforcement Learning for stochastic control problems seen during the course.\nWe will introduce in the following the main concepts of Reinforcement Learning. If you want to look for more in depth theory, you can look at",
+    "text": "3.1 Some Foundations of Reinforcement Learning\nThe following is a reminder of the main theoretical results about Reinforcement Learning for stochastic control problems seen during the course.\nWe will introduce in the following the main concepts of Reinforcement Learning. If you want to look for more in depth theory, you can look at the section References.",
     "crumbs": [
       "Part n°2  : Reinforcement Learning for stochastic control problems",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Course reminders</span>"
@@ -308,6 +308,28 @@
     "text": "Generative IA for data generation\n\n\nM. Hamdouche, P. Henry-Labordère, H. Pham: Generative modeling for time series via Schrödinger bridge, 2023. available here.\nA.Alouadi, B.Barreau, L.Carlier, H.Pham : Robust time series generation via Schrödinger Bridge: a comprehensive evaluation available here.\nC. Remlinger, J. Mikael, R. Elie: Conditional loss and deep Euler scheme for time series generation, 2021, AAAI Conference on Artificial Intelligence. available here.\nM. Xia, X. Li, Q. Shen, T. Chou: Squared Wasserstein-2 distance for efficient reconstruction of stochastic differential equations, 2024, arXiv:2401.11354 available here.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "contents/DeepPDE/TP1.html#footnotes",
+    "href": "contents/DeepPDE/TP1.html#footnotes",
+    "title": "2  Lab work n°1",
+    "section": "",
+    "text": "If you end-up with a .txt file, download it and rename it as a .ipynb↩︎\nThere will be coding and math questions.↩︎\ni.e., the list of proposed papers along with the expected work, as well as alternative, more challenging project options.↩︎",
+    "crumbs": [
+      "Part n°1 : Deep Learning for PDE",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
+    ]
+  },
+  {
+    "objectID": "contents/DeepPDE/TP1.html#towards-the-open-ended-project",
+    "href": "contents/DeepPDE/TP1.html#towards-the-open-ended-project",
+    "title": "2  Lab work n°1",
+    "section": "2.2 Towards the open ended project",
+    "text": "2.2 Towards the open ended project\n\nThe project will be fairly open-ended, allowing you to explore on your own the use of Deep Learning algorithms for the solution of partial differential equations (PDEs). The expected workload corresponds to approximately one full weekend of work.\nYou may be asked to reproduce results from selected research papers and to test the proposed methods on other types of PDEs that are of interest to you. For more ambitious students, we may also propose topics that are less directly related to PDE solving but that rely on the methods studied in lectures and tutorials to address more challenging control problems.\nIf you already have other project ideas in mind that make use of the methods covered during the course, please feel free to inform us in advance (between today and second week of February) so that the project can potentially be validated.\nIn all cases, the final mini-project will require the submission of a PDF report of at most 8 pages. The report should include the references to the papers used, a clear formulation of the problem addressed in these papers, a description of the numerical methods employed, as well as your numerical results. You will also need to submit the associated code (either in .py or .ipynb format).\nThe mini-project3 will be announced at the end of the third tutorial session on generative models, which will take place on February 19. A follow-up email will be sent asking you to indicate your preferred project choice. The submission deadline for the mini-project will be announced later.",
+    "crumbs": [
+      "Part n°1 : Deep Learning for PDE",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
     ]
   }
 ]

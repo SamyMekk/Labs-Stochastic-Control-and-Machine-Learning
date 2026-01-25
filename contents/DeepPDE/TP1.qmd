@@ -1,6 +1,9 @@
 # Lab work n°1  
 
-You can download **Lab Work n°1: Deep PDE Solver** as a Jupyter Notebook [here](TP1-PDE/Lab%20Session%20n%C2%B01%20-%20Deep%20Learning%20for%20PDE.ipynb). All the necessary information is already included in the notebook, but a brief summary of the lab content is provided below for convenience.
+You can download the **Lab Work n°1: Deep PDE Solver** as a Jupyter Notebook file [here](TP1-PDE/Lab%20Session%20n%C2%B01%20-%20Deep%20Learning%20for%20PDE.ipynb).
+^[If you end-up with a **.txt** file, download it and rename it as a **.ipynb** file] 
+
+All the necessary information is already included in the notebook^[There will be **coding** and **math** questions.].  Below, is a brief summary of the lab content and some expected results.
 
 
 ## Summary of the lab
@@ -11,13 +14,31 @@ You can download **Lab Work n°1: Deep PDE Solver** as a Jupyter Notebook [here]
 
 <span class="para-title"> Content : </span>
 
-The Lab work is divided into 3 parts : 
+The Lab work is divided into 2 parts : 
 
-- The first part is devoted to get more familiar with the PyTorch library for the ones who are not that familiar with the library.
-- The second part is devoted to the implementation of the Deep Galerkin algorithm with so 
-- The third part is devoted to the implementation of the Deep BSDE Solver and to 
-- TBD.
-- TBD
+- The first part is devoted to the implementation of the **Deep Galerkin algorithm** where you are going to test it on various PDEs arising in finance. 
+  
+We illustrate below some expected plots that you should obtain :
+
+
+::: {.columns}
+
+::: {.column width="50%"}
+![Test](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg)
+:::
+
+::: {.column width="50%"}
+![Test](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg)
+:::
+
+:::
+
+
+- The second part is devoted to the implementation of the **Deep BSDE Solver** where you are going to test it on known PDEs arising from **finance** and **stochastic control problems**.
+
+We illustrate below some expected plots that you should obtain for the **Deep BSDE Solver part**:
+
+
 
 
 
@@ -34,13 +55,21 @@ I will add some plots here.
 :::
 
 
-## Towards the open ended mini-project
+## Towards the open ended project
 
 
 ::: {#alg-description .algorithm}
 
-Add here what is expected for the mini-project.
+The project will be fairly open-ended, allowing you to explore on your own the use of Deep Learning algorithms for the solution of partial differential equations (PDEs). The expected workload corresponds to approximately one full weekend of work.
 
+You may be asked to reproduce results from selected research papers and to test the proposed methods on other types of PDEs that are of interest to you. For more ambitious students, we may also propose topics that are less directly related to PDE solving but that rely on the methods studied in lectures and tutorials to address more challenging control problems.
+
+If you already have other project ideas in mind that make use of the methods covered during the course, please feel free to inform us in advance (**between today and second week of February**) so that the project can potentially be validated.
+
+In all cases, the final mini-project will require the **submission of a PDF report of at most 8 pages**. The report should include the references to the papers used, a clear formulation of the problem addressed in these papers, a description of the numerical methods employed, as well as your numerical results. You will also need to **submit the associated code** (either in **.py** or **.ipynb** format). 
+
+The mini-project^[i.e., the list of proposed papers along with the expected work, as well as alternative, more challenging project options.]  will be announced at the end of the third tutorial session on generative models, which will take place on **February 19**. A follow-up **email** will be sent asking you to indicate your preferred project choice.
+The **submission deadline** for the mini-project will be announced later.
 :::
 
 
