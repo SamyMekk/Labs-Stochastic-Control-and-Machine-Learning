@@ -387,16 +387,16 @@ v(T,x) = g(x), \quad x \in \mathbb{R}^n
 \end{cases}
 \end{align}\]</span> For instance, when <span class="math inline">\(f(x,y) = r \text{max}(y,0) - ry\)</span>, this is the type of PDE which arises from pricing of CVA (Credit Valuation adjustment) where <span class="math inline">\(r\)</span> denotes the intensity of default of a counterparty.</li>
 </ul>
-<p><span class="para-subtitle">Numerical challenges.</span></p>
+<p><span class="para-subtitle">Numerical challenges</span></p>
 <p>However, solving these PDEs have always been highly challenging due to the curse of dimensionnality due to the exponentially scaling when discretizing the action mesh size <span class="math inline">\(\mathbb{R}^n\)</span> (grid based methods) but also from the point of view of Monte-Carlo methods which are limited to low dimensional setting <span class="math inline">\(n \approx 6\)</span> and where the solution is essentially computed at a fixed point <span class="math inline">\((t,x) \in [0,T] \times \mathbb{R}^n\)</span>. In order to solve <span class="math inline">\((1)\)</span> efficiently, we will rely on neural-network based algorithms which can provide a functional representation of the map <span class="math inline">\((t,x) \in [0,T] \times \mathbb{R}^n\)</span> at any <span class="math inline">\((t,x)\)</span> and for <span class="math inline">\(n\)</span> beeing large.</p>
 </div>
 <section id="deep-galerkin-algorithm" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="deep-galerkin-algorithm"><span class="header-section-number">1.2.1</span> Deep Galerkin Algorithm</h3>
 <div id="method-description" class="methodology">
-<p>&lt;span class=“Mathematical description : /span&gt;</p>
+<p><span class="Mathematical description :" span=""></span></p>
 </div>
 <div id="alg-description" class="algorithm">
-<p>&lt;span class=“Deep Galerkin Algorithm : /span&gt;</p>
+<p><span class="Deep Galerkin Algorithm :" span=""></span></p>
 <p>Let ( _) be a policy such that … 1. Initialize parameters 2. Iterate until convergence 3. Return the value function</p>
 </div>
 <p>Let ( _) be a policy such that … 1. Initialize parameters 2. Iterate until convergence 3. Return the value function :::</p>
@@ -404,20 +404,20 @@ v(T,x) = g(x), \quad x \in \mathbb{R}^n
 <section id="deep-bsde-solver" class="level3" data-number="1.2.2">
 <h3 data-number="1.2.2" class="anchored" data-anchor-id="deep-bsde-solver"><span class="header-section-number">1.2.2</span> Deep BSDE Solver</h3>
 <div id="method-description" class="methodology">
-<p>&lt;span class=“*Mathematical description : /span&gt;</p>
+<p><span class="Mathematical description :" span=""></span></p>
 </div>
 <div id="alg-description" class="algorithm">
-<p>&lt;span class=“Deep BSDE Algorithm : /span&gt;</p>
+<p><span class="Deep BSDE Algorithm :" span=""></span></p>
 <p>Let ( _) be a policy such that … 1. Initialize parameters 2. Iterate until convergence 3. Return the value function</p>
 </div>
 </section>
 <section id="deep-bdp-solver" class="level3" data-number="1.2.3">
 <h3 data-number="1.2.3" class="anchored" data-anchor-id="deep-bdp-solver"><span class="header-section-number">1.2.3</span> Deep BDP Solver</h3>
 <div id="method-description" class="methodology">
-<p>&lt;span class=“*Mathematical description : /span&gt;</p>
+<p><span class="Mathematical description :" span=""></span></p>
 </div>
 <div id="alg-description" class="algorithm">
-<p>&lt;span class=“Deep BDP Algorithm : /span&gt;</p>
+<p><span class="Deep BDP Algorithm :" span=""></span></p>
 <p><strong>Input:</strong> discount factor <span class="math inline">\(\gamma\)</span> , tolerance <span class="math inline">\(\varepsilon\)</span></p>
 <p><strong>Output:</strong> value function <span class="math inline">\(V^{\star}\)</span></p>
 <ol type="1">
