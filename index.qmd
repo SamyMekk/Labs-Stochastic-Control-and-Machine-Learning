@@ -12,7 +12,7 @@ Welcome to the webpage of the practical sessions of the course [Machine learning
 <span class="para-title">Prerequisites :</span>
 
 - Good knowledge on **Probability Theory** and **Stochastic Processes**.
-- Basics on **optimal control theory**.
+- Basics on **Optimal control theory**.
 - Basics on **Deep Learning**.
 - Familarity with **Python** and potentially with **PyTorch**.
 
@@ -32,24 +32,24 @@ The practical sessions will be conducted in **Python**. You should bring your ow
 
  - <span class="para-subtitle"> Lab work n°1 : Deep PDE Solver </span>
 
- The first lab session will be about **Deep PDE Solver** for solving partial differential equations using neural networks. You will implement some of the algorithms which were seen during the course. 
+ The first lab session will be about **Deep PDE Solver** for solving partial differential equations using neural networks. You will implement some of the algorithms seen during the course. 
 
   - <span class="para-subtitle"> Lab work n°2 : RL for stochastic control problems </span>
 
 
-The second lab session will be about **Reinforcement Learning** for solving some stochastic control problems. We will implement some of the algorithms seen during the course.
+The second lab session will be on **Reinforcement Learning** for solving some stochastic control problems. We will implement some of the algorithms seen during the course.
 
   - <span class="para-subtitle"> Lab work n°3 : GenAI for data generation </span>
 
 
-The third lab session will be about **Generative IA** for data generation based on the **Schrödinger bridge**. You will implement the **Schrödinger Bridge Time series (SBTS)** algorithm and apply it to generate some **new samples** of generic time series. 
+The third lab session will be about **Generative IA** for data generation based on the **Schrödinger Bridge**. You will implement the **Schrödinger Bridge Time series (SBTS)** algorithm and apply it to generate some **new samples** of generic time series. 
 
 
  <span class="para-title">Grade :</span>
 
-You will have to choose **one lab (TP)** among the three proposed by modifying the column named **"Lab Choice"** associated to your name directly on the  **Excel sheet** available [here](https://docs.google.com/spreadsheets/d/1H2ZDF7BeY9pMEMaEnG-JyBBCpDcvnkJcoZzA4M7mCMo/edit?gid=0#gid=0). Note that the project has be to done by **groups** of **2** or **3**.
-\
-Your objective will be to answer the **questions** of the chosen lab, and a fairly open-ended **mini-project** will be proposed at the end of it. 
+You will have to choose **one lab (TP)** among the three proposed by modifying the column named **"Lab Choice"** associated to your name directly on the  **Excel sheet** available [here](https://docs.google.com/spreadsheets/d/1H2ZDF7BeY9pMEMaEnG-JyBBCpDcvnkJcoZzA4M7mCMo/edit?gid=0#gid=0). Note that the project has to be done by **groups** of **2** or **3**.
+
+Your objective will be to answer the **questions** of the chosen lab, and a fairly open-ended **mini-project** will be proposed at the end of it. You will be able to 
 
 **The final grade** will be based on both the **lab questions** and the **mini-project**. In any case, the **final course grade** will be calculated as follows:
 
@@ -81,12 +81,12 @@ The site is structured into three sections that make up the course, each consist
 
   - <span class="para-subtitle"> Course reminders: </span>
 
-The first chapter, titled **Course Reminders**, reviews the key theoretical concepts covered in the course. It revisits important results and the corresponding algorithms for the underlying problems.
+The first chapter, named **Course reminders**, reviews the key theoretical concepts covered in the course. It revisits important results and the corresponding algorithms for the underlying problems.
 
 
   - <span class="para-subtitle"> Practical session: </span>
   
-The second chapter, titled **Lab work**, contains the practical session instructions along with a link to a **Jupyter Notebook** where you can write your code. These notebooks are designed to be self-contained, allowing you to work independently during the sessions. At the end of each practical session, an **open-ended project**^[The **projects** related to each course session will be uploaded after the third lab session, i.e., after **February 19**.] is provided. This project is not intended to be completed during the session, but it is closely related to the material covered and offers an opportunity to explore the concepts in more depth.
+The second chapter, named **Lab work**, contains the practical session instructions along with a link to a **Jupyter Notebook** where you can write your code. These notebooks are designed to be self-contained, allowing you to work independently during the sessions. At the end of each practical session, an **open-ended project**^[The **projects** related to each course session will be uploaded after the third lab session, i.e., after **February 19**.] is provided. This project is not intended to be completed during the session, but it is closely related to the material covered and offers an opportunity to explore the concepts in more depth.
 
 <div style="margin-top: 1em;"></div>
 
