@@ -3,7 +3,7 @@
 You can download the **Lab Work n°1: Deep PDE Solver** as a Jupyter Notebook file [here](TP1-PDE/Lab%20Session%20n%C2%B01%20-%20Deep%20Learning%20for%20PDE.ipynb).
 ^[If you end-up with a **.txt** file, download it and rename it as a **.ipynb** file] 
 
-All the necessary information is already included in the notebook^[There will be **coding** and **math** questions.].  Below, is a brief summary of the lab content and some expected results.
+All the necessary information is already included in the **notebook**^[There will be **coding** and **math** questions.].  Below, is a brief summary of the lab content and some expected results.
 
 
 ## Summary of the lab
@@ -16,19 +16,18 @@ All the necessary information is already included in the notebook^[There will be
 
 The Lab work is divided into 2 parts : 
 
-- The first part is devoted to the implementation of the **Deep Galerkin algorithm** where you are going to test it on various PDEs arising in finance. 
+- The first part is devoted to the implementation of the **Deep Galerkin algorithm** where you are going to test it on various PDEs arising in finance.  
   
-We illustrate below some expected plots that you should obtain :
-
+<span class="para-subtitle"> Some expected plots for **Deep Galerkin** part:  </span>
 
 ::: {.columns}
 
 ::: {.column width="50%"}
-![Test](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg)
+![Evolution of the loss in the learning process of the PDE of the price of a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png)
 :::
 
 ::: {.column width="50%"}
-![Test](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg)
+![Price surface $(t,s) \mapsto C(t,s)$ for a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.jpg)
 :::
 
 :::
@@ -36,8 +35,19 @@ We illustrate below some expected plots that you should obtain :
 
 - The second part is devoted to the implementation of the **Deep BSDE Solver** where you are going to test it on known PDEs arising from **finance** and **stochastic control problems**.
 
-We illustrate below some expected plots that you should obtain for the **Deep BSDE Solver part**:
+<span class="para-subtitle"> Some expected plots for **Deep BSDE** part:  </span>
 
+::: {.columns}
+
+::: {.column width="50%"}
+![Evolution of the loss for the learning of $y_0$ in the LQ control problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/LossLinearQuadraticControlProblem.png)
+:::
+
+::: {.column width="50%"}
+![Evolution of $y_0$ in the LQ control problem ](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/y0LinearQuadraticControlProblem.png)
+:::
+
+:::
 
 
 

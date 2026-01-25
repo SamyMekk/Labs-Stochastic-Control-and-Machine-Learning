@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../utils/styles.css">
 </head>
@@ -248,19 +277,54 @@ $$
 
 
 <p>You can download the <strong>Lab Work n°1: Deep PDE Solver</strong> as a Jupyter Notebook file <a href="TP1-PDE/Lab Session n°1 - Deep Learning for PDE.ipynb">here</a>. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>All the necessary information is already included in the notebook<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Below, is a brief summary of the lab content and some expected results.</p>
+<p>All the necessary information is already included in the <strong>notebook</strong><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Below, is a brief summary of the lab content and some expected results.</p>
 <section id="summary-of-the-lab" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="summary-of-the-lab"><span class="header-section-number">2.1</span> Summary of the lab</h2>
 <div id="alg-description" class="algorithm">
 <p><span class="para-title"> Content : </span></p>
-<p>The Lab work is divided into 3 parts :</p>
+<p>The Lab work is divided into 2 parts :</p>
 <ul>
-<li>The first part is devoted to get more familiar with the PyTorch library for the ones who are not that familiar with the library.</li>
-<li>The second part is devoted to the implementation of the Deep Galerkin algorithm with so</li>
-<li>The third part is devoted to the implementation of the Deep BSDE Solver and to</li>
-<li>TBD.</li>
-<li>TBD</li>
+<li>The first part is devoted to the implementation of the <strong>Deep Galerkin algorithm</strong> where you are going to test it on various PDEs arising in finance.</li>
 </ul>
+<p><span class="para-subtitle"> Some expected plots for <strong>Deep Galerkin</strong> part: </span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png" class="img-fluid figure-img"></p>
+<figcaption>Test</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.jpg" class="img-fluid figure-img"></p>
+<figcaption>Test</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>The second part is devoted to the implementation of the <strong>Deep BSDE Solver</strong> where you are going to test it on known PDEs arising from <strong>finance</strong> and <strong>stochastic control problems</strong>.</li>
+</ul>
+<p><span class="para-subtitle"> Some expected plots for <strong>Deep BSDE</strong> part: </span></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/LossLinearQuadraticControlProblem.png" class="img-fluid figure-img"></p>
+<figcaption>Evolution of the loss for the learning of <span class="math inline">\(y_0\)</span> in the LQ control problem</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/y0LinearQuadraticControlProblem.png" class="img-fluid figure-img"></p>
+<figcaption>Evolution of <span class="math inline">\(y_0\)</span> in the LQ control problem</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <p><span class="para-title"> Main goals : </span></p>
 <p>The TP aims you to implement the various PDE algorithms seen during the class session :</p>
 <ul>
@@ -285,7 +349,7 @@ $$
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>If you end-up with a .txt file, download it and rename it as a .ipynb<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>If you end-up with a <strong>.txt</strong> file, download it and rename it as a <strong>.ipynb</strong> file<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>There will be <strong>coding</strong> and <strong>math</strong> questions.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>i.e., the list of proposed papers along with the expected work, as well as alternative, more challenging project options.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
