@@ -245,9 +245,11 @@ $$
 <li><span class="para-subtitle">Dynamics of the controlled state process</span></li>
 </ul>
 <p>Let <span class="math inline">\((\Omega,\mathcal{F}, \mathbb{F}=(\mathcal{F}_t)_{t \geq 0}, \mathbb{P})\)</span> be a probability space satisfying the usual assumptions and big enough to support a Brownian motion <span class="math inline">\(W=(W_t)_{t \geq 0}\)</span>. We consider a control model where the state of the system is governed by a stochastic differential equation (SDE) valued in <span class="math inline">\(\mathbb{R}^n\)</span> given by</p>
-<p><span class="math display">\[\begin{align}
+<p><span id="eq-dynamics-stateprocess"><span class="math display">\[
+\begin{align}
     d X_s = b(X_s,\alpha_s) d s + \sigma(X_s, \alpha_s ) d W_s, \hspace{0.5 cm}
-\end{align}\]</span> starting from <span class="math inline">\(X_0= x \in \mathbb{R}^n\)</span> and where we are given 2 measurable maps <span class="math inline">\((b,\sigma) : \ \mathbb{R}^n \times A \to \mathbb{R}^n ,\mathbb{R}^{d \times n}\)</span> and the control <span class="math inline">\(\alpha=(\alpha_t)_{0 \leq t \leq T}\)</span> is a progressively measurable (with respect to <span class="math inline">\(\mathbb{F})\)</span> process valued in <span class="math inline">\(A \subset \mathbb{R}^m\)</span>. We suppose that the measurable maps <span class="math inline">\((b,\sigma)\)</span> satisfy a uniform Lipschitz condition on <span class="math inline">\(A\)</span>: <span class="math inline">\(\exists K \geq 0\)</span>, <span class="math inline">\(\forall x,y \in \mathbb{R}^n\)</span>, <span class="math inline">\(\forall a \in A\)</span>, <span class="math display">\[\begin{align}
+\end{align}
+\tag{1.1}\]</span></span> starting from <span class="math inline">\(X_0= x \in \mathbb{R}^n\)</span> and where we are given 2 measurable maps <span class="math inline">\((b,\sigma) : \ \mathbb{R}^n \times A \to \mathbb{R}^n ,\mathbb{R}^{d \times n}\)</span> and the control <span class="math inline">\(\alpha=(\alpha_t)_{0 \leq t \leq T}\)</span> is a progressively measurable (with respect to <span class="math inline">\(\mathbb{F})\)</span> process valued in <span class="math inline">\(A \subset \mathbb{R}^m\)</span>. We suppose that the measurable maps <span class="math inline">\((b,\sigma)\)</span> satisfy a uniform Lipschitz condition on <span class="math inline">\(A\)</span>: <span class="math inline">\(\exists K \geq 0\)</span>, <span class="math inline">\(\forall x,y \in \mathbb{R}^n\)</span>, <span class="math inline">\(\forall a \in A\)</span>, <span class="math display">\[\begin{align}
     | b(x,a) - b(y,a) |+ |\sigma(x,a) - \sigma(y,a) | \leq  K |x-y|.
 \end{align}\]</span> In the sequel, for <span class="math inline">\(0 \leq t \leq T\)</span>, we denote by <span class="math inline">\(\mathcal{T}_{t,T}\)</span> the set of stopping times valued in <span class="math inline">\([t,T]\)</span>. Fix <span class="math inline">\(T &gt; 0\)</span> and we denote by <span class="math inline">\(\mathcal{A}\)</span> the set of progressively mesurable with respect to <span class="math inline">\(\mathbb{F}\)</span> control processes <span class="math inline">\(\alpha = (\alpha_t)_{0 \leq t \leq T}\)</span> such that <span class="math display">\[\begin{align}
 \mathbb{E} \Big[ \int_{0}^{T} | b(0,\alpha_t)|^2 + |\sigma(0,\alpha_t)|^2 dt \Big] &lt; + \infty.
@@ -262,6 +264,158 @@ Let <span class="math inline">\(f :[0,T] \times \mathbb{R}^n \times A \to \mathb
 </section>
 <section id="the-dynamic-programming-approach-hjb-equation" class="level3" data-number="1.1.2">
 <h3 data-number="1.1.2" class="anchored" data-anchor-id="the-dynamic-programming-approach-hjb-equation"><span class="header-section-number">1.1.2</span> The dynamic programming approach : HJB equation</h3>
+<p>The dynamic programming principle (DPP) is a fundamental principle in the theory of stochastic control. For controlled Markov processes, it is formulated as follows</p>
+<div id="thm-DPPprinciple" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.1 (Dynamic Programming Principle.)</strong></span> Let <span class="math inline">\((t,x) \in [0,T] \times \mathbb{R}^d\)</span>. Then, we have <span id="eq-dynamicprogramming"><span class="math display">\[
+\begin{align}
+v(t,x) &amp;= \underset{\alpha \in \mathcal{A}(t,x)}{\text{ sup }}  \mathbb{E} \Big[ \int_{t}^{t+ \theta} f(s,X_s^{t,x},\alpha_s) d s + v(\theta, X_{\theta}^{t,x}) \Big]
+\end{align}
+\tag{1.2}\]</span></span> for any stopping time <span class="math inline">\(\theta \in \mathcal{T}_{t,T}\)</span>.</p>
+<ul>
+<li><span class="para-subtitle">Intuitive derivation of the HJB equation</span></li>
+</ul>
+<p>The interpretation of the DPP is that the optimization problem can be split in two parts: an optimal control on the whole interval <span class="math inline">\([t,T]\)</span> may be obtained by first searching for an optimal control from time <span class="math inline">\(\theta\)</span> given the state value <span class="math inline">\(X_{\theta}^{t,x}\)</span>, i.e.&nbsp;compute <span class="math inline">\(v(\theta,X_{\theta}^{t,x})\)</span> and then maximizing over controls on <span class="math inline">\([t,\theta]\)</span> the quantity<br>
+<span class="math display">\[
+\begin{align}
+\mathbb{E} \Big[ \int_{t}^{\theta} f(s,X_s^{t,x},\alpha_s ) d s + v(\theta, X_{\theta}^{t,x}) \Big].
+\end{align}
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of this result is non trivial and is based on a measurable selection argument but the proof can be found easily online so we omit it for now.</p>
+</div>
+<div id="alg-description" class="algorithm">
+<p>The Hamilton-Jacobi Bellman (HJB) equation is the infinitesimal version of the dynamic programming principle, i.e., it describes the local behavior of the value function when we send the stopping time <span class="math inline">\(\theta\)</span> in <a href="#eq-dynamicprogramming" class="quarto-xref">Equation&nbsp;<span>1.2</span></a> in <a href="#thm-DPPprinciple" class="quarto-xref">Theorem&nbsp;<span>1.1</span></a> to <span class="math inline">\(t\)</span>. The HJB equation is also called <strong>dynamic programming equation</strong>.</p>
+<p>Let us consider the time <span class="math inline">\(\theta = t+h\)</span> and a constant control <span class="math inline">\(\alpha = (\alpha_t)_{t  \leq s \leq T}= a\)</span> for some arbitrary <span class="math inline">\(a \in A\)</span>. Therefore, from the relation <a href="#eq-dynamicprogramming" class="quarto-xref">Equation&nbsp;<span>1.2</span></a>, we have</p>
+<p><span id="eq-inequality-dynamicprog"><span class="math display">\[
+\begin{align}
+v(t,x) \geq \mathbb{E} \Big[ \int_{t}^{t+h} f(s,X_s^{t,x},a) + v(t+h,X_{t+h}^{t,x}) \Big]
+\end{align}
+\tag{1.3}\]</span></span></p>
+<p>Under some regularity conditions on <span class="math inline">\(v\)</span>, we may apply Itô’s formula between <span class="math inline">\(t\)</span> and <span class="math inline">\(t+h\)</span> which gives</p>
+<p><span class="math display">\[
+\begin{align}
+v(t+h, X_{t+h}^{t,x}) = v(t,x) + \int_{t}^{t+h} \Big( \partial_t v + \mathcal{L}^a v \Big)(s, X_s^{t,x}) d s + \text{ Local martingale },
+\end{align}
+\]</span> where we denote the operator <span class="math inline">\(\mathcal{L}^a\)</span> associated to the diffusion with control process given by constant control <span class="math inline">\(a\)</span> and defined as <span class="math display">\[
+\begin{align}
+\mathcal{L}^{a}v = b(x,a) \cdot D_x v + \frac{1}{2} \sigma \sigma^{\top} : D_x^2 v
+\end{align},
+\]</span> where <span class="math inline">\(\cdot\)</span> denotes the scalar product between vectors on <span class="math inline">\(\mathbb{R}^d\)</span> and <span class="math inline">\(:\)</span> denotes the scalar prodcutes between matrix, i.e., <span class="math inline">\(A:B= \text{Tr}(A^{\top} B)\)</span>. Substituting into <a href="#eq-inequality-dynamicprog" class="quarto-xref">Equation&nbsp;<span>1.3</span></a>, we get <span class="math display">\[
+\begin{align}
+0 \geq \mathbb{E} \Big[\int_{t}^{t+h} \Big( \partial_t v+ \mathcal{L}^a v \Big)(s,X_s^{t,x} ) + f(s,X_s^{t,x},a) \d s \Big]
+\end{align}
+\]</span> Dividing by <span class="math inline">\(h\)</span> and sending <span class="math inline">\(h \to 0\)</span>, from the continuity of the map inside the expectation, we get by the mean-value theorem</p>
+<p><span id="eq-inequality-dynamicprog2"><span class="math display">\[
+\begin{align}
+0 \geq \partial_t v (t,x) + \mathcal{L}^a v(t,x) + f(t,x,a).
+\end{align}
+\tag{1.4}\]</span></span></p>
+<p>Since <a href="#eq-inequality-dynamicprog2" class="quarto-xref">Equation&nbsp;<span>1.5</span></a> holds for any <span class="math inline">\(a \in A\)</span>, we obtain the inequality</p>
+<p><span id="eq-inequality-dynamicprog2"><span class="math display">\[
+\begin{align}
+0 \geq \partial_t v (t,x) + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a v(t,x) + f(t,x,a) \big]
+\end{align}
+\tag{1.5}\]</span></span> On the other hand, if we assume that <span class="math inline">\(\alpha^{\star}= (\alpha^{\star}_t)_{0 \leq t \leq T}\)</span> is an optimal control. Then in <a href="#eq-dynamicprogramming" class="quarto-xref">Equation&nbsp;<span>1.2</span></a> , we have</p>
+<p><span class="math display">\[
+\begin{align}
+v(t,x) = \mathbb{E} \Big[ \int_{t}^{t+h} f(s,X_s^{\star}, \alpha_s^{\star}) d s + v(t+h, X_{t+h}^{\star}) \Big],
+\end{align}
+\]</span> where <span class="math inline">\(X^{\star}\)</span> is the state process solution to <a href="#eq-dynamics-stateprocess" class="quarto-xref">Equation&nbsp;<span>1.1</span></a> starting from <span class="math inline">\(x\)</span> at <span class="math inline">\(t\)</span>, with the control <span class="math inline">\(\alpha^{\star}\)</span>. Using similar arguments as derived above, we end up with</p>
+<p><span class="math display">\[
+\begin{align}
+\partial_t v(t,x) + \mathcal{L}^{\alpha^{\star}_t} v(t,x) + f(t,x, \alpha_t^{\star}) =0,
+\end{align}
+\]</span> which combined with <a href="#eq-inequality-dynamicprog2" class="quarto-xref">Equation&nbsp;<span>1.5</span></a>, suggests that <span class="math inline">\(v\)</span> should satisfy</p>
+<p><span id="eq-PDE-dynamicprog"><span class="math display">\[
+\begin{align}
+\partial_t v(t,x) + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^{a} v(t,x) + f(t,x,a) \big ] =0 , \quad \forall (t,x) \in [0,T) \times \mathbb{R}^d,
+\end{align}
+\tag{1.6}\]</span></span> if the above supremum is finite. The PDE <a href="#eq-PDE-dynamicprog" class="quarto-xref">Equation&nbsp;<span>1.6</span></a> is often rewritten in the form</p>
+<p><span id="eq-PDE-dynamicprog2"><span class="math display">\[
+\begin{align}
+\partial_t v(t,x) + H \big(t,x, D_x v(t,x) , D^2_x (t,x) \big) = 0, \quad \forall (t,x) \in [0,T) \times \mathbb{R}^d,
+\end{align}
+\tag{1.7}\]</span></span> where for <span class="math inline">\((t,x,p,M) \in [0,T] \times \mathbb{R}^d \times \mathbb{R}^d \times \mathcal{S}_n\)</span>, we denote</p>
+<p><span class="math display">\[
+\begin{align}
+H(t,x,p,M) = \underset{a \in A}{\text{ sup }} \big[ b(x,a) \cdot p + \frac{1}{2} \sigma \sigma^{\top}(x,a) : M + f(t,x,a)  \big].
+\end{align}
+\]</span> The map <span class="math inline">\(H\)</span> is called the Hamiltonian of the associated control problem and equation <a href="#eq-PDE-dynamicprog2" class="quarto-xref">Equation&nbsp;<span>1.7</span></a> is called dynamic programming equation (DPP) equation or Hamilton-Jacobi-Bellman (HJB) equation. The terminal condition to this PDE is given by</p>
+<p><span class="math display">\[
+\begin{align}
+v(T,x) = g(x), \quad \forall x \in \mathbb{R}^d,
+\end{align}
+\]</span> which is an immediate consequence of the definition of the value function.</p>
+</div>
+<div id="alg-description" class="algorithm">
+<p><span class="para-subtitle">Some remarks: </span></p>
+<ul>
+<li>When the control space <span class="math inline">\(A\)</span> is a singleton, i.e., <span class="math inline">\(A= \big \lbrace a_0 \rbrace\)</span>, the HJB equation is reduced to the Cauchy problem</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+\begin{cases}
+\partial_t v(t,x) + \mathcal{L}^{a_0} v(t,x) &amp;=  f(t,x,a_0), \quad \forall (t,x) \in [0,T) \times \mathbb{R}^d. \\
+v(T,x) &amp;= g(x), \quad \forall x \in \mathbb{R}^d.
+\end{cases}
+\end{align}
+\]</span></p>
+<ul>
+<li>The optimality argument of the DPP suggests that if one can find a measurable map $ [0,T] ^d (t,x) ^{}(t,x) A$ such that</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+\underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a v(t,x) + f(t,x,a) \big] = \mathcal{L}^{\alpha^{\star}(t,x)} v(t,x) + f(t,x, \alpha^{\star}(t,x)),
+\end{align}
+\]</span> then we would get <span class="math display">\[
+\begin{align}
+\begin{cases}
+\partial_t v(t,x) +  \mathcal{L}^{\alpha^{\star}(t,x)} v(t,x) +  f(t,x, \alpha^{\star}(t,x)) &amp;=0, \quad \forall (t,x) \in [0,T) \in \mathbb{R}^d \\
+v(T,x) &amp;= g(x), \quad x \in \mathbb{R}^d
+\end{cases}
+\end{align}
+\]</span> and so by Feynmann-Kac formula,</p>
+<p><span class="math display">\[
+\begin{align}
+v(t,x) = \mathbb{E} \Big[ \int_{t}^{T} f(s,X_s, \alpha^{\star}(s,X_s)) d s  + g(X_T^{\star}) \Big],
+\end{align}
+\]</span> where <span class="math inline">\(X^{\star} = (X^{\star}_s)_{t \leq s \leq T}\)</span> is solution to the SDE $$ <span class="math display">\[\begin{align}
+\begin{cases}
+dX_s^{\star} &amp;= b(X_s^{\star}, \alpha^{\star}(s,X_s^{\star})) + \sigma(X_s^{\star}, \alpha^{\star}(s,X_s^{\star})) d W_s , \quad t \leq s \leq T, \\
+X_t^{\star} &amp;= x
+\end{cases}
+\end{align}\]</span> This will show that the process <span class="math inline">\((\alpha^{\star}_s)_{t \leq s \leq T}= \big(\alpha^{\star}(s,X_s^{\star} )\big)_{t \leq s \leq T}\)</span> is an optimal Markovian control, i.e given from a measurable feedback map <span class="math inline">\(\alpha^{\star}\)</span>. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</div>
+<p>The crucial step in the classical approach to dynamic programming consists in proving, that given a smooth solution to the HJB equation, this candidate coïncides with the value function. This result is called <strong>verification theorem</strong>. We formulate a general version of the verification theorem.</p>
+<div id="thm-verificationtheorem" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1.2 (Verification theorem.)</strong></span> Let <span class="math inline">\(w\)</span> be a function in <span class="math inline">\(\mathcal{C}^{1,2}([0,T) \times \mathbb{R}^d) \cap \mathcal{C}^0([0,T] \times \mathbb{R}^d)\)</span>, satisfying a growth quadratic growth condition, i.e., there exists a constant <span class="math inline">\(C \geq 0\)</span> such that</p>
+<p><span class="math display">\[
+\begin{align}
+|w(t,x)| \leq C \big( 1+ |x|^2 \big), \quad \forall (t,x) \in [0,T] \times \mathbb{R}^d.
+\end{align}
+\]</span> - Suppose that</p>
+<p><span class="math display">\[
+\begin{align}
+\begin{cases}
+\partial_t w + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] &amp;\leq 0, \quad (t,x) \in [0,T) \times \mathbb{R}^d, \\
+w(T,x) &amp;\geq g(x), \quad x \in \mathbb{R}^d.
+\end{cases}
+\end{align}
+\]</span> Then <span class="math inline">\(w \geq v\)</span> on <span class="math inline">\([0,T] \times \mathbb{R}^d\)</span>.</p>
+<ul>
+<li>Suppose further <span class="math inline">\(w(T,\cdot)=g\)</span> and there exists a measurable map <span class="math inline">\([0,T] \times \mathbb{R}^d \ni (t,x) \mapsto \hat{\alpha}(t,x) \in A\)</span> such that <span class="math display">\[
+\begin{align}
+\partial_t w + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] = \partial_t w  \big[ \mathcal{L}^{\hat{\alpha}(t,x)} w(t,x) + f(t,x,\hat{\alpha}(t,x)) \big],
+\end{align}
+\]</span> and the SDE given by <span class="math display">\[
+d X_s = b(X_s, \hat{\alpha}(s,X_s)) d s + \sigma(X_s, \hat{\alpha}(s,X_s)) d W_s,
+\]</span> admits a unique solution, denoted by <span class="math inline">\(\hat{X}_s^{t,x}\)</span> and the process <span class="math inline">\(\big(\hat{\alpha}(s,X_s^{t,x}) \big)_{t \leq s \leq T} \in \mathcal{A}(t,x)\)</span>. Then, we have <span class="math inline">\(w=v\)</span> on <span class="math inline">\([0,T] \times \mathbb{R}^d\)</span> and <span class="math inline">\(\hat{\alpha}\)</span> is an optimal Markovian control.</li>
+</ul>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of this result follow essentially from Itô’s formula after denoting the sequence of stopping times <span class="math inline">\(\tau_n = \text{inf} \lbrace s \geq t : \int_{t}^s D_x w(l, X_l^{t,x})^{\top} \sigma(X_l^{t,x}, \alpha_l)|^2 d l \geq n \big \rbrace\)</span> and noticing that <span class="math inline">\(\tau_n \nearrow \infty\)</span> as <span class="math inline">\(n\)</span> tends to <span class="math inline">\(\infty\)</span> and applying Itô’s formula to <span class="math inline">\(w\)</span> between <span class="math inline">\(t\)</span> and <span class="math inline">\(s \wedge \tau_n\)</span>.</p>
+</div>
 </section>
 <section id="the-bsde-approach-pontryagins-formulation" class="level3" data-number="1.1.3">
 <h3 data-number="1.1.3" class="anchored" data-anchor-id="the-bsde-approach-pontryagins-formulation"><span class="header-section-number">1.1.3</span> The BSDE approach : Pontryagin’s formulation</h3>
@@ -273,9 +427,9 @@ Let <span class="math inline">\(f :[0,T] \times \mathbb{R}^n \times A \to \mathb
    Y_T &amp;= \xi
 \end{cases}
 \end{align}
-\tag{1.1}\]</span></span></p>
+\tag{1.8}\]</span></span></p>
 <div id="def-solBSDE" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 1.1</strong></span> A solution to the BSDE <a href="#eq-BSDE-differential" class="quarto-xref">Equation&nbsp;<span>1.1</span></a> is a pair of processes <span class="math inline">\((Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)\)</span> satisfying <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 1.1</strong></span> A solution to the BSDE <a href="#eq-BSDE-differential" class="quarto-xref">Equation&nbsp;<span>1.8</span></a> is a pair of processes <span class="math inline">\((Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)\)</span> satisfying <span class="math display">\[
 \begin{align}
 Y_t = \xi + \int_{t}^{T} f(s,Y_s,Z_s) ds - \int_{t}^{T} Z_s d W_s, \quad 0 \leq t \leq T, \quad \mathbb{P - }\text{ a.s}. \notag
 \end{align}
@@ -283,10 +437,10 @@ Y_t = \xi + \int_{t}^{T} f(s,Y_s,Z_s) ds - \int_{t}^{T} Z_s d W_s, \quad 0 \leq 
 </div>
 <p>We now state an import result ensuring existence and unicity to the BSDE <span class="math inline">\((1)\)</span></p>
 <div id="thm-ExistenceUnicityBSDE" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 1.1</strong></span> Given a pair of <span class="math inline">\((\xi,f)\)</span> satisfying Assumptions <span class="math inline">\((A)\)</span> and <span class="math inline">\((B)\)</span>, there exists a unique solution <span class="math inline">\((Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> to <span class="math inline">\((1)\)</span>.</p>
+<p><span class="theorem-title"><strong>Theorem 1.3</strong></span> Given a pair of <span class="math inline">\((\xi,f)\)</span> satisfying Assumptions <span class="math inline">\((A)\)</span> and <span class="math inline">\((B)\)</span>, there exists a unique solution <span class="math inline">\((Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> to <span class="math inline">\((1)\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>The proof of <a href="#thm-ExistenceUnicityBSDE" class="quarto-xref">Theorem&nbsp;<span>1.1</span></a> is based on a fixed point argument on the Banach space <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> endowed with the norm <span class="math display">\[
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of <a href="#thm-ExistenceUnicityBSDE" class="quarto-xref">Theorem&nbsp;<span>1.3</span></a> is based on a fixed point argument on the Banach space <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)\)</span> endowed with the norm <span class="math display">\[
 \begin{align}
 \lVert (Y,Z) \rVert_{\beta} = \bigg(\mathbb{E} \Big[ \int_{0}^{T}  e^{\beta s} \big( |Y_s|^2 + |Z_s|^2 \big) \Big] \bigg)^{\frac{1}{2}}
 \end{align}
@@ -313,7 +467,7 @@ Y_t = M_t - \int_{0}^{t} f(s,U_s, V_s) d s .
 v(T,x) = g(x).
 \end{cases}
 \end{align}
-\tag{1.2}\]</span></span> In fact, we will represent the PDE solution of <a href="#eq-semilinearPDE" class="quarto-xref">Equation&nbsp;<span>1.2</span></a> through a suitable BSDE representation as below</p>
+\tag{1.9}\]</span></span> In fact, we will represent the PDE solution of <a href="#eq-semilinearPDE" class="quarto-xref">Equation&nbsp;<span>1.9</span></a> through a suitable BSDE representation as below</p>
 <p><span id="eq-BSDE-differential-2"><span class="math display">\[
 \begin{align}
 \begin{cases}
@@ -321,7 +475,7 @@ v(T,x) = g(x).
     Y_T &amp;= g(X_T),
 \end{cases}
 \end{align}
-\tag{1.3}\]</span></span> and we recall that the forward SDE <span class="math inline">\(\mathbb{R}^n\)</span>-valued process <span class="math inline">\(X=(X_t)_{0 \leq t \leq T}\)</span> is given by <span class="math display">\[
+\tag{1.10}\]</span></span> and we recall that the forward SDE <span class="math inline">\(\mathbb{R}^n\)</span>-valued process <span class="math inline">\(X=(X_t)_{0 \leq t \leq T}\)</span> is given by <span class="math display">\[
 \begin{align}
 d X_s = b(s,X_s) d s + \sigma(s,X_s) d W_s
 \end{align}
@@ -337,7 +491,7 @@ Z_t &amp;= \sigma^{\top}(X_t) D_x v(t,X_t), \quad 0 \leq t \leq T
 \end{align}
 \]</span></p>
 </div>
-<p>is the solution to the BSDE <a href="#eq-BSDE-differential-2" class="quarto-xref">Equation&nbsp;<span>1.3</span></a>.</p>
+<p>is the solution to the BSDE <a href="#eq-BSDE-differential-2" class="quarto-xref">Equation&nbsp;<span>1.10</span></a>.</p>
 <p><strong>Proof.</strong> This result is an immediate application of the Itô’s formula applied to the process <span class="math inline">\(\big(v(t,X_t)\big)_{0 \leq t \leq T}\)</span> and the fact that <span class="math inline">\(v\)</span> is a solution to the PDE <strong>add ref</strong>. Indeed, applying Itô’s formula between <span class="math inline">\(t\)</span> and <span class="math inline">\(T\)</span>, we have <span class="math display">\[
 \begin{align}
    v(t,X_t)= v(T,X_T) - \int_{t}^{T} \Big( \partial_t v(s,X_s) - \mathcal{L}v(s,X_s)  \Big) d s - \int_{t}^{T} \sigma^{\top}(s,X_s) D_x v(s,X_s) d W_s, \quad 0 \leq t \leq T.
@@ -346,7 +500,7 @@ Z_t &amp;= \sigma^{\top}(X_t) D_x v(t,X_t), \quad 0 \leq t \leq T
 \begin{align}
 Y_t = g(X_T) + \int_{t}^{T} f(s,X_s,Y_s,Z_s) d s - \int_{t}^{T} Z_s d W_s,  \quad 0 \leq t \leq T,
 \end{align}
-\]</span> where we set <span class="math inline">\((Y_t,Z_t) = \Big(v(t,X_t), \sigma^{\top}(t,X_t)D_x v(t,X_t)\Big)\)</span> for any <span class="math inline">\(t \in [0,T]\)</span>. Moreover, from the growth assumptions on <span class="math inline">\(v\)</span> and <span class="math inline">\(D_x v\)</span>, we get that <span class="math inline">\((Y,Z)\)</span> lies in <span class="math inline">\(\mathbb{S}^2([0,T]; \mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)\)</span> and is unique by <a href="#thm-ExistenceUnicityBSDE" class="quarto-xref">Theorem&nbsp;<span>1.1</span></a> .</p>
+\]</span> where we set <span class="math inline">\((Y_t,Z_t) = \Big(v(t,X_t), \sigma^{\top}(t,X_t)D_x v(t,X_t)\Big)\)</span> for any <span class="math inline">\(t \in [0,T]\)</span>. Moreover, from the growth assumptions on <span class="math inline">\(v\)</span> and <span class="math inline">\(D_x v\)</span>, we get that <span class="math inline">\((Y,Z)\)</span> lies in <span class="math inline">\(\mathbb{S}^2([0,T]; \mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)\)</span> and is unique by <a href="#thm-ExistenceUnicityBSDE" class="quarto-xref">Theorem&nbsp;<span>1.3</span></a> .</p>
 </div>
 </section>
 </section>
@@ -433,6 +587,12 @@ v(T,x) = g(x), \quad x \in \mathbb{R}^n
 
 
 </section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>feedback refers to measurable function defined over time <span class="math inline">\(\times\)</span> state space .<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
