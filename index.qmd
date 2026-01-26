@@ -49,7 +49,7 @@ The third lab session will be about **Generative IA** for data generation based 
 
 You will have to choose **one lab (TP)** among the three proposed by modifying the column named **"Lab Choice"** associated to your name directly on the  **Excel sheet** available [here](https://docs.google.com/spreadsheets/d/1H2ZDF7BeY9pMEMaEnG-JyBBCpDcvnkJcoZzA4M7mCMo/edit?gid=0#gid=0). Note that the project has to be done by **groups** of **2** or **3**.
 
-Your objective will be to answer the **questions** of the chosen lab, and a fairly open-ended **mini-project** will be proposed at the end of it. You will be able to 
+Your objective will be to answer the **questions** of the chosen lab, and an open-ended **mini-project** will be proposed at the end of it. 
 
 **The final grade** will be based on both the **lab questions** and the **mini-project**. In any case, the **final course grade** will be calculated as follows:
 
@@ -86,7 +86,7 @@ The first chapter, named **Course reminders**, reviews the key theoretical conce
 
   - <span class="para-subtitle"> Practical session: </span>
   
-The second chapter, named **Lab work**, contains the practical session instructions along with a link to a **Jupyter Notebook** where you can write your code. These notebooks are designed to be self-contained, allowing you to work independently during the sessions. At the end of each practical session, an **open-ended project**^[The **projects** related to each course session will be uploaded after the third lab session, i.e., after **February 19**.] is provided. This project is not intended to be completed during the session, but it is closely related to the material covered and offers an opportunity to explore the concepts in more depth.
+The second chapter, named **Lab work**, contains the practical session instructions along with a link to a **Jupyter notebook** where you can write your code. These notebooks are designed to be self-contained, allowing you to work independently during the sessions. At the end of each practical session, an **open-ended project**^[The **projects** related to each course session will be uploaded after the third lab session, i.e., after **February 19**.] is provided. This project is not intended to be completed during the session, but it is closely related to the material covered and offers an opportunity to explore the concepts in more depth.
 
 <div style="margin-top: 1em;"></div>
 
