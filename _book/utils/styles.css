@@ -1,91 +1,69 @@
+/* =========================
+   Base typography
+========================= */
 body {
-    font-size: 0.91em; /* Ajustez cette valeur selon vos besoins */
-  }
-  
-  .book-title {
-    font-size: 1.03em; /* Ajustez cette valeur */
-  }
-
-
-  h1{
-    text-align: center;
-  }
-
-  h2{
-    text-align: center;
-  }
-
-
-  .theorem {
-    background-color: rgb(248, 239, 239);
-    padding: 0.5em;
-  }
-
-  .proposition {
-    background-color: rgb(248, 239, 239);
-    padding: 0.5em;
-  }
-
-  .lemma {
-    background-color: rgb(247, 247, 242);
-    padding: 0.5em;
+  font-size: 0.91em; /* Ajustez cette valeur selon vos besoins */
 }
 
-.definition {
-    background-color: rgb(238, 245, 242);
-    padding: 0.5em;
-  }
-
-
-  .proof {
-    background-color: rgb(120, 240, 220); /* orange très clair */
-    padding: 0.5em;
+.book-title {
+  font-size: 1.03em; /* Ajustez cette valeur */
 }
 
-  .theorem .definition p {
-    background-color: rgb(119, 37, 37);
-    margin-top: 1em;
-  }
+h1,
+h2 {
+  text-align: center;
+}
 
-.methodology {
+/* =========================
+   Unified math blocks
+   (Theorem / Definition / Lemma / Proposition / Proof / etc.)
+   -> same structure + same color everywhere
+========================= */
+.theorem,
+.definition,
+.proposition,
+.lemma,
+.corollary,
+.remark,
+.example,
+.proof,
+.callout-proof {
   border-left: 4px solid #3b82f6;
   padding: 1em 1.2em;
-  background-color: #f8fafc;
+  background-color: #f8fafc; /* même couleur partout */
   border-radius: 6px;
   margin: 1.5em 0;
+  box-sizing: border-box;
 }
-.para-title {
-  font-size: 1.4em;
+
+/* Si Quarto applique des fonds via callouts, on force le fond */
+.theorem,
+.definition,
+.proposition,
+.lemma,
+.corollary,
+.remark,
+.example,
+.proof,
+.callout-proof {
+  background-color: #f8fafc !important;
+}
+
+/* Titre/texte dans les callouts proof (si utilisés) */
+.callout-proof .callout-title {
+  color: #333333;
   font-weight: 600;
-  display: inline-block;
-  padding-bottom: 0.1em;
-  border-bottom: 1px solid currentColor;
 }
-.para-subtitle {
-  font-size: 1.0em;
-  font-weight: 400;
-  display: inline-block;
-  padding-bottom: 0.1em;
-  border-bottom: 1px solid currentColor;
-  font-style: italic;
-}
-.para-subsubtitle {
-  font-size: 0.8em;
-  font-weight: 400;
-  display: inline-block;
-  padding-bottom: 0.1em;
-  border-bottom: 1px solid currentColor;
-}
-.eq-frame {
-    border: 1px solid #aaa; /* cadre fin gris */
-    padding: 0.5em 0.8em;    /* un peu d’espace autour de l’équation */
-    margin: 1em 0;           /* espace au-dessus et en dessous */
-    border-radius: 3px;      /* coins légèrement arrondis, optionnel */
+.callout-proof .callout-body {
+  color: #222222;
 }
 
-
-
-.formulation {
+/* =========================
+   Methodology / Formulation / Algorithm (garde ta structure)
+========================= */
+.methodology,
+.formulation,
+.algorithm {
   border-left: 4px solid #3b82f6;
   padding: 1em 1.2em;
   background-color: #f8fafc;
@@ -94,48 +72,74 @@ body {
 }
 
 .algorithm {
-  border-left: 4px solid #3b82f6;
   padding: 1em;
-  background-color: #f8fafc;
 }
-  
+
+/* =========================
+   Paragraph titles
+========================= */
+.para-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  display: inline-block;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid currentColor;
+}
+
+.para-subtitle {
+  font-size: 1em;
+  font-weight: 400;
+  display: inline-block;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid currentColor;
+  font-style: italic;
+}
+
+.para-subsubtitle {
+  font-size: 0.8em;
+  font-weight: 400;
+  display: inline-block;
+  padding-bottom: 0.1em;
+  border-bottom: 1px solid currentColor;
+}
+
+/* =========================
+   Equation frame
+========================= */
+.eq-frame {
+  border: 1px solid #aaa;     /* cadre fin gris */
+  padding: 0.5em 0.8em;       /* espace autour de l’équation */
+  margin: 1em 0;              /* espace au-dessus et en dessous */
+  border-radius: 3px;         /* coins légèrement arrondis */
+}
+
+/* =========================
+   Mobile layout adjustments
+========================= */
 @media (max-width: 600px) {
-    .content {
-      margin: 2em 0;
-      width: calc(100vw - 2rem); /* Viewport width minus padding */
-      text-align: justify;
-      overflow-x: hidden;
-      padding: 0 1rem;
-      box-sizing: border-box;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    .content .math, 
-    .content .math-display {
-      width: auto;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
+  .content {
+    margin: 2em 0;
+    width: calc(100vw - 2rem); /* Viewport width minus padding */
+    text-align: justify;
+    overflow-x: hidden;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  .callout-proof {
-  background-color: #fbfbfb;   /* gris très clair, neutre */
-  border-left: none;           /* supprime la barre verticale */
-  border: 1px solid #eeeeee;   /* bordure fine discrète */
-  padding: 0.6em;
+  .content .math,
+  .content .math-display {
+    width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
 
-.callout-proof .callout-title {
-  color: #333333;
-  font-weight: 600;
-}
-
-.callout-proof .callout-body {
-  color: #222222;
-}
-
+/* =========================
+   Figures
+========================= */
 .center-caption figcaption {
   text-align: center;
 }

@@ -15,9 +15,11 @@ The following is a reminder of the main theoretical results about **Deep Learnin
 
 Let $(\Omega,\mathcal{F}, \mathbb{F}=(\mathcal{F}_t)_{t \geq 0}, \mathbb{P})$ be a probability space satisfying the usual assumptions and big enough to support a Brownian motion $W=(W_t)_{t \geq 0}$. We consider a control model where the state of the system is governed by a stochastic differential equation (SDE) valued in $\mathbb{R}^n$ given by 
 
+$$
 \begin{align}
     d X_s = b(X_s,\alpha_s) d s + \sigma(X_s, \alpha_s ) d W_s, \hspace{0.5 cm}
 \end{align}
+$${#eq-dynamics-stateprocess}
 starting from $X_0= x \in \mathbb{R}^n$ and where we are given 2 measurable maps $(b,\sigma) : \ \mathbb{R}^n \times A \to \mathbb{R}^n ,\mathbb{R}^{d \times n}$ and the control $\alpha=(\alpha_t)_{0 \leq t \leq T}$ is a progressively measurable  (with respect to $\mathbb{F})$ process valued in $A \subset \mathbb{R}^m$. We suppose that the measurable maps $(b,\sigma)$ satisfy a uniform Lipschitz condition on $A$: $\exists K \geq 0$, $\forall x,y \in \mathbb{R}^n$, $\forall a \in A$,
 \begin{align}
     | b(x,a) - b(y,a) |+ |\sigma(x,a) - \sigma(y,a) | \leq  K |x-y|.
@@ -43,7 +45,224 @@ or \item [(2)] g satisfies a quadratic growth condition : $|g(x)| \leq C( 1+ |x|
 ### The dynamic programming approach : HJB equation
 
 
+The dynamic programming principle (DPP) is a fundamental principle in the theory of stochastic control. For controlled Markov processes, it is formulated as follows
 
+:::{#thm-DPPprinciple name="Dynamic Programming Principle."} 
+  Let $(t,x) \in [0,T] \times \mathbb{R}^d$. Then, we have
+$$
+\begin{align}
+v(t,x) &= \underset{\alpha \in \mathcal{A}(t,x)}{\text{ sup }}  \mathbb{E} \Big[ \int_{t}^{t+ \theta} f(s,X_s^{t,x},\alpha_s) d s + v(\theta, X_{\theta}^{t,x}) \Big] 
+\end{align}
+$$ {#eq-dynamicprogramming}
+for any stopping time $\theta \in \mathcal{T}_{t,T}$.
+
+
+- <span class="para-subtitle">Intuitive derivation of the HJB  equation</span>
+
+
+The interpretation of the DPP is that the optimization problem can be split in two parts: an optimal control on the whole interval $[t,T]$ may be obtained by first searching for an optimal control from time $\theta$ given the state value $X_{\theta}^{t,x}$, i.e. compute $v(\theta,X_{\theta}^{t,x})$ and then maximizing over controls on $[t,\theta]$ the quantity  
+$$
+\begin{align}
+\mathbb{E} \Big[ \int_{t}^{\theta} f(s,X_s^{t,x},\alpha_s ) d s + v(\theta, X_{\theta}^{t,x}) \Big].
+\end{align}
+$$
+
+:::
+
+::: proof
+
+ The proof of this result is non trivial and is based on a measurable selection argument but the proof can be found easily online so we omit it for now.
+
+:::
+
+::: {#alg-description .algorithm}
+
+
+The Hamilton-Jacobi Bellman (HJB) equation is the infinitesimal version of the dynamic programming principle, i.e., it describes the local behavior of the value function when we send the stopping time $\theta$ in @eq-dynamicprogramming in @thm-DPPprinciple to $t$. The HJB equation is also called **dynamic programming equation**.
+
+
+
+Let us consider the time $\theta = t+h$ and a constant control $\alpha = (\alpha_t)_{t  \leq s \leq T}= a$ for some arbitrary $a \in A$. Therefore, from the relation @eq-dynamicprogramming, we have
+
+$$
+\begin{align}
+v(t,x) \geq \mathbb{E} \Big[ \int_{t}^{t+h} f(s,X_s^{t,x},a) + v(t+h,X_{t+h}^{t,x}) \Big]
+\end{align}
+$$ {#eq-inequality-dynamicprog}
+
+Under some regularity conditions on $v$, we may apply Itô's formula between $t$ and $t+h$ which gives
+
+$$
+\begin{align}
+v(t+h, X_{t+h}^{t,x}) = v(t,x) + \int_{t}^{t+h} \Big( \partial_t v + \mathcal{L}^a v \Big)(s, X_s^{t,x}) d s + \text{ Local martingale },
+\end{align}
+$$
+where we denote the operator $\mathcal{L}^a$ associated to the diffusion with control process given by constant control $a$ and defined as
+$$
+\begin{align}
+\mathcal{L}^{a}v = b(x,a) \cdot D_x v + \frac{1}{2} \sigma \sigma^{\top} : D_x^2 v
+\end{align},
+$$
+where $\cdot$ denotes the scalar product between vectors on $\mathbb{R}^d$ and $:$ denotes the scalar prodcutes between matrix, i.e., $A:B= \text{Tr}(A^{\top} B)$. Substituting into @eq-inequality-dynamicprog, we get
+$$
+\begin{align}
+0 \geq \mathbb{E} \Big[\int_{t}^{t+h} \Big( \partial_t v+ \mathcal{L}^a v \Big)(s,X_s^{t,x} ) + f(s,X_s^{t,x},a) \d s \Big]
+\end{align}
+$$
+Dividing by $h$ and sending $h \to 0$, from the continuity of the map inside the expectation, we get by the mean-value theorem
+
+$$
+\begin{align}
+0 \geq \partial_t v (t,x) + \mathcal{L}^a v(t,x) + f(t,x,a).
+\end{align}
+$$ {#eq-inequality-dynamicprog2}
+
+Since @eq-inequality-dynamicprog2 holds for any $a \in A$, we obtain the inequality
+
+$$
+\begin{align}
+0 \geq \partial_t v (t,x) + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a v(t,x) + f(t,x,a) \big]
+\end{align}
+$${#eq-inequality-dynamicprog2}
+On the other hand, if we assume that $\alpha^{\star}= (\alpha^{\star}_t)_{0 \leq t \leq T}$ is an optimal control. Then in @eq-dynamicprogramming    , we have
+
+$$
+\begin{align}
+v(t,x) = \mathbb{E} \Big[ \int_{t}^{t+h} f(s,X_s^{\star}, \alpha_s^{\star}) d s + v(t+h, X_{t+h}^{\star}) \Big],
+\end{align}
+$$
+where $X^{\star}$ is the state process solution to @eq-dynamics-stateprocess starting from $x$ at $t$, with the control $\alpha^{\star}$. Using similar arguments as derived above, we end up with
+
+$$
+\begin{align}
+\partial_t v(t,x) + \mathcal{L}^{\alpha^{\star}_t} v(t,x) + f(t,x, \alpha_t^{\star}) =0,
+\end{align}
+$$
+which combined with @eq-inequality-dynamicprog2, suggests that $v$ should satisfy
+
+$$
+\begin{align}
+ \partial_t v(t,x) + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^{a} v(t,x) + f(t,x,a) \big ] =0 , \quad \forall (t,x) \in [0,T) \times \mathbb{R}^d,
+\end{align}
+$$ {#eq-PDE-dynamicprog}
+if the above supremum is finite. The PDE @eq-PDE-dynamicprog is often rewritten in the form
+
+$$
+\begin{align}
+\partial_t v(t,x) + H \big(t,x, D_x v(t,x) , D^2_x (t,x) \big) = 0, \quad \forall (t,x) \in [0,T) \times \mathbb{R}^d,
+\end{align}
+$$ {#eq-PDE-dynamicprog2}
+where for $(t,x,p,M) \in [0,T] \times \mathbb{R}^d \times \mathbb{R}^d \times \mathcal{S}_n$, we denote
+
+$$
+\begin{align}
+H(t,x,p,M) = \underset{a \in A}{\text{ sup }} \big[ b(x,a) \cdot p + \frac{1}{2} \sigma \sigma^{\top}(x,a) : M + f(t,x,a)  \big].
+\end{align}
+$$
+The map $H$ is called the Hamiltonian of the associated control problem and equation @eq-PDE-dynamicprog2 is called dynamic programming equation (DPP) equation or Hamilton-Jacobi-Bellman (HJB) equation. The terminal condition to this PDE is given by
+
+$$
+\begin{align}
+v(T,x) = g(x), \quad \forall x \in \mathbb{R}^d,
+\end{align}
+$$
+which is an immediate consequence of the definition of the value function.
+:::
+
+::: {#alg-description .algorithm}
+
+
+<span class="para-subtitle">Some remarks: </span>
+
+- When the control space $A$ is a singleton, i.e., $A= \big \lbrace a_0 \rbrace$, the HJB equation is reduced to the Cauchy problem
+
+$$
+\begin{align}
+\begin{cases}
+\partial_t v(t,x) + \mathcal{L}^{a_0} v(t,x) &=  f(t,x,a_0), \quad \forall (t,x) \in [0,T) \times \mathbb{R}^d. \\
+v(T,x) &= g(x), \quad \forall x \in \mathbb{R}^d.
+\end{cases}
+\end{align}
+$$
+
+- The optimality argument of the DPP suggests that if one can find a measurable map $ [0,T] \times \mathbb{R}^d \ni (t,x) \mapsto \alpha^{\star}(t,x) \in A$ such that
+
+$$
+\begin{align}
+\underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a v(t,x) + f(t,x,a) \big] = \mathcal{L}^{\alpha^{\star}(t,x)} v(t,x) + f(t,x, \alpha^{\star}(t,x)),
+\end{align}
+$$
+then we would get
+$$
+\begin{align}
+\begin{cases}
+\partial_t v(t,x) +  \mathcal{L}^{\alpha^{\star}(t,x)} v(t,x) +  f(t,x, \alpha^{\star}(t,x)) &=0, \quad \forall (t,x) \in [0,T) \in \mathbb{R}^d \\
+v(T,x) &= g(x), \quad x \in \mathbb{R}^d 
+\end{cases}
+\end{align}
+$$
+and so by Feynmann-Kac formula,
+
+$$
+\begin{align}
+v(t,x) = \mathbb{E} \Big[ \int_{t}^{T} f(s,X_s, \alpha^{\star}(s,X_s)) d s  + g(X_T^{\star}) \Big],
+\end{align}
+$$
+where $X^{\star} = (X^{\star}_s)_{t \leq s \leq T}$ is solution to the SDE
+$$
+\begin{align}
+\begin{cases}
+dX_s^{\star} &= b(X_s^{\star}, \alpha^{\star}(s,X_s^{\star})) + \sigma(X_s^{\star}, \alpha^{\star}(s,X_s^{\star})) d W_s , \quad t \leq s \leq T, \\
+X_t^{\star} &= x
+\end{cases}
+\end{align}
+This will show that the process $(\alpha^{\star}_s)_{t \leq s \leq T}= \big(\alpha^{\star}(s,X_s^{\star} )\big)_{t \leq s \leq T}$ is an optimal Markovian control, i.e given from a measurable feedback map $\alpha^{\star}$. ^[feedback refers to measurable function defined over time $\times$ state space  .]
+
+:::
+
+The crucial step in the classical approach to dynamic programming consists in proving, that given a smooth solution to the HJB equation, this candidate coïncides with the value function. This result is called **verification theorem**. We formulate a general version of the verification theorem.
+
+:::{#thm-verificationtheorem name="Verification theorem."} 
+  Let $w$ be a function in $\mathcal{C}^{1,2}([0,T) \times \mathbb{R}^d) \cap \mathcal{C}^0([0,T] \times \mathbb{R}^d)$, satisfying a growth quadratic growth condition, i.e.,  there exists a constant $C \geq 0$ such that
+  
+$$
+\begin{align}
+|w(t,x)| \leq C \big( 1+ |x|^2 \big), \quad \forall (t,x) \in [0,T] \times \mathbb{R}^d.
+\end{align}
+$$
+- Suppose that 
+  
+$$
+\begin{align}
+\begin{cases}
+ \partial_t w + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] &\leq 0, \quad (t,x) \in [0,T) \times \mathbb{R}^d, \\
+ w(T,x) &\geq g(x), \quad x \in \mathbb{R}^d.
+\end{cases}
+\end{align}
+$$
+Then $w \geq v$ on $[0,T] \times \mathbb{R}^d$.
+
+- Suppose further $w(T,\cdot)=g$ and there exists a measurable map $[0,T] \times \mathbb{R}^d \ni (t,x) \mapsto \hat{\alpha}(t,x) \in A$ such that
+$$
+\begin{align}
+\partial_t w + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] = \partial_t w  \big[ \mathcal{L}^{\hat{\alpha}(t,x)} w(t,x) + f(t,x,\hat{\alpha}(t,x)) \big],
+\end{align}
+$$
+and the SDE given by
+$$
+d X_s = b(X_s, \hat{\alpha}(s,X_s)) d s + \sigma(X_s, \hat{\alpha}(s,X_s)) d W_s,
+$$
+admits a unique solution, denoted by $\hat{X}_s^{t,x}$ and the process $\big(\hat{\alpha}(s,X_s^{t,x}) \big)_{t \leq s \leq T} \in \mathcal{A}(t,x)$. Then, we have $w=v$ on $[0,T] \times \mathbb{R}^d$ and $\hat{\alpha}$ is an optimal Markovian control. 
+:::
+
+
+
+
+::: proof
+
+ The proof of this result follow essentially from Itô's formula after denoting the sequence of stopping times $\tau_n = \text{inf} \lbrace s \geq t : \int_{t}^s D_x w(l, X_l^{t,x})^{\top} \sigma(X_l^{t,x}, \alpha_l)|^2 d l \geq n \big \rbrace$ and noticing that $\tau_n \nearrow \infty$ as $n$ tends to $\infty$ and applying Itô's formula to $w$ between $t$ and $s \wedge \tau_n$.
+
+:::
 
 ### The BSDE approach : Pontryagin's formulation
 
