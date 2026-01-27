@@ -21,7 +21,7 @@ Welcome to the webpage of the practical sessions of the course [Machine learning
 - **Lab work** n°  $1$  : Tuesday, January 27th,  9h-12h, room $102$ in tower $15-25$.
 - **Lab work** n°  $2$  : Tuesday, February 3rd,  9h-12h, room $102$ in tower $15-25$.
 - **Lab work** n°  $3$  : Tuesday, February 19th, 9h-12h,
-room $102$ in tower $15-25$.
+room $106$ in tower $14-15$.
 
 <span class="para-title">Materials :</span>
 

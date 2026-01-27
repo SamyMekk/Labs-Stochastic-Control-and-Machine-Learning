@@ -286,7 +286,7 @@ We denote by $\mathbb{S}^2([0,T];\mathbb{R})$ the set of $\mathbb{R}$-valued pro
 
 - $(A)$ $\xi \in L^2(\Omega;\mathcal{F}_T; \mathbb{P}; \mathbb{R})$
 - $(B)$ $f : \Omega \times [0,T] \times \mathbb{R} \times \mathbb{R}^d \to \mathbb{R}$ such that
-  - $f(\cdot,t,y,z)$ (written for simplicity f(t,y,z))$ is progressively measurable for all $(y,z)$
+  - $f(\cdot,t,y,z)$ (written for simplicity $f(t,y,z)$) is progressively measurable for all $(y,z)$
   - $f(t,0,0) \in \mathbb{H}^2([0,T];\mathbb{R})$.
   - $f$ satisfies a uniform Lipschitz condition in $(y,z)$, i.e, there exists a constant $C_f$ such that
  $$
@@ -396,7 +396,7 @@ Y_t &= v(t,X_t), \\
 Z_t &= \sigma^{\top}(X_t) D_x v(t,X_t), \quad 0 \leq t \leq T
 \end{cases}
 \end{align}
-$$
+$${#eq-representationYZ}
 </div>
 is the solution to the BSDE @eq-BSDE-differential-2.
 
@@ -435,10 +435,14 @@ Now, that we have shown how stochastic control problems naturally lead to PDEs, 
 <span class="para-title">PDE formulation</span>
 
 Let $v$ a function defined on $[0,T] \times \mathbb{R}^n$ supposed to satisfy the following PDE
+$$
+\begin{align}
 \begin{cases}
-\partial_t v(t,x) + \mathcal{H}[v](t,x) = 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \quad (1) \\
-v(T,x) = g(x).
+\partial_t v(t,x) + \mathcal{H}[v](t,x) &= 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n,  \\
+v(T,x) &= g(x).
 \end{cases}
+\end{align}
+$${#eq-pde-formulation-algo}
 where the operator $\mathcal{H}$ is defined over the space of functions over $[0,T] \times \mathbb{R}^n$ potentially with some regularity
 $[0,T] \times \mathbb{R}^n$ and can be rewritten in the case we are going to cover as
 \begin{align}
@@ -491,27 +495,58 @@ However, solving these PDEs have always been highly challenging due to the curse
 :::{#method-description .methodology}
 <span class="para-subtitle">Mathematical description : </span>
 
-
+The main idea of **Deep Galerkin algorithm** is to rewrite the PDE @eq-pde-formulation-algo via a stochastic optimization problem. Given a smooth function $w$ on $[0,T] \times \mathbb{R}^n$, we define 
+$$
+\begin{align}
+\mathbb{L}(w) = \mathbb{E} \Big[ w(T,\mathcal{X}) - g(\mathcal{X})|^2 \Big] + \mathbb{E} \Big[ | \partial_t w(\tau,\mathcal{X} - \mathcal{H}[w](\tau,\mathcal{X})) |^2 \Big],
+\end{align}
+$${#eq-optimization-control-problem-deep-galerkin}
+where $(\tau,\mathcal{X}) \sim \rho_T \otimes \rho_n$ laws supported on $[0,T] \times \mathbb{R}^n $. In order to solve @eq-optimization-control-problem-deep-galerkin , we parametrize the family of maps $w$ by neural networks and reduce the infinite dimensional optimization problem into a finite one where the finite parameter is given by the parameter of the neural net $\mathcal{U}(\theta)$. and the problem is therefore now to solve $\underset{\theta \in \Theta}{\text{ inf }} L(\theta)$ with $L(\theta)=\mathbb{L}(U_{\theta})$ by uses of stochastic gradient descent methods.
 :::
 
 
-### Deep BSDE Solver
+### Deep Backward Solvers
 
 :::{#method-description .methodology}
-<span class="para-subtitle">Mathematical description : </span>
+<span class="para-subtitle">Mathematical description of Deep BSDE Solver : </span>
 
+The **Deep BSDE Solver** takes advantages of semi-linear PDE. The idea is to approximate the unknown functions $Y_0= v(0,X_0)$ and $Z_t = D_x v(t,X_t)$ by neural networks $\mathcal{U}_{\theta}$ on $\mathbb{R}^d and $\mathcal{Z}_{\theta}$ on $[0,T] \times \mathbb{R}^d$. In practice, we will compute by minimizing over $\theta \in \Theta$ the cost function given by
+
+$$
+\begin{align}
+L(\theta) = \mathbb{E} \Big[ |Y_T^{\theta} - g(X_T)|^2 \Big],
+\end{align}
+$$
+where the dynamics of $(Y_t^{\theta})_{0 \leq t \leq T}$ is given by
+
+$$
+\begin{align}
+Y_t^{\theta} = \mathcal{U}_{\theta}(X_0) - \int_{0}^{t} f(X_s,Y_s^{\theta}, \mathcal{Z}_{\theta}(s,X_s)) d s  + \int_{0}^{t} \mathcal{Z}_{\theta}(s,X_s)^{\top} \sigma(X_s) d W_s, \quad 0 \leq t \leq T.
+\end{align}
+$$
+
+The method is called Deep "Backward" but in fact it simulates the process $Y$ as a forward process by trying to optimize over its initial parameter $Y_0$.
+
+
+
+<span class="para-subtitle">Mathematical description of Deep BDP Solver : </span>
+
+
+The **Deep BDP Solver** is a solver which allows to approximate at every time-step $t_i$ the pair $(Y_{t_i},Z_{t_i})$ by minimizing the local loss function, defined recursively by the Backward Euler Scheme :
+
+$$
+\begin{align}
+\begin{cases}
+ Y_{t_{i+1}} &= Y_{t_i} - f(X_{t_i},Y_{t_i},Z_{t_i}) \Delta_{t_i} + Z_{t_i}^{\top} \sigma(X_{t_i}) \Delta W_{t_i}, \quad i = n-1, \ldots, 0 \\
+ Y_{t_N} &= g(X_{t_N}).
+\end{cases}
+\end{align}
+$$
+The method will either try to learn $(Y_{t_i},Z_{t_i})$ at every $i = n-1, \ldots,0$ by defining multiple neural networks, one for $Y$ and one for other $Z$ or we could alternatively taking advantage of @eq-representationYZ using one neural network and use automatic differentiation.
 :::
 
 
 
 
-### Deep BDP Solver
 
-:::{#method-description .methodology}
-<span class="para-subtitle">Mathematical description : </span>
-
-:::
-
-
-:::
 
