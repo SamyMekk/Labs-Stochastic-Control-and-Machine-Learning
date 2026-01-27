@@ -92,7 +92,7 @@ $$\mathbb{E} \Big[ \int_{t}^{\theta} f(s,X_s^{t,x},\alpha_s ) d s + v(\theta, X_
 
 - <span class="para-subtitle">Intuitive derivation of the HJB  equation</span>
 
-The Hamilton-Jacobi Bellman (HJB) equation is the infinitesimal version of the dynamic programming principle, i.e., it describes the local behavior of the value function when we send the stopping time $\theta$ in @eq-dynamicprogramming in @thm-DPPprinciple to $t$. The HJB equation is also called **dynamic programming equation**.
+The Hamilton-Jacobi Bellman (HJB) equation is the infinitesimal version of the **dynamic programming principle**, i.e., it describes the local behavior of the value function when we send the stopping time $\theta$ in @eq-dynamicprogramming in @thm-DPPprinciple to $t$. The HJB equation is also called **dynamic programming equation**.
 
 
 
