@@ -13,14 +13,14 @@ The following is a reminder of the main theoretical results about **Deep Learnin
 
 - <span class="para-subtitle">Dynamics of the controlled state process</span>
 
-Let $(\Omega,\mathcal{F}, \mathbb{F}=(\mathcal{F}_t)_{t \geq 0}, \mathbb{P})$ be a probability space satisfying the usual assumptions and big enough to support a Brownian motion $W=(W_t)_{t \geq 0}$. We consider a control model where the state of the system is governed by a stochastic differential equation (SDE) valued in $\mathbb{R}^n$ given by 
+Let $(\Omega,\mathcal{F}, \mathbb{F}=(\mathcal{F}_t)_{t \geq 0}, \mathbb{P})$ be a probability space satisfying the usual assumptions and big enough to support for simplicity a $\mathbb{R}^n$-valued Brownian motion $W=(W_t)_{t \geq 0}$. We consider a control model where the state of the system is governed by a stochastic differential equation (SDE) valued in $\mathbb{R}^n$ given by 
 
 $$
 \begin{align}
     d X_s = b(X_s,\alpha_s) d s + \sigma(X_s, \alpha_s ) d W_s, \hspace{0.5 cm}
 \end{align}
 $${#eq-dynamics-stateprocess}
-starting from $X_0= x \in \mathbb{R}^n$ and where we are given 2 measurable maps $(b,\sigma) : \ \mathbb{R}^n \times A \to \mathbb{R}^n ,\mathbb{R}^{d \times n}$ and the control $\alpha=(\alpha_t)_{0 \leq t \leq T}$ is a progressively measurable  (with respect to $\mathbb{F})$ process valued in $A \subset \mathbb{R}^m$. We suppose that the measurable maps $(b,\sigma)$ satisfy a uniform Lipschitz condition on $A$: $\exists K \geq 0$, $\forall x,y \in \mathbb{R}^n$, $\forall a \in A$,
+starting from $X_0= x \in \mathbb{R}^n$ and where we are given 2 measurable maps $(b,\sigma) : \ \mathbb{R}^n \times A \to \mathbb{R}^n ,\mathbb{R}^{n \times n}$ and the control $\alpha=(\alpha_t)_{0 \leq t \leq T}$ is a progressively measurable  (with respect to $\mathbb{F})$ process valued in $A \subset \mathbb{R}^m$. We suppose that the measurable maps $(b,\sigma)$ satisfy a uniform Lipschitz condition on $A$: $\exists K \geq 0$, $\forall x,y \in \mathbb{R}^n$, $\forall a \in A$,
 \begin{align}
     | b(x,a) - b(y,a) |+ |\sigma(x,a) - \sigma(y,a) | \leq  K |x-y|.
 \end{align}
@@ -37,10 +37,29 @@ It is known that under the previous conditions, existence and unicity of a stron
 - <span class="para-subtitle">Functional objective</span>
 
 Let $f :[0,T] \times \mathbb{R}^n \times A \to \mathbb{R}$ and $g : \mathbb{R}^n \to \mathbb{R}$ two measurable functions. We suppose that
-\begin{enumerate}
-\item [(1)] g is bounded from below.
-or \item [(2)] g satisfies a quadratic growth condition : $|g(x)| \leq C( 1+ |x|^2)$, $\quad$ $\forall x \in \mathbb{R}^n$. for some constant $C$ independant of $x$.
-\end{enumerate}
+g satisfies a quadratic growth condition : $|g(x)| \leq C( 1+ |x|^2)$, $\quad$ $\forall x \in \mathbb{R}^n$, for some constant $C$ independant of $x$. For $(t,x) \in [0,T] \times \mathbb{R}^n$, we denote by $\mathcal{A}(t,x)$ the subset of controls $\alpha \in \mathcal{A}$ such that
+$$
+\begin{align}
+\mathbb{E} \Big [ \int_{t}^{T} f(s,X_s^{t,x}, \alpha_s) d s \Big] < \infty,
+\end{align}
+$$
+and we assume that $\mathcal{A}(t,x)$ is not empty for all $(t,x) \in [0,T] \times \mathbb{R}^n$. We can then define the cost functional
+$$
+\begin{align}
+J(t,x,\alpha) := \mathbb{E} \Big[ \int_{t}^{T} f(s,X_s^{t,x},\alpha_s) d s + g(X_T^{t,x}) \Big],
+\end{align}
+$$
+for all $(t,x) \in [0,T] \times \mathbb{R}^n$ and $\alpha \in \mathcal{A}(t,x)$. The objective is to maximise over control processes the gain function $J$ and we introduce the value function
+
+$$
+\begin{align}
+v(t,x) = \underset{\alpha \in \mathcal{A}(t,x)}{\text{ sup }} J(t,x,\alpha).
+\end{align}
+$${#eq-value-function}
+
+- Given an initial condition $(t,x) \in [0,T) \times \mathbb{R}^n$, we say that $\hat{\alpha} \in \mathcal{A}(t,x)$ is an optimal control if $v(t,x) = J(t,x,\hat{\alpha})$.
+- A control process $\alpha= (\alpha_s)_{t \leq s \leq T}$ in the form $\alpha_s = \mathrm{a}(s,X_s^{t,x})$ for some measurable function $\mathrm{a}$ from $[0,T] \times \mathbb{R}^n$ into $A$ is called Markovian control.
+
 :::
 ### The dynamic programming approach : HJB equation
 
@@ -48,7 +67,7 @@ or \item [(2)] g satisfies a quadratic growth condition : $|g(x)| \leq C( 1+ |x|
 The dynamic programming principle (DPP) is a fundamental principle in the theory of stochastic control. For controlled Markov processes, it is formulated as follows
 
 :::{#thm-DPPprinciple name="Dynamic Programming Principle."} 
-  Let $(t,x) \in [0,T] \times \mathbb{R}^d$. Then, we have
+  Let $(t,x) \in [0,T] \times \mathbb{R}^n$. Then, we have
 $$
 \begin{align}
 v(t,x) &= \underset{\alpha \in \mathcal{A}(t,x)}{\text{ sup }}  \mathbb{E} \Big[ \int_{t}^{t+ \theta} f(s,X_s^{t,x},\alpha_s) d s + v(\theta, X_{\theta}^{t,x}) \Big] 
@@ -57,15 +76,8 @@ $$ {#eq-dynamicprogramming}
 for any stopping time $\theta \in \mathcal{T}_{t,T}$.
 
 
-- <span class="para-subtitle">Intuitive derivation of the HJB  equation</span>
-
-
 The interpretation of the DPP is that the optimization problem can be split in two parts: an optimal control on the whole interval $[t,T]$ may be obtained by first searching for an optimal control from time $\theta$ given the state value $X_{\theta}^{t,x}$, i.e. compute $v(\theta,X_{\theta}^{t,x})$ and then maximizing over controls on $[t,\theta]$ the quantity  
-$$
-\begin{align}
-\mathbb{E} \Big[ \int_{t}^{\theta} f(s,X_s^{t,x},\alpha_s ) d s + v(\theta, X_{\theta}^{t,x}) \Big].
-\end{align}
-$$
+$\mathbb{E} \Big[ \int_{t}^{\theta} f(s,X_s^{t,x},\alpha_s ) d s + v(\theta, X_{\theta}^{t,x}) \Big]$.
 
 :::
 
@@ -77,6 +89,7 @@ $$
 
 ::: {#alg-description .algorithm}
 
+- <span class="para-subtitle">Intuitive derivation of the HJB  equation</span>
 
 The Hamilton-Jacobi Bellman (HJB) equation is the infinitesimal version of the dynamic programming principle, i.e., it describes the local behavior of the value function when we send the stopping time $\theta$ in @eq-dynamicprogramming in @thm-DPPprinciple to $t$. The HJB equation is also called **dynamic programming equation**.
 
@@ -100,13 +113,13 @@ $$
 where we denote the operator $\mathcal{L}^a$ associated to the diffusion with control process given by constant control $a$ and defined as
 $$
 \begin{align}
-\mathcal{L}^{a}v = b(x,a) \cdot D_x v + \frac{1}{2} \sigma \sigma^{\top} : D_x^2 v
+\mathcal{L}^{a}v(t,x) = b(x,a) \cdot D_x v(t,x) + \frac{1}{2} \sigma \sigma^{\top}(t,x) : D_x^2 v(t,x)
 \end{align},
 $$
-where $\cdot$ denotes the scalar product between vectors on $\mathbb{R}^d$ and $:$ denotes the scalar prodcutes between matrix, i.e., $A:B= \text{Tr}(A^{\top} B)$. Substituting into @eq-inequality-dynamicprog, we get
+where $\cdot$ denotes the scalar product between vectors on $\mathbb{R}^n$ and $:$ denotes the scalar prodcutes between matrix, i.e., $A:B= \text{Tr}(A^{\top} B)$. Substituting into @eq-inequality-dynamicprog, we get
 $$
 \begin{align}
-0 \geq \mathbb{E} \Big[\int_{t}^{t+h} \Big( \partial_t v+ \mathcal{L}^a v \Big)(s,X_s^{t,x} ) + f(s,X_s^{t,x},a) \d s \Big]
+0 \geq \mathbb{E} \Big[\int_{t}^{t+h} \Big( \partial_t v+ \mathcal{L}^a v \Big)(s,X_s^{t,x} ) + f(s,X_s^{t,x},a) d s \Big]
 \end{align}
 $$
 Dividing by $h$ and sending $h \to 0$, from the continuity of the map inside the expectation, we get by the mean-value theorem
@@ -142,28 +155,28 @@ which combined with @eq-inequality-dynamicprog2, suggests that $v$ should satisf
 
 $$
 \begin{align}
- \partial_t v(t,x) + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^{a} v(t,x) + f(t,x,a) \big ] =0 , \quad \forall (t,x) \in [0,T) \times \mathbb{R}^d,
+ \partial_t v(t,x) + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^{a} v(t,x) + f(t,x,a) \big ] =0 , \quad \forall (t,x) \in [0,T) \times n,
 \end{align}
 $$ {#eq-PDE-dynamicprog}
 if the above supremum is finite. The PDE @eq-PDE-dynamicprog is often rewritten in the form
 
 $$
 \begin{align}
-\partial_t v(t,x) + H \big(t,x, D_x v(t,x) , D^2_x (t,x) \big) = 0, \quad \forall (t,x) \in [0,T) \times \mathbb{R}^d,
+\partial_t v(t,x) + H \big(t,x, D_x v(t,x) , D^2_x (t,x) \big) = 0, \quad \forall (t,x) \in [0,T) \times \mathbb{R}^n,
 \end{align}
 $$ {#eq-PDE-dynamicprog2}
-where for $(t,x,p,M) \in [0,T] \times \mathbb{R}^d \times \mathbb{R}^d \times \mathcal{S}_n$, we denote
+where for $(t,x,p,M) \in [0,T] \times \mathbb{R}^n \times \mathbb{R}^n \times \mathcal{S}_n$,^[$\mathcal{S}_n$ denotes the space of symmetric matrices over $\mathbb{R}^{n \times n}$] we denote
 
 $$
 \begin{align}
 H(t,x,p,M) = \underset{a \in A}{\text{ sup }} \big[ b(x,a) \cdot p + \frac{1}{2} \sigma \sigma^{\top}(x,a) : M + f(t,x,a)  \big].
 \end{align}
 $$
-The map $H$ is called the Hamiltonian of the associated control problem and equation @eq-PDE-dynamicprog2 is called dynamic programming equation (DPP) equation or Hamilton-Jacobi-Bellman (HJB) equation. The terminal condition to this PDE is given by
+The map $H$ is called the Hamiltonian of the associated control problem and   @eq-PDE-dynamicprog2 is called dynamic programming equation (DPP) equation or Hamilton-Jacobi-Bellman (HJB) equation. The terminal condition to this PDE is given by
 
 $$
 \begin{align}
-v(T,x) = g(x), \quad \forall x \in \mathbb{R}^d,
+v(T,x) = g(x), \quad \forall x \in \mathbb{R}^n,
 \end{align}
 $$
 which is an immediate consequence of the definition of the value function.
@@ -179,13 +192,13 @@ which is an immediate consequence of the definition of the value function.
 $$
 \begin{align}
 \begin{cases}
-\partial_t v(t,x) + \mathcal{L}^{a_0} v(t,x) &=  f(t,x,a_0), \quad \forall (t,x) \in [0,T) \times \mathbb{R}^d. \\
-v(T,x) &= g(x), \quad \forall x \in \mathbb{R}^d.
+\partial_t v(t,x) + \mathcal{L}^{a_0} v(t,x) &=  f(t,x,a_0), \quad \forall (t,x) \in [0,T) \times \mathbb{R}^n. \\
+v(T,x) &= g(x), \quad \forall x \in \mathbb{R}^n.
 \end{cases}
 \end{align}
 $$
 
-- The optimality argument of the DPP suggests that if one can find a measurable map $ [0,T] \times \mathbb{R}^d \ni (t,x) \mapsto \alpha^{\star}(t,x) \in A$ such that
+- The optimality argument of the DPP suggests that if one can find a measurable map $ [0,T] \times \mathbb{R}^n \ni (t,x) \mapsto \alpha^{\star}(t,x) \in A$ such that
 
 $$
 \begin{align}
@@ -196,8 +209,8 @@ then we would get
 $$
 \begin{align}
 \begin{cases}
-\partial_t v(t,x) +  \mathcal{L}^{\alpha^{\star}(t,x)} v(t,x) +  f(t,x, \alpha^{\star}(t,x)) &=0, \quad \forall (t,x) \in [0,T) \in \mathbb{R}^d \\
-v(T,x) &= g(x), \quad x \in \mathbb{R}^d 
+\partial_t v(t,x) +  \mathcal{L}^{\alpha^{\star}(t,x)} v(t,x) +  f(t,x, \alpha^{\star}(t,x)) &=0, \quad \forall (t,x) \in [0,T) \in \mathbb{R}^n \\
+v(T,x) &= g(x), \quad x \in \mathbb{R}^n 
 \end{cases}
 \end{align}
 $$
@@ -223,26 +236,27 @@ This will show that the process $(\alpha^{\star}_s)_{t \leq s \leq T}= \big(\alp
 The crucial step in the classical approach to dynamic programming consists in proving, that given a smooth solution to the HJB equation, this candidate coïncides with the value function. This result is called **verification theorem**. We formulate a general version of the verification theorem.
 
 :::{#thm-verificationtheorem name="Verification theorem."} 
-  Let $w$ be a function in $\mathcal{C}^{1,2}([0,T) \times \mathbb{R}^d) \cap \mathcal{C}^0([0,T] \times \mathbb{R}^d)$, satisfying a growth quadratic growth condition, i.e.,  there exists a constant $C \geq 0$ such that
+  Let $w$ be a function in $\mathcal{C}^{1,2}([0,T) \times \mathbb{R}^n \cap \mathcal{C}^0([0,T] \times \mathbb{R}^n)$, satisfying a growth quadratic growth condition, i.e.,  there exists a constant $C \geq 0$ such that
   
 $$
 \begin{align}
-|w(t,x)| \leq C \big( 1+ |x|^2 \big), \quad \forall (t,x) \in [0,T] \times \mathbb{R}^d.
+|w(t,x)| \leq C \big( 1+ |x|^2 \big), \quad \forall (t,x) \in [0,T] \times \mathbb{R}^n.
 \end{align}
 $$
+
 - Suppose that 
   
 $$
 \begin{align}
 \begin{cases}
- \partial_t w + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] &\leq 0, \quad (t,x) \in [0,T) \times \mathbb{R}^d, \\
- w(T,x) &\geq g(x), \quad x \in \mathbb{R}^d.
+ \partial_t w + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] &\leq 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \\
+ w(T,x) &\geq g(x), \quad x \in \mathbb{R}^n.
 \end{cases}
 \end{align}
 $$
-Then $w \geq v$ on $[0,T] \times \mathbb{R}^d$.
+Then $w \geq v$ on $[0,T] \times \mathbb{R}^n$.
 
-- Suppose further $w(T,\cdot)=g$ and there exists a measurable map $[0,T] \times \mathbb{R}^d \ni (t,x) \mapsto \hat{\alpha}(t,x) \in A$ such that
+- Suppose further $w(T,\cdot)=g$ and there exists a measurable map $[0,T] \times \mathbb{R}^n \ni (t,x) \mapsto \hat{\alpha}(t,x) \in A$ such that
 $$
 \begin{align}
 \partial_t w + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] = \partial_t w  \big[ \mathcal{L}^{\hat{\alpha}(t,x)} w(t,x) + f(t,x,\hat{\alpha}(t,x)) \big],
@@ -252,7 +266,7 @@ and the SDE given by
 $$
 d X_s = b(X_s, \hat{\alpha}(s,X_s)) d s + \sigma(X_s, \hat{\alpha}(s,X_s)) d W_s,
 $$
-admits a unique solution, denoted by $\hat{X}_s^{t,x}$ and the process $\big(\hat{\alpha}(s,X_s^{t,x}) \big)_{t \leq s \leq T} \in \mathcal{A}(t,x)$. Then, we have $w=v$ on $[0,T] \times \mathbb{R}^d$ and $\hat{\alpha}$ is an optimal Markovian control. 
+admits a unique solution, denoted by $\hat{X}_s^{t,x}$ and the process $\big(\hat{\alpha}(s,X_s^{t,x}) \big)_{t \leq s \leq T} \in \mathcal{A}(t,x)$. Then, we have $w=v$ on $[0,T] \times \mathbb{R}^n$ and $\hat{\alpha}$ is an optimal Markovian control.^[We recall that a control process $\alpha= (\alpha_s)_{t \leq s \leq T}$ in the form $\alpha_s = \mathrm{a}(s,X_s^{t,x})$ is said  to be Markovian.]
 :::
 
 
@@ -266,10 +280,21 @@ admits a unique solution, denoted by $\hat{X}_s^{t,x}$ and the process $\big(\ha
 
 ### The BSDE approach : Pontryagin's formulation
 
+::: {#formula-description .formulation}
 
-We introduce the pair of processes $(Y,Z) = (Y_t,Z_t)_{0 \leq t \leq T}$ 
+We denote by $\mathbb{S}^2([0,T];\mathbb{R})$ the set of $\mathbb{R}$-valued progressively measurables processes $Y=(Y_t)_{0 \leq t \leq T}$ such that $\mathbb{E} \Big[ \underset{0 \leq t \leq T}{\text{ sup }} |Y_t|^2 \Big] <  \infty$ and by $\mathbb{H}^2([0,T];\mathbb{R}^n)$ the set of $\mathbb{R}^n$-valued progressively measurable $Z=(Z_t)_{0 \leq t \leq T}$ such that $\mathbb{E} \Big[ \int_{0}^{T} |Z_t|^2 d t \Big] < \infty$. We are given a pair $(\xi, f)$ called terminal condition and generator (or driver) satisfying :
 
-
+- $(A)$ $\xi \in L^2(\Omega;\mathcal{F}_T; \mathbb{P}; \mathbb{R})$
+- $(B)$ $f : \Omega \times [0,T] \times \mathbb{R} \times \mathbb{R}^d \to \mathbb{R}$ such that
+  - $f(\cdot,t,y,z)$ (written for simplicity f(t,y,z))$ is progressively measurable for all $(y,z)$
+  - $f(t,0,0) \in \mathbb{H}^2([0,T];\mathbb{R})$.
+  - $f$ satisfies a uniform Lipschitz condition in $(y,z)$, i.e, there exists a constant $C_f$ such that
+ $$
+\begin{align}
+| f(t,y_1,z_1) - f(t,y_2,z_2)| \leq C_f \big ( |y_1 - y_2| + |z_1 - z_2| \big), \quad \forall y_1,y_2, \forall z_1, z_2, \quad d t \otimes d \mathbb{P} \text{ a-e.}
+\end{align}
+$$
+We now consider the (unidimensional)  backward stochastic differential equation (BSDE)
 $$
 \begin{align}
 \begin{cases}
@@ -279,9 +304,11 @@ $$
 \end{align}
 $$ {#eq-BSDE-differential}
 
+:::
+
 :::{#def-solBSDE}
 
-A solution to the BSDE @eq-BSDE-differential is a pair of processes $(Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)$ satisfying
+A solution to the BSDE @eq-BSDE-differential is a pair of processes $(Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^n)$ satisfying
 $$
 \begin{align}
 Y_t = \xi + \int_{t}^{T} f(s,Y_s,Z_s) ds - \int_{t}^{T} Z_s d W_s, \quad 0 \leq t \leq T, \quad \mathbb{P - }\text{ a.s}. \notag 
@@ -293,19 +320,19 @@ We now state an import result ensuring existence and unicity to the BSDE $(1)$
 
 :::{#thm-ExistenceUnicityBSDE}
 
-Given a pair of $(\xi,f)$ satisfying Assumptions $(A)$ and $(B)$, there exists a unique solution $(Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)$ to $(1)$.
+Given a pair of $(\xi,f)$ satisfying Assumptions $(A)$ and $(B)$, there exists a unique solution $(Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)$ to @def-solBSDE.
 
 :::
 
 ::: proof
 
-The proof of @thm-ExistenceUnicityBSDE is based on a fixed point argument on the Banach space $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)$ endowed with the norm 
+The proof of @thm-ExistenceUnicityBSDE is based on a fixed point argument on the Banach space $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)$ endowed with the norm 
 $$
 \begin{align}
 \lVert (Y,Z) \rVert_{\beta} = \bigg(\mathbb{E} \Big[ \int_{0}^{T}  e^{\beta s} \big( |Y_s|^2 + |Z_s|^2 \big) \Big] \bigg)^{\frac{1}{2}}
 \end{align}
 $$. 
-We now show that for a suitable choice of $\beta$, the  mapping $\Phi$ is  well defined on $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)$ into $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^d)$ as $(Y,Z) = \Phi(U,V)$. Formally, defining the martingale process $M=(M_t)_{0 \leq t \leq T}$ as $M_t = \mathbb{E} \Big[ \xi + \int_{0}^{T} f(s,U_s,V_s)| \mathcal{F}_t \Big]$, from the Itô's martingale decomposition theorem, we got the existence of a process $Z=(Z_t)_{0 \leq t \leq T} \in \mathbb{H}^2([0,T];\mathbb{R}^d)$ such that
+We now show that for a suitable choice of $\beta$, the  mapping $\Phi$ is  well defined on $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)$ into $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)$ as $(Y,Z) = \Phi(U,V)$. Formally, defining the martingale process $M=(M_t)_{0 \leq t \leq T}$ as $M_t = \mathbb{E} \Big[ \xi + \int_{0}^{T} f(s,U_s,V_s)| \mathcal{F}_t \Big]$, from the Itô's martingale decomposition theorem, we got the existence of a process $Z=(Z_t)_{0 \leq t \leq T} \in \mathbb{H}^2([0,T];\mathbb{R}^n)$ such that
 $$
 \begin{align}
 M_t = M_0 + \int_{0}^{t} Z_s d W_s.
@@ -373,7 +400,7 @@ $$
 </div>
 is the solution to the BSDE @eq-BSDE-differential-2.
 
-**Proof.** This result is an immediate application of the Itô's formula applied to the process $\big(v(t,X_t)\big)_{0 \leq t \leq T}$ and the fact that $v$ is a solution to the PDE **add ref**. Indeed, applying Itô's formula between $t$ and $T$, we have
+**Proof.** This result is an immediate application of the Itô's formula applied to the process $\big(v(t,X_t)\big)_{0 \leq t \leq T}$ and the fact that $v$ is a solution to the PDE in @eq-semilinearPDE. Indeed, applying Itô's formula between $t$ and $T$, we have
 $$
 \begin{align}
    v(t,X_t)= v(T,X_T) - \int_{t}^{T} \Big( \partial_t v(s,X_s) - \mathcal{L}v(s,X_s)  \Big) d s - \int_{t}^{T} \sigma^{\top}(s,X_s) D_x v(s,X_s) d W_s, \quad 0 \leq t \leq T.
@@ -385,7 +412,7 @@ $$
 Y_t = g(X_T) + \int_{t}^{T} f(s,X_s,Y_s,Z_s) d s - \int_{t}^{T} Z_s d W_s,  \quad 0 \leq t \leq T,
 \end{align}
 $$
-where we set $(Y_t,Z_t) = \Big(v(t,X_t), \sigma^{\top}(t,X_t)D_x v(t,X_t)\Big)$ for any $t \in [0,T]$. Moreover, from the growth assumptions on $v$ and $D_x v$, we get that $(Y,Z)$ lies in $\mathbb{S}^2([0,T]; \mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^d)$ and is unique by @thm-ExistenceUnicityBSDE .
+where we set $(Y_t,Z_t) = \Big(v(t,X_t), \sigma^{\top}(t,X_t)D_x v(t,X_t)\Big)$ for any $t \in [0,T]$. Moreover, from the growth assumptions on $v$ and $D_x v$, we get that $(Y,Z)$ lies in $\mathbb{S}^2([0,T]; \mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^n)$ and is unique by @thm-ExistenceUnicityBSDE .
 
 
 
@@ -464,24 +491,9 @@ However, solving these PDEs have always been highly challenging due to the curse
 :::{#method-description .methodology}
 <span class="para-subtitle">Mathematical description : </span>
 
+
 :::
 
-
-::: {#alg-description .algorithm}
-<span class="para-subtitle">Deep Galerkin Algorithm : </span>
-
-
-Let \( \pi_\theta \) be a policy such that …
-1. Initialize parameters
-2. Iterate until convergence
-3. Return the value function
-:::
-
-Let \( \pi_\theta \) be a policy such that …
-1. Initialize parameters
-2. Iterate until convergence
-3. Return the value function
-:::
 
 ### Deep BSDE Solver
 
@@ -491,15 +503,6 @@ Let \( \pi_\theta \) be a policy such that …
 :::
 
 
-::: {#alg-description .algorithm}
-<span class="para-subtitle">Deep BSDE Algorithm : </span>
-
-
-Let \( \pi_\theta \) be a policy such that …
-1. Initialize parameters
-2. Iterate until convergence
-3. Return the value function
-:::
 
 
 ### Deep BDP Solver
@@ -510,23 +513,5 @@ Let \( \pi_\theta \) be a policy such that …
 :::
 
 
-::: {#alg-description .algorithm}
-<span class="para-subtitle">Deep BDP Algorithm : </span>
-
-**Input:** discount factor $\gamma$ , tolerance $\varepsilon$  
-
-**Output:** value function $V^{\star}$
-
-1. Initialize \( V_0(s) = 0 \) for all states \( s \)
-   
-2. Repeat:
-   1. For each state \( s \):
-      \[
-      V_{k+1}(s) \leftarrow \max_a \left( r(s,a) + \gamma \sum_{s'} P(s'|s,a) V_k(s') \right)
-      \]
-
-3. Until \( \| V_{k+1} - V_k \| < \varepsilon \)
-   
-4. Return \( V^\* \)
 :::
 
