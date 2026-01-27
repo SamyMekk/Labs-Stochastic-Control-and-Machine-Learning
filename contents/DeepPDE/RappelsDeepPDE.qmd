@@ -77,7 +77,8 @@ for any stopping time $\theta \in \mathcal{T}_{t,T}$.
 
 
 The interpretation of the DPP is that the optimization problem can be split in two parts: an optimal control on the whole interval $[t,T]$ may be obtained by first searching for an optimal control from time $\theta$ given the state value $X_{\theta}^{t,x}$, i.e. compute $v(\theta,X_{\theta}^{t,x})$ and then maximizing over controls on $[t,\theta]$ the quantity  
-$\mathbb{E} \Big[ \int_{t}^{\theta} f(s,X_s^{t,x},\alpha_s ) d s + v(\theta, X_{\theta}^{t,x}) \Big]$.
+
+$$\mathbb{E} \Big[ \int_{t}^{\theta} f(s,X_s^{t,x},\alpha_s ) d s + v(\theta, X_{\theta}^{t,x}) \Big].$$
 
 :::
 
