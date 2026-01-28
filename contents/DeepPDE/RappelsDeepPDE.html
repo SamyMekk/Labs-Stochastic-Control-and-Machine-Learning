@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.32">
+<meta name="generator" content="quarto-1.6.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-275061990db69f1fcac8dd72fc2d8868.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-61d41e5301eef9078892d481b68da2a7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -392,12 +392,14 @@ v(T,x) &amp;= g(x), \quad x \in \mathbb{R}^n
 \begin{align}
 v(t,x) = \mathbb{E} \Big[ \int_{t}^{T} f(s,X_s, \alpha^{\star}(s,X_s)) d s  + g(X_T^{\star}) \Big],
 \end{align}
-\]</span> where <span class="math inline">\(X^{\star} = (X^{\star}_s)_{t \leq s \leq T}\)</span> is solution to the SDE $$ <span class="math display">\[\begin{align}
+\]</span> where <span class="math inline">\(X^{\star} = (X^{\star}_s)_{t \leq s \leq T}\)</span> is solution to the SDE <span class="math display">\[
+\begin{align}
 \begin{cases}
 dX_s^{\star} &amp;= b(X_s^{\star}, \alpha^{\star}(s,X_s^{\star})) + \sigma(X_s^{\star}, \alpha^{\star}(s,X_s^{\star})) d W_s , \quad t \leq s \leq T, \\
 X_t^{\star} &amp;= x
 \end{cases}
-\end{align}\]</span> This will show that the process <span class="math inline">\((\alpha^{\star}_s)_{t \leq s \leq T}= \big(\alpha^{\star}(s,X_s^{\star} )\big)_{t \leq s \leq T}\)</span> is an optimal Markovian control, i.e given from a measurable feedback map <span class="math inline">\(\alpha^{\star}\)</span>. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+\end{align}
+\]</span> This will show that the process <span class="math inline">\((\alpha^{\star}_s)_{t \leq s \leq T}= \big(\alpha^{\star}(s,X_s^{\star} )\big)_{t \leq s \leq T}\)</span> is an optimal Markovian control, i.e given from a measurable feedback map <span class="math inline">\(\alpha^{\star}\)</span>. <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 </div>
 <p>The crucial step in the classical approach to dynamic programming consists in proving, that given a smooth solution to the HJB equation, this candidate coïncides with the value function. This result is called <strong>verification theorem</strong>. We formulate a general version of the verification theorem.</p>
 <div id="thm-verificationtheorem" class="theorem">
@@ -471,9 +473,13 @@ Y_t = \xi + \int_{t}^{T} f(s,Y_s,Z_s) ds - \int_{t}^{T} Z_s d W_s, \quad 0 \leq 
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The proof of <a href="#thm-ExistenceUnicityBSDE" class="quarto-xref">Theorem&nbsp;<span>1.3</span></a> is based on a fixed point argument on the Banach space <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)\)</span> endowed with the norm <span class="math display">\[
 \begin{align}
-\lVert (Y,Z) \rVert_{\beta} = \bigg(\mathbb{E} \Big[ \int_{0}^{T}  e^{\beta s} \big( |Y_s|^2 + |Z_s|^2 \big) \Big] \bigg)^{\frac{1}{2}}
+\lVert (Y,Z) \rVert_{\beta} = \bigg(\mathbb{E} \Big[ \int_{0}^{T}  e^{\beta s} \big( |Y_s|^2 + |Z_s|^2 \big) \Big] \bigg)^{\frac{1}{2}}.
 \end{align}
-\]</span>. We now show that for a suitable choice of <span class="math inline">\(\beta\)</span>, the mapping <span class="math inline">\(\Phi\)</span> is well defined on <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)\)</span> into <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)\)</span> as <span class="math inline">\((Y,Z) = \Phi(U,V)\)</span>. Formally, defining the martingale process <span class="math inline">\(M=(M_t)_{0 \leq t \leq T}\)</span> as <span class="math inline">\(M_t = \mathbb{E} \Big[ \xi + \int_{0}^{T} f(s,U_s,V_s)| \mathcal{F}_t \Big]\)</span>, from the Itô’s martingale decomposition theorem, we got the existence of a process <span class="math inline">\(Z=(Z_t)_{0 \leq t \leq T} \in \mathbb{H}^2([0,T];\mathbb{R}^n)\)</span> such that <span class="math display">\[
+\]</span> We now show that for a suitable choice of <span class="math inline">\(\beta\)</span>, the mapping <span class="math inline">\(\Phi\)</span> is well defined on <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)\)</span> into <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)\)</span> as <span class="math inline">\((Y,Z) = \Phi(U,V)\)</span>. Formally, defining the martingale process <span class="math inline">\(M=(M_t)_{0 \leq t \leq T}\)</span> as <span class="math display">\[
+\begin{align}
+M_t = \mathbb{E} \Big[ \xi + \int_{0}^{T} f(s,U_s,V_s)| \mathcal{F}_t \Big],
+\end{align}
+\]</span> from the Itô’s martingale decomposition theorem, we got the existence of a process <span class="math inline">\(Z=(Z_t)_{0 \leq t \leq T} \in \mathbb{H}^2([0,T];\mathbb{R}^n)\)</span> such that <span class="math display">\[
 \begin{align}
 M_t = M_0 + \int_{0}^{t} Z_s d W_s.
 \end{align}
@@ -506,7 +512,7 @@ v(T,x) = g(x).
 \end{align}
 \tag{1.11}\]</span></span> and we recall that the forward SDE <span class="math inline">\(\mathbb{R}^n\)</span>-valued process <span class="math inline">\(X=(X_t)_{0 \leq t \leq T}\)</span> is given by <span class="math display">\[
 \begin{align}
-d X_s = b(s,X_s) d s + \sigma(s,X_s) d W_s
+d X_s = b(s,X_s) d s + \sigma(s,X_s) d W_s.
 \end{align}
 \]</span> <span class="para-subtitle">Proposition : Link between <span class="math inline">\(v\)</span> and <span class="math inline">\((Y,Z)\)</span> :</span></p>
 <p>Let <span class="math inline">\(v \in \mathcal{C}^{1,2}([0,T) \times \mathbb{R}^n) \cap C^0([0,T] \times \mathbb{R}^n)\)</span> be a solution to the PDE <span class="math inline">\((4)\)</span>, satisfying a linear growth condition and such that there exists positive constants <span class="math inline">\(C,q\)</span> such that <span class="math inline">\(| D_x v(t,x)| \leq C( 1+ |x|^q)\)</span> for any <span class="math inline">\(x \in \mathbb{R}^n\)</span>. Then the pair of processes <span class="math inline">\((Y,Z)\)</span> defined by</p>
@@ -583,7 +589,7 @@ v(T,x) = g(x), \quad x \in \mathbb{R}^n
 \begin{align}
 \mathbb{L}(w) = \mathbb{E} \Big[ w(T,\mathcal{X}) - g(\mathcal{X})|^2 \Big] + \mathbb{E} \Big[ | \partial_t w(\tau,\mathcal{X} - \mathcal{H}[w](\tau,\mathcal{X})) |^2 \Big],
 \end{align}
-\tag{1.14}\]</span></span> where <span class="math inline">\((\tau,\mathcal{X}) \sim \rho_T \otimes \rho_n\)</span> laws supported on $[0,T] ^n $. In order to solve <a href="#eq-optimization-control-problem-deep-galerkin" class="quarto-xref">Equation&nbsp;<span>1.14</span></a> , we parametrize the family of maps <span class="math inline">\(w\)</span> by neural networks and reduce the infinite dimensional optimization problem into a finite one where the finite parameter is given by the parameter of the neural net <span class="math inline">\(\mathcal{U}(\theta)\)</span>. and the problem is therefore now to solve <span class="math inline">\(\underset{\theta \in \Theta}{\text{ inf }} L(\theta)\)</span> with <span class="math inline">\(L(\theta)=\mathbb{L}(U_{\theta})\)</span> by uses of stochastic gradient descent methods.</p>
+\tag{1.14}\]</span></span> where <span class="math inline">\((\tau,\mathcal{X}) \sim \rho_T \otimes \rho_n\)</span> laws supported on $[0,T] ^n $. In order to solve <a href="#eq-optimization-control-problem-deep-galerkin" class="quarto-xref">Equation&nbsp;<span>1.14</span></a> , we parametrize the family of maps <span class="math inline">\(w\)</span> by neural networks and reduce the infinite dimensional optimization problem into a finite one where the finite parameter is given by the parameter of the neural net <span class="math inline">\(\mathcal{U}(\theta)\)</span>. and the problem is therefore now to solve <span class="math inline">\(\underset{\theta \in \Theta}{\text{ inf }} L(\theta)\)</span> with <span class="math inline">\(L(\theta)=\mathbb{L}(\mathcal{U}_{\theta})\)</span> by uses of stochastic gradient descent methods.</p>
 </div>
 </section>
 <section id="deep-backward-solvers" class="level3" data-number="1.2.2">
