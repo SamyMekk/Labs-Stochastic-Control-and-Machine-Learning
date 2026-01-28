@@ -230,6 +230,7 @@ dX_s^{\star} &= b(X_s^{\star}, \alpha^{\star}(s,X_s^{\star})) + \sigma(X_s^{\sta
 X_t^{\star} &= x
 \end{cases}
 \end{align}
+$$
 This will show that the process $(\alpha^{\star}_s)_{t \leq s \leq T}= \big(\alpha^{\star}(s,X_s^{\star} )\big)_{t \leq s \leq T}$ is an optimal Markovian control, i.e given from a measurable feedback map $\alpha^{\star}$. ^[feedback refers to measurable function defined over time $\times$ state space  .]
 
 :::
@@ -330,10 +331,16 @@ Given a pair of $(\xi,f)$ satisfying Assumptions $(A)$ and $(B)$, there exists a
 The proof of @thm-ExistenceUnicityBSDE is based on a fixed point argument on the Banach space $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)$ endowed with the norm 
 $$
 \begin{align}
-\lVert (Y,Z) \rVert_{\beta} = \bigg(\mathbb{E} \Big[ \int_{0}^{T}  e^{\beta s} \big( |Y_s|^2 + |Z_s|^2 \big) \Big] \bigg)^{\frac{1}{2}}
+\lVert (Y,Z) \rVert_{\beta} = \bigg(\mathbb{E} \Big[ \int_{0}^{T}  e^{\beta s} \big( |Y_s|^2 + |Z_s|^2 \big) \Big] \bigg)^{\frac{1}{2}}.
 \end{align}
-$$. 
-We now show that for a suitable choice of $\beta$, the  mapping $\Phi$ is  well defined on $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)$ into $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)$ as $(Y,Z) = \Phi(U,V)$. Formally, defining the martingale process $M=(M_t)_{0 \leq t \leq T}$ as $M_t = \mathbb{E} \Big[ \xi + \int_{0}^{T} f(s,U_s,V_s)| \mathcal{F}_t \Big]$, from the Itô's martingale decomposition theorem, we got the existence of a process $Z=(Z_t)_{0 \leq t \leq T} \in \mathbb{H}^2([0,T];\mathbb{R}^n)$ such that
+$$ 
+We now show that for a suitable choice of $\beta$, the  mapping $\Phi$ is  well defined on $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)$ into $\mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T];\mathbb{R}^n)$ as $(Y,Z) = \Phi(U,V)$. Formally, defining the martingale process $M=(M_t)_{0 \leq t \leq T}$ as
+$$
+\begin{align}
+M_t = \mathbb{E} \Big[ \xi + \int_{0}^{T} f(s,U_s,V_s)| \mathcal{F}_t \Big],
+\end{align}
+$$
+from the Itô's martingale decomposition theorem, we got the existence of a process $Z=(Z_t)_{0 \leq t \leq T} \in \mathbb{H}^2([0,T];\mathbb{R}^n)$ such that
 $$
 \begin{align}
 M_t = M_0 + \int_{0}^{t} Z_s d W_s.
@@ -382,7 +389,7 @@ $${#eq-BSDE-differential-2}
 and  we recall that the forward SDE $\mathbb{R}^n$-valued process $X=(X_t)_{0 \leq t \leq T}$ is given by
 $$
 \begin{align}
- d X_s = b(s,X_s) d s + \sigma(s,X_s) d W_s
+ d X_s = b(s,X_s) d s + \sigma(s,X_s) d W_s.
 \end{align}
 $$
 <span class="para-subtitle">Proposition : Link between $v$ and $(Y,Z)$ :</span>
@@ -502,7 +509,7 @@ $$
 \mathbb{L}(w) = \mathbb{E} \Big[ w(T,\mathcal{X}) - g(\mathcal{X})|^2 \Big] + \mathbb{E} \Big[ | \partial_t w(\tau,\mathcal{X} - \mathcal{H}[w](\tau,\mathcal{X})) |^2 \Big],
 \end{align}
 $${#eq-optimization-control-problem-deep-galerkin}
-where $(\tau,\mathcal{X}) \sim \rho_T \otimes \rho_n$ laws supported on $[0,T] \times \mathbb{R}^n $. In order to solve @eq-optimization-control-problem-deep-galerkin , we parametrize the family of maps $w$ by neural networks and reduce the infinite dimensional optimization problem into a finite one where the finite parameter is given by the parameter of the neural net $\mathcal{U}(\theta)$. and the problem is therefore now to solve $\underset{\theta \in \Theta}{\text{ inf }} L(\theta)$ with $L(\theta)=\mathbb{L}(U_{\theta})$ by uses of stochastic gradient descent methods.
+where $(\tau,\mathcal{X}) \sim \rho_T \otimes \rho_n$ laws supported on $[0,T] \times \mathbb{R}^n $. In order to solve @eq-optimization-control-problem-deep-galerkin , we parametrize the family of maps $w$ by neural networks and reduce the infinite dimensional optimization problem into a finite one where the finite parameter is given by the parameter of the neural net $\mathcal{U}(\theta)$. and the problem is therefore now to solve $\underset{\theta \in \Theta}{\text{ inf }} L(\theta)$ with $L(\theta)=\mathbb{L}(\mathcal{U}_{\theta})$ by uses of stochastic gradient descent methods.
 :::
 
 
