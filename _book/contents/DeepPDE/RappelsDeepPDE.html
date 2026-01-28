@@ -409,26 +409,35 @@ X_t^{\star} &amp;= x
 |w(t,x)| \leq C \big( 1+ |x|^2 \big), \quad \forall (t,x) \in [0,T] \times \mathbb{R}^n.
 \end{align}
 \]</span></p>
-<ul>
+<ol type="1">
 <li>Suppose that</li>
-</ul>
+</ol>
+<p><span class="math display">\[
+\begin{cases}
+\partial_t w + \sup_{a \in A} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] \le 0,
+\quad (t,x) \in [0,T) \times \mathbb{R}^n, \\
+w(T,x) \ge g(x), \quad x \in \mathbb{R}^n.
+\end{cases}
+\]</span></p>
+<p>Then <span class="math inline">\(w \geq v\)</span> on <span class="math inline">\([0,T] \times \mathbb{R}^n\)</span>.</p>
+<ol start="2" type="1">
+<li>Suppose further that <span class="math inline">\(w(T,\cdot)=g\)</span> and there exists a measurable map <span class="math inline">\((t,x) \mapsto \hat{\alpha}(t,x)\)</span> such that</li>
+</ol>
 <p><span class="math display">\[
 \begin{align}
-\begin{cases}
-\partial_t w + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] &amp;\leq 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \\
-w(T,x) &amp;\geq g(x), \quad x \in \mathbb{R}^n.
-\end{cases}
+\partial_t w + \sup_{a \in A} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big]
+=
+\partial_t w + \mathcal{L}^{\hat{\alpha}(t,x)} w(t,x)
++ f(t,x,\hat{\alpha}(t,x)),
 \end{align}
-\]</span> Then <span class="math inline">\(w \geq v\)</span> on <span class="math inline">\([0,T] \times \mathbb{R}^n\)</span>.</p>
-<ul>
-<li>Suppose further <span class="math inline">\(w(T,\cdot)=g\)</span> and there exists a measurable map <span class="math inline">\([0,T] \times \mathbb{R}^n \ni (t,x) \mapsto \hat{\alpha}(t,x) \in A\)</span> such that <span class="math display">\[
-\begin{align}
-\partial_t w + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] = \partial_t w  \big[ \mathcal{L}^{\hat{\alpha}(t,x)} w(t,x) + f(t,x,\hat{\alpha}(t,x)) \big],
-\end{align}
-\]</span> and the SDE given by <span class="math display">\[
-d X_s = b(X_s, \hat{\alpha}(s,X_s)) d s + \sigma(X_s, \hat{\alpha}(s,X_s)) d W_s,
-\]</span> admits a unique solution, denoted by <span class="math inline">\(\hat{X}_s^{t,x}\)</span> and the process <span class="math inline">\(\big(\hat{\alpha}(s,X_s^{t,x}) \big)_{t \leq s \leq T} \in \mathcal{A}(t,x)\)</span>. Then, we have <span class="math inline">\(w=v\)</span> on <span class="math inline">\([0,T] \times \mathbb{R}^n\)</span> and <span class="math inline">\(\hat{\alpha}\)</span> is an optimal Markovian control.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
-</ul>
+\]</span></p>
+<p>and the SDE <span class="math display">\[
+  \begin{align}
+      d X_s = b(X_s, \hat{\alpha}(s,X_s)) \, ds
+      + \sigma(X_s, \hat{\alpha}(s,X_s)) \, dW_s,
+    \end{align}
+    \]</span> admits a unique solution <span class="math inline">\(\hat{X}_s^{t,x}\)</span>, with <span class="math inline">\(\hat{\alpha}(s,X_s^{t,x}))_{t \le s \le T} \in \mathcal{A}(t,x)\)</span>.</p>
+<p>Then <span class="math inline">\(w = v\)</span> on <span class="math inline">\([0,T] \times \mathbb{R}^n\)</span> and <span class="math inline">\(\hat{\alpha}\)</span> is an optimal Markovian control.</p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Proof</em>. </span>The proof of this result follow essentially from Itô’s formula after denoting the sequence of stopping times <span class="math inline">\(\tau_n = \text{inf} \lbrace s \geq t : \int_{t}^s D_x w(l, X_l^{t,x})^{\top} \sigma(X_l^{t,x}, \alpha_l)|^2 d l \geq n \big \rbrace\)</span> and noticing that <span class="math inline">\(\tau_n \nearrow \infty\)</span> as <span class="math inline">\(n\)</span> tends to <span class="math inline">\(\infty\)</span> and applying Itô’s formula to <span class="math inline">\(w\)</span> between <span class="math inline">\(t\)</span> and <span class="math inline">\(s \wedge \tau_n\)</span>.</p>
@@ -437,27 +446,30 @@ d X_s = b(X_s, \hat{\alpha}(s,X_s)) d s + \sigma(X_s, \hat{\alpha}(s,X_s)) d W_s
 <section id="the-bsde-approach-pontryagins-formulation" class="level3" data-number="1.1.3">
 <h3 data-number="1.1.3" class="anchored" data-anchor-id="the-bsde-approach-pontryagins-formulation"><span class="header-section-number">1.1.3</span> The BSDE approach : Pontryagin’s formulation</h3>
 <div id="formula-description" class="formulation">
-<p>We denote by <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R})\)</span> the set of <span class="math inline">\(\mathbb{R}\)</span>-valued progressively measurables processes <span class="math inline">\(Y=(Y_t)_{0 \leq t \leq T}\)</span> such that <span class="math inline">\(\mathbb{E} \Big[ \underset{0 \leq t \leq T}{\text{ sup }} |Y_t|^2 \Big] &lt;  \infty\)</span> and by <span class="math inline">\(\mathbb{H}^2([0,T];\mathbb{R}^n)\)</span> the set of <span class="math inline">\(\mathbb{R}^n\)</span>-valued progressively measurable <span class="math inline">\(Z=(Z_t)_{0 \leq t \leq T}\)</span> such that <span class="math inline">\(\mathbb{E} \Big[ \int_{0}^{T} |Z_t|^2 d t \Big] &lt; \infty\)</span>. We are given a pair <span class="math inline">\((\xi, f)\)</span> called terminal condition and generator (or driver) satisfying :</p>
+<p>We denote by <span class="math inline">\(\mathbb{S}^2([0,T];\mathbb{R})\)</span> the set of <span class="math inline">\(\mathbb{R}\)</span>-valued progressively measurable processes <span class="math inline">\(Y=(Y_t)_{0 \leq t \leq T}\)</span> such that <span class="math inline">\(\mathbb{E}\big[ \sup_{0 \leq t \leq T} |Y_t|^2 \big] &lt; \infty\)</span>, and by <span class="math inline">\(\mathbb{H}^2([0,T];\mathbb{R}^n)\)</span> the set of <span class="math inline">\(\mathbb{R}^n\)</span>-valued progressively measurable processes <span class="math inline">\(Z=(Z_t)_{0 \leq t \leq T}\)</span> such that <span class="math inline">\(\mathbb{E}\big[ \int_0^T |Z_t|^2 \, dt \big] &lt; \infty\)</span>.</p>
+<p>We are given a pair <span class="math inline">\((\xi,f)\)</span> called terminal condition and generator (or driver) satisfying:</p>
 <ul>
-<li><span class="math inline">\((A)\)</span> <span class="math inline">\(\xi \in L^2(\Omega;\mathcal{F}_T; \mathbb{P}; \mathbb{R})\)</span></li>
-<li><span class="math inline">\((B)\)</span> <span class="math inline">\(f : \Omega \times [0,T] \times \mathbb{R} \times \mathbb{R}^d \to \mathbb{R}\)</span> such that
+<li><p><strong>(A)</strong> <span class="math inline">\(\xi \in L^2(\Omega;\mathcal{F}_T;\mathbb{P};\mathbb{R})\)</span></p></li>
+<li><p><strong>(B)</strong> <span class="math inline">\(f : \Omega \times [0,T] \times \mathbb{R} \times \mathbb{R}^d \to \mathbb{R}\)</span> such that</p>
 <ul>
-<li><span class="math inline">\(f(\cdot,t,y,z)\)</span> (written for simplicity <span class="math inline">\(f(t,y,z)\)</span>) is progressively measurable for all <span class="math inline">\((y,z)\)</span></li>
-<li><span class="math inline">\(f(t,0,0) \in \mathbb{H}^2([0,T];\mathbb{R})\)</span>.</li>
-<li><span class="math inline">\(f\)</span> satisfies a uniform Lipschitz condition in <span class="math inline">\((y,z)\)</span>, i.e, there exists a constant <span class="math inline">\(C_f\)</span> such that <span class="math display">\[
-\begin{align}
-| f(t,y_1,z_1) - f(t,y_2,z_2)| \leq C_f \big ( |y_1 - y_2| + |z_1 - z_2| \big), \quad \forall y_1,y_2, \forall z_1, z_2, \quad d t \otimes d \mathbb{P} \text{ a-e.}
-\end{align}
-\]</span> We now consider the (unidimensional) backward stochastic differential equation (BSDE) <span id="eq-BSDE-differential"><span class="math display">\[
-\begin{align}
-\begin{cases}
-dY_t &amp;= - f(t,Y_t,Z_t) d t + Z_t d W_t ,\\
-Y_T &amp;= \xi
-\end{cases}
-\end{align}
-\tag{1.9}\]</span></span></li>
+<li><span class="math inline">\(f(\cdot,t,y,z)\)</span> (written for simplicity <span class="math inline">\(f(t,y,z)\)</span>) is progressively measurable for all <span class="math inline">\((y,z)\)</span>;</li>
+<li><span class="math inline">\(f(t,0,0) \in \mathbb{H}^2([0,T];\mathbb{R})\)</span>;</li>
+<li><span class="math inline">\(f\)</span> satisfies a uniform Lipschitz condition in <span class="math inline">\((y,z)\)</span>, i.e.&nbsp;there exists a constant <span class="math inline">\(C_f\)</span> such that <span class="math display">\[
+|f(t,y_1,z_1) - f(t,y_2,z_2)|
+\le C_f\big(|y_1-y_2| + |z_1-z_2|\big),
+\quad dt \otimes d\mathbb{P}\text{-a.e.}
+\]</span></li>
 </ul></li>
 </ul>
+<p>We now consider the (unidimensional) backward stochastic differential equation (BSDE).</p>
+<p><span id="eq-BSDE-differential"><span class="math display">\[
+\begin{align}
+\begin{cases}
+   dY_t &amp;= - f(t,Y_t,Z_t) d t + Z_t d W_t ,\\
+   Y_T &amp;= \xi
+\end{cases}
+\end{align}
+\tag{1.9}\]</span></span></p>
 </div>
 <div id="def-solBSDE" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1.1</strong></span> A solution to the BSDE <a href="#eq-BSDE-differential" class="quarto-xref">Equation&nbsp;<span>1.9</span></a> is a pair of processes <span class="math inline">\((Y,Z) \in \mathbb{S}^2([0,T];\mathbb{R}) \times \mathbb{H}^2([0,T]; \mathbb{R}^n)\)</span> satisfying <span class="math display">\[
@@ -628,7 +640,6 @@ Y_{t_N} &amp;= g(X_{t_N}).
 <ol>
 <li id="fn1"><p><span class="math inline">\(\mathcal{S}_n\)</span> denotes the space of symmetric matrices over <span class="math inline">\(\mathbb{R}^{n \times n}\)</span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>feedback refers to measurable function defined over time <span class="math inline">\(\times\)</span> state space .<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>We recall that a control process <span class="math inline">\(\alpha= (\alpha_s)_{t \leq s \leq T}\)</span> in the form <span class="math inline">\(\alpha_s = \mathrm{a}(s,X_s^{t,x})\)</span> is said to be Markovian.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

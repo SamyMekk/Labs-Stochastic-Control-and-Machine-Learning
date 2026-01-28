@@ -246,30 +246,41 @@ $$
 \end{align}
 $$
 
-- Suppose that 
-  
+(1) Suppose that
+
 $$
-\begin{align}
 \begin{cases}
- \partial_t w + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] &\leq 0, \quad (t,x) \in [0,T) \times \mathbb{R}^n, \\
- w(T,x) &\geq g(x), \quad x \in \mathbb{R}^n.
+ \partial_t w + \sup_{a \in A} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] \le 0,
+ \quad (t,x) \in [0,T) \times \mathbb{R}^n, \\
+ w(T,x) \ge g(x), \quad x \in \mathbb{R}^n.
 \end{cases}
-\end{align}
 $$
+
 Then $w \geq v$ on $[0,T] \times \mathbb{R}^n$.
 
-- Suppose further $w(T,\cdot)=g$ and there exists a measurable map $[0,T] \times \mathbb{R}^n \ni (t,x) \mapsto \hat{\alpha}(t,x) \in A$ such that
+(2) Suppose further that $w(T,\cdot)=g$ and there exists a measurable map $(t,x) \mapsto \hat{\alpha}(t,x)$ such that
+
 $$
 \begin{align}
-\partial_t w + \underset{a \in A}{\text{ sup }} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big] = \partial_t w  \big[ \mathcal{L}^{\hat{\alpha}(t,x)} w(t,x) + f(t,x,\hat{\alpha}(t,x)) \big],
+\partial_t w + \sup_{a \in A} \big[ \mathcal{L}^a w(t,x) + f(t,x,a) \big]
+=
+\partial_t w + \mathcal{L}^{\hat{\alpha}(t,x)} w(t,x)
++ f(t,x,\hat{\alpha}(t,x)),
 \end{align}
 $$
-and the SDE given by
-$$
-d X_s = b(X_s, \hat{\alpha}(s,X_s)) d s + \sigma(X_s, \hat{\alpha}(s,X_s)) d W_s,
-$$
-admits a unique solution, denoted by $\hat{X}_s^{t,x}$ and the process $\big(\hat{\alpha}(s,X_s^{t,x}) \big)_{t \leq s \leq T} \in \mathcal{A}(t,x)$.
-Then, we have $w=v$ on $[0,T] \times \mathbb{R}^n$ and $\hat{\alpha}$ is an optimal Markovian control.^[We recall that a control process $\alpha= (\alpha_s)_{t \leq s \leq T}$ in the form $\alpha_s = \mathrm{a}(s,X_s^{t,x})$ is said  to be Markovian.]
+
+  and the SDE
+  $$
+  \begin{align}
+      d X_s = b(X_s, \hat{\alpha}(s,X_s)) \, ds
+      + \sigma(X_s, \hat{\alpha}(s,X_s)) \, dW_s,
+    \end{align}
+    $$
+  admits a unique solution  $\hat{X}_s^{t,x}$, with $\hat{\alpha}(s,X_s^{t,x}))_{t \le s \le T} \in \mathcal{A}(t,x)$.
+
+Then $w = v$ on $[0,T] \times \mathbb{R}^n$ and
+$\hat{\alpha}$ is an optimal Markovian control.
+
 :::
 
 
@@ -285,19 +296,29 @@ Then, we have $w=v$ on $[0,T] \times \mathbb{R}^n$ and $\hat{\alpha}$ is an opti
 
 ::: {#formula-description .formulation}
 
-We denote by $\mathbb{S}^2([0,T];\mathbb{R})$ the set of $\mathbb{R}$-valued progressively measurables processes $Y=(Y_t)_{0 \leq t \leq T}$ such that $\mathbb{E} \Big[ \underset{0 \leq t \leq T}{\text{ sup }} |Y_t|^2 \Big] <  \infty$ and by $\mathbb{H}^2([0,T];\mathbb{R}^n)$ the set of $\mathbb{R}^n$-valued progressively measurable $Z=(Z_t)_{0 \leq t \leq T}$ such that $\mathbb{E} \Big[ \int_{0}^{T} |Z_t|^2 d t \Big] < \infty$. We are given a pair $(\xi, f)$ called terminal condition and generator (or driver) satisfying :
+We denote by $\mathbb{S}^2([0,T];\mathbb{R})$ the set of $\mathbb{R}$-valued progressively measurable processes
+$Y=(Y_t)_{0 \leq t \leq T}$ such that
+$\mathbb{E}\big[ \sup_{0 \leq t \leq T} |Y_t|^2 \big] < \infty$,
+and by $\mathbb{H}^2([0,T];\mathbb{R}^n)$ the set of $\mathbb{R}^n$-valued progressively measurable processes
+$Z=(Z_t)_{0 \leq t \leq T}$ such that
+$\mathbb{E}\big[ \int_0^T |Z_t|^2 \, dt \big] < \infty$.
 
-- $(A)$ $\xi \in L^2(\Omega;\mathcal{F}_T; \mathbb{P}; \mathbb{R})$
-- $(B)$ $f : \Omega \times [0,T] \times \mathbb{R} \times \mathbb{R}^d \to \mathbb{R}$ such that
-  - $f(\cdot,t,y,z)$ (written for simplicity $f(t,y,z)$) is progressively measurable for all $(y,z)$
-  - $f(t,0,0) \in \mathbb{H}^2([0,T];\mathbb{R})$.
-  - $f$ satisfies a uniform Lipschitz condition in $(y,z)$, i.e, there exists a constant $C_f$ such that
- $$
-\begin{align}
-| f(t,y_1,z_1) - f(t,y_2,z_2)| \leq C_f \big ( |y_1 - y_2| + |z_1 - z_2| \big), \quad \forall y_1,y_2, \forall z_1, z_2, \quad d t \otimes d \mathbb{P} \text{ a-e.}
-\end{align}
-$$
-We now consider the (unidimensional)  backward stochastic differential equation (BSDE)
+We are given a pair $(\xi,f)$ called terminal condition and generator (or driver) satisfying:
+
+- **(A)** $\xi \in L^2(\Omega;\mathcal{F}_T;\mathbb{P};\mathbb{R})$
+
+- **(B)** $f : \Omega \times [0,T] \times \mathbb{R} \times \mathbb{R}^d \to \mathbb{R}$ such that
+  - $f(\cdot,t,y,z)$ (written for simplicity $f(t,y,z)$) is progressively measurable for all $(y,z)$;
+  - $f(t,0,0) \in \mathbb{H}^2([0,T];\mathbb{R})$;
+  - $f$ satisfies a uniform Lipschitz condition in $(y,z)$, i.e. there exists a constant $C_f$ such that
+    $$
+    |f(t,y_1,z_1) - f(t,y_2,z_2)|
+    \le C_f\big(|y_1-y_2| + |z_1-z_2|\big),
+    \quad dt \otimes d\mathbb{P}\text{-a.e.}
+    $$
+
+We now consider the (unidimensional) backward stochastic differential equation (BSDE).
+
 $$
 \begin{align}
 \begin{cases}
