@@ -268,7 +268,8 @@ and the SDE given by
 $$
 d X_s = b(X_s, \hat{\alpha}(s,X_s)) d s + \sigma(X_s, \hat{\alpha}(s,X_s)) d W_s,
 $$
-admits a unique solution, denoted by $\hat{X}_s^{t,x}$ and the process $\big(\hat{\alpha}(s,X_s^{t,x}) \big)_{t \leq s \leq T} \in \mathcal{A}(t,x)$. Then, we have $w=v$ on $[0,T] \times \mathbb{R}^n$ and $\hat{\alpha}$ is an optimal Markovian control.^[We recall that a control process $\alpha= (\alpha_s)_{t \leq s \leq T}$ in the form $\alpha_s = \mathrm{a}(s,X_s^{t,x})$ is said  to be Markovian.]
+admits a unique solution, denoted by $\hat{X}_s^{t,x}$ and the process $\big(\hat{\alpha}(s,X_s^{t,x}) \big)_{t \leq s \leq T} \in \mathcal{A}(t,x)$.
+Then, we have $w=v$ on $[0,T] \times \mathbb{R}^n$ and $\hat{\alpha}$ is an optimal Markovian control.^[We recall that a control process $\alpha= (\alpha_s)_{t \leq s \leq T}$ in the form $\alpha_s = \mathrm{a}(s,X_s^{t,x})$ is said  to be Markovian.]
 :::
 
 
