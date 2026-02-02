@@ -204,24 +204,7 @@ window.Quarto = {
   <li><a href="#some-foundations-of-reinforcement-learning" id="toc-some-foundations-of-reinforcement-learning" class="nav-link active" data-scroll-target="#some-foundations-of-reinforcement-learning"><span class="header-section-number">3.1</span> Some Foundations of Reinforcement Learning</a>
   <ul class="collapse">
   <li><a href="#basics-of-reinforcement-learning" id="toc-basics-of-reinforcement-learning" class="nav-link" data-scroll-target="#basics-of-reinforcement-learning"><span class="header-section-number">3.1.1</span> Basics of Reinforcement Learning</a></li>
-  <li><a href="#value-based-methods" id="toc-value-based-methods" class="nav-link" data-scroll-target="#value-based-methods"><span class="header-section-number">3.1.2</span> Value-based methods</a></li>
-  <li><a href="#policy-based-methods" id="toc-policy-based-methods" class="nav-link" data-scroll-target="#policy-based-methods"><span class="header-section-number">3.1.3</span> Policy based methods</a></li>
   </ul></li>
-  <li><a href="#mdp" id="toc-mdp" class="nav-link" data-scroll-target="#mdp"><span class="header-section-number">3.2</span> MDP</a>
-  <ul class="collapse">
-  <li><a href="#value-based-methods-1" id="toc-value-based-methods-1" class="nav-link" data-scroll-target="#value-based-methods-1"><span class="header-section-number">3.2.1</span> Value-based methods</a></li>
-  <li><a href="#policy-based-methods-1" id="toc-policy-based-methods-1" class="nav-link" data-scroll-target="#policy-based-methods-1"><span class="header-section-number">3.2.2</span> Policy-based methods</a></li>
-  <li><a href="#tbd" id="toc-tbd" class="nav-link" data-scroll-target="#tbd"><span class="header-section-number">3.2.3</span> TBD</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">3.2.4</span> </a></li>
-  </ul></li>
-  <li><a href="#reinforcement-learning-in-continous-time" id="toc-reinforcement-learning-in-continous-time" class="nav-link" data-scroll-target="#reinforcement-learning-in-continous-time"><span class="header-section-number">3.3</span> Reinforcement Learning in Continous Time</a>
-  <ul class="collapse">
-  <li><a href="#problem-formulation" id="toc-problem-formulation" class="nav-link" data-scroll-target="#problem-formulation"><span class="header-section-number">3.3.1</span> Problem Formulation</a></li>
-  <li><a href="#policy-gradient-methods-in-continous-time" id="toc-policy-gradient-methods-in-continous-time" class="nav-link" data-scroll-target="#policy-gradient-methods-in-continous-time"><span class="header-section-number">3.3.2</span> Policy gradient methods in continous time</a></li>
-  <li><a href="#q-learning-and-approximations-in-continous-time" id="toc-q-learning-and-approximations-in-continous-time" class="nav-link" data-scroll-target="#q-learning-and-approximations-in-continous-time"><span class="header-section-number">3.3.3</span> Q-learning and approximations in continous time</a></li>
-  </ul></li>
-  <li><a href="#rl-algorithms-to-solve-stochastic-control-problems" id="toc-rl-algorithms-to-solve-stochastic-control-problems" class="nav-link" data-scroll-target="#rl-algorithms-to-solve-stochastic-control-problems"><span class="header-section-number">3.4</span> RL algorithms to solve stochastic control problems</a></li>
-  <li><a href="#to-go-further" id="toc-to-go-further" class="nav-link" data-scroll-target="#to-go-further"><span class="header-section-number">3.5</span> To Go further</a></li>
   </ul>
 </nav>
     </div>
@@ -269,11 +252,11 @@ $$
 <p>The following is a reminder of the main theoretical results about <strong>Reinforcement Learning for stochastic control problems</strong> seen during the course.</p>
 <section id="some-foundations-of-reinforcement-learning" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="some-foundations-of-reinforcement-learning"><span class="header-section-number">3.1</span> Some Foundations of Reinforcement Learning</h2>
-<p>We will introduce in the following the main concepts of Reinforcement Learning. If you want to look for more in depth theory, you can look at the section <strong>References</strong>.</p>
+<p>We will introduce in the following the main concepts of Reinforcement Learning. If you want to look for more in depth theory, you can look at the <strong>References</strong>.</p>
 <section id="basics-of-reinforcement-learning" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="basics-of-reinforcement-learning"><span class="header-section-number">3.1.1</span> Basics of Reinforcement Learning</h3>
+<h3 data-number="3.1.1" class="anchored"><span class="header-section-number">3.1.1</span> Basics of Reinforcement Learning</h3>
 <div id="def-MDP" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.1</strong></span> A Markov Decision Process is a quadruplet given by <span class="math inline">\((\mathcal{X},\mathcal{A},P,r=(f,g))\)</span> such that :</p>
+<p><span class="theorem-title"><strong>Definition 3.1 ((Markov Decision Processes).)</strong></span> A Markov Decision Process is a quadruplet given by <span class="math inline">\((\mathcal{X},\mathcal{A},P,r=(f,g))\)</span> such that :</p>
 <ul>
 <li><span class="math inline">\(\mathcal{X}\)</span> denotes the space of states on which the discrete time state process <span class="math inline">\((X_t)_{t \in \mathbb{N}}\)</span></li>
 <li><span class="math inline">\(\mathcal{A}\)</span> denotes the space of actions in which the control <span class="math inline">\((\alpha_t)_{t \in \mathbb{N}}\)</span> is defined</li>
@@ -282,42 +265,90 @@ $$
 <ul>
 <li><span class="math inline">\(f(x,a)\)</span> is a running reward obtained in state <span class="math inline">\(x\)</span> when choosing the action <span class="math inline">\(a\)</span></li>
 <li>Terminal reward <span class="math inline">\(g(x)\)</span></li>
-<li>Discount factor <span class="math inline">\(\beta \in [0,1]\)</span></li>
+<li>Discount factor <span class="math inline">\(\beta \in [0,1]\)</span> in case of infinite horizon.</li>
 </ul></li>
 </ul>
 </div>
 <p>Now, that we have defined the main components of a reinforcement learning problem, we can define the notion of policy</p>
 <div id="def-Policy" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.2</strong></span> A policy <span class="math inline">\(\pi=(\pi_t)_{t \in \mathbb{N}^{*}}\)</span> is a sequence of actions choosen in a markovian setting with respect to the state variable. A policy <span class="math inline">\(\pi\)</span> can be either :</p>
+<p><span class="theorem-title"><strong>Definition 3.2 ((Policy Definition).)</strong></span> A policy <span class="math inline">\(\pi=(\pi_t)_{t \in \mathbb{N}}\)</span> is a sequence of actions choosen in a markovian setting with respect to the state variable. A policy <span class="math inline">\(\pi\)</span> can be either :</p>
 <ul>
 <li>deterministic when <span class="math inline">\(\pi_t : \mathcal{X} \mapsto \mathcal{A}\)</span></li>
 <li>randomized when <span class="math inline">\(\pi_t : \mathcal{X} : \mapsto \mathcal{P}(\mathcal{A})\)</span> meaning that <span class="math inline">\(\pi_t\)</span> is a probability distribution of choosing an action at time <span class="math inline">\(t\)</span> in state <span class="math inline">\(x\)</span>.</li>
 </ul>
 <p>We will say that a control <span class="math inline">\(\alpha = (\alpha_t)_{t \in \mathbb{N}}\)</span> is drawn from a policy <span class="math inline">\(\pi\)</span> if for each <span class="math inline">\(t \in \mathbb{N}\)</span>, we have :</p>
 <ul>
-<li><span class="math inline">\(\alpha_t =\pi_t(X_t)\)</span> in the case of deterministic policies</li>
+<li><span class="math inline">\(\alpha_t =\pi_t(X_t)\)</span> in the case of deterministic policies.</li>
 <li><span class="math inline">\(\alpha_t \sim \pi_t(X_t)\)</span> in the case of randomized policies.</li>
 </ul>
 </div>
-<p>The goal of Reinforcement Learning will be to learn the control <span class="math inline">\(\alpha\)</span> with maximises the sum of rewards which will be defined in the value function.</p>
+<p>The goal of Reinforcement Learning will be to learn the policy <span class="math inline">\(\pi=(\pi_t)_{t \in \mathbb{N}}\)</span> which maximises the sum of rewards which will be defined in the value function.</p>
 <div id="def-valuefunction" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.3</strong></span> Given a policy <span class="math inline">\(\pi=(\pi_t)_{t \in \mathbb{N}}\)</span> and an horizon <span class="math inline">\(T \in \mathbb{N}\)</span>, we define :</p>
+<p><span class="theorem-title"><strong>Definition 3.3 ((Value function).)</strong></span> Given a policy <span class="math inline">\(\pi=(\pi_t)_{t \in \mathbb{N}}\)</span> and an horizon <span class="math inline">\(T \in \mathbb{N}\)</span>, we define :</p>
 <ul>
-<li><p>The state value function is defined as : <span class="math display">\[\begin{align}
-V_t^{\pi}(x) = \mathbb{E}_{\pi}[\sum_{s=t}^{T-1} f(X_s,\alpha_s) + g(X_T) | X_t = x], \quad x \in \mathcal{X}
+<li><p>The <span class="math display">\[state value function\]</span> as : <span class="math display">\[\begin{align}
+V_t^{\pi}(x) &amp;= \mathbb{E}_{\pi}[\sum_{s=t}^{T-1} f(X_s,\alpha_s) + g(X_T) | X_t = x], \quad x \in \mathcal{X}
 \end{align}
 \]</span> where <span class="math inline">\(\mathbb{E}_{\pi}\)</span> denotes the expectation when <span class="math inline">\(\alpha \sim \pi\)</span>.</p></li>
 <li><p>The Q value function of <span class="math inline">\(\pi\)</span> which is defined as : <span class="math display">\[\begin{align}
 Q_t^{\pi}(x,a) = \mathbb{E}_{\pi}[\sum_{s=t}^{T-1} f(X_s,\alpha_s) + g(X_T) | X_t = x,\alpha_t = a], \quad x \in \mathcal{X}, \alpha \in \mathcal{A}
 \end{align}
 \]</span></p></li>
-<li><p>Notons par ailleurs que : <span class="math display">\[
+<li><p>We note that <span class="math display">\[
 V_t^{\pi}(x) = \mathbb{E}_{a \sim \pi_t(x)} [Q_t^{\pi}(x,a)]
 \]</span></p></li>
 </ul>
 </div>
-<p>The goal is therefore to find a policy <span class="math inline">\(\pi^{*}\)</span> such that we have <span class="math inline">\(V_t^{\pi^*}(x) = \underset{\pi}{\text{ sup }} V_t^{\pi}(x)\)</span></p>
-</section>
+<p>The goal is therefore to find a policy <span class="math inline">\(\pi^{*}\)</span> such that we have at a given <span class="math inline">\(t \in \mathbb{N}\)</span> <span class="math display">\[
+\begin{align}
+V_t^{\pi^{\star}}(x) = \underset{\pi \in \Pi}{\text{ sup }} V_t^{\pi}(x), \quad  Q_t^{\pi^{\star}}(x) = \underset{\pi \in \Pi}{\text{ sup }} Q_t^{\pi}(x).
+\end{align}
+\]</span></p>
+<div id="thm-Bellmanequation" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3.5 ((Bellman equation for value functions).)</strong></span> &nbsp;</p>
+<ul>
+<li>For a fixed policy <span class="math inline">\(\pi=(\pi_t)_{t \in \mathbb{N}}\)</span>, we have</li>
+</ul>
+<p><span id="eq-value-function-fixed-policy"><span class="math display">\[
+\begin{align}
+V_t^{\pi}(x) &amp;= \mathbb{E}_{a \sim \pi_t(x)} \Big[ f(x,a) + \mathbb{E}_{x' \sim P_t(x,a)} \big[ V_{t+1}^{\pi}(x') \big] \Big], \quad t =0, \ldots, T-1
+V_T^{\pi}(x) &amp;= g(x)
+\end{align}
+\tag{3.1}\]</span></span> and <span id="eq-q-value-function-fixed-policy"><span class="math display">\[
+\begin{align}
+Q_t^{\pi}(x,a) &amp;=  f(x,a) + \mathbb{E}_{x' \sim P_t(x,a), a' \sim \pi_{t+1}(x')} \big[ Q_{t+1}^{\pi}(x',a') \big] , \quad t =0, \ldots, T-1
+Q_T^{\pi}(x,a) &amp;= g(x).
+\end{align}
+\tag{3.2}\]</span></span></p>
+<ul>
+<li>For optimal value function and <span class="math inline">\(Q\)</span> functions, we have</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+V_t(x) &amp;= \underset{a \in A}{\text{ sup }} \big \lbrace f(x,a) + \mathbb{E}_{x' \sim P_t(x,a)} \big[V_{t+1}(x')], t=0,\ldots, T-1
+V_T(x) &amp;= g(x)
+\end{align}
+\]</span> and <span class="math display">\[
+\begin{align}
+Q_t(x,a) &amp;=  f(x,a) + \mathbb{E}_{x' \sim P_t(x,a)} \big[ \underset{a' \in A}{\text{ sup }} Q_{t+1}(x',a') \big] , \quad t =0, \ldots, T-1
+Q_T(x,a) &amp;= g(x).
+\end{align}
+\]</span> Then the optimal deterministic policy <span class="math inline">\(\pi^{\star} = (\pi^{\star}_t)_{t \in \mathbb{N}}\)</span> is given from the <span class="math inline">\(Q\)</span>-value function as <span class="math display">\[
+\begin{align}
+\pi_t(x) = \underset{a \in A}{\text{ arg max }} Q_t(x,a)
+\end{align}
+\]</span></p>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>Let <span class="math inline">\(\pi=(\pi_t)_{t \in \mathbb{N}}\)</span> be a fixed policy. Then, we have by law of iterated conditional expectations</p>
+<p><span class="math display">\[
+\begin{align}
+\begin{cases}
+V_t^{\pi}(x) &amp;= \mathbb{E}_{a \sim \pi_t(x)} \Big[ f(x,a) + \mathbb{E}_{x' \sim P_t(x,a)} V_{t+1}^{\pi}(x') \Big], \\
+Q_t^{\pi}(x,a)&amp;= f(x,a) + \mathbb{E}_{ x' \sim P_t(x,a)} \Big[ V_{t+1}^{\pi}(x') \Big]
+\end{cases}
+\end{align}
+\]</span> Moreover, we notice that <span class="math inline">\(Q_t^{\pi}(x,a) = f(x,a) + \mathbb{E}_{x' \sim P_t(x,a)} \big[ V_{t+1}^{\pi}(x') \big]\)</span> and recalling that <span class="math inline">\(V_{t+1}(x) =  \E_{a \sim \pi_{t+1}(x)} \big[  Q_{t+1}(x,a) \big]\)</span>, we recover <a href="#eq-q-value-function-fixed-policy" class="quarto-xref">Equation&nbsp;<span>3.2</span></a> and <a href="#eq-value-function-fixed-policy" class="quarto-xref">Equation&nbsp;<span>3.1</span></a>.</p>
+</div>
 <section id="value-based-methods" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="value-based-methods"><span class="header-section-number">3.1.2</span> Value-based methods</h3>
 <p>In the case of valued based methods, the goal is to learn a representation of the value function <span class="math inline">\(V^{\pi^*}\)</span> and <span class="math inline">\(Q^{\pi^*}\)</span> and then derive the optimal policy from the value function.</p>
@@ -342,113 +373,205 @@ J(\theta) = \mathbb{E}_{\pi^{\theta}} [ \sum_{t=0}^{T-1} f(X_t,\alpha_t) + g(X_T
 \end{align}
 \]</span></p>
 </div>
-<div id="proof-PolicyGradient">
-
-</div>
 </section>
-</section>
-<section id="mdp" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="mdp"><span class="header-section-number">3.2</span> MDP</h2>
-<div id="def-Test" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.5</strong></span> Un intervalle de confiance de niveau <span class="math inline">\(1-\alpha\)</span> est un intervalle <span class="math inline">\(I = [A,B]\)</span> dont les bornes <span class="math inline">\(A,B\)</span> sont des statistiques, et tel que pour tout <span class="math inline">\(\theta\)</span>, <span class="math display">\[P_\theta(\theta \in I) \geqslant 1 - \alpha.\]</span> Un intervalle de confiance de niveau asymptotique <span class="math inline">\(1-\alpha\)</span> est une <em>suite</em> d’intervalles <span class="math inline">\(I_n = [A_n,B_n]\)</span> dont les bornes <span class="math inline">\(A_n,B_n\)</span> sont des statistiques, et tels que pour tout <span class="math inline">\(n\)</span>, <span class="math display">\[ P_\theta(\theta \in I_n) \geqslant 1 - \alpha.\]</span></p>
-</div>
-<div id="thm-biaisvar" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 3.2 (Décomposition biais-variance)</strong></span> Le risque quadratique <span class="math inline">\(\mathbb{E}_{\theta} [|\hat{\theta}-\theta|^2]\)</span> est égal à <span class="math display">\[
-\underbrace{\operatorname{Var}_{\theta} (\hat{\theta})}_{\text{variance}} +
-\underbrace{\mathbb{E}_{\theta}[\hat{\theta}-\theta]^2}_{\text{carré du biais}} \, .
+<section id="reinforcement-learning-in-continous-time" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="reinforcement-learning-in-continous-time"><span class="header-section-number">3.2</span> Reinforcement Learning in Continous Time</h2>
+<p>We present in the following the main concepts of Reinforcement Learning in continuous time. This can be motivated by the following applications.</p>
+<ul>
+<li><strong>Applicability to real-word problems</strong>
+<ul>
+<li>High frequency trading</li>
+<li>Enginerring systems</li>
+</ul></li>
+<li><strong>Scalability, flexibility and efficiency</strong>
+<ul>
+<li>Avoid discretization errors</li>
+</ul></li>
+<li><strong>Mathematical tools</strong>
+<ul>
+<li>Tools from stochastic calculus, control and PDEs</li>
+<li>Understanding of RL algorithms and interpretability</li>
+</ul></li>
+</ul>
+<section id="the-control-problem" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="the-control-problem"><span class="header-section-number">3.2.1</span> The control problem</h3>
+<div id="def-continuoustime" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3.5 (Randomized policies in continuous time.)</strong></span> We now introduce the concept of randomized policies in continuous time, viewed as the natural extension of MDP.</p>
+<ul>
+<li><p><span class="math inline">\(\pi : [0,T] \times \mathbb{R}^d \to \mathcal{P}(A)\)</span> with density <span class="math inline">\(A \ni a \mapsto \pi(t,x,a)\)</span> with respect to a reference measure <span class="math inline">\(\nu\)</span> on <span class="math inline">\(P(A)\)</span> and we will by misuse of notation write <span class="math display">\[
+\begin{align}
+\pi(t,x,da) = \pi(t,x,a) d a.
+\end{align}
+\]</span></p></li>
+<li><p>A control <span class="math inline">\(\alpha = (\alpha_t)_{t \in [0,T]}\)</span> is said to be sampled from <span class="math inline">\(\pi=(\pi_t)_{t \in [0,T]}\)</span> if at each time <span class="math inline">\(t \in [0,T]\)</span>, we have <span class="math inline">\(\alpha_t \sim \pi_t\)</span>. We will denote <span class="math inline">\(\alpha \sim \pi\)</span>.</p></li>
+</ul>
+<p>There is a technical issue here to ensure that we can in fact sample <span class="math inline">\(\alpha\)</span> from <span class="math inline">\(\pi\)</span> using an appropriate randomization of the controls through an uncountable number of i.i.d uniform random variables <span class="math inline">\((U_t)_{t \in [0,T]}\)</span>. This kind of randomization can be done under a suitable enlargment of the probability space <span class="math inline">\((\Omega,\mathcal{F},\mathbb{P})\)</span> by using the Fubini Extension to ensure the progressive measurability of <span class="math inline">\(\alpha\)</span> with respect to the filtration given by <span class="math display">\[\tilde{\mathbb{F}} = (\tilde{\mathcal{F}_t})_{t \in [0,T]}, \quad \tilde{\mathcal{F}_t} =  \sigma((W_s)_{s \leq t}) \vee  \sigma(U_s, s \leq t).\]</span></p>
+<ul>
+<li>Given a policy <span class="math inline">\(\pi=(\pi_t)_{0 \leq t \leq T}\)</span>, the state dynamics <span class="math inline">\(X=(X^{\pi}_t)_{0 \leq t \leq T}\)</span> is given by</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+dX_t = b(X_t,a_t) dt  + \sigma(X_t,a_t) dW_t.
+\end{align}
 \]</span></p>
 </div>
-<div class="proof">
-<p><span class="proof-title"><em>Proof</em>. </span>En notant <span class="math inline">\(x\)</span> l’espérance de <span class="math inline">\(\hat{\theta}\)</span>, on voit que le risque quadratique est égal à <span class="math inline">\(\mathbb{E}[|\hat{\theta} - x - (\theta - x)|^2]\)</span>. Le carré se développe en trois termes :&nbsp;le premier, <span class="math inline">\(\mathbb{E}[|\hat{\theta} - x|^2]\)</span>, est la variance de <span class="math inline">\(\hat{\theta}\)</span>. Le second, <span class="math inline">\(-2\mathbb{E}[(\hat{\theta} - x)(\theta - x)]\)</span>, est égal à <span class="math inline">\(-2(\theta - x)\mathbb{E}[\hat{\theta} - x]\)</span>, c’est-à-dire 0. Le dernier, <span class="math inline">\(\mathbb{E}[(\theta - x)^2]\)</span>, est égal à <span class="math inline">\((\theta - x)^2\)</span>, c’est-à-dire <span class="math inline">\((\theta - \mathbb{E}[\hat{\theta}])^2\)</span> :&nbsp;c’est bien le carré du biais.</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../..\images/cover.png" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption>À&nbsp;gauche, RQ élevé mais biais nul ;&nbsp;à droite, RQ faible mais biais non nul.</figcaption>
-</figure>
-</div>
-<div id="exm-testadeq" class="theorem example">
-<p><span class="theorem-title"><strong>Example 3.1</strong></span> &nbsp;</p>
-</div>
-<section id="value-based-methods-1" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="value-based-methods-1"><span class="header-section-number">3.2.1</span> Value-based methods</h3>
-</section>
-<section id="policy-based-methods-1" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="policy-based-methods-1"><span class="header-section-number">3.2.2</span> Policy-based methods</h3>
-</section>
-<section id="tbd" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="tbd"><span class="header-section-number">3.2.3</span> TBD</h3>
-</section>
-<section id="section" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="section"><span class="header-section-number">3.2.4</span> </h3>
-</section>
-</section>
-<section id="reinforcement-learning-in-continous-time" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="reinforcement-learning-in-continous-time"><span class="header-section-number">3.3</span> Reinforcement Learning in Continous Time</h2>
-<p>We present in the following the main concepts of Reinforcement learning in continuous time.</p>
-<section id="problem-formulation" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="problem-formulation"><span class="header-section-number">3.3.1</span> Problem Formulation</h3>
-<div id="def-RLContinuousTime" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.6</strong></span> &nbsp;</p>
-<ul>
-<li><span class="math inline">\(\pi : [0,T] \times \mathbb{R}^d \to \mathcal{P}(A)\)</span> with density <span class="math inline">\(A \ni a \mapsto \pi(t,x,a)\)</span> with respect to a reference measure <span class="math inline">\(\nu\)</span> on <span class="math inline">\(P(A)\)</span> and we will by misuse of notation write</li>
-</ul>
-<p><span class="math display">\[ \pi(t,x,da) = \pi(t,x,a) d a .\]</span></p>
-<ul>
-<li>A control <span class="math inline">\(\alpha = (\alpha_t)_{t \in [0,T]}\)</span> is said to be sampled from <span class="math inline">\(\pi=(\pi_t)_{t \in [0,T]}\)</span> if at each time <span class="math inline">\(t \in [0,T]\)</span>, we have <span class="math inline">\(\alpha_t \sim \pi_t\)</span>. There is a technical issue here to ensure that we can in fact sample <span class="math inline">\(\alpha\)</span> from <span class="math inline">\(\pi\)</span> using an appropriate randomization of the controls through an uncountable number of i.i.d uniform random variables <span class="math inline">\((U_t)_{t \in [0,T]}\)</span>. This kind of randomization can be done under a suitable enlargment of the probability space <span class="math inline">\((\Omega,\mathcal{F},\mathbb{P})\)</span> by using the Fubini Extension to ensure the progressive measurability of <span class="math inline">\(\alpha\)</span> with respect to the filtration given by <span class="math display">\[\tilde{\mathbb{F}} = (\tilde{\mathcal{F}_t})_{t \in [0,T]}, \quad \tilde{\mathcal{F}_t} =  \sigma((W_s)_{s \leq t}) \vee  \sigma(U_s, s \leq t).\]</span></li>
-<li>State dynamics given by the Itô’s dynamics with <span class="math inline">\(\alpha \sim \pi\)</span></li>
-</ul>
-<p><span class="math display">\[ dX_t = b(X_t,a_t) dt  + \sigma(X_t,a_t) dW_t.\]</span></p>
-</div>
-<p>Now, we can define the performance evaluation / value function in the context of reinforcement learning in continuous time.</p>
-<div id="def-valuefunctionRLTempsContinu" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.7</strong></span> Given a policy <span class="math inline">\(\pi=(\pi_t)_{t \in [0,T]}\)</span>, we consider the performance value function defined as</p>
-<p><span class="math display">\[\begin{align}
-V_t^{\pi}(x) &amp;= \mathbb{E}_{\pi} \Big[ \int_{t}^{T} f(X_s,a_s) + \lambda \mathcal{E}(\pi(s,(X_s)) d s  + g(X_T) | X_t = x \Big] \notag \\
-&amp;=  \mathbb{E}_{\pi} \Big[ \int_{t}^{T} f(X_s,a_s) + \lambda \text{ log } \pi(s,X_s,a_s) d s  + g(X_T) | X_t = x \Big] \notag
+<p>Now, we can define the value function in the context of reinforcement learning in continuous time.</p>
+<div id="def-valuefunctionRL" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3.6 (Value function in continuous time.)</strong></span> Given a policy <span class="math inline">\(\pi=(\pi_t)_{t \in [0,T]}\)</span>, we consider the performance value function defined as</p>
+<p><span class="math display">\[
+\begin{align}
+V_t^{\pi}(x) &amp;= \mathbb{E}_{\pi} \bigg[ \int_{t}^{T} f(X_s,a_s) + \lambda \mathcal{E}(\pi(s,(X_s)) d s  + g(X_T) | X_t = x \bigg] \notag \\
+&amp;=  \mathbb{E}_{\pi} \bigg[ \int_{t}^{T} f(X_s,a_s) + \lambda \text{ log } \pi(s,X_s,a_s) d s  + g(X_T) | X_t = x \bigg] \notag
 \end{align}
-\]</span> where <span class="math inline">\(\mathbb{E}_{\pi}\)</span> denotes the expectation when <span class="math inline">\(\alpha \sim \pi\)</span> and when we added the Shannon entropy $ : (A) $ with temperature <span class="math inline">\(\lambda &gt; 0\)</span></p>
-<p><span class="math display">\[\mathcal{E}(\pi) = - \int_{A} \text{ log } \pi(a) \pi(d a)= - \mathbb{E}_{a \sim \pi} [ \text{ log } \pi(a) ],\]</span></p>
-<p>for <span class="math inline">\(\pi \in \mathcal{P}(A)\)</span> with density given by <span class="math inline">\(a \mapsto \pi(a)\)</span> used for exploration in the context of RL.</p>
-<p>The optimal value function is given for <span class="math inline">\(\pi \in \Pi\)</span> where <span class="math inline">\(\Pi\)</span> denotes an admissible class of stochastic policies as</p>
-<p><span class="math display">\[V_t(x) = \underset{\pi \in \Pi}{\sup } V_t^{\pi}(x) .\]</span></p>
+\]</span> where <span class="math inline">\(\mathbb{E}_{\pi}\)</span> denotes the expectation when <span class="math inline">\(\alpha \sim \pi\)</span> and when we added the Shannon entropy <span class="math inline">\(\mathcal{E} : \mathcal{P}(A) \to \mathbb{R}\)</span> with temperature <span class="math inline">\(\lambda &gt; 0\)</span></p>
+<p><span class="math display">\[
+\begin{align}
+\mathcal{E}(\pi) = - \int_{A} \text{ log } \pi(a) \pi(d a)= - \mathbb{E}_{a \sim \pi} [ \text{ log } \pi(a) ],
+\end{align}
+\]</span> for <span class="math inline">\(\pi \in \mathcal{P}(A)\)</span> with density given by <span class="math inline">\(a \mapsto \pi(a)\)</span>.</p>
+<p>Denoting by <span class="math inline">\(\Pi\)</span> the set of admissible policies (here we will consider the set of absolutely continuous measure with respect to Lebesgue measure), the optimal value function is defined as</p>
+<p><span id="eq-value-function"><span class="math display">\[
+\begin{align}
+V_t(x) = \underset{\pi \in \Pi}{\sup } V_t^{\pi}(x), \quad (t,x) \in [0,T] \times \mathbb{R}^d.
+\end{align}
+\tag{3.3}\]</span></span></p>
+</div>
+<div id="thm-HamiltonianAndBellmanequations" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3.2 (Hamiltonian and Bellman equations.)</strong></span> &nbsp;</p>
+<ul>
+<li>For any stochastic policy <span class="math inline">\(\pi\)</span>, the value function <span class="math inline">\(V^{\pi}\)</span> satisfies the following PDE</li>
+</ul>
+<p><span id="eq-value-function-form-fixed-policy"><span class="math display">\[
+\begin{align}
+\begin{cases}
+\frac{\partial V^{\pi}}{\partial t} (t,x) + \int_{A} \big[ H(x,a, \nabla_x V^{\pi}(t,x), D_x^2 V^{\pi}(t,x)) - \lambda \text{log}(\pi(t,x,a)) \big] \pi(t,x,a)\nu(da) &amp;= 0,\notag \\
+V^{\pi}(T,x) &amp;= g(x),
+\end{cases}
+\end{align}
+\tag{3.4}\]</span></span> where the map <span class="math inline">\(H\)</span> is called Hamiltonian function and defined as <span class="math display">\[
+\begin{align}
+H(x,a,p,M) = b(x,a) \cdot p + \frac{1}{2} \text{tr}(\sigma \sigma^{\top}(x,a) M) + f(x,a), \notag
+\end{align}
+\]</span> for <span class="math inline">\(x \in \mathbb{R}^d\)</span>, <span class="math inline">\(a \in A\)</span>, <span class="math inline">\(p \in \mathbb{R}^d\)</span>, and <span class="math inline">\(M \in \mathbb{R}^{d \times d}\)</span>.</p>
+<ul>
+<li>The Bellman equation for the value function <span class="math inline">\(V\)</span> is given by <span id="eq-value-function-form"><span class="math display">\[
+\begin{align}
+\begin{cases}
+\frac{\partial V}{\partial t} (t,x) + \underset{\pi \in \mathcal{P}(A)}{\text{ sup }} \int_{A} \big[ H(x,a, \nabla_x V^{\pi}(t,x), D_x^2 V^{\pi}(t,x)) - \lambda \text{log}(\pi(t,x,a)) \big] \pi(t,x,a)\nu(da) &amp;= 0,\notag \\
+V(T,x) &amp;= g(x),
+\end{cases}
+\end{align}
+\tag{3.5}\]</span></span></li>
+</ul>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of theses results follows from the Bellman relation for <span class="math inline">\(V^{\pi}\)</span> and <span class="math inline">\(V\)</span> by using the law of iterated conditional expectations and by applying Itô’s formula to the process <span class="math inline">\(\big(V^{\pi}(s,X_s) \big)_{t \leq s \leq T}\)</span> between <span class="math inline">\(t\)</span> and <span class="math inline">\(t+h\)</span>. The proof follows standard computations so we omit it.</p>
+</div>
+<div id="thm-optimalrandomizedpolicy" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3.3 (Optimal randomized policy.)</strong></span> The optimal randomized policy for the control problem <a href="#eq-value-function" class="quarto-xref">Equation&nbsp;<span>3.3</span></a> is given by</p>
+<p><span id="eq-optimal-randomized-policy"><span class="math display">\[
+\begin{align}
+\pi^{\star}(t,x,a) =  \frac{ \text{ exp } \big(\frac{1}{\lambda} H(x,a,D_x V(t,x), D^2_x V(t,x) \big)}{\int_{A} \text{ exp } \big(\frac{1}{\lambda} H(x,a,D_x V(t,x), D^2_x V(t,x) \big) \nu(d a) }, \quad (t,x,a) \in [0,T] \times \mathbb{R}^d \times \mathbb{R}^m.
+\end{align}
+\tag{3.6}\]</span></span></p>
+<p>The right-hand side of <a href="#eq-optimal-randomized-policy" class="quarto-xref">Equation&nbsp;<span>3.6</span></a> is called <strong>Gibbs measure</strong> and can be viewed as the continuous time of the soft-max policy.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>For a fixed <span class="math inline">\((t,x \in [0,T] \times \mathbb{R}^n)\)</span> and from <a href="#eq-value-function-form" class="quarto-xref">Equation&nbsp;<span>3.5</span></a> , we define <span class="math display">\[
+\begin{align}
+\mathbb{R}^m \ni a \mapsto F_x(a) = H(x,a, D_x V(t,x), D^2_x V(t,x)) - \lambda \text{ log } \pi(a),
+\end{align}
+\]</span> where we omit the dependance in <span class="math inline">\((t,x)\)</span> for <span class="math inline">\(\pi\)</span> for simplicity. Then, we aim to solve the optimization problem</p>
+<p><span class="math display">\[
+\begin{align}
+\underset{\pi \in \mathcal{P}(\mathbb{R}^m)}{\text{ max }} \int_{A} \big( F_x(a) - \lambda \text{ log } \pi(t,x,a) \big) \pi(t,x,a) \nu(d a)
+\end{align}
+\]</span> with the constraints <span class="math inline">\(\int_{A} \pi(a) \nu(d a) = 1\)</span> and <span class="math inline">\(\pi(a) \geq 0\)</span> <span class="math inline">\(\nu-\text{a.e.}\)</span>. Defining the lagrangian multiplier associated to theses constraints, we define the map <span class="math display">\[
+\begin{align}
+\mathcal{L}(\pi,\eta) :=  \int_{A} \big( F_x(a) - \lambda \text{ log } \pi(a)) \pi(a) \nu(d a) + \eta \big( \int_{A} \pi(a) \nu(da) - 1)
+\end{align}
+\]</span> Deriving <span class="math inline">\(\mathcal{L}\)</span> with respect to <span class="math inline">\(\eta\)</span> and taking the stationnarity condition, we have that <span class="math inline">\(\nu(\d a)-\text{ a.e}\)</span> <span class="math display">\[
+\begin{align}
+F_x(u) - \lambda \big( \text{ ln } \pi(a) +1) + \eta = 0,
+\end{align}
+\]</span> and therefore <span class="math inline">\(\pi(a) = C \text{exp}(\frac{F_x(u)}{\lambda})\)</span> for a positive constant <span class="math inline">\(C\)</span>. Using the normalization condition for <span class="math inline">\(\pi\)</span>, we get the result.</p>
+</div>
+<p>The following result is the continuous time version of the Policy iteration for MDP with the <span class="math inline">\(Q\)</span>-value function.</p>
+<div id="thm-policyimprovement" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 3.4 (Policy Improvement.)</strong></span> Define the following Gibbs operator as <span id="eq-gibbs-policy"><span class="math display">\[
+\begin{align}
+\Pi \ni \pi \mapsto \mathcal{G}(\pi)(t,x,a) = \pi'(t,x,a) := \frac{ \text{ exp } \big(\frac{1}{\lambda} H(x,a,D_x V^{\pi}(t,x), D^2_x V^{\pi}(t,x) \big)}{\int_{A} \text{ exp } \big(\frac{1}{\lambda} H(x,a,D_x V^{\pi}(t,x), D^2_x V^{\pi}(t,x) \big) \nu(d a) }, \quad (t,x,a) \in [0,T] \times \mathbb{R}^d \times \mathbb{R}^m.
+\end{align}
+\tag{3.7}\]</span></span> Then, <span class="math inline">\(V^{\pi'} \geq V^{\pi}\)</span>. Moreover, if <span class="math inline">\(\mathcal{G}\)</span> has a fixed point <span class="math inline">\(\pi^{\star}\)</span>, then <span class="math inline">\(\pi^{\star}\)</span> is an optimal policy.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>The proof of <a href="#thm-policyimprovement" class="quarto-xref">Theorem&nbsp;<span>3.4</span></a> can be found in the lecture notes and takes advantage of the Gibbs measure representation of the optimal randomized policy.</p>
 </div>
 </section>
-<section id="policy-gradient-methods-in-continous-time" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="policy-gradient-methods-in-continous-time"><span class="header-section-number">3.3.2</span> Policy gradient methods in continous time</h3>
+<section id="the-linear-quadratic-case" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="the-linear-quadratic-case"><span class="header-section-number">3.2.2</span> The linear quadratic case</h3>
+<div id="def-LQ" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3.7 (Linear quadratic in continuous time.)</strong></span> A specific subclass of control problems is the class of linear quadratic control problems where we set :</p>
+<ul>
+<li>Linear dynamics for state :</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+b(x,a) = Bx + Ca, \quad \sigma(x,a) = Dx + Fa,
+\end{align}
+\]</span> with <span class="math inline">\(x \in \mathbb{R}^d\)</span>, <span class="math inline">\(a \in \mathbb{R}^m\)</span>, <span class="math inline">\(D \in \mathbb{R}^{d \times d}\)</span> and <span class="math inline">\(F \in \mathbb{R}^{d \times m}\)</span>.</p>
+<ul>
+<li>Quadratic cost functional :</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+f(x,a) = x^{\top} Qx + a^{\top} N a, \quad g(x)= x^{\top} P x,
+\end{align}
+\]</span> with <span class="math inline">\(Q,P \in \mathbb{S}^d_{+}\)</span> and <span class="math inline">\(N \in \mathbb{S}^m_{+}\)</span>.</p>
+<p>One can show after an ansatz that the optimal value function is in the quadratic form</p>
+<p><span class="math display">\[
+\begin{align}
+V(t,x) = x^{\top} K(t) x +  \chi(t),
+\end{align}
+\]</span> for some deterministic functions <span class="math inline">\(K : [0,T] \rightarrow \mathbb{S}_{+}^d\)</span> and <span class="math inline">\(R : [0,T] \rightarrow \mathbb{R}\)</span> solutions to Ricatti and linear ODE with terminal condition $K(T)=</p>
+<p>Moreover, one can show that the optimal policy <span class="math inline">\(\pi^{\star}\)</span> is Gaussian where <span class="math inline">\(\lambda\)</span> is a term which measures the degree of exploration, i.e., associated to the variance of <span class="math inline">\(\pi^{\star}\)</span>. We refer to the slides in the course to view the associated Ricatti system.</p>
+</div>
+</section>
+<section id="policy-gradient-methods-in-continous-time" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="policy-gradient-methods-in-continous-time"><span class="header-section-number">3.2.3</span> Policy gradient methods in continous time</h3>
 <p>In the policy gradient method, we will consider parametric family of randomized policies admitting a density writh respect to <span class="math inline">\(\nu\)</span> on A given by :</p>
 <p><span class="math display">\[
 \pi_{\theta}(t,x,da) = p(t,x,a) \nu(da)
-\]</span> Therefore, the perforamnce value function which is also called critic with entropy regularizer is given by :</p>
+\]</span> Therefore, the performance value function which is also called critic with entropy regularizer is given by :</p>
 <p><span class="math display">\[
 V^{\pi_{\theta}}(t,x) = \mathbb{E}_{\pi_{\theta}} [ \int_{t}^{T} f(X_s,\alpha_s) - \lambda \text{ log } (\pi_{\theta})(s,X_s,\alpha_s) + g(X_T) | X_t= x]
 \]</span> and <span class="math display">\[
 J(\theta) = \mathbb{E}[V^{\pi_{\theta}}(0,X_0)]
 \]</span></p>
-<section id="policy-gradient-representation" class="level4" data-number="3.3.2.1">
-<h4 data-number="3.3.2.1" class="anchored" data-anchor-id="policy-gradient-representation"><span class="header-section-number">3.3.2.1</span> Policy Gradient Representation</h4>
+<section id="policy-gradient-representation" class="level4" data-number="3.2.3.1">
+<h4 data-number="3.2.3.1" class="anchored" data-anchor-id="policy-gradient-representation"><span class="header-section-number">3.2.3.1</span> Policy Gradient Representation</h4>
 <p>Let’s dive into policy gradient representation now.</p>
 </section>
-<section id="actor-critic-algorithms" class="level4" data-number="3.3.2.2">
-<h4 data-number="3.3.2.2" class="anchored" data-anchor-id="actor-critic-algorithms"><span class="header-section-number">3.3.2.2</span> Actor critic algorithms</h4>
+<section id="actor-critic-algorithms" class="level4" data-number="3.2.3.2">
+<h4 data-number="3.2.3.2" class="anchored" data-anchor-id="actor-critic-algorithms"><span class="header-section-number">3.2.3.2</span> Actor critic algorithms</h4>
 <p>Let’s dive into Actor critic algorithms</p>
 </section>
 </section>
-<section id="q-learning-and-approximations-in-continous-time" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="q-learning-and-approximations-in-continous-time"><span class="header-section-number">3.3.3</span> Q-learning and approximations in continous time</h3>
-<section id="tbd-1" class="level4" data-number="3.3.3.1">
-<h4 data-number="3.3.3.1" class="anchored" data-anchor-id="tbd-1"><span class="header-section-number">3.3.3.1</span> TBD</h4>
+<section id="q-learning-and-approximations-in-continous-time" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="q-learning-and-approximations-in-continous-time"><span class="header-section-number">3.2.4</span> Q-learning and approximations in continous time</h3>
+<section id="tbd" class="level4" data-number="3.2.4.1">
+<h4 data-number="3.2.4.1" class="anchored" data-anchor-id="tbd"><span class="header-section-number">3.2.4.1</span> TBD</h4>
 </section>
-<section id="tbd-2" class="level4" data-number="3.3.3.2">
-<h4 data-number="3.3.3.2" class="anchored" data-anchor-id="tbd-2"><span class="header-section-number">3.3.3.2</span> TBD</h4>
+<section id="tbd-1" class="level4" data-number="3.2.4.2">
+<h4 data-number="3.2.4.2" class="anchored" data-anchor-id="tbd-1"><span class="header-section-number">3.2.4.2</span> TBD</h4>
 </section>
 </section>
 </section>
-<section id="rl-algorithms-to-solve-stochastic-control-problems" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="rl-algorithms-to-solve-stochastic-control-problems"><span class="header-section-number">3.4</span> RL algorithms to solve stochastic control problems</h2>
+<section id="rl-algorithms-to-solve-stochastic-control-problems" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="rl-algorithms-to-solve-stochastic-control-problems"><span class="header-section-number">3.3</span> RL algorithms to solve stochastic control problems</h2>
 </section>
-<section id="to-go-further" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="to-go-further"><span class="header-section-number">3.5</span> To Go further</h2>
+<section id="to-go-further" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="to-go-further"><span class="header-section-number">3.4</span> To Go further</h2>
 <p>If you are interested in such topics, you can have a look at the following papers as this is a current research topic.</p>
 <ul>
 <li><p>Y. Jia and X.Y. Zhou: Policy gradient and Actor-Critic learning in continuous time and space: theory and algorithms, 2022, Journal of Machine Learning and Research. available <a href="https://arxiv.org/abs/2111.11232">here</a>.</p></li>
@@ -456,6 +579,9 @@ J(\theta) = \mathbb{E}[V^{\pi_{\theta}}(0,X_0)]
 </ul>
 
 
+</section>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
