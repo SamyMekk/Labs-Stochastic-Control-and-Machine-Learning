@@ -168,6 +168,29 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Part n°2 : Reinforcement Learning for stochastic control</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/RL/RappelsRL.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Course reminders</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/RL/TP2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lab work n°2</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -297,7 +320,7 @@ v(t,x) &amp;= \underset{\alpha \in \mathcal{A}(t,x)}{\text{ sup }}  \mathbb{E} \
 <ul>
 <li><span class="para-subtitle">Intuitive derivation of the HJB equation</span></li>
 </ul>
-<p>The Hamilton-Jacobi Bellman (HJB) equation is the infinitesimal version of the dynamic programming principle, i.e., it describes the local behavior of the value function when we send the stopping time <span class="math inline">\(\theta\)</span> in <a href="#eq-dynamicprogramming" class="quarto-xref">Equation&nbsp;<span>1.3</span></a> in <a href="#thm-DPPprinciple" class="quarto-xref">Theorem&nbsp;<span>1.1</span></a> to <span class="math inline">\(t\)</span>. The HJB equation is also called <strong>dynamic programming equation</strong>.</p>
+<p>The Hamilton-Jacobi Bellman (HJB) equation is the infinitesimal version of the <strong>dynamic programming principle</strong>, i.e., it describes the local behavior of the value function when we send the stopping time <span class="math inline">\(\theta\)</span> in <a href="#eq-dynamicprogramming" class="quarto-xref">Equation&nbsp;<span>1.3</span></a> in <a href="#thm-DPPprinciple" class="quarto-xref">Theorem&nbsp;<span>1.1</span></a> to <span class="math inline">\(t\)</span>. The HJB equation is also called <strong>dynamic programming equation</strong>.</p>
 <p>Let us consider the time <span class="math inline">\(\theta = t+h\)</span> and a constant control <span class="math inline">\(\alpha = (\alpha_t)_{t  \leq s \leq T}= a\)</span> for some arbitrary <span class="math inline">\(a \in A\)</span>. Therefore, from the relation <a href="#eq-dynamicprogramming" class="quarto-xref">Equation&nbsp;<span>1.3</span></a>, we have</p>
 <p><span id="eq-inequality-dynamicprog"><span class="math display">\[
 \begin{align}

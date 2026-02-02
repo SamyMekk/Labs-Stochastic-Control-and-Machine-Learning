@@ -17,6 +17,10 @@ book:
        chapters:
          - contents/DeepPDE/RappelsDeepPDE.qmd
          - contents/DeepPDE/TP1.qmd
+     - part: "Part n°2 : Reinforcement Learning for stochastic control"
+       chapters:
+         - contents/RL/RappelsRL.qmd
+         - contents/RL/TP2.qmd
 
     
      

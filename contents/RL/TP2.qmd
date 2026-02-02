@@ -1,6 +1,9 @@
 # Lab work n°2 
 
-You can download **Lab Work n°2: RL for stochastic control problems** as a Jupyter Notebook [here](TP2-RL/TP%20n%C2%B02-%20RL%20in%20Continuous%20Time.ipynb). All the necessary information is already included in the notebook, but a brief summary of the lab content is provided below for convenience.
+You can download **Lab Work n°2: RL for stochastic control problems** as a Jupyter Notebook [here](TP2-RL/TP%20n%C2%B02-%20RL%20in%20Continuous%20Time.ipynb). 
+^[If you end-up with a **.txt** file, download it and rename it as a **.ipynb** file.] 
+
+All the necessary informations are already included in the **notebook**^[There will be **coding** and **math** questions.].  Below is a brief summary of the lab content and some expected results.
 
 
 ## Summary of the lab 
@@ -11,14 +14,40 @@ You can download **Lab Work n°2: RL for stochastic control problems** as a Jupy
 
 <span class="para-title"> Content : </span>
 
-The lab work is divided into 2 parts :
+The Lab work is divided into 3 parts :
  
-- The first part is devoted to the implementation of Policy gradient algorithms in the context of RL in continuous time with applications to some stochastic models used in finance.
-- The second part is devoted to the use of Q-learning algorithms for RL in continuous time.
+- The first part is devoted to the implementation of some RL algorithms for solving the famous mean-variance Markowitz problem. We give below some expected plots 
 
-<span class="para-title"> Main goals : </span>
 
-I will add some plots here.
+::: {.columns}
+
+::: {.column width="50%" style="text-align: center;"}
+![Evolution of the loss in the PDE learning of the call price](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png){fig-align="center"}
+:::
+
+::: {.column width="50%" style="text-align: center;"}
+![Price surface $(t,s) \mapsto C(t,s)$ for a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.png){fig-align="center" width=90%}
+:::
+
+:::
+
+- The second part is devoted to the implementation of some RL algorithms for solving a Market impact problem. We give below some expected plots 
+
+
+::: {.columns}
+
+::: {.column width="50%" style="text-align: center;"}
+![Evolution of the loss for $y_0$ in the LQ control problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/LossLinearQuadraticControlProblem.png){fig-align="center" .center-caption}
+:::
+
+::: {.column width="50%" style="text-align: center;"}
+![Evolution of $y_0$ in the LQ control problem ](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/y0LinearQuadraticControlProblem.png){fig-align="center" .center-caption}
+:::
+
+:::
+
+
+- The third  part is devoted to retrieve the results of the course on  the optimal policy for the linear quadratic control problems in continuous time, i.e. to recover the associated Ricatti equations.
 
 :::
 
@@ -27,8 +56,16 @@ I will add some plots here.
 
 ::: {#alg-description .algorithm}
 
-Add here what is expected for the mini-project.
+The project will be fairly open-ended, allowing you to explore on your own the use of **Reinforcement Learning algorithms** to solve **stochastic control problems**. The expected workload corresponds to approximately one full weekend of work.
 
+You may be asked to reproduce results from selected research papers. For more ambitious students, we may also propose some topics  which will rely on the methods studied in lectures and tutorials to address more challenging control problems.
+
+If you already have other project ideas in mind that make use of the methods covered during the course, please feel free to inform us in advance (**between today and second week of February**) so that the project can potentially be validated.
+
+In all cases, the final mini-project will require the **submission of a PDF report of at most 8 pages**. The report should include the references to the papers used, a clear formulation of the problem addressed in these papers, a description of the numerical methods employed, as well as your numerical results. You will also need to **submit the associated code** (either in **.py** or **.ipynb** format). 
+
+The mini-project^[i.e., the list of proposed papers along with the expected work, as well as alternative, more challenging project options.]  will be announced at the end of the third tutorial session on generative models, which will take place on **February 19**.^[A follow-up **email** will be sent to recall you to complete the Excel sheet available [here](https://docs.google.com/spreadsheets/d/1H2ZDF7BeY9pMEMaEnG-JyBBCpDcvnkJcoZzA4M7mCMo/edit?gid=0#gid=0) to choose your lab.] 
+The **submission deadline** for the mini-project and the answers to the lab session^[**No PDF submission** is required for the lab session answers. The answers should be written directly in the **Jupyter notebook** and submitted along with the documents associated with the mini-project.] will be announced later.
 :::
 
 
