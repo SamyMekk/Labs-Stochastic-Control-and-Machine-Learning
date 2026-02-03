@@ -175,7 +175,7 @@
     "href": "contents/RL/TP2.html",
     "title": "4  Lab work n°2",
     "section": "",
-    "text": "4.1 Summary of the lab\nYou can download Lab Work n°2: RL for stochastic control problems as a Jupyter Notebook here. 1\nAll the necessary informations are already included in the notebook2. Below is a brief summary of the lab content and some expected results.",
+    "text": "4.1 Summary of the lab\nYou can download Lab Work n°2: RL for stochastic control problems as a Jupyter Notebook here.1\nAll the necessary informations are already included in the notebook2. Below is a brief summary of the lab content and some expected results.",
     "crumbs": [
       "Part n°2 : Reinforcement Learning for stochastic control",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab work n°2</span>"
@@ -186,7 +186,7 @@
     "href": "contents/RL/TP2.html#summary-of-the-lab",
     "title": "4  Lab work n°2",
     "section": "",
-    "text": "Content : \nThe Lab work is divided into 2 parts :\n\nThe first part is devoted to the implementation of some RL algorithms for solving a Market impact problem. We give an expected plot for the evolution of the sum of the rewards for the market impact problem\n\n\n\n\n\n\n\nThe third part is devoted to retrieve the results of the course on the optimal policy for the linear quadratic control problems in continuous time, i.e. to recover the associated Ricatti equations.",
+    "text": "Content : \nThe Lab work is divided into 2 parts :\n\nThe first part is devoted to the implementation of some RL algorithms for solving a market impact problem. We give an expected plot for the evolution of the sum of the rewards for the market impact problem\n\n\n\n\n\n\n\nThe second part is devoted to retrieve the results of the course on the optimal policy for the linear quadratic control problems in continuous time, i.e. to recover the associated Ricatti equations and the associated optimal policy.",
     "crumbs": [
       "Part n°2 : Reinforcement Learning for stochastic control",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab work n°2</span>"
