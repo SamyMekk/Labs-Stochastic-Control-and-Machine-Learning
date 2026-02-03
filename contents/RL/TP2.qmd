@@ -16,13 +16,13 @@ All the necessary informations are already included in the **notebook**^[There w
 
 The Lab work is divided into 2 parts :
  
-- The first part is devoted to the implementation of some RL algorithms for solving a Market impact problem. We give below some expected plots 
+- The first part is devoted to the implementation of some RL algorithms for solving a Market impact problem. We give an expected plot 
 
 
 ::: {.columns}
 
 ::: {.column width="50%" style="text-align: center;"}
-![Evolution of the loss for $y_0$ in the LQ control problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/RL/SarsaQlearningtables.png){fig-align="center" .center-caption}
+![Evolution of the  sum of the rewards for the market impact problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/RL/SarsaQlearningtables.png){fig-align="center" .center-caption}
 
 :::
 
