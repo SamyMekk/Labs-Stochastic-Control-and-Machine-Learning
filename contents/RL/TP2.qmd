@@ -16,18 +16,13 @@ All the necessary informations are already included in the **notebook**^[There w
 
 The Lab work is divided into 2 parts :
  
-- The first part is devoted to the implementation of some RL algorithms for solving a Market impact problem. We give an expected plot 
+- The first part is devoted to the implementation of some RL algorithms for solving a **market impact** problem. We give an **expected plot** for the evolution of the sum of the rewards for the **market impact** problem
 
 
-::: {.columns}
-
-::: {.column width="50%" style="text-align: center;"}
-![Evolution of the  sum of the rewards for the market impact problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/RL/SarsaQlearningtables.png){fig-align="center" .center-caption}
-
-:::
+![](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/RL/SarsaQlearningtables.png){fig-align="center" width="40%"}
 
 
-- The third  part is devoted to retrieve the results of the course on  the optimal policy for the linear quadratic control problems in continuous time, i.e. to recover the associated Ricatti equations.
+- The second  part is devoted to retrieve the results of the course on  the optimal policy for the linear quadratic control problems in continuous time, i.e. to recover the associated **Ricatti** equations and the associated **optimal** policy.
 
 :::
 
