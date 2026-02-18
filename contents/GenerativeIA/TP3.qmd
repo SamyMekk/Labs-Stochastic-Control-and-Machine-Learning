@@ -25,11 +25,13 @@ The Lab work is divided into 2 parts :
 ::: {.columns}
 
 
-<div style="text-align: center;">
+<figure style="text-align: center;">
   <img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/garch_data.png"
-       alt="GARCH process - SBTS samples vs real samples"
-       style="max-width: 100%;">
-</div>
+       style="max-width: 70%;">
+  <figcaption>
+    GARCH process – SBTS samples vs real samples
+  </figcaption>
+</figure>
 
 - The second part is devoted to the study of the O-U process. You will generate **SBTS** samples of the **O-U** process and estimate the **parameters** of your **SBTS samples** vs the ones of the real O-U process.
   
@@ -40,13 +42,23 @@ The Lab work is divided into 2 parts :
 
 ::: {.columns}
 
-::: {.column width="100%" style="text-align: center;"}
-![Evolution of the loss for $y_0$ in the LQ control problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_data.png){fig-align="center" .center-caption}
-:::
+<figure style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_data.png"
+       style="max-width: 70%;">
+  <figcaption>
+    OU process – SBTS samples vs real samples
+  </figcaption>
+</figure>
 
-::: {.column width="100%" style="text-align: center;"}
-![Evolution of $y_0$ in the LQ control problem ](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_distrib.png){fig-align="center" .center-caption}
-:::
+
+<figure style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_distrib.png"
+       style="max-width: 70%;">
+  <figcaption>
+    OU parameter distributions – SBTS samples vs real samples
+  </figcaption>
+</figure>
+
 
 :::
 
