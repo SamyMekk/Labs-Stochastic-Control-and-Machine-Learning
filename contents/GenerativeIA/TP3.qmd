@@ -71,26 +71,10 @@ We give below some expected plots that you should obtain after finishing this pa
 
 ::: {#alg-description .algorithm}
 
-The project for you will be to choose a **time-series dataset** and focus on **data augmentation** using the SBTS algorithm. 
-The primary goal is to demonstrate how SBTS-generated samples can help improve model performance on a task of your choice.
-You will have freedom to select
+The project for the **GenAI for data generation** can be found at the end the PDF file by clicking [here](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/contents/GenerativeIA/PDF-File/Lab3_GenAI_DataGeneration.pdf).
 
-- Any **time series dataset** from any domain
-- Find any problem or task where synthetic data can be beneficial. This could include, but not limited to **data augmentation**,
-**data imputation**, **scenario simulation** or **stress testing**.
-- Anomaly detection.
-- Any other use case relevant to your interests.
-
-Your project should include
-
-- A **clear description** of your chosen dataset and task.
-- An **explanation** of how and why you use synthetic data generation.
-- Implementation details, including parameters choice for the **SBTS method**.
-- **Model training** and **evaluation protocols**, with comparison when applicable.
-- An analysis discussing the impact and benefits of **synthetic data** in your context.
-
-
-**Creativity** and **critical analysis** will be important criteria for assessment. Feel free to explore and justify your choices freely
+- Please do not forget to indicate your name on the Excel sheet [here](https://docs.google.com/spreadsheets/d/1H2ZDF7BeY9pMEMaEnG-JyBBCpDcvnkJcoZzA4M7mCMo/edit?gid=0#gid=0).
+- Recall that the **submission deadline** for the mini-project and the answers to the lab session^[**No PDF submission** is required for the lab session answers. The answers should be written directly in the **Jupyter notebook** and submitted along with the documents associated with the mini-project.] is set to **31 March 2026**.
 :::
 
     

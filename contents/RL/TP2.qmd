@@ -30,16 +30,10 @@ The Lab work is divided into 2 parts :
 
 ::: {#alg-description .algorithm}
 
-The project will be fairly open-ended, allowing you to explore on your own the use of **Reinforcement Learning algorithms** to solve **stochastic control problems**. The expected workload corresponds to approximately one full weekend of work.
+The list of potential projects for the ** Reinforcement Learning for stochastic control problems** can be found in the PDF file by clicking [here]().
 
-You may be asked to reproduce results from selected research papers. For more ambitious students, we may also propose some topics  which will rely on the methods studied in lectures and tutorials to address more challenging control problems.
-
-If you already have other project ideas in mind that make use of the methods covered during the course, please feel free to inform us in advance (**between today and second week of February**) so that the project can potentially be validated.
-
-In all cases, the final mini-project will require the **submission of a PDF report of at most 8 pages**. The report should include the references to the papers used, a clear formulation of the problem addressed in these papers, a description of the numerical methods employed, as well as your numerical results. You will also need to **submit the associated code** (either in **.py** or **.ipynb** format). 
-
-The mini-project^[i.e., the list of proposed papers along with the expected work, as well as alternative, more challenging project options.]  will be announced at the end of the third tutorial session on generative models, which will take place on **February 19**.^[A follow-up **email** will be sent to recall you to complete the Excel sheet available [here](https://docs.google.com/spreadsheets/d/1H2ZDF7BeY9pMEMaEnG-JyBBCpDcvnkJcoZzA4M7mCMo/edit?gid=0#gid=0) to choose your lab.] 
-The **submission deadline** for the mini-project and the answers to the lab session^[**No PDF submission** is required for the lab session answers. The answers should be written directly in the **Jupyter notebook** and submitted along with the documents associated with the mini-project.] will be announced later.
+- Please do not forget to indicate your name on the Excel sheet [here](https://docs.google.com/spreadsheets/d/1H2ZDF7BeY9pMEMaEnG-JyBBCpDcvnkJcoZzA4M7mCMo/edit?gid=0#gid=0).
+- Recall that the **submission deadline** for the mini-project and the answers to the lab session^[**No PDF submission** is required for the lab session answers. The answers should be written directly in the **Jupyter notebook** and submitted along with the documents associated with the mini-project.] is set to **31 March 2026**.
 :::
 
 
