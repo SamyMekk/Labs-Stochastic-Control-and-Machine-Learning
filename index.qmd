@@ -49,7 +49,10 @@ The third lab session will be about **Generative IA** for data generation based 
 
 You will have to choose **one lab (TP)** among the three proposed by modifying the column named **"Lab Choice"** associated to your name directly on the  **Excel sheet** available [here](https://docs.google.com/spreadsheets/d/1H2ZDF7BeY9pMEMaEnG-JyBBCpDcvnkJcoZzA4M7mCMo/edit?gid=0#gid=0). Note that the project has to be done by **groups** of **2** or **3**.
 
-Your objective will be to answer the **questions** of the chosen lab, and an open-ended **mini-project** will be proposed at the end of it. 
+Your objective will be to answer the **questions** of the chosen lab, and an open-ended **mini-project** will be proposed at the 
+end of it. The mini-project will require the **submission of a PDF report of at most 8 pages**. The report should include the references to the papers used, a clear formulation of the problem addressed in these papers, a description of the numerical methods employed, as well as your numerical results. You will also need to **submit the associated code** (either in **.py** or **.ipynb** format). 
+
+The final **deadline** for the **submission** of  the project and the associated lab is fixed to the end of **31 March 2026**.
 
 **The final grade** will be based on both the **lab questions** and the **mini-project**. In any case, the **final course grade** will be calculated as follows:
 

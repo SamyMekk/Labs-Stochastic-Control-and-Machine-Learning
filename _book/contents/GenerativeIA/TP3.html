@@ -68,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../utils/styles.css">
 </head>
@@ -218,6 +189,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#summary-of-the-lab" id="toc-summary-of-the-lab" class="nav-link active" data-scroll-target="#summary-of-the-lab"><span class="header-section-number">5.1</span> Summary of the lab</a></li>
+  <li><a href="#towards-the-open-ended-mini-project" id="toc-towards-the-open-ended-mini-project" class="nav-link" data-scroll-target="#towards-the-open-ended-mini-project"><span class="header-section-number">5.2</span> Towards the open ended mini-project</a></li>
   </ul>
 </nav>
     </div>
@@ -268,57 +240,42 @@ $$
 <h2 data-number="5.1" class="anchored" data-anchor-id="summary-of-the-lab"><span class="header-section-number">5.1</span> Summary of the lab</h2>
 <div id="alg-description" class="algorithm">
 <p><span class="para-title"> Content : </span></p>
-<p>The Lab work is divided into 2 parts :</p>
+<p>The lab work is divided into 2 parts :</p>
 <ul>
-<li>The first part is devoted to the implementation of the SBTS algorithm via the implementation of the optimal drift using kernel methods. Here are some expected plots</li>
+<li>The first part is devoted to the implementation of the SBTS algorithm via the implementation of the <strong>optimal drift</strong> using <strong>kernel methods</strong>.</li>
 </ul>
+<p>We give below some expected plots that you should obtain after finishing this part.</p>
 <div class="columns">
-<div style="text-align: center;">
-<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/garch_data.png" alt="GARCH process - SBTS samples vs real samples" style="max-width: 100%;"></p>
-</div><ul>
+<figure style="text-align: center;" class="figure"><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/garch_data.png" style="max-width: 70%;" class="figure-img"><figcaption>GARCH process – SBTS samples vs real samples</figcaption></figure><ul>
 <li>The second part is devoted to the study of the O-U process. You will generate <strong>SBTS</strong> samples of the <strong>O-U</strong> process and estimate the <strong>parameters</strong> of your <strong>SBTS samples</strong> vs the ones of the real O-U process.</li>
 </ul><p>We give below some <strong>expected plots</strong> that you should obtain after finishing this part.</p><div class="columns">
-<div class="column" style="text-align: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_data.png" class="center-caption img-fluid figure-img"></p>
-<figcaption>Evolution of the loss for <span class="math inline">\(y_0\)</span> in the LQ control problem</figcaption>
-</figure>
-</div>
-</div><div class="column" style="text-align: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_distrib.png" class="center-caption img-fluid figure-img"></p>
-<figcaption>Evolution of <span class="math inline">\(y_0\)</span> in the LQ control problem</figcaption>
-</figure>
+<figure style="text-align: center;" class="figure"><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_data.png" style="max-width: 70%;" class="figure-img"><figcaption>OU process – SBTS samples vs real samples</figcaption></figure><figure style="text-align: center;" class="figure"><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_distrib.png" style="max-width: 70%;" class="figure-img"><figcaption>OU parameter distributions – SBTS samples vs real samples</figcaption></figure>
 </div>
 </div>
 </div>
-</div>
+</section>
 <section id="towards-the-open-ended-mini-project" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="towards-the-open-ended-mini-project"><span class="header-section-number">5.2</span> Towards the open ended mini-project</h2>
 <div id="alg-description" class="algorithm">
 <p>The project for you will be to choose a <strong>time-series dataset</strong> and focus on <strong>data augmentation</strong> using the SBTS algorithm. The primary goal is to demonstrate how SBTS-generated samples can help improve model performance on a task of your choice. You will have freedom to select</p>
 <ul>
-<li>Any time series dataset from any domain</li>
+<li>Any <strong>time series dataset</strong> from any domain</li>
 <li>Find any problem or task where synthetic data can be beneficial. This could include, but not limited to <strong>data augmentation</strong>, <strong>data imputation</strong>, <strong>scenario simulation</strong> or <strong>stress testing</strong>.</li>
-<li>Anomaly detection</li>
-<li>Any other use case relevant to your interests</li>
+<li>Anomaly detection.</li>
+<li>Any other use case relevant to your interests.</li>
 </ul>
 <p>Your project should include</p>
 <ul>
 <li>A <strong>clear description</strong> of your chosen dataset and task.</li>
 <li>An <strong>explanation</strong> of how and why you use synthetic data generation.</li>
-<li>Implementation details, including parameters choice for the SBTS method.</li>
+<li>Implementation details, including parameters choice for the <strong>SBTS method</strong>.</li>
 <li><strong>Model training</strong> and <strong>evaluation protocols</strong>, with comparison when applicable.</li>
-<li>An analysis discussing the impact and benefits of synthetic data in your context.</li>
+<li>An analysis discussing the impact and benefits of <strong>synthetic data</strong> in your context.</li>
 </ul>
 <p><strong>Creativity</strong> and <strong>critical analysis</strong> will be important criteria for assessment. Feel free to explore and justify your choices freely</p>
 </div>
 
 
-</section>
-</div>
 </section>
 
 </main> <!-- /main -->

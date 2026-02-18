@@ -15,9 +15,11 @@ All the necessary information is already included in the PDF file. Below is a br
 
 <span class="para-title"> Content : </span>
 
-The Lab work is divided into 2 parts : 
+The lab work is divided into 2 parts : 
 
-- The first part is devoted to the implementation of the SBTS algorithm via the implementation of the optimal drift using kernel methods. Here are some expected plots
+- The first part is devoted to the implementation of the SBTS algorithm via the implementation of the **optimal drift** using **kernel methods**.
+  
+We give below some expected plots that you should obtain after finishing this part.
 
 
 
@@ -35,7 +37,6 @@ The Lab work is divided into 2 parts :
 
 - The second part is devoted to the study of the O-U process. You will generate **SBTS** samples of the **O-U** process and estimate the **parameters** of your **SBTS samples** vs the ones of the real O-U process.
   
-
  We give below some **expected plots** that you should obtain after finishing this part.
 
 
@@ -63,6 +64,7 @@ The Lab work is divided into 2 parts :
 :::
 
 :::
+:::
 
 ## Towards the open ended mini-project
 
@@ -73,19 +75,19 @@ The project for you will be to choose a **time-series dataset** and focus on **d
 The primary goal is to demonstrate how SBTS-generated samples can help improve model performance on a task of your choice.
 You will have freedom to select
 
-- Any time series dataset from any domain
+- Any **time series dataset** from any domain
 - Find any problem or task where synthetic data can be beneficial. This could include, but not limited to **data augmentation**,
 **data imputation**, **scenario simulation** or **stress testing**.
-- Anomaly detection
-- Any other use case relevant to your interests
+- Anomaly detection.
+- Any other use case relevant to your interests.
 
 Your project should include
 
 - A **clear description** of your chosen dataset and task.
 - An **explanation** of how and why you use synthetic data generation.
-- Implementation details, including parameters choice for the SBTS method.
+- Implementation details, including parameters choice for the **SBTS method**.
 - **Model training** and **evaluation protocols**, with comparison when applicable.
-- An analysis discussing the impact and benefits of synthetic data in your context.
+- An analysis discussing the impact and benefits of **synthetic data** in your context.
 
 
 **Creativity** and **critical analysis** will be important criteria for assessment. Feel free to explore and justify your choices freely
