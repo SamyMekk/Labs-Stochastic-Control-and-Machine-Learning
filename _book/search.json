@@ -120,7 +120,7 @@
     "href": "contents/DeepPDE/TP1.html#towards-the-open-ended-project",
     "title": "2  Lab work n°1",
     "section": "2.2 Towards the open ended project",
-    "text": "2.2 Towards the open ended project\n\nThe list of potential projects for the Deep Learning for PDE can be found in the PDF file by clicking here.\nPlease do not forget to indicate your name on the Excel sheet here and recall that the submission deadline for the mini-project and the answers to the lab session3 is set to 31 March 2026.",
+    "text": "2.2 Towards the open ended project\n\nThe list of potential projects for the Deep Learning for PDE can be found in the PDF file by clicking here.\n\nPlease do not forget to indicate your name on the Excel sheet here.\nRecall that the submission deadline for the mini-project and the answers to the lab session3 is set to 31 March 2026.",
     "crumbs": [
       "Part n°1 : Deep Learning for PDE",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab work n°1</span>"
@@ -197,7 +197,7 @@
     "href": "contents/RL/TP2.html#towards-the-open-ended-mini-project",
     "title": "4  Lab work n°2",
     "section": "4.2 Towards the open ended mini-project",
-    "text": "4.2 Towards the open ended mini-project\n\nThe project will be fairly open-ended, allowing you to explore on your own the use of Reinforcement Learning algorithms to solve stochastic control problems. The expected workload corresponds to approximately one full weekend of work.\nYou may be asked to reproduce results from selected research papers. For more ambitious students, we may also propose some topics which will rely on the methods studied in lectures and tutorials to address more challenging control problems.\nIf you already have other project ideas in mind that make use of the methods covered during the course, please feel free to inform us in advance (between today and second week of February) so that the project can potentially be validated.\nIn all cases, the final mini-project will require the submission of a PDF report of at most 8 pages. The report should include the references to the papers used, a clear formulation of the problem addressed in these papers, a description of the numerical methods employed, as well as your numerical results. You will also need to submit the associated code (either in .py or .ipynb format).\nThe mini-project3 will be announced at the end of the third tutorial session on generative models, which will take place on February 19.4 The submission deadline for the mini-project and the answers to the lab session5 will be announced later.",
+    "text": "4.2 Towards the open ended mini-project\n\nThe list of potential projects for the ** Reinforcement Learning for stochastic control problems** can be found in the PDF file by clicking here.\n\nPlease do not forget to indicate your name on the Excel sheet here.\nRecall that the submission deadline for the mini-project and the answers to the lab session3 is set to 31 March 2026.",
     "crumbs": [
       "Part n°2 : Reinforcement Learning for stochastic control",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab work n°2</span>"
@@ -208,7 +208,7 @@
     "href": "contents/RL/TP2.html#footnotes",
     "title": "4  Lab work n°2",
     "section": "",
-    "text": "If you end-up with a .txt file, download it and rename it as a .ipynb file.↩︎\nThere will be coding and math questions.↩︎\ni.e., the list of proposed papers along with the expected work, as well as alternative, more challenging project options.↩︎\nA follow-up email will be sent to recall you to complete the Excel sheet available here to choose your lab.↩︎\nNo PDF submission is required for the lab session answers. The answers should be written directly in the Jupyter notebook and submitted along with the documents associated with the mini-project.↩︎",
+    "text": "If you end-up with a .txt file, download it and rename it as a .ipynb file.↩︎\nThere will be coding and math questions.↩︎\nNo PDF submission is required for the lab session answers. The answers should be written directly in the Jupyter notebook and submitted along with the documents associated with the mini-project.↩︎",
     "crumbs": [
       "Part n°2 : Reinforcement Learning for stochastic control",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab work n°2</span>"
@@ -241,7 +241,7 @@
     "href": "contents/GenerativeIA/TP3.html#towards-the-open-ended-mini-project",
     "title": "5  Lab work n°3",
     "section": "5.2 Towards the open ended mini-project",
-    "text": "5.2 Towards the open ended mini-project\n\nThe project for you will be to choose a time-series dataset and focus on data augmentation using the SBTS algorithm. The primary goal is to demonstrate how SBTS-generated samples can help improve model performance on a task of your choice. You will have freedom to select\n\nAny time series dataset from any domain\nFind any problem or task where synthetic data can be beneficial. This could include, but not limited to data augmentation, data imputation, scenario simulation or stress testing.\nAnomaly detection.\nAny other use case relevant to your interests.\n\nYour project should include\n\nA clear description of your chosen dataset and task.\nAn explanation of how and why you use synthetic data generation.\nImplementation details, including parameters choice for the SBTS method.\nModel training and evaluation protocols, with comparison when applicable.\nAn analysis discussing the impact and benefits of synthetic data in your context.\n\nCreativity and critical analysis will be important criteria for assessment. Feel free to explore and justify your choices freely",
+    "text": "5.2 Towards the open ended mini-project\n\nThe project for the GenAI for data generation can be found at the end the PDF file by clicking here.\n\nPlease do not forget to indicate your name on the Excel sheet here.\nRecall that the submission deadline for the mini-project and the answers to the lab session1 is set to 31 March 2026.",
     "crumbs": [
       "Part n°3 : GenAI for data generation",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lab work n°3</span>"
