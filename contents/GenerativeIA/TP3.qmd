@@ -17,20 +17,19 @@ All the necessary information is already included in the PDF file. Below is a br
 
 The Lab work is divided into 2 parts : 
 
-- The first part is devoted to the implementation of the optimal process.
+- The first part is devoted to the implementation of the SBTS algorithm via the implementation of the optimal drift using kernel methods. Here are some expected plots
 
 
 
 
 ::: {.columns}
 
-::: {.column width="50%" style="text-align: center;"}
-![](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/garch_data.png){fig-align="center"}
-:::
 
-:::
-
-
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/garch_data.png"
+       alt="GARCH process - SBTS samples vs real samples"
+       style="max-width: 100%;">
+</div>
 
 - The second part is devoted to the study of the O-U process. You will generate **SBTS** samples of the **O-U** process and estimate the **parameters** of your **SBTS samples** vs the ones of the real O-U process.
   
