@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Lab work n°3 – Lab sessions : Stochastic Control and Machine Learning</title>
+<title>5&nbsp; Lab work n°3 – Lab sessions : Stochastic Control and Machine Learning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../References.html" rel="next">
-<link href="../../contents/GenerativeIA/RappelsGenAI.html" rel="prev">
+<link href="../../contents/RL/TP2.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -111,7 +110,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/GenerativeIA/RappelsGenAI.html">Part n°3 : Generative AI for data generation</a></li><li class="breadcrumb-item"><a href="../../contents/GenerativeIA/TP3.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab work n°3</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/GenerativeIA/TP3.html">Part n°3 : GenAI for data generation</a></li><li class="breadcrumb-item"><a href="../../contents/GenerativeIA/TP3.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lab work n°3</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -171,7 +170,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Part n°2 : Reinforcement Learning for stochastic control problems</span></a>
+ <span class="menu-text">Part n°2 : Reinforcement Learning for stochastic control</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -194,7 +193,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Part n°3 : Generative AI for data generation</span></a>
+ <span class="menu-text">Part n°3 : GenAI for data generation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -202,24 +201,12 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/GenerativeIA/RappelsGenAI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Course reminders</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../contents/GenerativeIA/TP3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab work n°3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lab work n°3</span></span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../References.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -230,9 +217,8 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary-of-the-lab" id="toc-summary-of-the-lab" class="nav-link active" data-scroll-target="#summary-of-the-lab"><span class="header-section-number">6.1</span> Summary of the lab</a></li>
-  <li><a href="#towards-the-open-ended-mini-project" id="toc-towards-the-open-ended-mini-project" class="nav-link" data-scroll-target="#towards-the-open-ended-mini-project"><span class="header-section-number">6.2</span> Towards the open ended mini-project</a></li>
-  <li><a href="#expected-results" id="toc-expected-results" class="nav-link" data-scroll-target="#expected-results"><span class="header-section-number">6.3</span> Expected results</a></li>
+  <li><a href="#summary-of-the-lab" id="toc-summary-of-the-lab" class="nav-link active" data-scroll-target="#summary-of-the-lab"><span class="header-section-number">5.1</span> Summary of the lab</a></li>
+  <li><a href="#towards-the-open-ended-mini-project" id="toc-towards-the-open-ended-mini-project" class="nav-link" data-scroll-target="#towards-the-open-ended-mini-project"><span class="header-section-number">5.2</span> Towards the open ended mini-project</a></li>
   </ul>
 </nav>
     </div>
@@ -258,9 +244,9 @@ $$
 
 </p></div>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/GenerativeIA/RappelsGenAI.html">Part n°3 : Generative AI for data generation</a></li><li class="breadcrumb-item"><a href="../../contents/GenerativeIA/TP3.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab work n°3</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../contents/GenerativeIA/TP3.html">Part n°3 : GenAI for data generation</a></li><li class="breadcrumb-item"><a href="../../contents/GenerativeIA/TP3.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lab work n°3</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab work n°3</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lab work n°3</span></h1>
 </div>
 
 
@@ -277,50 +263,85 @@ $$
 </header>
 
 
-<p>You can download the <strong>Lab work n°3</strong> as a PDF file by clicking <a href="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/contents/GenerativeIA/PDF-File/LabWork3_SchrodingerBridge.pdf">here</a>. All the necessary information is already included in the PDF file, but a brief summary of the lab content is provided below for convenience.</p>
-<section id="summary-of-the-lab" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="summary-of-the-lab"><span class="header-section-number">6.1</span> Summary of the lab</h2>
+<p>You can download the <strong>Lab work n°3</strong> as a PDF file by clicking <a href="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/contents/GenerativeIA/PDF-File/Lab3_GenAI_DataGeneration.pdf">here</a>.</p>
+<p>All the necessary information is already included in the PDF file. Below is a brief summary of the lab content and some expected results.</p>
+<section id="summary-of-the-lab" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="summary-of-the-lab"><span class="header-section-number">5.1</span> Summary of the lab</h2>
 <div id="alg-description" class="algorithm">
 <p><span class="para-title"> Content : </span></p>
-<p>The lab work is divided into 2 parts :</p>
+<p>The Lab work is divided into 2 parts :</p>
 <ul>
-<li>TBD</li>
-<li>TBD</li>
+<li>The first part is devoted to the implementation of the <strong>Deep Galerkin algorithm</strong> where you are going to test it on various PDEs arising in <strong>finance</strong>. We give below some <strong>expected plots</strong> that you should obtain after finishing this part.</li>
 </ul>
-<p><span class="para-title"> Main goals : </span></p>
-<p>I will add some plots here.</p>
-</div>
-</section>
-<section id="towards-the-open-ended-mini-project" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="towards-the-open-ended-mini-project"><span class="header-section-number">6.2</span> Towards the open ended mini-project</h2>
-<div id="alg-description" class="algorithm">
-<p>Add here what is expected for the mini-project.</p>
-</div>
-</section>
-<section id="expected-results" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="expected-results"><span class="header-section-number">6.3</span> Expected results</h2>
-<div style="text-align: center;">
-<img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/videos/animation.gif" alt="Animation" style="display: block; margin: 0 auto; max-width: 40%; height: auto;">
-<p>
-<em>Animation ici</em>
-</p>
-</div>
-<div class="text-center">
+<div class="columns">
+<div class="column" style="text-align: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg" class="img-fluid figure-img" style="width:40.0%"></p>
-<figcaption>Optimal transport from <span class="math inline">\(\mathbf{\delta_{x}}\)</span> to Gaussian</figcaption>
+<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png" class="img-fluid figure-img"></p>
+<figcaption>Evolution of the loss in the PDE learning of the call price</figcaption>
 </figure>
 </div>
-<figure style="text-align: center; margin: 0;" class="figure">
-<img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg" alt="Ma belle image" style="display: block; margin: 0 auto; max-width: 40%; height: auto;" class="figure-img">
-<figcaption style="font-size: 0.9em; color: #333; margin-top: 0.5em;">
-<p>Optimal transport from Dirac distribution to Gaussian</p>
-</figcaption>
+</div><div class="column" style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Price surface <span class="math inline">\((t,s) \mapsto C(t,s)\)</span> for a call option</figcaption>
 </figure>
-
-
 </div>
+</div>
+</div>
+<ul>
+<li><p>The second part is devoted to the study of the O-U process. You will be</p></li>
+<li><p>Generate SBTS samples of the O-U process</p></li>
+<li><p>Estimate the parameters of your SBTS samples vs the ones of the real O-U process.</p></li>
+</ul>
+<p>We give below some <strong>expected plots</strong> that you should obtain after finishing this part.</p>
+<div class="columns">
+<div class="column" style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_data.png" class="center-caption img-fluid figure-img"></p>
+<figcaption>Evolution of the loss for <span class="math inline">\(y_0\)</span> in the LQ control problem</figcaption>
+</figure>
+</div>
+</div><div class="column" style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_distrib.png" class="center-caption img-fluid figure-img"></p>
+<figcaption>Evolution of <span class="math inline">\(y_0\)</span> in the LQ control problem</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="towards-the-open-ended-mini-project" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="towards-the-open-ended-mini-project"><span class="header-section-number">5.2</span> Towards the open ended mini-project</h2>
+<div id="alg-description" class="algorithm">
+<p>The project for you will be to choose a time-series dataset and focus on data augmentation using the SBTS algorithm. The primary goal is to demonstrate how SBTS-generated samples can help improve model performance on a task of your choice. You will have freedom to select</p>
+<ul>
+<li>Any time series dataset from any domain</li>
+<li>Find any problem or task where synthetic data can be beneficial. This could include, but not limited to
+<ul>
+<li>Data augmentation</li>
+<li>Data imputation</li>
+<li>Scenario simulation or stress testing</li>
+</ul></li>
+<li>Anomaly detection</li>
+<li>Any other use case relevant to your interests</li>
+</ul>
+<p>Your project should include</p>
+<ul>
+<li>A clear description of your chosen dataset and task.</li>
+<li>An explanation of how and why you use synthetic data generation.</li>
+<li>Implementation details, including parameters choice for the SBTS method.</li>
+<li>Model training and evalaution protocols, with comparison when applicable.</li>
+<li>An analysis discussing the impact and benefits of synthetic data in your context.</li>
+</ul>
+<p>Creativity and critical analysis will be important criteria for assessment. Feel free to explore and justify your choices freely</p>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -746,14 +767,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../contents/GenerativeIA/RappelsGenAI.html" class="pagination-link" aria-label="Course reminders">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Course reminders</span></span>
+      <a href="../../contents/RL/TP2.html" class="pagination-link" aria-label="Lab work n°2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lab work n°2</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../References.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

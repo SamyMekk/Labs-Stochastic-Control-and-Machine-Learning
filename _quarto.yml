@@ -21,6 +21,9 @@ book:
        chapters:
          - contents/RL/RappelsRL.qmd
          - contents/RL/TP2.qmd
+     - part: "Part n°3 : GenAI for data generation"
+       chapters:
+         - contents/GenerativeIA/TP3.qmd
 
     
      

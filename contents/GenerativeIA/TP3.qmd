@@ -1,7 +1,9 @@
 # Lab work n°3  
 
-You can download the **Lab work n°3** as a PDF file by clicking [here](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/contents/GenerativeIA/PDF-File/LabWork3_SchrodingerBridge.pdf).
-All the necessary information is already included in the PDF file, but a brief summary of the lab content is provided below for convenience.
+You can download the **Lab work n°3** as a PDF file by clicking [here](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/contents/GenerativeIA/PDF-File/Lab3_GenAI_DataGeneration.pdf).
+
+
+All the necessary information is already included in the PDF file. Below is a brief summary of the lab content and some expected results.
 
 
 ## Summary of the lab 
@@ -13,14 +15,48 @@ All the necessary information is already included in the PDF file, but a brief s
 
 <span class="para-title"> Content : </span>
 
-The lab work is divided into 2 parts :
- 
-- TBD
-- TBD
+The Lab work is divided into 2 parts : 
 
-<span class="para-title"> Main goals : </span>
+- The first part is devoted to the implementation of the **Deep Galerkin algorithm** where you are going to test it on various PDEs arising in **finance**. We give below some **expected plots** that you should obtain after finishing this part.
 
-I will add some plots here.
+
+
+
+::: {.columns}
+
+::: {.column width="50%" style="text-align: center;"}
+![Evolution of the loss in the PDE learning of the call price](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png){fig-align="center"}
+:::
+
+::: {.column width="50%" style="text-align: center;"}
+![Price surface $(t,s) \mapsto C(t,s)$ for a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.png){fig-align="center" width=90%}
+:::
+
+:::
+
+
+
+- The second part is devoted to the study of the O-U process. You will be 
+
+- Generate SBTS samples of the O-U process
+- Estimate the parameters of your SBTS samples vs the ones of the real O-U process.
+  
+
+ We give below some **expected plots** that you should obtain after finishing this part.
+
+
+
+::: {.columns}
+
+::: {.column width="50%" style="text-align: center;"}
+![Evolution of the loss for $y_0$ in the LQ control problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_data.png){fig-align="center" .center-caption}
+:::
+
+::: {.column width="50%" style="text-align: center;"}
+![Evolution of $y_0$ in the LQ control problem ](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_distrib.png){fig-align="center" .center-caption}
+:::
+
+:::
 
 :::
 
@@ -29,36 +65,31 @@ I will add some plots here.
 
 ::: {#alg-description .algorithm}
 
-Add here what is expected for the mini-project.
+The project for you will be to choose a **time-series dataset** and focus on **data augmentation** using the SBTS algorithm. 
+The primary goal is to demonstrate how SBTS-generated samples can help improve model performance on a task of your choice.
+You will have freedom to select
 
+- Any time series dataset from any domain
+- Find any problem or task where synthetic data can be beneficial. This could include, but not limited to **data augmentation**,
+**data imputation**, **scenario simulation** or **stress testing**.
+- Anomaly detection
+- Any other use case relevant to your interests
+
+Your project should include
+
+- A **clear description** of your chosen dataset and task.
+- An **explanation** of how and why you use synthetic data generation.
+- Implementation details, including parameters choice for the SBTS method.
+- **Model training** and **evaluation protocols**, with comparison when applicable.
+- An analysis discussing the impact and benefits of synthetic data in your context.
+
+
+**Creativity** and **critical analysis** will be important criteria for assessment. Feel free to explore and justify your choices freely
 :::
 
     
 
 
-
-## Expected results
-
-<div style="text-align: center;">
-  <img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/videos/animation.gif" alt="Animation" 
-  style="display: block; margin: 0 auto; max-width: 40%; height: auto;">
-  <p><em>Animation ici</em></p>
-</div>
-
-
-::: {.text-center}
-![Optimal transport from $\mathbf{\delta_{x}}$ to Gaussian](https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg){width=40%}
-
-
-<figure style="text-align: center; margin: 0;">
-  <img src="https://raw.githubusercontent.com/SamyMekk/TP-Controle-Stochastique/main/images/SBTS/Gaussian_to_Gaussian.jpg" 
-       alt="Ma belle image"
-       style="display: block; margin: 0 auto; max-width: 40%; height: auto;">
-  <figcaption style="font-size: 0.9em; color: #333; margin-top: 0.5em;">
-  Optimal transport from Dirac distribution to Gaussian
-  
-  </figcaption>
-</figure>
 
 
 

@@ -213,5 +213,38 @@
       "Part n°2 : Reinforcement Learning for stochastic control",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab work n°2</span>"
     ]
+  },
+  {
+    "objectID": "contents/GenerativeIA/TP3.html",
+    "href": "contents/GenerativeIA/TP3.html",
+    "title": "5  Lab work n°3",
+    "section": "",
+    "text": "5.1 Summary of the lab\nYou can download the Lab work n°3 as a PDF file by clicking here.\nAll the necessary information is already included in the PDF file. Below is a brief summary of the lab content and some expected results.",
+    "crumbs": [
+      "Part n°3 : GenAI for data generation",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lab work n°3</span>"
+    ]
+  },
+  {
+    "objectID": "contents/GenerativeIA/TP3.html#summary-of-the-lab",
+    "href": "contents/GenerativeIA/TP3.html#summary-of-the-lab",
+    "title": "5  Lab work n°3",
+    "section": "",
+    "text": "Content : \nThe Lab work is divided into 2 parts :\n\nThe first part is devoted to the implementation of the Deep Galerkin algorithm where you are going to test it on various PDEs arising in finance. We give below some expected plots that you should obtain after finishing this part.\n\n\n\n\n\n\nEvolution of the loss in the PDE learning of the call price\n\n\n\n\n\n\nPrice surface \\((t,s) \\mapsto C(t,s)\\) for a call option\n\n\n\n\n\nThe second part is devoted to the study of the O-U process. You will be\nGenerate SBTS samples of the O-U process\nEstimate the parameters of your SBTS samples vs the ones of the real O-U process.\n\nWe give below some expected plots that you should obtain after finishing this part.\n\n\n\n\n\nEvolution of the loss for \\(y_0\\) in the LQ control problem\n\n\n\n\n\n\nEvolution of \\(y_0\\) in the LQ control problem",
+    "crumbs": [
+      "Part n°3 : GenAI for data generation",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lab work n°3</span>"
+    ]
+  },
+  {
+    "objectID": "contents/GenerativeIA/TP3.html#towards-the-open-ended-mini-project",
+    "href": "contents/GenerativeIA/TP3.html#towards-the-open-ended-mini-project",
+    "title": "5  Lab work n°3",
+    "section": "5.2 Towards the open ended mini-project",
+    "text": "5.2 Towards the open ended mini-project\n\nThe project for you will be to choose a time-series dataset and focus on data augmentation using the SBTS algorithm. The primary goal is to demonstrate how SBTS-generated samples can help improve model performance on a task of your choice. You will have freedom to select\n\nAny time series dataset from any domain\nFind any problem or task where synthetic data can be beneficial. This could include, but not limited to\n\nData augmentation\nData imputation\nScenario simulation or stress testing\n\nAnomaly detection\nAny other use case relevant to your interests\n\nYour project should include\n\nA clear description of your chosen dataset and task.\nAn explanation of how and why you use synthetic data generation.\nImplementation details, including parameters choice for the SBTS method.\nModel training and evalaution protocols, with comparison when applicable.\nAn analysis discussing the impact and benefits of synthetic data in your context.\n\nCreativity and critical analysis will be important criteria for assessment. Feel free to explore and justify your choices freely",
+    "crumbs": [
+      "Part n°3 : GenAI for data generation",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lab work n°3</span>"
+    ]
   }
 ]
