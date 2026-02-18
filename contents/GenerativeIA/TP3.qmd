@@ -17,7 +17,7 @@ All the necessary information is already included in the PDF file. Below is a br
 
 The Lab work is divided into 2 parts : 
 
-- The first part is devoted to the implementation of the **Deep Galerkin algorithm** where you are going to test it on various PDEs arising in **finance**. We give below some **expected plots** that you should obtain after finishing this part.
+- The first part is devoted to the implementation of the optimal process.
 
 
 
@@ -25,21 +25,14 @@ The Lab work is divided into 2 parts :
 ::: {.columns}
 
 ::: {.column width="50%" style="text-align: center;"}
-![Evolution of the loss in the PDE learning of the call price](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/TraingAndLossTestCallPrice.png){fig-align="center"}
-:::
-
-::: {.column width="50%" style="text-align: center;"}
-![Price surface $(t,s) \mapsto C(t,s)$ for a call option](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/PDE/CallOptionPriceSurface.png){fig-align="center" width=90%}
+![](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/garch_data.png){fig-align="center"}
 :::
 
 :::
 
 
 
-- The second part is devoted to the study of the O-U process. You will be 
-
-- Generate SBTS samples of the O-U process
-- Estimate the parameters of your SBTS samples vs the ones of the real O-U process.
+- The second part is devoted to the study of the O-U process. You will generate **SBTS** samples of the **O-U** process and estimate the **parameters** of your **SBTS samples** vs the ones of the real O-U process.
   
 
  We give below some **expected plots** that you should obtain after finishing this part.
@@ -48,11 +41,11 @@ The Lab work is divided into 2 parts :
 
 ::: {.columns}
 
-::: {.column width="50%" style="text-align: center;"}
+::: {.column width="100%" style="text-align: center;"}
 ![Evolution of the loss for $y_0$ in the LQ control problem](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_data.png){fig-align="center" .center-caption}
 :::
 
-::: {.column width="50%" style="text-align: center;"}
+::: {.column width="100%" style="text-align: center;"}
 ![Evolution of $y_0$ in the LQ control problem ](https://raw.githubusercontent.com/SamyMekk/Labs-Stochastic-Control-and-Machine-Learning/main/images/SBTS/ou_distrib.png){fig-align="center" .center-caption}
 :::
 
